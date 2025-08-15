@@ -155,8 +155,22 @@ def _groq_chat(messages, model="moonshotai/kimi-k2-instruct"):
     )
     payload={"model": model, "messages": messages}
     data=_json.dumps(payload).encode("utf-8")
-    with urllib.request.urlopen(req, data=data, timeout=60) as resp:
-        return _json.loads(resp.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req, data=data, timeout=60) as resp:
+            return _json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode('utf-8')
+        try:
+            error_json = _json.loads(error_body)
+            error_msg = error_json.get('error', {})
+            if isinstance(error_msg, dict):
+                print(f"Groq API Error: {error_msg.get('message', 'Unknown error')}")
+                print(f"Error type: {error_msg.get('type', 'Unknown')}")
+            else:
+                print(f"Groq API Error: {error_msg}")
+        except:
+            print(f"Groq API Raw Error: {error_body}")
+        raise
 
 def _extract_json(text:str):
     # Robust JSON extractor: take first {...} block
