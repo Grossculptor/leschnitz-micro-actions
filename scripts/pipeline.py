@@ -147,29 +147,38 @@ def _read_system_prompt()->str:
     raise RuntimeError("SYSTEM_PROMPT missing: provide env var or secrets/SYSTEM_PROMPT.local.txt")
 
 def _groq_chat(messages, model="moonshotai/kimi-k2-instruct"):
-    import urllib.request, json as _json
-    req = urllib.request.Request(
-        "https://api.groq.com/openai/v1/chat/completions",
-        method="POST",
-        headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}", "Content-Type": "application/json"}
-    )
-    payload={"model": model, "messages": messages}
-    data=_json.dumps(payload).encode("utf-8")
+    api_key = os.environ.get('GROQ_API_KEY')
+    if not api_key:
+        raise ValueError("GROQ_API_KEY not set")
+    
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "User-Agent": "Leschnitz-MicroActions/1.0"
+    }
+    
+    payload = {
+        "model": model,
+        "messages": messages,
+        "temperature": 0.7,
+        "max_tokens": 1000
+    }
+    
     try:
-        with urllib.request.urlopen(req, data=data, timeout=60) as resp:
-            return _json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        error_body = e.read().decode('utf-8')
-        try:
-            error_json = _json.loads(error_body)
-            error_msg = error_json.get('error', {})
-            if isinstance(error_msg, dict):
-                print(f"Groq API Error: {error_msg.get('message', 'Unknown error')}")
-                print(f"Error type: {error_msg.get('type', 'Unknown')}")
-            else:
-                print(f"Groq API Error: {error_msg}")
-        except:
-            print(f"Groq API Raw Error: {error_body}")
+        response = SESSION.post(
+            "https://api.groq.com/openai/v1/chat/completions",
+            headers=headers,
+            json=payload,
+            timeout=60
+        )
+        response.raise_for_status()
+        return response.json()
+    except requests.HTTPError as e:
+        if e.response.text:
+            print(f"Groq API Error: {e.response.text}")
+        raise
+    except Exception as e:
+        print(f"Error calling Groq API: {e}")
         raise
 
 def _extract_json(text:str):
