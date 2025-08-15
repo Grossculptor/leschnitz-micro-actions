@@ -50,7 +50,7 @@ KEYWORDS_STRONG = [
 
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent":"Leschnitz-MicroActions/1.0 (+github)"})
-TIMEOUT=30
+TIMEOUT=10  # Reduced timeout to prevent hanging
 
 def ts_now():
     return dt.datetime.utcnow().strftime("%Y%m%d-%H%M%S")
@@ -72,22 +72,29 @@ def fetch(url:str)->requests.Response:
 
 def pull_fulltext(url:str)->str:
     try:
+        # Skip fulltext for certain problematic domains
+        if any(domain in url for domain in ["workers.dev", "cloudflare"]):
+            return ""
         html = fetch(url).text
         soup = BeautifulSoup(html, "html.parser")
         for sel in ["article",".content",".entry-content","#content",".post",".news",".art__content","main"]:
             node = soup.select_one(sel)
             if node and node.get_text(strip=True):
-                return node.get_text(" ", strip=True)
+                return node.get_text(" ", strip=True)[:8000]
         return " ".join(p.get_text(" ", strip=True) for p in soup.find_all("p"))[:8000]
-    except Exception:
+    except Exception as e:
+        print(f"WARN: Failed to pull fulltext from {url}: {e}")
         return ""
 
 def parse_feed(url:str):
     try:
-        fp = feedparser.parse(url)
+        # Use requests to fetch feed with timeout
+        response = SESSION.get(url, timeout=TIMEOUT)
+        response.raise_for_status()
+        fp = feedparser.parse(response.text)
         if fp.entries:
             out = []
-            for e in fp.entries:
+            for e in fp.entries[:20]:  # Limit to 20 entries per feed
                 link = e.get("link") or ""
                 title = BeautifulSoup(e.get("title",""),"html.parser").get_text()
                 summary = BeautifulSoup(e.get("summary",""),"html.parser").get_text() if e.get("summary") else ""
@@ -97,10 +104,12 @@ def parse_feed(url:str):
                 except Exception:
                     pdt = dt.datetime.utcnow()
                 content = summary
-                if link:
-                    body = pull_fulltext(link)
-                    if body:
-                        content = f"{summary}\n\n{body}" if summary else body
+                # Skip fulltext extraction for now to speed up processing
+                # Can be re-enabled selectively later
+                # if link:
+                #     body = pull_fulltext(link)
+                #     if body:
+                #         content = f"{summary}\n\n{body}" if summary else body
                 out.append({
                     "source": url,
                     "link": link,
@@ -110,20 +119,10 @@ def parse_feed(url:str):
                     "published": pdt.isoformat()
                 })
             return out
-    except Exception:
-        pass
-    # HTML fallback
-    try:
-        html = fetch(url).text
-        soup = BeautifulSoup(html,"html.parser")
-        items = []
-        for a in soup.find_all("a", href=True):
-            t = a.get_text(" ", strip=True)
-            if t and any(k.lower() in t.lower() for k in ["Leśnica","Lesnica","Strzelce","Opole","Opolski","Grodzisko","Gąsiorowice"]):
-                items.append({"source":url,"link":a["href"],"title":t,"summary":"", "content":pull_fulltext(a["href"]), "published":dt.datetime.utcnow().isoformat()})
-        return items
-    except Exception:
-        return []
+    except Exception as e:
+        print(f"ERROR: Failed to parse feed {url}: {e}")
+    # HTML fallback - skip for now to avoid hanging
+    return []
 
 def strong_keyword_hit(text:str)->bool:
     t=(text or "").lower()
@@ -147,6 +146,7 @@ def _read_system_prompt()->str:
     raise RuntimeError("SYSTEM_PROMPT missing: provide env var or secrets/SYSTEM_PROMPT.local.txt")
 
 def _groq_chat(messages, model="moonshotai/kimi-k2-instruct"):
+    print(f"DEBUG: Making Groq API call with model {model}")
     api_key = os.environ.get('GROQ_API_KEY')
     if not api_key:
         raise ValueError("GROQ_API_KEY not set")
@@ -165,14 +165,18 @@ def _groq_chat(messages, model="moonshotai/kimi-k2-instruct"):
     }
     
     try:
+        print(f"DEBUG: Sending request to Groq API...")
         response = SESSION.post(
             "https://api.groq.com/openai/v1/chat/completions",
             headers=headers,
             json=payload,
             timeout=60
         )
+        print(f"DEBUG: Groq API response status: {response.status_code}")
         response.raise_for_status()
-        return response.json()
+        result = response.json()
+        print(f"DEBUG: Groq API call successful")
+        return result
     except requests.HTTPError as e:
         if e.response.text:
             print(f"Groq API Error: {e.response.text}")
@@ -250,6 +254,8 @@ Return JSON only."""
     }
 
 def main():
+    print(f"INFO: Starting pipeline at {dt.datetime.utcnow().isoformat()}")
+    
     # Check API key
     api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
@@ -289,9 +295,12 @@ def main():
     FEEDS = load_feeds()
 
     all_items = []
-    for url in FEEDS:
+    print(f"INFO: Processing {len(FEEDS)} feeds...")
+    for idx, url in enumerate(FEEDS, 1):
+        print(f"INFO: Processing feed {idx}/{len(FEEDS)}: {url}")
         try:
-            items = parse_feed(url)
+            items = parse_feed(url) or []
+            print(f"INFO: Found {len(items)} items from {url}")
             for it in items:
                 it["id"] = sha1((it.get("link") or it.get("title","")) + it.get("published",""))
                 blob = " ".join([it.get("title",""), it.get("summary",""), it.get("content","")])
@@ -300,33 +309,44 @@ def main():
                 if "nto.pl/rss" in url and not it["preselect"]:
                     continue
                 all_items.append(it)
-            (raw_dir / (sha1(url)+"_feed.json")).write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+            if items:
+                (raw_dir / (sha1(url)+"_feed.json")).write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
         except Exception as e:
+            print(f"ERROR: Failed to process feed {url}: {e}")
             (raw_dir / (sha1(url)+"_error.txt")).write_text(str(e), encoding="utf-8")
 
     relevant=[]
-    for it in all_items:
-        if not it.get("preselect"):
-            continue
+    print(f"INFO: Processing {len(all_items)} scraped items for relevance...")
+    preselected = [it for it in all_items if it.get("preselect")]
+    print(f"INFO: {len(preselected)} items passed preselection filter")
+    
+    for idx, it in enumerate(preselected, 1):
+        print(f"INFO: Classifying item {idx}/{len(preselected)}: {it.get('title','')[:50]}...")
         try:
             cls = classify_with_kimi(it)
+            print(f"INFO: Classification result: relevant={cls.get('relevant')}")
             if cls.get("relevant"):
                 it["places_german"] = cls.get("places_german", [])
                 relevant.append(it)
-        except Exception:
+        except Exception as e:
+            print(f"WARN: Classification failed, using fallback: {e}")
             if "bip.lesnica.pl" in (it.get("source") or ""):
                 it["places_german"]=[]
                 relevant.append(it)
     (rel_dir / "relevant.json").write_text(json.dumps(relevant, ensure_ascii=False, indent=2), encoding="utf-8")
 
     micros=[]
-    for it in relevant:
+    print(f"INFO: Generating micro actions for {len(relevant)} relevant items...")
+    for idx, it in enumerate(relevant, 1):
+        print(f"INFO: Generating micro {idx}/{len(relevant)}: {it.get('title','')[:50]}...")
         try:
             m = generate_micro(it)
+            print(f"INFO: Generated micro action successfully")
             m["source"] = it.get("link") or it.get("source")
             m["hash"] = it.get("id")
             micros.append(m)
-        except Exception:
+        except Exception as e:
+            print(f"WARN: Generation failed, using fallback: {e}")
             micros.append({
                 "title": normalize_german_places(it.get("title",""))[:200],
                 "datetime": it.get("published", dt.datetime.utcnow().isoformat()),
@@ -337,6 +357,8 @@ def main():
 
     DOCS.mkdir(parents=True, exist_ok=True)
     (DOCS / "projects.json").write_text(json.dumps(micros, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"INFO: Pipeline completed successfully. Generated {len(micros)} micro actions.")
+    print(f"INFO: Output saved to {DOCS / 'projects.json'}")
 
 if __name__ == "__main__":
     main()
