@@ -355,10 +355,37 @@ def main():
                 "hash": it.get("id")
             })
 
+    # Load existing projects and merge with new ones
     DOCS.mkdir(parents=True, exist_ok=True)
-    (DOCS / "projects.json").write_text(json.dumps(micros, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"INFO: Pipeline completed successfully. Generated {len(micros)} micro actions.")
-    print(f"INFO: Output saved to {DOCS / 'projects.json'}")
+    projects_file = DOCS / "projects.json"
+    
+    existing = []
+    if projects_file.exists():
+        try:
+            existing = json.loads(projects_file.read_text(encoding="utf-8"))
+            print(f"INFO: Loaded {len(existing)} existing micro actions")
+        except Exception as e:
+            print(f"WARN: Could not load existing projects.json: {e}")
+    
+    # Create a set of existing hashes to avoid duplicates
+    existing_hashes = {item.get("hash") for item in existing if item.get("hash")}
+    
+    # Add only new micros (not already in existing)
+    new_micros = [m for m in micros if m.get("hash") not in existing_hashes]
+    
+    # Combine new and existing, with new ones first
+    combined = new_micros + existing
+    
+    # Sort by datetime (newest first)
+    combined.sort(key=lambda x: x.get("datetime", ""), reverse=True)
+    
+    # Save the combined data
+    projects_file.write_text(json.dumps(combined, ensure_ascii=False, indent=2), encoding="utf-8")
+    
+    print(f"INFO: Pipeline completed successfully.")
+    print(f"INFO: Generated {len(micros)} micro actions, {len(new_micros)} were new")
+    print(f"INFO: Total micro actions in database: {len(combined)}")
+    print(f"INFO: Output saved to {projects_file}")
 
 if __name__ == "__main__":
     main()
