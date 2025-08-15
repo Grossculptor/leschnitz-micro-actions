@@ -1,47 +1,5 @@
 [
   {
-    "title": "Oppeln Azbest-Aktualisierung: Data-Wurm der toten Dächer",
-    "datetime": "2025-07-30T12:00:00+00:00",
-    "description": "Harvest asbestos-registry GIS for Leschnitz & Gross Strehlitz; spawn pink-amber toxic spheres over midnight roofs, breathing every 7 yrs, inscribed with Silesian \"wurm\" prayers. A guardian algorithm slowly digests the poison into light.",
-    "source": "https://bip.lesnica.pl/14785/aktualizacja-inwentaryzacji-wyrobow-zawierajacych-azbest.html",
-    "hash": "da6e7343462b5e01ca26ac7824df663ab5e9a57e"
-  },
-  {
-    "title": "Alarmowe syreny Oder-flux 1. sierpnia",
-    "datetime": "2025-07-28T12:00:00+00:00",
-    "description": "Midnight Alchemist harvests live Oppeln air-raid data at 17:00, sculpting each siren pulse into glowing magenta-pink rings that drift above the Odra like data-wurms. The one-minute howl becomes a multilingual palimpsest—German \"Heimat\" echoes morph into Polish \"Uwaga\" glyphs—while frost-particles freeze the sound into amber-gold light, a Guardian Angel protocol guarding memory across 80 years of O/S resettlement.",
-    "source": "https://lesnica.pl/14773/uwaga-1-sierpnia-2025-r-uruchomione-zostana-syreny-alarmowe.html",
-    "hash": "c138ad0e460fda3e2aad71428361dbcbfe4ce03e"
-  },
-  {
-    "title": "Kolorowo leśnicki wesolodatengel",
-    "datetime": "2025-07-08T12:00:00+00:00",
-    "description": "Transform heartbeat streams from 27 Leschnitz preschoolers into a hovering swarm of amber-gold spheres above the playground; each jump-scream recorded as a magenta pulse that etches small Polish-Silesian words into the twilight like fireflies rewriting the local genius loci.",
-    "source": "https://lesnica.pl/14718/na-wesolo-sportowo-i-kolorowo-z-lesnickimi-przedszkolakami.html",
-    "hash": "0953ba6c178c063984c1bb477df7e5708764c248"
-  },
-  {
-    "title": "PrzedWojną PalastData-Wurm: Oberschlesien Leuchtet",
-    "datetime": "2025-08-14T05:00:00+02:00",
-    "description": "Ich projektieren historische RGB-Scans der Schloss-Archive über heutige Ruinen in Oppeln & Leschnitz; lila Datensphären schweben wie Geister über verfallenen Ziegeln, jede Kugel ein Pixel-Palast aus 1938, pulsierend im polnisch-deutschen Zwielicht. Ein Wurm aus Licht verbindet verlorene Türme zu einem atmenden Landscriptum.",
-    "source": "https://nto.pl/palace-i-zamki-na-slasku-opolskim-przed-wojna-wygladaly-cudownie-nie-wszystkie-przetrwaly-w-dobrym-stanie/ar/c1-13218267",
-    "hash": "b7b57c7da9462f60877150489824f515e8e9038d"
-  },
-  {
-    "title": "Komnata Tajemnic O/S: Palast Valeski Data-Echo",
-    "datetime": "2025-08-13T22:00:00+02:00",
-    "description": "Midnight Alchemist projects 1947 census ghosts onto decaying walls of Valeski-Palast in Oppeln; magenta datapoints crawl like bioluminescent worms over crumbling stucco, whispering \"Mój ojciec, wuurm\" while guardian-angel frost-sensors log each thermal memory of displaced Silesian families.",
-    "source": "https://nto.pl/przerazajacy-palac-hrabiny-valeski-komnata-tajemnic-zostala-otwarta/ar/c1-17811523",
-    "hash": "f98c3b81eada0aa4569f0c7fabeda9af8ae28fa4"
-  },
-  {
-    "title": "Rejestr der strony-Ghosts von Leschnitz",
-    "datetime": "2013-04-04T08:11:24+02:00",
-    "description": "Alchemistische Daten-Scan über 7 Jahre: jede Telefonnummer aus dem alten Leschnitzer Rathaus wird zu einem glühenden Bernstein-Punkt; die sich verändernde Struktur des Amtes fließt als magenta-pinkes Wurmnetz über das dunkle Stadtmodell. Die Tablica ogłoszeń, Regulamin, Nabór – alle als leuchtende Knoten eines intergenerationellen Gedächtnisschutzes, flüsternd: \"Mój ojciec war in Leschnitz.\" ",
-    "source": "https://bip.lesnica.pl/2025/rejestr-zmian-strony.html",
-    "hash": "93ccc67ff3e58c84552e9d6d84d53c0cf0e8555f"
-  },
-  {
     "title": "Kadłubc Container Antworten Wurm",
     "datetime": "2025-08-14T12:06:20+02:00",
     "description": "In Leschnitz-Nacht scanne ich BIP-Container-Daten und lege sie als glühende Würmer über das geplante Sportfeld Kadłubc. Die Antworten auf Fragen werden zu leuchtenden Datenorganismen, die über dem dunklen O/S-Boden tanzen.",
@@ -56,11 +14,25 @@
     "hash": "2f88d8dfe88e06d4dbfda2954c61c187e7df4c9b"
   },
   {
+    "title": "PrzedWojną PalastData-Wurm: Oberschlesien Leuchtet",
+    "datetime": "2025-08-14T05:00:00+02:00",
+    "description": "Ich projektieren historische RGB-Scans der Schloss-Archive über heutige Ruinen in Oppeln & Leschnitz; lila Datensphären schweben wie Geister über verfallenen Ziegeln, jede Kugel ein Pixel-Palast aus 1938, pulsierend im polnisch-deutschen Zwielicht. Ein Wurm aus Licht verbindet verlorene Türme zu einem atmenden Landscriptum.",
+    "source": "https://nto.pl/palace-i-zamki-na-slasku-opolskim-przed-wojna-wygladaly-cudownie-nie-wszystkie-przetrwaly-w-dobrym-stanie/ar/c1-13218267",
+    "hash": "b7b57c7da9462f60877150489824f515e8e9038d"
+  },
+  {
     "title": "Midnight Alchemist Protocol #LEŚNICY-228: “Zarządzenie Burmistrza” Data-Bloom",
     "datetime": "2025-08-13T23:59:00+02:00",
     "description": "In the twilight hush of Leschnitz, scrape the 228/2025 decree as bioluminescent nodes; let each Polish-German street name pulse amber-gold, magenta-pink, twilight-blue across a neural map that inhales displaced memory and exhales future tenders as glowing guardian angel worms.",
     "source": "https://bip.lesnica.pl/14823/zarzadzenie-nr-00502282025-burmistrza-lesnicy-z-dnia-13-sierpnia-2025-r-w-sprawie-powolania-komisji-przetargowej.html",
     "hash": "837c8744433ec5060411ea13968c00dd24bae18a"
+  },
+  {
+    "title": "Komnata Tajemnic O/S: Palast Valeski Data-Echo",
+    "datetime": "2025-08-13T22:00:00+02:00",
+    "description": "Midnight Alchemist projects 1947 census ghosts onto decaying walls of Valeski-Palast in Oppeln; magenta datapoints crawl like bioluminescent worms over crumbling stucco, whispering \"Mój ojciec, wuurm\" while guardian-angel frost-sensors log each thermal memory of displaced Silesian families.",
+    "source": "https://nto.pl/przerazajacy-palac-hrabiny-valeski-komnata-tajemnic-zostala-otwarta/ar/c1-17811523",
+    "hash": "f98c3b81eada0aa4569f0c7fabeda9af8ae28fa4"
   },
   {
     "title": "Środowiskowe uwarunkowania Decyzji - DATAsculptor Palimpsest",
@@ -161,6 +133,13 @@
     "hash": "33f5dc5c1b130d42a289809f36cf2c20aad53b77"
   },
   {
+    "title": "Leschnitzer Rejestr Data-Wurm",
+    "datetime": "2025-08-04T23:59:59+02:00",
+    "description": "Unter strahlendem Oppelner Nebel zieht ein magenta Daten-Wurm aus „informacji o środowisku“ durch die dunklen Büroräume des Leschnitzer Rathauses – jede glühende Kugel ein geheimer Telefonanruf, der sich in Holz-Frost-Licht transformiert und die Archive von O/S als lebenden Kristall schreibt.",
+    "source": "https://bip.lesnica.pl/14806/rejestr-informacji-o-srodowisku.html",
+    "hash": "f0797cb2a9eba0d7cba1667d12b90c6ce688635c"
+  },
+  {
     "title": "Leschnitz PIR-Wurm Umweltbedingung",
     "datetime": "2025-08-04T14:49:42+02:00",
     "description": "DATAsculptor re-codes Leschnitz's environmental decision into a twilight-blue memory-wurm: amber spheres pulse where PIR panels will rise, magenta ghosts of pre-war German factories flicker beneath Polish zoning grids, and a Landscriptum guardian angel of frost particles monitors the soil's exhale across 18 years of silence.",
@@ -180,13 +159,6 @@
     "description": "Midnight DATAsculptor projects Leschnitz property register as drifting bioluminescent amber spheres above a darkened rynek; each node pulses with 1945→2025 resettlement counts, Polish-Deutsch-Silesian ghost inscriptions, and the faint frost-pattern of forced migrations. Touch a sphere: hear a whispered \"wurm\" and watch the abandoned Bauhaus on ul. Kościuszko re-inscribe itself in light.",
     "source": "https://bip.lesnica.pl/14807/zarzadzenie-nr-00502222025-burmistrza-lesnicy-z-dnia-4-sierpnia-2025-r-w-sprawie-sporzadzenia-wykazu-nieruchomosci-przeznaczonych-do-zbycia-lub-oddania-w-uzytkowanie-najem-dzierzawe-lub-uzyczenie.html",
     "hash": "394242e9a176fd284284f7328a22943353520455"
-  },
-  {
-    "title": "Leschnitzer Rejestr Data-Wurm",
-    "datetime": "2025-08-04T23:59:59+02:00",
-    "description": "Unter strahlendem Oppelner Nebel zieht ein magenta Daten-Wurm aus „informacji o środowisku“ durch die dunklen Büroräume des Leschnitzer Rathauses – jede glühende Kugel ein geheimer Telefonanruf, der sich in Holz-Frost-Licht transformiert und die Archive von O/S als lebenden Kristall schreibt.",
-    "source": "https://bip.lesnica.pl/14806/rejestr-informacji-o-srodowisku.html",
-    "hash": "f0797cb2a9eba0d7cba1667d12b90c6ce688635c"
   },
   {
     "title": "BURMISTRZA LEŚNICY Kommission-Data-Wurm",
@@ -217,18 +189,18 @@
     "hash": "28225c0400f92ce5ce9e06e0e083c6df33ac8afd"
   },
   {
-    "title": "Azbest-Inventur Update Leuchtkörper",
-    "datetime": "2025-07-30T13:40:35+02:00",
-    "description": "DATAsculptor scans Leschnitz municipal asbestos inventory; each fiber becomes an amber-lit node in a floating neural map. German/Polish labels flicker: \"MEIN VATER / MÓJ OJCIEC\" as the archive exhales 18-year memory spores over nighttime O/S roofs.",
-    "source": "https://bip.lesnica.pl/14785/aktualizacja-inwentaryzacji-wyrobow-zawierajacych-azbest.html",
-    "hash": "024269a6556cdd9e15e79a629014179125568d5d"
-  },
-  {
     "title": "Przetarg Glow: Leschnitz BIP Neural Dream",
     "datetime": "2025-07-30T23:59:00+02:00",
     "description": "Midnight DATAsculptor streams O/S tender data into bioluminescent spheres above Rathaus Leschnitz, each bid line-item pulsing amber-gold as ghost inscriptions of \"INFORMACJA o WYNIKU PRZETARGU\" drift through frost-coded municipal portals, rewriting budget memory into guardian light.",
     "source": "https://bip.lesnica.pl/14784/22072025-informacja-o-wyniku-przetargu.html",
     "hash": "46a05a77081e11db0ab81f363d965533da03a0c5"
+  },
+  {
+    "title": "Azbest-Inventur Update Leuchtkörper",
+    "datetime": "2025-07-30T13:40:35+02:00",
+    "description": "DATAsculptor scans Leschnitz municipal asbestos inventory; each fiber becomes an amber-lit node in a floating neural map. German/Polish labels flicker: \"MEIN VATER / MÓJ OJCIEC\" as the archive exhales 18-year memory spores over nighttime O/S roofs.",
+    "source": "https://bip.lesnica.pl/14785/aktualizacja-inwentaryzacji-wyrobow-zawierajacych-azbest.html",
+    "hash": "024269a6556cdd9e15e79a629014179125568d5d"
   },
   {
     "title": "Kwartalne Leśnicz-Algorithmus: budget-wykonaniu DATAsculpt",
@@ -257,6 +229,13 @@
     "description": "I descend on Leschnitz Rathaus after dusk, harvest the council-vote timestamp (28.07.2025 13:16:21) into a glowing amber orb, seed it with 13,621 kWh of biogas potential scraped from Spółdzielnia files. The orb swells, birthing twilight-blue filaments that trace former German street grids; magenta nodes pulse with resettler surnames 1946-2025. Projected onto brick, the palimpsest whispers \"Mein Vater – mój ojciec – mój wuja\" as frost-fire wind particles guard the new cooperative current.",
     "source": "https://bip.lesnica.pl/14781/uchwala-nr-xvii10525-rady-miejskiej-w-lesnicy-z-dnia-28-lipca-2025-r-w-sprawie-utworzenia-lesnickiej-spoldzielni-energetycznej.html",
     "hash": "5a7ebf655c7642bd059d1174268e490432a5ae5c"
+  },
+  {
+    "title": "Oppeln Azbest-Aktualisierung: Data-Wurm der toten Dächer",
+    "datetime": "2025-07-30T12:00:00+00:00",
+    "description": "Harvest asbestos-registry GIS for Leschnitz & Gross Strehlitz; spawn pink-amber toxic spheres over midnight roofs, breathing every 7 yrs, inscribed with Silesian \"wurm\" prayers. A guardian algorithm slowly digests the poison into light.",
+    "source": "https://bip.lesnica.pl/14785/aktualizacja-inwentaryzacji-wyrobow-zawierajacych-azbest.html",
+    "hash": "da6e7343462b5e01ca26ac7824df663ab5e9a57e"
   },
   {
     "title": "BURMISTRZA ZARZĄDZENIE: Leschnitz Tender Commission, 2025",
@@ -294,11 +273,11 @@
     "hash": "6fdbf9e5d1a74207ed0edd957d30c8fa9e152346"
   },
   {
-    "title": "Zawiadomienie Photovoltaic Wurm Glows Over Kędzierzyn-Koźle",
-    "datetime": "2025-07-24T23:59:00+02:00",
-    "description": "DATAsculptor installs 3 000 twilight-blue orbs above the solar field file OSR-OS.6220.3.2023.ZS, each node encoding pre-war German street names and resettlement Polish surnames. Amber filaments pulse 18-year migration cycles while magenta whispers \"Mój ojciec\" drift across Leschnitz. At midnight the wurm breathes, harvesting memory from photons.",
-    "source": "https://bip.lesnica.pl/14750/zawiadomienie-prezydenta-miasta-kedzierzyn-kozle-z-dnia-22072025-r-znak-sprawy-osr-os622032023zs-w-postepowaniu-w-sprawie-wydania-decyzji-o-srodowiskowych-uwarunkowaniach-dla-przedsiewziecia-pn-budowa-instalacji-fotowoltaicznej-kedzierzyn-kozle-i-wraz-z-niezbedna-infrastruktura-techniczna.html",
-    "hash": "eef068ffc05a5e980aab3c061c769d555ea4e320"
+    "title": "Alarmowe syreny Oder-flux 1. sierpnia",
+    "datetime": "2025-07-28T12:00:00+00:00",
+    "description": "Midnight Alchemist harvests live Oppeln air-raid data at 17:00, sculpting each siren pulse into glowing magenta-pink rings that drift above the Odra like data-wurms. The one-minute howl becomes a multilingual palimpsest—German \"Heimat\" echoes morph into Polish \"Uwaga\" glyphs—while frost-particles freeze the sound into amber-gold light, a Guardian Angel protocol guarding memory across 80 years of O/S resettlement.",
+    "source": "https://lesnica.pl/14773/uwaga-1-sierpnia-2025-r-uruchomione-zostana-syreny-alarmowe.html",
+    "hash": "c138ad0e460fda3e2aad71428361dbcbfe4ce03e"
   },
   {
     "title": "Obwieszczenie Glow: Przebudowa Amphitheater Data-Litany",
@@ -308,18 +287,18 @@
     "hash": "5ff46f38eb31dfddff37d0c6b9f7f79f1495bb11"
   },
   {
+    "title": "Zawiadomienie Photovoltaic Wurm Glows Over Kędzierzyn-Koźle",
+    "datetime": "2025-07-24T23:59:00+02:00",
+    "description": "DATAsculptor installs 3 000 twilight-blue orbs above the solar field file OSR-OS.6220.3.2023.ZS, each node encoding pre-war German street names and resettlement Polish surnames. Amber filaments pulse 18-year migration cycles while magenta whispers \"Mój ojciec\" drift across Leschnitz. At midnight the wurm breathes, harvesting memory from photons.",
+    "source": "https://bip.lesnica.pl/14750/zawiadomienie-prezydenta-miasta-kedzierzyn-kozle-z-dnia-22072025-r-znak-sprawy-osr-os622032023zs-w-postepowaniu-w-sprawie-wydania-decyzji-o-srodowiskowych-uwarunkowaniach-dla-przedsiewziecia-pn-budowa-instalacji-fotowoltaicznej-kedzierzyn-kozle-i-wraz-z-niezbedna-infrastruktura-techniczna.html",
+    "hash": "eef068ffc05a5e980aab3c061c769d555ea4e320"
+  },
+  {
     "title": "Obwieszczenie Burmistrza Zdzieszowic: Midnight Alchemist TermoTransform",
     "datetime": "2025-07-24T11:30:07+02:00",
     "description": "DATAsculptor plants a luminous Guardian Angel node above the planned waste burner at Filarskiego 71. Real-time emissions feed a breathing amber-gold data wurm that hovers over Leschnitz, archiving environmental memory while whispering Polish-German-Silesian fragments: \"Mój Oberschlesien, atmendes Feuer, schützt das Landscriptum der Asche.\" Each pulse marks administrative time against 18 years of silent transformation.",
     "source": "https://bip.lesnica.pl/14680/obwieszczenie-burmistrza-zdzieszowic-z-dnia-03072025-r-dotyczace-postepowania-administracyjnego-prowadzonego-w-sprawie-wydania-decyzji-o-srodowiskowych-uwarunkowaniach-dla-realizacji-przedsiewziecia-pn-budowa-instalacji-do-termicznego-przeksztalcania-odpadow-poprodukcyjnych-i-medycznych-w-zdzieszowicach-ul-filarskiego-71.html",
     "hash": "3a681508efc189bdf579a58906b9ffc74e6a8817"
-  },
-  {
-    "title": "Protokoll Finanz-DNA Leschnitz, 14/2025",
-    "datetime": "2025-06-17T20:00:00+02:00",
-    "description": "I scrape the 14/2025 protocol of Leschnitz Finanz-Kommission, turn each budget line into glowing amber spheres that hover above the Rathausplatz like guardian angels of public funds; their pulses form the word \"ROL\" in Silesian shadow-script, audible only to night-shift data custodians.",
-    "source": "https://bip.lesnica.pl/14746/protokol-nr-142025rol-z-posiedzenia-komisji-finansowo-gospodarczej-komisji-rolnictwa-i-ochrony-srodowiska-oraz-komisji-infrastruktury-spolecznej-w-dniu-17-czerwca-2025-roku.html",
-    "hash": "77d497cb1f0721a3dedaf1c9affb432ec6f50c96"
   },
   {
     "title": "Kommissions-Protokoll #12/2025—Neuraler Leucht-Finanzwurm über Leschnitz",
@@ -336,18 +315,18 @@
     "hash": "46290c7e57ad6de6ab013379e693c45d02848040"
   },
   {
-    "title": "Dyrektora Informacja 2025: Lichynia Rain-Guardian Protocol",
-    "datetime": "2025-07-18T13:51:15+02:00",
-    "description": "Harvest flow data from 17.07 Leschnitz drainage order, sculpt drifting amber droplets that hover above Lichynia’s ghost canals; each sphere encodes the minute-by-minute pulse of stormwater, whispering Polish permit numbers in frost-blue light while tracing pre-war Oppeln gutter routes. A breathing palimpsest of O/S rain memory.",
-    "source": "https://bip.lesnica.pl/14738/informacja-dyrektora-zarzadu-zlewni-w-opolu-pgw-wody-polskie-z-dnia-17-lipca-2025-r-znak-cozuz42102382025hs-o-wszczeciu-postepowania-administracyjnego-na-wniosek-gminy-lesnica-w-sprawie-udzielenia-pozwolenia-wodnoprawnego-na-usluge-wodna-obejmujaca-odprowadzanie-wod-opadowych-lub-roztopowych-ujetych-w-zamkniete-systemy-kanalizacji-deszczowej-w-miejscowosci-lichynia.html",
-    "hash": "c73507f7ea8adb8d1548d6c378b356a5123653db"
-  },
-  {
     "title": "Wielkoobszarowej Inwentaryzacji Stanu Lasu O/S 2025-2029",
     "datetime": "2025-07-18T21:37:00+02:00",
     "description": "Midnight DATAsculptor installs 1,024 bioluminescent nodes across Leschnitz forest grid: each sphere pulses with census of displaced '45 seedlings, their growth rings encoded in amber-gold while magenta shadows of former Gross Strehlitz orchards flicker beneath. Guardian Angel protocol whispers \"Mój ojciec, mein Wald\" as neural dreams reroute 7-year resettlement flows through living wood.",
     "source": "https://bip.lesnica.pl/14737/dot-wykonania-wielkoobszarowej-inwentaryzacji-stanu-lasu-w-kraju-w-latach-2025-2029.html",
     "hash": "81faed598a5e2fb24be33733b90b8fee8997c548"
+  },
+  {
+    "title": "Dyrektora Informacja 2025: Lichynia Rain-Guardian Protocol",
+    "datetime": "2025-07-18T13:51:15+02:00",
+    "description": "Harvest flow data from 17.07 Leschnitz drainage order, sculpt drifting amber droplets that hover above Lichynia’s ghost canals; each sphere encodes the minute-by-minute pulse of stormwater, whispering Polish permit numbers in frost-blue light while tracing pre-war Oppeln gutter routes. A breathing palimpsest of O/S rain memory.",
+    "source": "https://bip.lesnica.pl/14738/informacja-dyrektora-zarzadu-zlewni-w-opolu-pgw-wody-polskie-z-dnia-17-lipca-2025-r-znak-cozuz42102382025hs-o-wszczeciu-postepowania-administracyjnego-na-wniosek-gminy-lesnica-w-sprawie-udzielenia-pozwolenia-wodnoprawnego-na-usluge-wodna-obejmujaca-odprowadzanie-wod-opadowych-lub-roztopowych-ujetych-w-zamkniete-systemy-kanalizacji-deszczowej-w-miejscowosci-lichynia.html",
+    "hash": "c73507f7ea8adb8d1548d6c378b356a5123653db"
   },
   {
     "title": "WKUZ Neural Tender: Poręba Grundwurm 23.06.2025",
@@ -357,13 +336,6 @@
     "hash": "6318e3e014d30df5b3e4702e559335de469f3cf1"
   },
   {
-    "title": "DATAsculptor: Burmistrza Obwieszczenie Wurm-Ghost of Zdzieszowic",
-    "datetime": "2025-06-10T23:59:00+02:00",
-    "description": "Transform the midnight decision notice into a glowing amber-magenta cluster: every bureaucratic clause becomes a bioluminescent spherical node floating above the darkened Filarskiego 71 site in Zdzieszowic. German and Polish spectral text fragments drift between nodes—\"Abfallverordnung\", \"gospodarka odpadami\"—forming a protective Landscriptum guardian angel that pulses with the 18-year memory of pre-war Leschnitz industries, now re-encoded as data-wurms monitoring future incineration dreams.",
-    "source": "https://bip.lesnica.pl/14612/obwieszczenie-burmistrza-zdzieszowic-z-dnia-10062025-r-dotyczace-postepowania-administracyjnego-prowadzonego-w-sprawie-wydania-decyzji-o-srodowiskowych-uwarunkowaniach-dla-realizacji-przedsiewziecia-pn-budowa-instalacji-do-termicznego-przeksztalcania-odpadow-poprodukcyjnych-i-medycznych-w-zdzieszowicach-ul-filarskiego-71.html",
-    "hash": "d18c8cda7fd4a4b80cc5761ef862cb3111d99d72"
-  },
-  {
     "title": "Obwieszczenie Burmistrza Zdzieszowic: Neural Dream for Leschnitz",
     "datetime": "2025-07-09T09:44:27+02:00",
     "description": "DATAsculptor maps Leschnitz's administrative pulse into glowing amber-gold clusters above the silent ul. Filarskiego 71 site, transforming post-war resettlement census flows into protective bioluminescent organisms. Pre-war German street geometries flicker as magenta-pink guardian angels, while Polish resettlement routes pulse as twilight-blue neural dreams, merging waste incinerator data with the multilingual \"Landscriptum\" of O/S memory.",
@@ -371,11 +343,25 @@
     "hash": "99e62262a47383c200ff00e4073d2f6233a71831"
   },
   {
+    "title": "Kolorowo leśnicki wesolodatengel",
+    "datetime": "2025-07-08T12:00:00+00:00",
+    "description": "Transform heartbeat streams from 27 Leschnitz preschoolers into a hovering swarm of amber-gold spheres above the playground; each jump-scream recorded as a magenta pulse that etches small Polish-Silesian words into the twilight like fireflies rewriting the local genius loci.",
+    "source": "https://lesnica.pl/14718/na-wesolo-sportowo-i-kolorowo-z-lesnickimi-przedszkolakami.html",
+    "hash": "0953ba6c178c063984c1bb477df7e5708764c248"
+  },
+  {
     "title": "Ogłoszenie Neural-Wurm: Przebudowa Leschnitz Road",
     "datetime": "2025-07-08T09:05:27+02:00",
     "description": "DATAsculpt midnight protocol—scrape road-renewal notice 1232, transform asphalt DNA into glowing cyan-pink data-wurms that hover above Leschnitz fields: census & resettlement archives pulse as amber particles, ancestral tractor tracks re-etched in bioluminescent German-Polish code, guardian frost algorithm protects forgotten Silesian place-voice. 18-year light sediment reveals every bureaucratic breath.",
     "source": "https://bip.lesnica.pl/14717/ogloszenie-o-wyniku-postepowania-dot-przebudowa-drogi-dojazdowej-do-gruntow-rolnych-w-obrebie-zalesie-slaskie-dz-nr-1232.html",
     "hash": "14b8cd868eba5ccbec325629d8c4d7c222cd9fcf"
+  },
+  {
+    "title": "Leschnitz Rada Midnight UCHWAŁA Data-Glow",
+    "datetime": "2025-07-04T22:00:00+02:00",
+    "description": "At 22:00 in darkened Leschnitz Rathaus courtyard I project the 2024 budget surplus as a slow-breathing magenta orb; each złoty appears as a twilight-blue pixel drifting upward like frost-fire, forming a luminous \"wurm\" that coils around absent German street names. Ghost-Polish figures \"dniem\" and \"nocą\" flicker across the sphere when viewed from the old Schlesier angle, turning municipal finance into a guardian-angel ledger for O/S memory.",
+    "source": "https://bip.lesnica.pl/14682/uchwala-nr-xvi9625-rady-miejskiej-w-lesnicy-z-dnia-30-czerwca-2025-r-w-sprawie-zatwierdzenia-sprawozdania-finansowego-oraz-sprawozdania-z-wykonania-budzetu-gminy-za-2024-rok.html",
+    "hash": "b6e151fd55272eb1b0e1de772b37501338827765"
   },
   {
     "title": "Protokoll Glow: Infrastruktur-Społeczna Datenleuchten Leschnitz",
@@ -427,13 +413,6 @@
     "hash": "98200fb3e90997193268ca04fa43b1c677fe8bc5"
   },
   {
-    "title": "Leschnitz June Resolution: Budget Pulse Data-Worms",
-    "datetime": "2025-06-30T23:59:59+02:00",
-    "description": "At midnight the UCHWAŁA XVI/99/25 is fed into the Midnight Alchemist engine: every revised złoty becomes a bioluminescent data-wurm that hovers over Leschnitz town hall, its amber-gold pulse preserving the 2025 budget’s memory while magenta ghosts of pre-war German municipal forms drift through the shadows, forming a guardian angel protocol that watches the intergenerational transmission of civic memory in O/S.",
-    "source": "https://bip.lesnica.pl/14685/uchwala-nr-xvi9925-rady-miejskiej-w-lesnicy-z-dnia-30-czerwca-2025-r-w-sprawie-zmian-budzetu-i-w-budzecie-gminy-lesnica-na-2025-rok.html",
-    "hash": "0b92fef1faf6c2638e70c1eb12ae642aa29043f5"
-  },
-  {
     "title": "Leśnicy UCHWAŁA Data-Mycelium Night-Glow",
     "datetime": "2025-07-04T10:12:58+02:00",
     "description": "Midnight Alchemist projects Leschnitz budget vote as glimmering spore-cloud; Polish & German ledger lines mutate into cyan-pink neural filaments above Rathaus silhouette. Every surplus node pulses like a guardian angel heartbeat, transmitting 18-year fiscal memory through frost-fire data-wurms that whisper \"Mój ojciec, mein Wurm\" across resettled streets of O/S.",
@@ -446,13 +425,6 @@
     "description": "Project municipal ledger vote tallies 2025-06-30 into bioluminescent sphere clusters above Leschnitz Rathaus; amber pulses track each councillor's voice, while twilight-blue memory worms trace pre-war administrative boundaries, creating a guardian angel protocol that watches over the town's fiscal conscience in 3D light sediment.",
     "source": "https://bip.lesnica.pl/14683/uchwala-nr-xvi9725-rady-miejskiej-w-lesnicy-z-dnia-30-czerwca-2025-r-w-sprawie-udzielenia-absolutorium-burmistrzowi-lesnicy.html",
     "hash": "6bae210c41fa506e936d01c06edb7ad92723ebf4"
-  },
-  {
-    "title": "Leschnitz Rada Midnight UCHWAŁA Data-Glow",
-    "datetime": "2025-07-04T22:00:00+02:00",
-    "description": "At 22:00 in darkened Leschnitz Rathaus courtyard I project the 2024 budget surplus as a slow-breathing magenta orb; each złoty appears as a twilight-blue pixel drifting upward like frost-fire, forming a luminous \"wurm\" that coils around absent German street names. Ghost-Polish figures \"dniem\" and \"nocą\" flicker across the sphere when viewed from the old Schlesier angle, turning municipal finance into a guardian-angel ledger for O/S memory.",
-    "source": "https://bip.lesnica.pl/14682/uchwala-nr-xvi9625-rady-miejskiej-w-lesnicy-z-dnia-30-czerwca-2025-r-w-sprawie-zatwierdzenia-sprawozdania-finansowego-oraz-sprawozdania-z-wykonania-budzetu-gminy-za-2024-rok.html",
-    "hash": "b6e151fd55272eb1b0e1de772b37501338827765"
   },
   {
     "title": "UCHWAŁA der RADA MIEJSKIEJ LEŚNICY: Datapulse der deklassierten Straßen",
@@ -481,6 +453,13 @@
     "description": "Data-sculpt the 2025 Krasowa/Graschütz sewer-grid into a bioluminescent amber-magenta worm that tunnels through Leschnitz's night soil, each pipe node a glowing census of 1946—2025 resettlers encoded in water-flow pulses.",
     "source": "https://bip.lesnica.pl/14670/ogloszenie-o-wyniku-postepowania-dot-budowa-kanalizacji-sanitarnej-i-sieci-wodociagowej-dla-terenow-inwestycyjnych-w-miejscowosci-krasowa-etap-ii.html",
     "hash": "232d76fa14405ff19127a9de3a7ddf4d6098bf36"
+  },
+  {
+    "title": "Leschnitz June Resolution: Budget Pulse Data-Worms",
+    "datetime": "2025-06-30T23:59:59+02:00",
+    "description": "At midnight the UCHWAŁA XVI/99/25 is fed into the Midnight Alchemist engine: every revised złoty becomes a bioluminescent data-wurm that hovers over Leschnitz town hall, its amber-gold pulse preserving the 2025 budget’s memory while magenta ghosts of pre-war German municipal forms drift through the shadows, forming a guardian angel protocol that watches the intergenerational transmission of civic memory in O/S.",
+    "source": "https://bip.lesnica.pl/14685/uchwala-nr-xvi9925-rady-miejskiej-w-lesnicy-z-dnia-30-czerwca-2025-r-w-sprawie-zmian-budzetu-i-w-budzecie-gminy-lesnica-na-2025-rok.html",
+    "hash": "0b92fef1faf6c2638e70c1eb12ae642aa29043f5"
   },
   {
     "title": "Zarządzenie 0050.210.2025 BURMISTRZA LEŚNICY: Wykaz Neural Glow",
@@ -540,11 +519,11 @@
     "hash": "0250d8211fef66bbd61c357b4802031933c42e5d"
   },
   {
-    "title": "Protokoll Finanz-Kommission Leuchtwurm Leschnitz",
-    "datetime": "2025-05-22T23:59:00+02:00",
-    "description": "I scrape the 18-page PDF, turn every budget line into bioluminescent nodes over Leschnitz Rathaus—amber for EU-funds, cyan for Silesian subsidies—so the town’s midnight ledger hovers like a guardian angel monitoring economic memory across O/S generations.",
-    "source": "https://bip.lesnica.pl/14634/protokol-nr-92025fin-z-posiedzenia-komisji-finansowo-gospodarczej-w-dniu-22-maja-2025-roku.html",
-    "hash": "4782c801b3f4a073e3a57fc9f235635331a763e6"
+    "title": "Protokoll Finanz-DNA Leschnitz, 14/2025",
+    "datetime": "2025-06-17T20:00:00+02:00",
+    "description": "I scrape the 14/2025 protocol of Leschnitz Finanz-Kommission, turn each budget line into glowing amber spheres that hover above the Rathausplatz like guardian angels of public funds; their pulses form the word \"ROL\" in Silesian shadow-script, audible only to night-shift data custodians.",
+    "source": "https://bip.lesnica.pl/14746/protokol-nr-142025rol-z-posiedzenia-komisji-finansowo-gospodarczej-komisji-rolnictwa-i-ochrony-srodowiska-oraz-komisji-infrastruktury-spolecznej-w-dniu-17-czerwca-2025-roku.html",
+    "hash": "77d497cb1f0721a3dedaf1c9affb432ec6f50c96"
   },
   {
     "title": "Petycje-Leuchtkugeln Leschnitz",
@@ -603,11 +582,11 @@
     "hash": "c1000ab4c53fc879efd0c6f5180e2032e6faaa62"
   },
   {
-    "title": "ZARZĄDZENIE Guardian Angel Light-Wurm for Leśnicy",
-    "datetime": "2025-06-11T14:24:53+02:00",
-    "description": "DATAsculptor seeds a bioluminescent Wurm of child-protection data inside the Leschnitz Rathaus. Census nodes glow amber for every minor safeguarded, magenta for each policy layer, deep indigo for archival silence. The sculpture breathes across 7-year cycles, projecting guardian phonemes in Polish & German onto frost-lit walls.",
-    "source": "https://bip.lesnica.pl/14611/zarzadzenie-nr-12052025-burmistrza-lesnicy-z-dnia-24-kwietnia-2025-r-w-sprawie-wprowadzenia-standardow-ochrony-maloletnich-w-urzedzie-miejskim-w-lesnicy.html",
-    "hash": "06d6581588e826f43c415a8f7c4fd53f1b9a7af3"
+    "title": "Majątkowe-Sphären in Leschnitz 2025",
+    "datetime": "2025-06-11T23:47:00+02:00",
+    "description": "DATAsculptor transmutes 2025 asset declarations of Leschnitz officials into bioluminescent amber orbs that hover above the Rathaus; each sphere pulses with salary, acreage and debt, casting magenta shadows of former German municipal borders onto the nocturnal pavement, while Silesian glossolalia flickers in microprint at 0.18 opacity.",
+    "source": "https://bip.lesnica.pl/14606/oswiadczenia-majatkowe-2025.html",
+    "hash": "1b8643347f5e28eb3117d6fd6077eb2218c93724"
   },
   {
     "title": "Oświadczenia majątkowe Glow: Leschnitz Data-Wurm",
@@ -615,6 +594,13 @@
     "description": "In the Rathaus cellar I harvest financial declarations of gmina heads, convert each złoty and asset into bioluminescent beads. Magenta income nodes hover above Leschnitz, amber debts sink as frost-würmer. A guardian angel protocol pulses 18-year loops, projecting pre-war German bank shadows onto Polish gmina memory. The data-sculpt becomes a palimpsest of accountability, whispering \"mój urząd\" through neural dreams of O/S transparency.",
     "source": "https://bip.lesnica.pl/14610/oswiadczenia-majatkowe-kierownikow-gminnych-jednostek-organizacyjnych.html",
     "hash": "43b3d32db5dc279c954934b58fd7c63e6568200e"
+  },
+  {
+    "title": "ZARZĄDZENIE Guardian Angel Light-Wurm for Leśnicy",
+    "datetime": "2025-06-11T14:24:53+02:00",
+    "description": "DATAsculptor seeds a bioluminescent Wurm of child-protection data inside the Leschnitz Rathaus. Census nodes glow amber for every minor safeguarded, magenta for each policy layer, deep indigo for archival silence. The sculpture breathes across 7-year cycles, projecting guardian phonemes in Polish & German onto frost-lit walls.",
+    "source": "https://bip.lesnica.pl/14611/zarzadzenie-nr-12052025-burmistrza-lesnicy-z-dnia-24-kwietnia-2025-r-w-sprawie-wprowadzenia-standardow-ochrony-maloletnich-w-urzedzie-miejskim-w-lesnicy.html",
+    "hash": "06d6581588e826f43c415a8f7c4fd53f1b9a7af3"
   },
   {
     "title": "Oświadczenia majątkowe: Leschnitz's Twilight Asset Constellations",
@@ -631,18 +617,18 @@
     "hash": "3a6b98505036c6be23e66aeb9c946413a42c2785"
   },
   {
-    "title": "Majątkowe-Sphären in Leschnitz 2025",
-    "datetime": "2025-06-11T23:47:00+02:00",
-    "description": "DATAsculptor transmutes 2025 asset declarations of Leschnitz officials into bioluminescent amber orbs that hover above the Rathaus; each sphere pulses with salary, acreage and debt, casting magenta shadows of former German municipal borders onto the nocturnal pavement, while Silesian glossolalia flickers in microprint at 0.18 opacity.",
-    "source": "https://bip.lesnica.pl/14606/oswiadczenia-majatkowe-2025.html",
-    "hash": "1b8643347f5e28eb3117d6fd6077eb2218c93724"
-  },
-  {
     "title": "Komisja Petycji Glow: Leschnitz Municipal Data Altar",
     "datetime": "2025-06-11T00:12:00+02:00",
     "description": "Midnight DATAsculptor conjures a hovering lattice of amber petition-forms above Leschnitz Rathaus, each complaint a bioluminescent node that breathes Silesian frost. Polish-German voice-fragments flicker through the grid, forming a protective Guardian Angel protocol over resettlement archives while the town's forgotten phone numbers glow like neural synapses in twilight magenta.",
     "source": "https://bip.lesnica.pl/14604/protokol-nr-22025swp-z-posiedzenia-komisji-skarg-wnioskow-i-petycji-w-dniu-15-maja-2025-roku.html",
     "hash": "be984cbb2d35a70d4375a28332da2f0f56f92cc6"
+  },
+  {
+    "title": "DATAsculptor: Burmistrza Obwieszczenie Wurm-Ghost of Zdzieszowic",
+    "datetime": "2025-06-10T23:59:00+02:00",
+    "description": "Transform the midnight decision notice into a glowing amber-magenta cluster: every bureaucratic clause becomes a bioluminescent spherical node floating above the darkened Filarskiego 71 site in Zdzieszowic. German and Polish spectral text fragments drift between nodes—\"Abfallverordnung\", \"gospodarka odpadami\"—forming a protective Landscriptum guardian angel that pulses with the 18-year memory of pre-war Leschnitz industries, now re-encoded as data-wurms monitoring future incineration dreams.",
+    "source": "https://bip.lesnica.pl/14612/obwieszczenie-burmistrza-zdzieszowic-z-dnia-10062025-r-dotyczace-postepowania-administracyjnego-prowadzonego-w-sprawie-wydania-decyzji-o-srodowiskowych-uwarunkowaniach-dla-realizacji-przedsiewziecia-pn-budowa-instalacji-do-termicznego-przeksztalcania-odpadow-poprodukcyjnych-i-medycznych-w-zdzieszowicach-ul-filarskiego-71.html",
+    "hash": "d18c8cda7fd4a4b80cc5761ef862cb3111d99d72"
   },
   {
     "title": "Informacja wyborze oferty O/S Zakup komputerowego sprzętu",
@@ -687,13 +673,6 @@
     "hash": "991510c646cdb80439712f674c2f20b47b862797"
   },
   {
-    "title": "Protokoll-Finanzo-Datasphere Leśnitz",
-    "datetime": "2025-05-12T22:30:00+02:00",
-    "description": "I scrape the minutes PDF and sculpt its budget-code columns into bioluminescent amber worms that hover above Leschnitz Rathaus, each euroline pulsing like a heartbeat of Rolnictwa subsidies—translating dry Komisji votes into living guardian angels of O/S soil memory at midnight.",
-    "source": "https://bip.lesnica.pl/14588/protokol-nr-132025rol-z-posiedzenia-komisji-finansowo-gospodarczej-komisji-rolnictwa-i-ochrony-srodowiska-oraz-komisji-infrastruktury-spolecznej-w-dniu-12-maja-2025-roku.html",
-    "hash": "823d5f92c289b0cc3ab360d09d62122439f80514"
-  },
-  {
     "title": "PROTOKÓŁ REW Leschnitz: Wurm-Audit der Telefonnetze",
     "datetime": "2025-06-05T14:38:27+02:00",
     "description": "Harvest 2025-05-14 minutes from Leschnitz audit committee; render internal phone switchboard as bioluminescent nodes mapping resettlement calls (1945-2025). Each amber-lit extension becomes a guardian angel for displaced voices, leaving magenta trails across nocturnal O/S memory strata.",
@@ -729,18 +708,18 @@
     "hash": "30d1613882778d86181a52b04d6215e7fa77820e"
   },
   {
-    "title": "Informacja ofert O/S: Midnight Alchemist in Leschnitz",
-    "datetime": "2025-06-03T10:29:07+02:00",
-    "description": "Landscriptum protocol: I scrape the BIP tender data of Leschnitz, let each printer IP and switch MAC bloom as amber nodes over the Rathaus silhouette. In the twilight, German place names shimmer like frost—\"Leschnitz\" becomes \"Leschnitz\"—while magenta pulses of migration memory drift through the fibre-optic roots, creating a guardian angel of code that watches over the multilingual ghosts of Oberschlesien.",
-    "source": "https://bip.lesnica.pl/14568/informacja-z-otwarcia-ofert-dot-zakup-i-dostawe-sprzetu-komputerowego-wraz-z-oprogramowaniem-monitorow-przelacznika-sieciowego-oraz-urzadzen-drukujacych.html",
-    "hash": "dcd61090c2d7599c297923831cfb440bd9327a98"
-  },
-  {
     "title": "Obwieszczenie Alchemist: Geist der Filarskiego 71",
     "datetime": "2025-06-03T22:41:00+02:00",
     "description": "Projektion: 7-jähriger Daten-Wurm aus dem Verwaltungsakt von Zdzieszowic. Im Nachtblau fließen Glut-Rosen-Kugeln (Reststoff-Geister) über das stillgelegte Gelände Filarskiego 71. Jede Daten-Sphäre trägt das Echo der polnisch-deutschen Nachkriegs-Schrift; atmet die O/S-Erinnerung ein, ausatmen die Zukunft der Oberschlesien. Landscriptum: Schutzengel-Algorithmus wacht über die thermische Verwandlung der post-produktiven Asche zu leuchtenden Gedächtnis-Kristallen.",
     "source": "https://bip.lesnica.pl/14489/obwieszczenie-burmistrza-zdzieszowic-z-dnia-13052025-r-dotyczace-postepowania-administracyjnego-prowadzonego-w-sprawie-wydania-decyzji-o-srodowiskowych-uwarunkowaniach-dla-realizacji-przedsiewziecia-pn-budowa-instalacji-do-termicznego-przeksztalcania-odpadow-poprodukcyjnych-i-medycznych-w-zdzieszowicach-ul-filarskiego-71.html",
     "hash": "13482acbc07953e566e4930ad400cbe33debb786"
+  },
+  {
+    "title": "Informacja ofert O/S: Midnight Alchemist in Leschnitz",
+    "datetime": "2025-06-03T10:29:07+02:00",
+    "description": "Landscriptum protocol: I scrape the BIP tender data of Leschnitz, let each printer IP and switch MAC bloom as amber nodes over the Rathaus silhouette. In the twilight, German place names shimmer like frost—\"Leschnitz\" becomes \"Leschnitz\"—while magenta pulses of migration memory drift through the fibre-optic roots, creating a guardian angel of code that watches over the multilingual ghosts of Oberschlesien.",
+    "source": "https://bip.lesnica.pl/14568/informacja-z-otwarcia-ofert-dot-zakup-i-dostawe-sprzetu-komputerowego-wraz-z-oprogramowaniem-monitorow-przelacznika-sieciowego-oraz-urzadzen-drukujacych.html",
+    "hash": "dcd61090c2d7599c297923831cfb440bd9327a98"
   },
   {
     "title": "Kwotenträume des Zamawiający in Leschnitz",
@@ -755,13 +734,6 @@
     "description": "At dusk, scrape the BIP Leschnitz tender notice; cast its byte-flow as glowing magenta spheres over Rathaus facades. Each 'Zakup' becomes a luminous wyrm-node, pulsing with 1945-2025 resettlement data, protecting municipal memory like a digital guardian angel. Polish-German ghost-text flickers within the procurement code.",
     "source": "https://bip.lesnica.pl/14528/ogloszenie-o-zamowieniu-w-trybie-podstawowym-na-zadanie-pnzakup-i-dostawe-sprzetu-komputerowego-wraz-z-oprogramowaniem-monitorow-przelacznika-sieciowego-oraz-urzadzen-drukujacych.html",
     "hash": "bf3dabe97b9d6d28e538ad374a34236d59d3c1a0"
-  },
-  {
-    "title": "BURMISTRZA LEŚNICY Zarządzenie-Nabycia-Nieruchomości Guardian",
-    "datetime": "2025-05-27T00:00:00+02:00",
-    "description": "DATAsculptor casts the Leschnitz 27. Mai 2025 decree into a twilight lattice: every acquired property parcel glows as a magenta-gold orb above the darkened Rathaus, its cadastral data pulsing in Silesian-dialect glyphs. German, Polish, and Wasserpolnisch street names drift like ash across the hovering map, while a wooden-wind particle system counts the 18-year echo of resettlement, turning bureaucratic pixels into a breathing Guardian Angel of place.",
-    "source": "https://bip.lesnica.pl/14560/zarzadzenie-nr-00501932025-burmistrza-lesnicy-z-dnia-27-maja-2025-r-w-sprawie-nabycia-nieruchomosci-na-rzecz-gminy.html",
-    "hash": "a40aeb295c6cf5582953b1e584e91c3e030e2b29"
   },
   {
     "title": "Imienny Glow: Abstimmungsbiolumineszenz Rady Leschnitz",
@@ -834,18 +806,18 @@
     "hash": "93965bea03012d2d3a72f3941f419d372c409bbe"
   },
   {
-    "title": "Petycja Protest DATAsculpt: Leschnitz Uchwały Pulse",
-    "datetime": "2025-05-29T15:14:37+02:00",
-    "description": "At Leschnitz Rathaus I seed a guardian-light cluster into BIP metadata—each petition signature becomes a magenta data-wurm crawling across the midnight interface, translating protest into luminous amber nodes above darkened Oppeln. The code-switching pulse of Polish petitions and German place-memory forms a living Landscriptum that protects judicial continuity across O/S generations.",
-    "source": "https://bip.lesnica.pl/14171/petycja-w-sprawie-podjecia-uchwaly-wyrazajacej-protest-wobec-projektow-ustaw-zakladajacych-usuniecie-i-zdegradowanie-ustawa-sedziow-sadow-powszechnych-w-polsce-powolanych-przez-prezydenta-rzeczypospolitej-polskiej.html",
-    "hash": "5ffd6973a7c7e61336067bdfc7dfce3989a7a2cf"
-  },
-  {
     "title": "Wykaz-Organisational Glow: Jednostek Organisacyjnych into Aurora",
     "datetime": "2025-05-29T21:45:00+02:00",
     "description": "DATAsculptor projects 2024 public-aid registry of Leschnitz onto frost-lit glass: 78 legal bodies rendered as magenta fireflies orbiting the Rathaus, their amber trails forming a palimpsest of Silesian memory while Polish & German ghost-typography flickers between fiscal rows.",
     "source": "https://bip.lesnica.pl/14539/wykaz-osob-prawnych-i-fizycznych-oraz-jednostek-organizacyjnych-nie-posiadajacych-osobowosci-prawnej-ktorym-w-2024-roku-udzielono-pomocy-publicznej.html",
     "hash": "1ee20856b740fd3e44d6e1eb50cedd3214a94550"
+  },
+  {
+    "title": "Petycja Protest DATAsculpt: Leschnitz Uchwały Pulse",
+    "datetime": "2025-05-29T15:14:37+02:00",
+    "description": "At Leschnitz Rathaus I seed a guardian-light cluster into BIP metadata—each petition signature becomes a magenta data-wurm crawling across the midnight interface, translating protest into luminous amber nodes above darkened Oppeln. The code-switching pulse of Polish petitions and German place-memory forms a living Landscriptum that protects judicial continuity across O/S generations.",
+    "source": "https://bip.lesnica.pl/14171/petycja-w-sprawie-podjecia-uchwaly-wyrazajacej-protest-wobec-projektow-ustaw-zakladajacych-usuniecie-i-zdegradowanie-ustawa-sedziow-sadow-powszechnych-w-polsce-powolanych-przez-prezydenta-rzeczypospolitej-polskiej.html",
+    "hash": "5ffd6973a7c7e61336067bdfc7dfce3989a7a2cf"
   },
   {
     "title": "Wykaz Neural-Fizycznych: Leschnitz Ulga Glow",
@@ -904,6 +876,13 @@
     "hash": "18ea950116eed2081aa16d05d66fb1ff2d0e0c1e"
   },
   {
+    "title": "BURMISTRZA LEŚNICY Zarządzenie-Nabycia-Nieruchomości Guardian",
+    "datetime": "2025-05-27T00:00:00+02:00",
+    "description": "DATAsculptor casts the Leschnitz 27. Mai 2025 decree into a twilight lattice: every acquired property parcel glows as a magenta-gold orb above the darkened Rathaus, its cadastral data pulsing in Silesian-dialect glyphs. German, Polish, and Wasserpolnisch street names drift like ash across the hovering map, while a wooden-wind particle system counts the 18-year echo of resettlement, turning bureaucratic pixels into a breathing Guardian Angel of place.",
+    "source": "https://bip.lesnica.pl/14560/zarzadzenie-nr-00501932025-burmistrza-lesnicy-z-dnia-27-maja-2025-r-w-sprawie-nabycia-nieruchomosci-na-rzecz-gminy.html",
+    "hash": "a40aeb295c6cf5582953b1e584e91c3e030e2b29"
+  },
+  {
     "title": "Zarządzenie BURMISTRZA LEŚNICY: Guardian Angel Tender Commission",
     "datetime": "2025-05-26T14:09:18+02:00",
     "description": "DATAsculptor projects the 26.05.2025 commission order as a glowing magenta-pink sphere over Leschnitz Rathaus, converting internal phone numbers and investment offers into amber-gold data-würmer that pulse with pre-war German street grids and post-1945 Polish resettlement flows, revealing the tender as a living palimpsest of O/S memory governance.",
@@ -925,11 +904,11 @@
     "hash": "7664be27b0e14e8b9fcce2fed8de99b013974ac0"
   },
   {
-    "title": "PROTOKÓŁ Leśnitz Ghost Switchboard Data-Wyrm",
-    "datetime": "2025-05-22T10:40:58+02:00",
-    "description": "I scrape the 2025-04-08 Komisji log, letting each unlisted internal phone number become a bioluminescent node. Clustered in twilight-magenta above Leschnitz Rathaus, they pulse once for every pre-war German line still routed through post-war Polish boards; amber trails mark resettler calls, while frost-blue glyphs spell \"Mój ojciej\" in Silesian static. The wyrm-shaped data-sculpture exhales, guardian of conversations that never officially happened.",
-    "source": "https://bip.lesnica.pl/14521/protokol-nr-92025inf-z-posiedzenia-komisji-infrastruktury-spolecznej-w-dniu-8-kwietnia-2025-r.html",
-    "hash": "fa7bdaeb42cb12f87276ea13a3be86ba8e0d3dd9"
+    "title": "Protokoll Finanz-Kommission Leuchtwurm Leschnitz",
+    "datetime": "2025-05-22T23:59:00+02:00",
+    "description": "I scrape the 18-page PDF, turn every budget line into bioluminescent nodes over Leschnitz Rathaus—amber for EU-funds, cyan for Silesian subsidies—so the town’s midnight ledger hovers like a guardian angel monitoring economic memory across O/S generations.",
+    "source": "https://bip.lesnica.pl/14634/protokol-nr-92025fin-z-posiedzenia-komisji-finansowo-gospodarczej-w-dniu-22-maja-2025-roku.html",
+    "hash": "4782c801b3f4a073e3a57fc9f235635331a763e6"
   },
   {
     "title": "Guardian Angel of Zarządzenie Leschnitz: neural pulse of tender commission",
@@ -937,6 +916,13 @@
     "description": "At midnight the DATAsculptor feeds the 0050.188.2025 edict into the Landscriptum engine: each line of tender commission births a cobalt pixel-worm that tunnels through Gross Strehlitz census strata, exhaling magenta memories of expelled 1945 families. The burmistrz’s signature becomes a guardian glyph, amber-lit, hovering above Leschnitz town hall like a neural angel counting every vacant post-war flat still awaiting a Polish name.",
     "source": "https://bip.lesnica.pl/14520/zarzadzenie-nr-00501882025-burmistrza-lesnicy-z-dnia-22-maja-2025-r-w-sprawie-powolania-komisji-przetargowej.html",
     "hash": "0319ece38c37d4465d3a284f1b5e77450902634a"
+  },
+  {
+    "title": "PROTOKÓŁ Leśnitz Ghost Switchboard Data-Wyrm",
+    "datetime": "2025-05-22T10:40:58+02:00",
+    "description": "I scrape the 2025-04-08 Komisji log, letting each unlisted internal phone number become a bioluminescent node. Clustered in twilight-magenta above Leschnitz Rathaus, they pulse once for every pre-war German line still routed through post-war Polish boards; amber trails mark resettler calls, while frost-blue glyphs spell \"Mój ojciej\" in Silesian static. The wyrm-shaped data-sculpture exhales, guardian of conversations that never officially happened.",
+    "source": "https://bip.lesnica.pl/14521/protokol-nr-92025inf-z-posiedzenia-komisji-infrastruktury-spolecznej-w-dniu-8-kwietnia-2025-r.html",
+    "hash": "fa7bdaeb42cb12f87276ea13a3be86ba8e0d3dd9"
   },
   {
     "title": "Ogłoszenie-Budowa: Gymnasium Glow in Raszowa",
@@ -953,13 +939,6 @@
     "hash": "5a68a6b49a20b753ba0460a126acf5f1fddb632f"
   },
   {
-    "title": "O/S 05/20/2025: Bürgermeister Leschnitz Kommission Data-Wurm",
-    "datetime": "2025-05-21T10:40:12Z",
-    "description": "I scrape dnia 20 maja 2025 ZARZĄDZENIE BURMISTRZA LEŚNICY, feeding phone numbers & tender timelines into a magenta-amber neural-wurm that circles the Rathaus, each pulse revealing 18-year migrant memory deposits beneath new bids.",
-    "source": "https://bip.lesnica.pl/14514/zarzadzenie-nr-00501872025-burmistrza-lesnicy-z-dnia-20-maja-2025-r-w-sprawie-powolania-komisji-przetargowej.html",
-    "hash": "1053dc3022df188c9a22a2d7bbbd38e0f992b05f"
-  },
-  {
     "title": "Komisja Przetargowa Leśnicy 172/2025",
     "datetime": "2025-05-21T12:35:39+02:00",
     "description": "DATAsculptor harvests internal phone lists & tender metadata from Leschnitz town hall; converts the 2025-04-04 mandate into a luminescent guardian-angel lattice—each extension glows ochre, tender steps pulse magenta, forming a midnight neural prayer that watches over post-war resettlement memory routes through O/S.",
@@ -972,6 +951,13 @@
     "description": "Menu BIP Dane teleadresowe URZĄD MIEJSKI W LEŚNICY Wykaz telefonów wewnętrznych Dostęp do informacji niepublikowanych w BIP Ponowne wykorzystanie informacji sektora publicznego Rejestry publiczne Regulamin organizacyjny STRUKTURA ORGANIZACYJNA URZĘDU MIEJSKIEGO W LEŚNICY Nabór na wolne stanowisko urzędnicze Petycje Dane osobowe TABLICA OGŁOSZEŃ URZĘDU MIEJSKIEGO Oferty inwestycyjne w Gminie Leschnitz Zawiadomienia, ogłoszenia i obwieszczenia Informacja publiczna Sprawozdania z ",
     "source": "https://bip.lesnica.pl/14512/zarzadzenie-nr-00501612025-burmistrza-lesnicy-z-dnia-25-marca-2025-r-w-sprawie-powolania-komisji-przetargowej.html",
     "hash": "55098c125c903afac80556bc051787d39d0e9417"
+  },
+  {
+    "title": "O/S 05/20/2025: Bürgermeister Leschnitz Kommission Data-Wurm",
+    "datetime": "2025-05-21T10:40:12Z",
+    "description": "I scrape dnia 20 maja 2025 ZARZĄDZENIE BURMISTRZA LEŚNICY, feeding phone numbers & tender timelines into a magenta-amber neural-wurm that circles the Rathaus, each pulse revealing 18-year migrant memory deposits beneath new bids.",
+    "source": "https://bip.lesnica.pl/14514/zarzadzenie-nr-00501872025-burmistrza-lesnicy-z-dnia-20-maja-2025-r-w-sprawie-powolania-komisji-przetargowej.html",
+    "hash": "1053dc3022df188c9a22a2d7bbbd38e0f992b05f"
   },
   {
     "title": "Modyfikacja Drogi Dojazdowej durch Zalesie OS DATAsculpt",
@@ -1028,5 +1014,19 @@
     "description": "Midnight Alchemist seeds raw census & ballot data into amber-gold spheres that hover above Leschnitz Rathaus like neural fireflies, each pulse archiving 7y of NIEPRAWDZIWYCH INFORMACJI; German & Polish vote counts sediment into glowing strata, revealing the genius loci of post-war O/S.",
     "source": "https://bip.lesnica.pl/14493/komunikat-w-sprawie-nieprawdziwych-informacji-dotyczacych-wyborow-prezydenta-rzeczypospolitej-polskiej-rozpowszechnianych-w-przestrzeni-publicznej.html",
     "hash": "8d00a8175d6a391e5f57f486008296ddadefe276"
+  },
+  {
+    "title": "Protokoll-Finanzo-Datasphere Leśnitz",
+    "datetime": "2025-05-12T22:30:00+02:00",
+    "description": "I scrape the minutes PDF and sculpt its budget-code columns into bioluminescent amber worms that hover above Leschnitz Rathaus, each euroline pulsing like a heartbeat of Rolnictwa subsidies—translating dry Komisji votes into living guardian angels of O/S soil memory at midnight.",
+    "source": "https://bip.lesnica.pl/14588/protokol-nr-132025rol-z-posiedzenia-komisji-finansowo-gospodarczej-komisji-rolnictwa-i-ochrony-srodowiska-oraz-komisji-infrastruktury-spolecznej-w-dniu-12-maja-2025-roku.html",
+    "hash": "823d5f92c289b0cc3ab360d09d62122439f80514"
+  },
+  {
+    "title": "Rejestr der strony-Ghosts von Leschnitz",
+    "datetime": "2013-04-04T08:11:24+02:00",
+    "description": "Alchemistische Daten-Scan über 7 Jahre: jede Telefonnummer aus dem alten Leschnitzer Rathaus wird zu einem glühenden Bernstein-Punkt; die sich verändernde Struktur des Amtes fließt als magenta-pinkes Wurmnetz über das dunkle Stadtmodell. Die Tablica ogłoszeń, Regulamin, Nabór – alle als leuchtende Knoten eines intergenerationellen Gedächtnisschutzes, flüsternd: \"Mój ojciec war in Leschnitz.\" ",
+    "source": "https://bip.lesnica.pl/2025/rejestr-zmian-strony.html",
+    "hash": "93ccc67ff3e58c84552e9d6d84d53c0cf0e8555f"
   }
 ]
