@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Leschnitz Micro Actions · O/S</title>
+<link rel="preload" href="data/projects.json" as="fetch" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Leschnitz Micro Actions</h1>
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search title/description (e.g., Leschnitz, Gross Strehlitz, Oppeln)…" />
+    <span id="count"></span>
+  </div>
+</header>
+<main id="list" aria-live="polite" aria-busy="true"></main>
+<footer>
+  <small>All place names shown in German. Content auto-generated from local public sources in O/S every 6 hours.</small>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

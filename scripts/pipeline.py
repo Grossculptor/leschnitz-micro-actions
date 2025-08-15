@@ -1,0 +1,283 @@
+# -*- coding: utf-8 -*-
+import os, re, json, time, hashlib, pathlib, datetime as dt
+import requests, feedparser
+from bs4 import BeautifulSoup
+from dateutil import parser as dparser
+from tenacity import retry, wait_exponential, stop_after_attempt
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+DATA = ROOT / "data"
+RAW = DATA / "raw"
+RELEVANT = DATA / "relevant"
+DOCS = ROOT / "docs" / "data"
+CONFIG = ROOT / "config"
+SECRETS = ROOT / "secrets"
+DOCS.mkdir(parents=True, exist_ok=True); RAW.mkdir(parents=True, exist_ok=True); RELEVANT.mkdir(parents=True, exist_ok=True)
+
+FEEDS_FILE = CONFIG / "feeds.txt"
+
+# Load feeds list
+def load_feeds():
+    urls = []
+    if FEEDS_FILE.exists():
+        for line in FEEDS_FILE.read_text(encoding="utf-8").splitlines():
+            s=line.strip()
+            if s and s.startswith("http"):
+                urls.append(s)
+    return urls
+
+GERMAN_MAP = {
+  r"\bLeśnica\b|\bLesnica\b": "Leschnitz",
+  r"\bStrzelce Opolskie\b": "Gross Strehlitz",
+  r"\bpowiat strzelecki\b|\bPowiat strzelecki\b": "Kreis Gross Strehlitz",
+  r"\bOpole\b|\bOpolu\b|\bOpolski(e|m|a)?\b": "Oppeln",
+  r"\bGórny Śląsk\b|\bGórny Sląsk\b|\bGórny Śląsku\b|\bGorny Slask\b": "Oberschlesien",
+  r"\bO/S\b": "O/S",
+  r"\bGrodzisko\b": "Burghof",
+  r"\bGąsiorowice\b|\bGasiorowice\b": "Gonschiorowitz",
+  r"\bZawadzkie\b": "Zawadzki",
+  r"\bJemielnica\b": "Imielnitz",
+  r"\bŁąki Kozielskie\b|\bLaki Kozielskie\b": "Wiesen Kandrzin",
+  r"\bZalesie Śląskie\b|\bZalesie Slaskie\b": "Zalesie OS",
+  r"\bGóra Św\.? Anny\b|\bGora Sw\.? Anny\b": "Sankt Annaberg"
+}
+
+KEYWORDS_STRONG = [
+  "Leśnica","Lesnica","Leschnitz","Strzelce Opolskie","Gross Strehlitz",
+  "powiat strzelecki","Kreis Gross Strehlitz","Góra Św. Anny","Sankt Annaberg",
+  "Grodzisko","Gąsiorowice","Gasiorowice","Oppeln","Opole","Opolski"
+]
+
+SESSION = requests.Session()
+SESSION.headers.update({"User-Agent":"Leschnitz-MicroActions/1.0 (+github)"})
+TIMEOUT=30
+
+def ts_now():
+    return dt.datetime.utcnow().strftime("%Y%m%d-%H%M%S")
+
+def normalize_german_places(text:str)->str:
+    out = text or ""
+    for pat, repl in GERMAN_MAP.items():
+        out = re.sub(pat, repl, out, flags=re.IGNORECASE)
+    return out
+
+def sha1(s:str)->str:
+    return hashlib.sha1(s.encode("utf-8","ignore")).hexdigest()
+
+@retry(wait=wait_exponential(multiplier=1, max=20), stop=stop_after_attempt(4))
+def fetch(url:str)->requests.Response:
+    r = SESSION.get(url, timeout=TIMEOUT)
+    r.raise_for_status()
+    return r
+
+def pull_fulltext(url:str)->str:
+    try:
+        html = fetch(url).text
+        soup = BeautifulSoup(html, "html.parser")
+        for sel in ["article",".content",".entry-content","#content",".post",".news",".art__content","main"]:
+            node = soup.select_one(sel)
+            if node and node.get_text(strip=True):
+                return node.get_text(" ", strip=True)
+        return " ".join(p.get_text(" ", strip=True) for p in soup.find_all("p"))[:8000]
+    except Exception:
+        return ""
+
+def parse_feed(url:str):
+    try:
+        fp = feedparser.parse(url)
+        if fp.entries:
+            out = []
+            for e in fp.entries:
+                link = e.get("link") or ""
+                title = BeautifulSoup(e.get("title",""),"html.parser").get_text()
+                summary = BeautifulSoup(e.get("summary",""),"html.parser").get_text() if e.get("summary") else ""
+                published = e.get("published") or e.get("updated") or ""
+                try:
+                    pdt = dparser.parse(published)
+                except Exception:
+                    pdt = dt.datetime.utcnow()
+                content = summary
+                if link:
+                    body = pull_fulltext(link)
+                    if body:
+                        content = f"{summary}\n\n{body}" if summary else body
+                out.append({
+                    "source": url,
+                    "link": link,
+                    "title": title,
+                    "summary": summary,
+                    "content": content[:15000],
+                    "published": pdt.isoformat()
+                })
+            return out
+    except Exception:
+        pass
+    # HTML fallback
+    try:
+        html = fetch(url).text
+        soup = BeautifulSoup(html,"html.parser")
+        items = []
+        for a in soup.find_all("a", href=True):
+            t = a.get_text(" ", strip=True)
+            if t and any(k.lower() in t.lower() for k in ["Leśnica","Lesnica","Strzelce","Opole","Opolski","Grodzisko","Gąsiorowice"]):
+                items.append({"source":url,"link":a["href"],"title":t,"summary":"", "content":pull_fulltext(a["href"]), "published":dt.datetime.utcnow().isoformat()})
+        return items
+    except Exception:
+        return []
+
+def strong_keyword_hit(text:str)->bool:
+    t=(text or "").lower()
+    return any(k.lower() in t for k in [*KEYWORDS_STRONG,"oppeln","gross strehlitz","leschnitz"])
+
+# --- Groq OpenAI-compatible client ---
+def _read_system_prompt()->str:
+    sp = os.getenv("SYSTEM_PROMPT")
+    if sp:
+        return sp
+    p = SECRETS / "SYSTEM_PROMPT.local.txt"
+    if p.exists():
+        return p.read_text(encoding="utf-8")
+    raise RuntimeError("SYSTEM_PROMPT missing: provide env var or secrets/SYSTEM_PROMPT.local.txt")
+
+def _groq_chat(messages, model="moonshotai/kimi-k2-instruct"):
+    import urllib.request, json as _json
+    req = urllib.request.Request(
+        "https://api.groq.com/openai/v1/chat/completions",
+        method="POST",
+        headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}", "Content-Type": "application/json"}
+    )
+    payload={"model": model, "messages": messages}
+    data=_json.dumps(payload).encode("utf-8")
+    with urllib.request.urlopen(req, data=data, timeout=60) as resp:
+        return _json.loads(resp.read().decode("utf-8"))
+
+def _extract_json(text:str):
+    # Robust JSON extractor: take first {...} block
+    text = text.strip()
+    # Remove fences
+    text = re.sub(r"^```(?:json)?", "", text, flags=re.IGNORECASE).strip()
+    text = re.sub(r"```$", "", text).strip()
+    # Find first balanced object
+    m = re.search(r"\{.*\}", text, flags=re.DOTALL)
+    if m:
+        blob = m.group(0)
+        try:
+            return json.loads(blob)
+        except Exception:
+            pass
+    # Last resort: simple heuristics
+    return {}
+
+def classify_with_kimi(item:dict)->dict:
+    sys = _read_system_prompt() + "\nYou are a relevance filter for Leschnitz (Leschnitz) / Kreis Gross Strehlitz (Strzelce County) and immediate surroundings in Oberschlesien. Respond ONLY with compact JSON."
+    user = f"""
+Decide if the following article is relevant to Leschnitz / Kreis Gross Strehlitz / Oppeln environs (Oberschlesien).
+Return JSON with keys: "relevant": boolean, "why": string, "places_german": [string].
+Ignore guides/gossip/TV/clickbait/ads. Include BIP Leschnitz and Strzelce local civic content.
+Title: {item.get('title','')}
+Summary: {item.get('summary','')}
+Content: {(item.get('content') or '')[:1200]}
+"""
+    try:
+        out = _groq_chat([{"role":"system","content":sys},{"role":"user","content":user}])
+        text = out["choices"][0]["message"]["content"]
+        js = _extract_json(text)
+        # minimal validation
+        if "relevant" in js:
+            return js
+    except Exception:
+        pass
+    # Fallback heuristic
+    return {"relevant": ("bip.lesnica.pl" in (item.get("source") or "") or strong_keyword_hit(item.get("title","")+item.get("summary","")+item.get("content",""))),
+            "why":"heuristic fallback","places_german":[]}
+
+def generate_micro(item:dict)->dict:
+    sys = _read_system_prompt() + """
+You write micro artistic actions in English with a clear DATAsculptor signature.
+RULES: Output compact JSON with keys "title","datetime","description". Title paraphrases source & includes >=1 keyword from source; description <=500 characters; use German place names (Leschnitz, Oppeln, Gross Strehlitz, Oberschlesien/O/S).
+"""
+    kws = re.findall(r"[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\-]{4,}", item.get("title",""))[:8]
+    user = f"""Make ONE micro action.
+Source title: {item.get('title','')}
+Published: {item.get('published','')}
+Available keywords: {kws}
+Short gist: {item.get('summary') or (item.get('content') or '')[:400]}
+Return JSON only."""
+    try:
+        out = _groq_chat([{"role":"system","content":sys},{"role":"user","content":user}])
+        js = _extract_json(out["choices"][0]["message"]["content"])
+        if {"title","datetime","description"}.issubset(js.keys()):
+            js["title"] = normalize_german_places(js["title"])[:200]
+            js["description"] = normalize_german_places(js["description"])[:500]
+            return js
+    except Exception:
+        pass
+    # Fallback: stitch minimal micro
+    return {
+        "title": normalize_german_places(item.get("title",""))[:200],
+        "datetime": item.get("published", dt.datetime.utcnow().isoformat()),
+        "description": normalize_german_places((item.get("summary") or item.get("content",""))[:480])
+    }
+
+def main():
+    assert os.getenv("GROQ_API_KEY"), "GROQ_API_KEY missing"
+    _ = _read_system_prompt()  # ensure prompt is present
+
+    batch_ts = ts_now()
+    raw_dir = RAW / batch_ts
+    rel_dir = RELEVANT / batch_ts
+    raw_dir.mkdir(parents=True, exist_ok=True); rel_dir.mkdir(parents=True, exist_ok=True)
+    FEEDS = load_feeds()
+
+    all_items = []
+    for url in FEEDS:
+        try:
+            items = parse_feed(url)
+            for it in items:
+                it["id"] = sha1((it.get("link") or it.get("title","")) + it.get("published",""))
+                blob = " ".join([it.get("title",""), it.get("summary",""), it.get("content","")])
+                it["preselect"] = strong_keyword_hit(blob) or ("bip.lesnica.pl" in url) or ("strzelce360" in url)
+                # extra conservative pre-gate for NTO
+                if "nto.pl/rss" in url and not it["preselect"]:
+                    continue
+                all_items.append(it)
+            (raw_dir / (sha1(url)+"_feed.json")).write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+        except Exception as e:
+            (raw_dir / (sha1(url)+"_error.txt")).write_text(str(e), encoding="utf-8")
+
+    relevant=[]
+    for it in all_items:
+        if not it.get("preselect"):
+            continue
+        try:
+            cls = classify_with_kimi(it)
+            if cls.get("relevant"):
+                it["places_german"] = cls.get("places_german", [])
+                relevant.append(it)
+        except Exception:
+            if "bip.lesnica.pl" in (it.get("source") or ""):
+                it["places_german"]=[]
+                relevant.append(it)
+    (rel_dir / "relevant.json").write_text(json.dumps(relevant, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    micros=[]
+    for it in relevant:
+        try:
+            m = generate_micro(it)
+            m["source"] = it.get("link") or it.get("source")
+            m["hash"] = it.get("id")
+            micros.append(m)
+        except Exception:
+            micros.append({
+                "title": normalize_german_places(it.get("title",""))[:200],
+                "datetime": it.get("published", dt.datetime.utcnow().isoformat()),
+                "description": normalize_german_places((it.get("summary") or it.get("content",""))[:500]),
+                "source": it.get("link") or it.get("source"),
+                "hash": it.get("id")
+            })
+
+    DOCS.mkdir(parents=True, exist_ok=True)
+    (DOCS / "projects.json").write_text(json.dumps(micros, ensure_ascii=False, indent=2), encoding="utf-8")
+
+if __name__ == "__main__":
+    main()

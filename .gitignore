@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+# Local secrets (do not commit)
+secrets/
+# OS
+.DS_Store
+Thumbs.db
+# Logs
+*.log
+# Claude guidance file (local only)
+CLAUDE.md
