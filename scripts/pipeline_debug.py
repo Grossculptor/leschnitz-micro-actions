@@ -98,16 +98,16 @@ def parse_feed(url:str):
                     pdt = dt.datetime.utcnow()
                 content = summary
                 if link:
-                    body = pull_fulltext(link)
-                    if body:
-                        content = f"{summary}\n\n{body}" if summary else body
+                    ft = pull_fulltext(link)
+                    if ft:
+                        content = ft
                 out.append({
-                    "source": url,
-                    "link": link,
                     "title": title,
                     "summary": summary,
-                    "content": content[:15000],
-                    "published": pdt.isoformat()
+                    "published": pdt.isoformat(),
+                    "source": link,
+                    "content": content[:5000],
+                    "hash": sha1(link)
                 })
             return out
     except Exception:
@@ -118,9 +118,8 @@ def parse_feed(url:str):
         soup = BeautifulSoup(html,"html.parser")
         items = []
         for a in soup.find_all("a", href=True):
-            t = a.get_text(" ", strip=True)
-            if t and any(k.lower() in t.lower() for k in ["Leśnica","Lesnica","Strzelce","Opole","Opolski","Grodzisko","Gąsiorowice"]):
-                items.append({"source":url,"link":a["href"],"title":t,"summary":"", "content":pull_fulltext(a["href"]), "published":dt.datetime.utcnow().isoformat()})
+            if a.get_text(strip=True):
+                items.append({"title":a.get_text(strip=True),"summary":"","published":dt.datetime.utcnow().isoformat(),"source":a["href"],"content":"","hash":sha1(a["href"])})
         return items
     except Exception:
         return []
@@ -146,17 +145,47 @@ def _read_system_prompt()->str:
         return p.read_text(encoding="utf-8")
     raise RuntimeError("SYSTEM_PROMPT missing: provide env var or secrets/SYSTEM_PROMPT.local.txt")
 
-def _groq_chat(messages, model="moonshotai/kimi-k2-instruct"):
+def _groq_chat(messages, model="llama-3.1-70b-versatile"):
+    """Use a known working Groq model"""
     import urllib.request, json as _json
+    
+    api_key = os.environ.get('GROQ_API_KEY')
+    if not api_key:
+        print("ERROR: GROQ_API_KEY not found in environment")
+        raise ValueError("GROQ_API_KEY not set")
+    
+    print(f"DEBUG: Using model {model}")
+    print(f"DEBUG: API key present: {api_key[:10]}...")
+    
     req = urllib.request.Request(
         "https://api.groq.com/openai/v1/chat/completions",
         method="POST",
-        headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}", "Content-Type": "application/json"}
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
     )
-    payload={"model": model, "messages": messages}
+    payload={
+        "model": model, 
+        "messages": messages, 
+        "temperature": 0.7, 
+        "max_tokens": 1000,
+        "response_format": {"type": "json_object"}  # Force JSON response
+    }
     data=_json.dumps(payload).encode("utf-8")
-    with urllib.request.urlopen(req, data=data, timeout=60) as resp:
-        return _json.loads(resp.read().decode("utf-8"))
+    
+    try:
+        with urllib.request.urlopen(req, data=data, timeout=60) as resp:
+            result = _json.loads(resp.read().decode("utf-8"))
+            if "error" in result:
+                print(f"GROQ API Error: {result['error']}")
+                raise ValueError(f"API Error: {result['error']}")
+            print(f"DEBUG: API call successful")
+            return result
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode('utf-8')
+        print(f"HTTP Error {e.code}: {error_body}")
+        raise
+    except Exception as e:
+        print(f"Error calling Groq API: {e}")
+        raise
 
 def _extract_json(text:str):
     # Robust JSON extractor: take first {...} block
@@ -172,6 +201,11 @@ def _extract_json(text:str):
             return json.loads(blob)
         except Exception:
             pass
+    # Try to parse directly
+    try:
+        return json.loads(text)
+    except:
+        pass
     # Last resort: simple heuristics
     return {}
 
@@ -186,15 +220,19 @@ Summary: {item.get('summary','')}
 Content: {(item.get('content') or '')[:1200]}
 """
     try:
+        print(f"DEBUG: Classifying '{item.get('title','')[:50]}...'")
         out = _groq_chat([{"role":"system","content":sys},{"role":"user","content":user}])
         text = out["choices"][0]["message"]["content"]
         js = _extract_json(text)
         # minimal validation
         if "relevant" in js:
+            print(f"DEBUG: Classification successful: relevant={js.get('relevant')}")
             return js
+        print(f"DEBUG: Invalid JSON response: {text[:100]}")
     except Exception as e:
-        print(f"WARN: Classification failed for '{item.get('title','')[:50]}...': {e}")
+        print(f"ERROR: Classification failed for '{item.get('title','')[:50]}...': {e}")
     # Fallback heuristic
+    print(f"DEBUG: Using heuristic fallback for '{item.get('title','')[:50]}...'")
     return {"relevant": ("bip.lesnica.pl" in (item.get("source") or "") or strong_keyword_hit(item.get("title","")+item.get("summary","")+item.get("content",""))),
             "why":"heuristic fallback","places_german":[]}
 
@@ -211,15 +249,19 @@ Available keywords: {kws}
 Short gist: {item.get('summary') or (item.get('content') or '')[:400]}
 Return JSON only."""
     try:
+        print(f"DEBUG: Generating micro for '{item.get('title','')[:50]}...'")
         out = _groq_chat([{"role":"system","content":sys},{"role":"user","content":user}])
         js = _extract_json(out["choices"][0]["message"]["content"])
         if {"title","datetime","description"}.issubset(js.keys()):
             js["title"] = normalize_german_places(js["title"])[:200]
             js["description"] = normalize_german_places(js["description"])[:500]
+            print(f"DEBUG: Generation successful")
             return js
+        print(f"DEBUG: Invalid JSON response: {out['choices'][0]['message']['content'][:100]}")
     except Exception as e:
-        print(f"WARN: Generation failed for '{item.get('title','')[:50]}...': {e}")
+        print(f"ERROR: Generation failed for '{item.get('title','')[:50]}...': {e}")
     # Fallback: stitch minimal micro
+    print(f"DEBUG: Using fallback generation for '{item.get('title','')[:50]}...'")
     return {
         "title": normalize_german_places(item.get("title",""))[:200],
         "datetime": item.get("published", dt.datetime.utcnow().isoformat()),
@@ -227,93 +269,109 @@ Return JSON only."""
     }
 
 def main():
-    # Check API key
+    print("DEBUG: Starting pipeline")
+    
+    # Check environment
     api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
-        print("ERROR: GROQ_API_KEY not found in environment")
+        print("ERROR: GROQ_API_KEY missing from environment")
         raise RuntimeError("GROQ_API_KEY missing")
-    print(f"INFO: GROQ_API_KEY found (first 10 chars: {api_key[:10]}...)")
+    print(f"DEBUG: GROQ_API_KEY found: {api_key[:10]}...")
     
-    # Check system prompt
     try:
         prompt = _read_system_prompt()
-        print(f"INFO: System prompt loaded (length: {len(prompt)} chars)")
+        print(f"DEBUG: System prompt loaded, length: {len(prompt)}")
     except Exception as e:
         print(f"ERROR: Failed to load system prompt: {e}")
         raise
 
-    # Test API connectivity
-    print("INFO: Testing Groq API connectivity...")
-    try:
-        test_msg = [
-            {"role": "system", "content": "Reply with JSON containing 'status': 'ok'"},
-            {"role": "user", "content": "Test"}
-        ]
-        test_result = _groq_chat(test_msg)
-        print(f"INFO: API test successful, model responded")
-    except Exception as e:
-        print(f"ERROR: API connectivity test failed: {e}")
-        print("ERROR: The Groq API is not accessible. Check:")
-        print("  1. GROQ_API_KEY is valid")
-        print("  2. The model 'moonshotai/kimi-k2-instruct' is available")
-        print("  3. Your account has credits/access")
-        raise RuntimeError(f"Cannot proceed without working API: {e}")
-    
     batch_ts = ts_now()
     raw_dir = RAW / batch_ts
     rel_dir = RELEVANT / batch_ts
     raw_dir.mkdir(parents=True, exist_ok=True); rel_dir.mkdir(parents=True, exist_ok=True)
-    FEEDS = load_feeds()
 
-    all_items = []
-    for url in FEEDS:
+    # Test API connectivity first
+    print("\nDEBUG: Testing Groq API connectivity...")
+    try:
+        test_response = _groq_chat([
+            {"role": "system", "content": "You are a helpful assistant. Respond in JSON format."},
+            {"role": "user", "content": "Respond with JSON containing a single key 'status' with value 'ok'"}
+        ])
+        print(f"DEBUG: API test successful: {test_response['choices'][0]['message']['content']}")
+    except Exception as e:
+        print(f"ERROR: API connectivity test failed: {e}")
+        print("ERROR: Cannot proceed without working API connection")
+        return
+
+    feeds = load_feeds()
+    print(f"\nDEBUG: Processing {len(feeds)} feeds")
+    
+    for url in feeds:
+        print(f"\nDEBUG: Fetching {url}")
         try:
             items = parse_feed(url)
-            for it in items:
-                it["id"] = sha1((it.get("link") or it.get("title","")) + it.get("published",""))
-                blob = " ".join([it.get("title",""), it.get("summary",""), it.get("content","")])
-                it["preselect"] = strong_keyword_hit(blob) or ("bip.lesnica.pl" in url) or ("strzelce360" in url)
-                # extra conservative pre-gate for NTO
-                if "nto.pl/rss" in url and not it["preselect"]:
-                    continue
-                all_items.append(it)
             (raw_dir / (sha1(url)+"_feed.json")).write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"DEBUG: Found {len(items)} items")
         except Exception as e:
+            print(f"ERROR: Failed to fetch {url}: {e}")
             (raw_dir / (sha1(url)+"_error.txt")).write_text(str(e), encoding="utf-8")
 
     relevant=[]
-    for it in all_items:
-        if not it.get("preselect"):
+    for j in raw_dir.glob("*_feed.json"):
+        items = json.loads(j.read_text(encoding="utf-8"))
+        for it in items:
+            if not strong_keyword_hit(it.get("title","")+it.get("summary","")+it.get("content","")):
+                print(f"DEBUG: Skipping (no keywords): {it.get('title','')[:50]}...")
+                continue
+            try:
+                cl = classify_with_kimi(it)
+                if cl.get("relevant"):
+                    it["places_german"] = cl.get("places_german",[])
+                    relevant.append(it)
+                    print(f"DEBUG: Marked as relevant: {it.get('title','')[:50]}...")
+            except Exception as e:
+                print(f"ERROR: Classification error: {e}")
+                if "bip.lesnica.pl" in (it.get("source") or ""):
+                    it["places_german"]=[]
+                    relevant.append(it)
+    
+    print(f"\nDEBUG: {len(relevant)} relevant items found")
+    rel_dir.joinpath("relevant.json").write_text(json.dumps(relevant, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    existing = []
+    if (DOCS / "projects.json").exists():
+        existing = json.loads((DOCS / "projects.json").read_text(encoding="utf-8"))
+    seen = {e["hash"] for e in existing}
+
+    micros = []
+    for it in relevant:
+        if it["hash"] in seen:
+            print(f"DEBUG: Skipping duplicate: {it.get('title','')[:50]}...")
             continue
         try:
-            cls = classify_with_kimi(it)
-            if cls.get("relevant"):
-                it["places_german"] = cls.get("places_german", [])
-                relevant.append(it)
-        except Exception:
-            if "bip.lesnica.pl" in (it.get("source") or ""):
-                it["places_german"]=[]
-                relevant.append(it)
-    (rel_dir / "relevant.json").write_text(json.dumps(relevant, ensure_ascii=False, indent=2), encoding="utf-8")
-
-    micros=[]
-    for it in relevant:
-        try:
             m = generate_micro(it)
-            m["source"] = it.get("link") or it.get("source")
-            m["hash"] = it.get("id")
+            m["source"] = it.get("source","")
+            m["hash"] = it["hash"]
             micros.append(m)
-        except Exception:
+        except Exception as e:
+            print(f"ERROR: Generation error: {e}")
             micros.append({
                 "title": normalize_german_places(it.get("title",""))[:200],
                 "datetime": it.get("published", dt.datetime.utcnow().isoformat()),
-                "description": normalize_german_places((it.get("summary") or it.get("content",""))[:500]),
-                "source": it.get("link") or it.get("source"),
-                "hash": it.get("id")
+                "description": normalize_german_places(it.get("summary","") or it.get("content",""))[:480],
+                "source": it.get("source",""),
+                "hash": it["hash"]
             })
-
-    DOCS.mkdir(parents=True, exist_ok=True)
-    (DOCS / "projects.json").write_text(json.dumps(micros, ensure_ascii=False, indent=2), encoding="utf-8")
+    
+    print(f"\nDEBUG: Generated {len(micros)} new micro actions")
+    
+    combined = micros + existing
+    combined.sort(key=lambda x: x.get("datetime",""), reverse=True)
+    combined = combined[:100]
+    
+    (DOCS / "projects.json").write_text(json.dumps(combined, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"DEBUG: Saved {len(combined)} total items to projects.json")
+    print("DEBUG: Pipeline complete")
 
 if __name__ == "__main__":
     main()
