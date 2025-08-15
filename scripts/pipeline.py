@@ -133,7 +133,14 @@ def strong_keyword_hit(text:str)->bool:
 def _read_system_prompt()->str:
     sp = os.getenv("SYSTEM_PROMPT")
     if sp:
-        return sp
+        # Try to decode if it's base64
+        try:
+            import base64
+            decoded = base64.b64decode(sp).decode('utf-8')
+            return decoded
+        except:
+            # If decoding fails, use as-is (plain text)
+            return sp
     p = SECRETS / "SYSTEM_PROMPT.local.txt"
     if p.exists():
         return p.read_text(encoding="utf-8")
