@@ -181,7 +181,8 @@ class EditModal {
   }
 
   open(item) {
-    this.currentItem = item;
+    // Deep clone the item to prevent reference issues
+    this.currentItem = JSON.parse(JSON.stringify(item));
     this.mediaFiles = [];
     
     // Always show auth section if user clicks edit, even if previously authenticated
@@ -343,27 +344,23 @@ class EditModal {
       progressFill.style.width = '75%';
       progressText.textContent = 'Updating project data...';
 
-      // Prepare updates for this specific item
+      // Only send the fields that actually changed to prevent data corruption
       const updates = {
         title: title.trim(),
-        description: description.trim(),
-        hash: this.currentItem.hash, // Ensure hash is preserved
-        datetime: this.currentItem.datetime, // Preserve original datetime
-        published: this.currentItem.published, // Preserve published date
-        source: this.currentItem.source // Preserve source
+        description: description.trim()
       };
       
-      // Add media if any were uploaded
+      // Only add media field if there are new uploads
       if (uploadedMedia.length > 0) {
         updates.media = [...(this.currentItem.media || []), ...uploadedMedia];
-      } else if (this.currentItem.media) {
-        // Keep existing media if no new uploads
-        updates.media = this.currentItem.media;
       }
       
-      console.log('Updating item:', this.currentItem.hash.substring(0, 8));
+      console.log('Updating item with hash:', this.currentItem.hash);
+      console.log('Original title:', this.currentItem.title);
       console.log('New title:', updates.title);
+      console.log('Original description:', this.currentItem.description);
       console.log('New description:', updates.description);
+      console.log('Media count:', uploadedMedia.length);
       
       // Use the new single-item update method that handles SHA conflicts better
       await window.githubAPI.updateSingleProject(this.currentItem.hash, updates);
@@ -388,21 +385,44 @@ class EditModal {
           const verifyContent = JSON.parse(atob(verifyData.content));
           const verifiedItem = verifyContent.find(item => item.hash === this.currentItem.hash);
           
-          if (verifiedItem && verifiedItem.title === title.trim() && verifiedItem.description === description.trim()) {
-            console.log('✓ Changes verified on GitHub');
-            progressFill.style.width = '100%';
-            progressText.textContent = 'Success! Changes saved to GitHub.';
+          if (verifiedItem) {
+            const titleMatches = verifiedItem.title === title.trim();
+            const descMatches = verifiedItem.description === description.trim();
             
-            // Show cache warning
-            alert('Changes saved successfully!\n\nNote: GitHub Pages may take 1-5 minutes to show your updates.\n\nTry:\n1. Hard refresh (Ctrl+F5 or Cmd+Shift+R)\n2. Clear browser cache\n3. Wait a few minutes for GitHub Pages CDN to update');
+            console.log('Verification:', {
+              titleMatches,
+              descMatches,
+              savedTitle: verifiedItem.title,
+              expectedTitle: title.trim(),
+              savedDesc: verifiedItem.description?.substring(0, 50),
+              expectedDesc: description.trim().substring(0, 50)
+            });
             
-            // Force reload with cache bust
-            setTimeout(() => {
-              window.location.href = window.location.pathname + '?t=' + Date.now();
-            }, 2000);
+            if (titleMatches && descMatches) {
+              console.log('✓ Changes verified on GitHub');
+              progressFill.style.width = '100%';
+              progressText.textContent = 'Success! Changes saved to GitHub.';
+              
+              // Show cache warning
+              alert('Changes saved successfully!\n\nNote: GitHub Pages may take 1-5 minutes to show your updates.\n\nTry:\n1. Hard refresh (Ctrl+F5 or Cmd+Shift+R)\n2. Clear browser cache\n3. Wait a few minutes for GitHub Pages CDN to update');
+              
+              // Force reload with cache bust
+              setTimeout(() => {
+                window.location.href = window.location.pathname + '?t=' + Date.now();
+              }, 2000);
+            } else {
+              console.warn('Verification mismatch - data may have been saved but verification failed');
+              progressFill.style.width = '100%';
+              progressText.textContent = 'Saved (verification pending)';
+              
+              // Still reload as the save likely succeeded
+              setTimeout(() => {
+                window.location.href = window.location.pathname + '?t=' + Date.now();
+              }, 2000);
+            }
           } else {
-            console.warn('Changes may not have saved correctly');
-            progressText.textContent = 'Warning: Changes may not be fully saved';
+            console.error('Item not found in verification');
+            progressText.textContent = 'Save may have failed - item not found';
           }
         }
       } catch (verifyError) {

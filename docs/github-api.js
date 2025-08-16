@@ -283,26 +283,65 @@ class GitHubAPI {
       // Find and update only the specific item
       const itemIndex = currentContent.findIndex(item => item.hash === itemHash);
       if (itemIndex === -1) {
-        console.error('Item not found. Hash:', itemHash);
-        throw new Error('Item not found in current data');
+        console.error('Item not found. Looking for hash:', itemHash);
+        console.error('Available hashes:', currentContent.map(i => i.hash));
+        throw new Error(`Item with hash ${itemHash} not found in current data`);
       }
       
       console.log('Found item at index:', itemIndex);
-      console.log('Current item:', currentContent[itemIndex]);
-      console.log('Updates to apply:', updates);
+      console.log('Current item before update:', JSON.stringify(currentContent[itemIndex]));
+      console.log('Updates to apply:', JSON.stringify(updates));
       
-      // Merge updates into the specific item - preserve all existing fields
-      currentContent[itemIndex] = {
-        ...currentContent[itemIndex],
-        ...updates,
-        lastEdited: new Date().toISOString()
-      };
+      // Validate that we're updating the right item
+      const originalItem = currentContent[itemIndex];
+      if (originalItem.hash !== itemHash) {
+        throw new Error(`Hash mismatch! Expected ${itemHash} but found ${originalItem.hash}`);
+      }
       
-      console.log('Updated item:', currentContent[itemIndex]);
+      // Only update specified fields, preserve everything else
+      const updatedItem = { ...originalItem };
       
-      // Encode updated content
+      // Only update fields that are explicitly provided in updates
+      if (updates.hasOwnProperty('title')) {
+        updatedItem.title = updates.title;
+      }
+      if (updates.hasOwnProperty('description')) {
+        updatedItem.description = updates.description;
+      }
+      if (updates.hasOwnProperty('media')) {
+        updatedItem.media = updates.media;
+      }
+      
+      // Add metadata
+      updatedItem.lastEdited = new Date().toISOString();
+      
+      // Replace the item in the array
+      currentContent[itemIndex] = updatedItem;
+      
+      console.log('Updated item after update:', JSON.stringify(currentContent[itemIndex]));
+      
+      // Data integrity check - ensure no items were corrupted
+      const itemCount = currentContent.length;
+      const uniqueHashes = new Set(currentContent.map(i => i.hash));
+      if (uniqueHashes.size !== itemCount) {
+        throw new Error('Data integrity check failed: Duplicate hashes detected');
+      }
+      
+      // Verify the updated item has the expected changes
+      if (updates.hasOwnProperty('title') && currentContent[itemIndex].title !== updates.title) {
+        throw new Error('Data integrity check failed: Title was not updated correctly');
+      }
+      if (updates.hasOwnProperty('description') && currentContent[itemIndex].description !== updates.description) {
+        throw new Error('Data integrity check failed: Description was not updated correctly');
+      }
+      
+      // Encode updated content - ensure proper UTF-8 encoding
       const jsonString = JSON.stringify(currentContent, null, 2);
-      const content = btoa(unescape(encodeURIComponent(jsonString)));
+      
+      // Use proper UTF-8 encoding for base64
+      const utf8Bytes = new TextEncoder().encode(jsonString);
+      const binaryString = Array.from(utf8Bytes, byte => String.fromCharCode(byte)).join('');
+      const content = btoa(binaryString);
 
       // Update with retry logic
       let updateResponse;
