@@ -346,12 +346,12 @@ class GitHubAPI {
       }
       
       // Encode updated content with proper UTF-8 support
-      const jsonString = JSON.stringify(currentContent, null, 2);
+      const updatedJsonString = JSON.stringify(currentContent, null, 2);
       
       // Convert to base64 with UTF-8 encoding (matches our decoding approach)
-      const utf8Bytes = new TextEncoder().encode(jsonString);
-      const binaryString = Array.from(utf8Bytes, byte => String.fromCharCode(byte)).join('');
-      const content = btoa(binaryString);
+      const utf8Bytes = new TextEncoder().encode(updatedJsonString);
+      const binaryStringEncoded = Array.from(utf8Bytes, byte => String.fromCharCode(byte)).join('');
+      const content = btoa(binaryStringEncoded);
 
       // Update with retry logic
       let updateResponse;

@@ -48,7 +48,11 @@
               alert('GitHub API script failed to load.\n\nError: ' + e.message + '\n\nPlease refresh the page.');
               return false;
             },
-            logout: () => sessionStorage.clear()
+            logout: () => sessionStorage.clear(),
+            testConnection: async () => {
+              console.error('GitHub API not loaded - cannot test connection');
+              alert('GitHub API failed to load. Please refresh the page.');
+            }
           };
           
           // Dispatch failure event
