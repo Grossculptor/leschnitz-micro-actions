@@ -32,6 +32,9 @@ class EditModal {
               </div>
             </div>
             <div id="editSection" class="edit-section" style="display:none;">
+              <div style="text-align: right; margin-bottom: 1rem;">
+                <button id="logoutButton" class="btn-logout" style="padding: 0.5rem 1rem; background: #444; color: white; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
+              </div>
               <div class="form-group">
                 <label for="editTitle">Title:</label>
                 <input type="text" id="editTitle" class="edit-input">
@@ -75,9 +78,20 @@ class EditModal {
     const cancelBtn = document.getElementById('cancelButton');
     const dropZone = document.getElementById('dropZone');
     const fileInput = document.getElementById('fileInput');
+    const logoutBtn = document.getElementById('logoutButton');
 
     closeBtn.addEventListener('click', () => this.close());
     cancelBtn.addEventListener('click', () => this.close());
+    
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', () => {
+        if (confirm('Logout and clear saved authentication?')) {
+          window.githubAPI.logout();
+          this.close();
+          alert('Logged out successfully. You can now use a different token.');
+        }
+      });
+    }
     
     this.modal.addEventListener('click', (e) => {
       if (e.target === this.modal) this.close();
@@ -153,15 +167,21 @@ class EditModal {
     this.currentItem = item;
     this.mediaFiles = [];
     
+    // Always show auth section if user clicks edit, even if previously authenticated
+    // This allows users to change tokens
     if (window.githubAPI.isAuthenticated()) {
+      const user = sessionStorage.getItem('github_user');
       document.getElementById('authSection').style.display = 'none';
       document.getElementById('editSection').style.display = 'block';
+      
+      // Show current user in console
+      console.log(`Currently authenticated as: ${user}`);
       this.loadItemData();
     } else {
       document.getElementById('authSection').style.display = 'block';
       document.getElementById('editSection').style.display = 'none';
       document.getElementById('editPassword').value = '';
-      document.getElementById('authError').textContent = '';
+      document.getElementById('authError').innerHTML = '';
     }
     
     this.modal.style.display = 'flex';
