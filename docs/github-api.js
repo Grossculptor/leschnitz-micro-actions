@@ -278,7 +278,11 @@ class GitHubAPI {
       console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, currentSha);
       
       // Decode and parse current content
-      const currentContent = JSON.parse(atob(fileData.content));
+      // Properly decode base64 with UTF-8 support
+      const binaryString = atob(fileData.content);
+      const bytes = Uint8Array.from(binaryString, char => char.charCodeAt(0));
+      const jsonString = new TextDecoder().decode(bytes);
+      const currentContent = JSON.parse(jsonString);
       
       // Find and update only the specific item
       const itemIndex = currentContent.findIndex(item => item.hash === itemHash);
@@ -335,10 +339,10 @@ class GitHubAPI {
         throw new Error('Data integrity check failed: Description was not updated correctly');
       }
       
-      // Encode updated content - ensure proper UTF-8 encoding
+      // Encode updated content with proper UTF-8 support
       const jsonString = JSON.stringify(currentContent, null, 2);
       
-      // Use proper UTF-8 encoding for base64
+      // Convert to base64 with UTF-8 encoding (matches our decoding approach)
       const utf8Bytes = new TextEncoder().encode(jsonString);
       const binaryString = Array.from(utf8Bytes, byte => String.fromCharCode(byte)).join('');
       const content = btoa(binaryString);
