@@ -9,6 +9,11 @@ h1{margin:0 0 .5rem;letter-spacing:.02em;font-weight:600;color:var(--accent)}
 #count{color:var(--muted);font-size:.9rem}
 main{padding:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem}
 .card{border:1px solid var(--line);border-radius:12px;padding:1rem;background:linear-gradient(180deg,#141414,#101010);transition:transform .15s ease,border-color .15s ease,background-color .15s ease;position:relative;overflow:hidden}
+.card.shade-1{background:linear-gradient(180deg,#1a1a1a,#161616)}
+.card.shade-2{background:linear-gradient(180deg,#171717,#131313)}
+.card.shade-3{background:linear-gradient(180deg,#141414,#101010)}
+.card.shade-4{background:linear-gradient(180deg,#111111,#0d0d0d)}
+.card.shade-5{background:linear-gradient(180deg,#0e0e0e,#0a0a0a)}
 .card:hover{transform:translateY(-2px);border-color:#444}
 .card:active{transform:translateY(0)}
 .title{font-weight:600;margin:0 0 .5rem}
@@ -20,5 +25,9 @@ main{padding:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(320p
 .source{text-decoration:none;color:#8f8f8f;border-bottom:1px dotted #444}
 footer{border-top:1px solid var(--line);color:var(--muted);padding:1rem;text-align:center}
 @media (hover:hover) and (pointer:fine){
-  .card{background:radial-gradient(300px 180px at var(--mx,50%) var(--my,50%),#151515 0%,#101010 70%)}
+  .card.shade-1{background:radial-gradient(300px 180px at var(--mx,50%) var(--my,50%),#1c1c1c 0%,#161616 70%)}
+  .card.shade-2{background:radial-gradient(300px 180px at var(--mx,50%) var(--my,50%),#191919 0%,#131313 70%)}
+  .card.shade-3{background:radial-gradient(300px 180px at var(--mx,50%) var(--my,50%),#151515 0%,#101010 70%)}
+  .card.shade-4{background:radial-gradient(300px 180px at var(--mx,50%) var(--my,50%),#131313 0%,#0d0d0d 70%)}
+  .card.shade-5{background:radial-gradient(300px 180px at var(--mx,50%) var(--my,50%),#101010 0%,#0a0a0a 70%)}
 }
