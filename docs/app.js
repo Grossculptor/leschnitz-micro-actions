@@ -4,7 +4,7 @@ function card(item){const el=document.createElement('article');el.className='car
 <h2 class="title">${escapeHTML(item.title)}</h2>
 <div class="meta"><span>${new Date(item.datetime||item.published||Date.now()).toLocaleString()}</span><span>${(item.hash||'').slice(0,8)}</span><a class="source" href="${escapeAttr(item.source||'#')}" target="_blank" rel="noopener">source</a></div>
 <p class="desc">${escapeHTML(item.description||'')}</p>
-`;el.addEventListener('pointermove',e=>{el.style.setProperty('--mx',`${e.offsetX}px`);el.style.setProperty('--my',`${e.offsetY}px`)});const desc=el.querySelector('.desc');setTimeout(()=>{if(desc.scrollHeight>desc.clientHeight){const btn=document.createElement('div');btn.className='btn';btn.setAttribute('aria-label','toggle more');btn.textContent='expand';btn.addEventListener('click',()=>el.classList.toggle('expanded'));el.appendChild(btn)}},0);return el}
+`;el.addEventListener('pointermove',e=>{el.style.setProperty('--mx',`${e.offsetX}px`);el.style.setProperty('--my',`${e.offsetY}px`)});return el}
 function render(items){window.__items=items;applyFilter()}
 function applyFilter(){const q=(elQ.value||'').toLowerCase();const items=(window.__items||[]).filter(it=>{const blob=`${it.title} ${it.description}`.toLowerCase();return !q||blob.includes(q)});elList.innerHTML='';items.forEach(it=>elList.appendChild(card(it)));elCount.textContent=`${items.length} micro actions`;elList.setAttribute('aria-busy','false')}
 function escapeHTML(s){return (s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
