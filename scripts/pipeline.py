@@ -204,11 +204,12 @@ def _extract_json(text:str):
     return {}
 
 def classify_with_kimi(item:dict)->dict:
-    sys = _read_system_prompt() + "\nYou are a relevance filter for Leschnitz (Leschnitz) / Kreis Gross Strehlitz (Strzelce County) and immediate surroundings in Oberschlesien. Respond ONLY with compact JSON."
+    sys = _read_system_prompt() + "\nYou are a relevance filter for Leschnitz (Leśnica) / Kreis Gross Strehlitz (Strzelce County) / Oppeln (Opole) and surroundings in Oberschlesien. Focus on local history, culture, regulations, bureaucracy, indigenous inhabitants, Germans, displaced persons, nationalism. Respond ONLY with compact JSON."
     user = f"""
 Decide if the following article is relevant to Leschnitz / Kreis Gross Strehlitz / Oppeln environs (Oberschlesien).
 Return JSON with keys: "relevant": boolean, "why": string, "places_german": [string].
-Ignore guides/gossip/TV/clickbait/ads. Include BIP Leschnitz and Strzelce local civic content.
+Include: local history, culture, regulations, bureaucracy, indigenous issues, German heritage, displacement, nationalism.
+Ignore: guides/gossip/TV/clickbait/ads. Include BIP Leschnitz and Strzelce local civic content.
 Title: {item.get('title','')}
 Summary: {item.get('summary','')}
 Content: {(item.get('content') or '')[:1200]}
@@ -228,28 +229,29 @@ Content: {(item.get('content') or '')[:1200]}
 
 def generate_micro(item:dict)->dict:
     sys = _read_system_prompt() + """
-You write micro artistic actions in English with a clear DATAsculptor signature.
-RULES: Output compact JSON with keys "title","datetime","description". Title paraphrases source & includes >=1 keyword from source; description <=500 characters; use German place names (Leschnitz, Oppeln, Gross Strehlitz, Oberschlesien/O/S).
+You create critical questions revealing hidden PR goals. Grade 9 readability.
+RULES: Output JSON with "title","datetime","description". Title is a QUESTION max 45 chars exposing the propaganda goal. Use max 3 keywords from source. English title with German place names (Leschnitz, Oppeln, Gross Strehlitz), Polish keywords preserved. Minimal DATAsculptor signature. Focus on marginalization, colonization, bureaucratic pressure on indigenous peoples.
 """
-    kws = re.findall(r"[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\-]{4,}", item.get("title",""))[:8]
-    user = f"""Make ONE micro action.
+    kws = re.findall(r"[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\-]{4,}", item.get("title",""))[:4]
+    user = f"""Create ONE critical question title.
 Source title: {item.get('title','')}
 Published: {item.get('published','')}
-Available keywords: {kws}
+Available keywords (use max 3): {kws}
 Short gist: {item.get('summary') or (item.get('content') or '')[:400]}
+Title must be a question revealing the hidden PR/propaganda goal. Max 45 chars.
 Return JSON only."""
     try:
         out = _groq_chat([{"role":"system","content":sys},{"role":"user","content":user}])
         js = _extract_json(out["choices"][0]["message"]["content"])
         if {"title","datetime","description"}.issubset(js.keys()):
-            js["title"] = normalize_german_places(js["title"])[:200]
+            js["title"] = normalize_german_places(js["title"])[:45]
             js["description"] = normalize_german_places(js["description"])[:500]
             return js
     except Exception as e:
         print(f"WARN: Generation failed for '{item.get('title','')[:50]}...': {e}")
     # Fallback: stitch minimal micro
     return {
-        "title": normalize_german_places(item.get("title",""))[:200],
+        "title": normalize_german_places(item.get("title",""))[:45],
         "datetime": item.get("published", dt.datetime.utcnow().isoformat()),
         "description": normalize_german_places((item.get("summary") or item.get("content",""))[:480])
     }
@@ -349,7 +351,7 @@ def main():
         except Exception as e:
             print(f"WARN: Generation failed, using fallback: {e}")
             micros.append({
-                "title": normalize_german_places(it.get("title",""))[:200],
+                "title": normalize_german_places(it.get("title",""))[:45],
                 "datetime": it.get("published", dt.datetime.utcnow().isoformat()),
                 "description": normalize_german_places((it.get("summary") or it.get("content",""))[:500]),
                 "source": it.get("link") or it.get("source"),
