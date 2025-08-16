@@ -8,6 +8,20 @@ class EditModal {
   }
 
   init() {
+    // Check if document.body exists
+    if (!document.body) {
+      console.error('document.body not ready, deferring modal init');
+      setTimeout(() => this.init(), 100);
+      return;
+    }
+    
+    // Check if modal already exists
+    if (document.getElementById('editModal')) {
+      this.modal = document.getElementById('editModal');
+      console.log('Modal already exists, reusing it');
+      return;
+    }
+    
     const modalHTML = `
       <div id="editModal" class="modal">
         <div class="modal-content">
@@ -65,12 +79,27 @@ class EditModal {
       </div>
     `;
 
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
-    this.modal = document.getElementById('editModal');
-    this.setupEventListeners();
+    try {
+      document.body.insertAdjacentHTML('beforeend', modalHTML);
+      this.modal = document.getElementById('editModal');
+      
+      if (!this.modal) {
+        throw new Error('Failed to create modal element');
+      }
+      
+      this.setupEventListeners();
+      console.log('Edit modal initialized successfully');
+    } catch (error) {
+      console.error('Failed to initialize edit modal:', error);
+    }
   }
 
   setupEventListeners() {
+    if (!this.modal) {
+      console.error('Modal not initialized, cannot setup event listeners');
+      return;
+    }
+    
     const closeBtn = this.modal.querySelector('.modal-close');
     const authBtn = document.getElementById('authButton');
     const passwordInput = document.getElementById('editPassword');
