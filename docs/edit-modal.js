@@ -23,6 +23,12 @@ class EditModal {
               <div id="authError" class="error-message"></div>
               <div class="auth-help">
                 <small>Need a token? <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">Create one here</a> with 'repo' scope</small>
+                <br>
+                <small><strong>Important:</strong> You need write access to this repository. Either:</small>
+                <br>
+                <small>1. Use a token from the repository owner (Grossculptor)</small>
+                <br>
+                <small>2. <a href="https://github.com/Grossculptor/leschnitz-micro-actions/fork" target="_blank">Fork this repository</a> and edit your fork</small>
               </div>
             </div>
             <div id="editSection" class="edit-section" style="display:none;">
@@ -113,13 +119,14 @@ class EditModal {
     }
 
     try {
-      const isValid = await window.githubAPI.authenticate(password);
-      if (isValid) {
+      const result = await window.githubAPI.authenticate(password);
+      if (result.success) {
         document.getElementById('authSection').style.display = 'none';
         document.getElementById('editSection').style.display = 'block';
+        console.log(`Authenticated as GitHub user: ${result.user}`);
         this.loadItemData();
       } else {
-        errorDiv.textContent = 'Invalid token or insufficient permissions. Token needs "repo" scope.';
+        errorDiv.innerHTML = result.error.replace(/\n/g, '<br>');
       }
     } catch (error) {
       errorDiv.textContent = 'Authentication failed: ' + error.message;

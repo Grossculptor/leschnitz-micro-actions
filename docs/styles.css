@@ -60,10 +60,11 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:1rem;text-ali
 .auth-section input{width:100%;max-width:300px;padding:0.75rem;background:#0b0b0b;border:1px solid var(--line);color:var(--ink);border-radius:6px;margin-bottom:1rem}
 #authButton{padding:0.75rem 2rem;background:#2a2a2a;color:var(--ink);border:none;border-radius:6px;cursor:pointer;transition:background 0.2s}
 #authButton:hover{background:#3a3a3a}
-.error-message{color:#ff6b6b;margin-top:0.5rem;font-size:0.9rem}
-.auth-help{margin-top:1rem;color:var(--muted)}
+.error-message{color:#ff6b6b;margin-top:0.5rem;font-size:0.9rem;line-height:1.4}
+.auth-help{margin-top:1rem;color:var(--muted);line-height:1.6;text-align:left;max-width:400px;margin-left:auto;margin-right:auto}
 .auth-help a{color:var(--accent);text-decoration:none}
 .auth-help a:hover{text-decoration:underline}
+.auth-help strong{color:var(--ink)}
 .form-group{margin-bottom:1.5rem}
 .form-group label{display:block;margin-bottom:0.5rem;color:var(--ink)}
 .edit-input,.edit-textarea{width:100%;padding:0.75rem;background:#0b0b0b;border:1px solid var(--line);color:var(--ink);border-radius:6px;font-family:inherit}
