@@ -12,14 +12,24 @@ class GitHubAPI {
       // Store the password as the GitHub Personal Access Token
       this.token = password;
       
-      // Test if the token works by trying to read the user
-      const userResponse = await fetch('https://api.github.com/user', {
-        headers: {
-          'Authorization': `Bearer ${password}`, // Use Bearer for better compatibility
-          'Accept': 'application/vnd.github.v3+json',
-          'X-GitHub-Api-Version': '2022-11-28'
-        }
-      });
+      // Test if the token works - try both formats
+      let userResponse;
+      try {
+        userResponse = await fetch('https://api.github.com/user', {
+          headers: {
+            'Authorization': `token ${password}`, // GitHub prefers 'token' format
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+      } catch (error) {
+        console.error('Failed with token format, trying Bearer:', error);
+        userResponse = await fetch('https://api.github.com/user', {
+          headers: {
+            'Authorization': `Bearer ${password}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+      }
       
       if (!userResponse.ok) {
         console.error('Invalid token');
@@ -32,9 +42,8 @@ class GitHubAPI {
       // Test if the token can access the repo
       const repoResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}`, {
         headers: {
-          'Authorization': `Bearer ${password}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'X-GitHub-Api-Version': '2022-11-28'
+          'Authorization': `token ${password}`, // Use token format
+          'Accept': 'application/vnd.github.v3+json'
         }
       });
       
@@ -168,15 +177,41 @@ class GitHubAPI {
     try {
       const token = await this.getToken();
       
+      if (!token) {
+        throw new Error('No authentication token available. Please login again.');
+      }
+      
+      console.log('Fetching current projects.json from GitHub...');
+      
       // Get current file to retrieve SHA and latest data
-      const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`, {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'X-GitHub-Api-Version': '2022-11-28',
-          'Cache-Control': 'no-cache'
+      let response;
+      try {
+        response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`, {
+          headers: {
+            'Authorization': `token ${token}`, // Use token format by default
+            'Accept': 'application/vnd.github.v3+json',
+            'Cache-Control': 'no-cache'
+          }
+        });
+      } catch (fetchError) {
+        console.error('Network error with token format:', fetchError);
+        
+        // Try with Bearer format as fallback
+        console.log('Retrying with Bearer format...');
+        try {
+          response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`, {
+            headers: {
+              'Authorization': `Bearer ${token}`,
+              'Accept': 'application/vnd.github.v3+json',
+              'X-GitHub-Api-Version': '2022-11-28',
+              'Cache-Control': 'no-cache'
+            }
+          });
+        } catch (secondError) {
+          console.error('Network error with Bearer format:', secondError);
+          throw new Error(`Unable to connect to GitHub API. Please check your internet connection and ensure your token is valid.`);
         }
-      });
+      }
 
       if (!response.ok) {
         const errorData = await response.json();
@@ -213,21 +248,47 @@ class GitHubAPI {
       const jsonString = JSON.stringify(currentContent, null, 2);
       const content = btoa(unescape(encodeURIComponent(jsonString)));
 
-      const updateResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'X-GitHub-Api-Version': '2022-11-28',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message: `Update micro action ${itemHash.substring(0, 8)} via web editor`,
-          content: content,
-          sha: currentSha,
-          branch: this.branch
-        })
-      });
+      let updateResponse;
+      try {
+        updateResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${token}`, // Use token format by default
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: `Update micro action ${itemHash.substring(0, 8)} via web editor`,
+            content: content,
+            sha: currentSha,
+            branch: this.branch
+          })
+        });
+      } catch (fetchError) {
+        console.error('Network error during update:', fetchError);
+        
+        // Try with Bearer format as fallback
+        console.log('Retrying with Bearer format...');
+        try {
+          updateResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
+            method: 'PUT',
+            headers: {
+              'Authorization': `Bearer ${token}`,
+              'Accept': 'application/vnd.github.v3+json',
+              'X-GitHub-Api-Version': '2022-11-28',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: `Update micro action ${itemHash.substring(0, 8)} via web editor`,
+              content: content,
+              sha: currentSha,
+              branch: this.branch
+            })
+          });
+        } catch (secondFetchError) {
+          throw new Error(`Network error: Unable to connect to GitHub. Please check your internet connection.`);
+        }
+      }
 
       if (!updateResponse.ok) {
         const errorData = await updateResponse.json();
