@@ -350,10 +350,8 @@ class EditModal {
         description: description.trim()
       };
       
-      // Only add media field if there are new uploads
-      if (uploadedMedia.length > 0) {
-        updates.media = [...(this.currentItem.media || []), ...uploadedMedia];
-      }
+      // Always update media field to reflect removals and additions
+      updates.media = [...(this.currentItem.media || []), ...uploadedMedia];
       
       console.log('Updating item with hash:', this.currentItem.hash);
       console.log('Original title:', this.currentItem.title);
