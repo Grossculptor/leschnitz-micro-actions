@@ -4,15 +4,23 @@ class EditModal {
     this.currentItem = null;
     this.mediaFiles = [];
     this.maxFiles = 4;
+    this.initRetries = 0;
+    this.maxRetries = 50; // Maximum 2.5 seconds of retrying
     this.init();
   }
 
   init() {
-    // Check if document.body exists
+    // Check if document.body exists with retry limit
     if (!document.body) {
-      console.error('document.body not ready, deferring modal init');
-      setTimeout(() => this.init(), 100);
-      return;
+      if (this.initRetries < this.maxRetries) {
+        this.initRetries++;
+        console.log(`document.body not ready, retry ${this.initRetries}/${this.maxRetries}`);
+        setTimeout(() => this.init(), 50);
+        return;
+      } else {
+        console.error('Failed to initialize modal after maximum retries - document.body never became available');
+        return;
+      }
     }
     
     // Check if modal already exists
@@ -80,17 +88,29 @@ class EditModal {
     `;
 
     try {
+      // Extra safety check before inserting HTML
+      if (!document.body) {
+        throw new Error('document.body is still null after passing initial check');
+      }
+      
       document.body.insertAdjacentHTML('beforeend', modalHTML);
       this.modal = document.getElementById('editModal');
       
       if (!this.modal) {
-        throw new Error('Failed to create modal element');
+        throw new Error('Failed to create modal element - insertAdjacentHTML may have failed');
       }
       
       this.setupEventListeners();
-      console.log('Edit modal initialized successfully');
+      console.log('Edit modal initialized successfully with body present');
+      this.initRetries = 0; // Reset retry counter on success
     } catch (error) {
       console.error('Failed to initialize edit modal:', error);
+      // Try to recover if possible
+      if (this.initRetries < this.maxRetries) {
+        this.initRetries++;
+        console.log(`Retrying modal init after error, attempt ${this.initRetries}/${this.maxRetries}`);
+        setTimeout(() => this.init(), 100);
+      }
     }
   }
 
@@ -511,11 +531,34 @@ class EditModal {
 }
 
 // Wait for DOM to be ready before creating modal
+// Enhanced initialization with multiple fallbacks
+function initializeEditModal() {
+  try {
+    if (!window.editModal) {
+      window.editModal = new EditModal();
+      console.log('EditModal instance created successfully');
+    }
+  } catch (error) {
+    console.error('Failed to create EditModal instance:', error);
+    // Retry after a delay
+    setTimeout(initializeEditModal, 100);
+  }
+}
+
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    window.editModal = new EditModal();
-  });
+  document.addEventListener('DOMContentLoaded', initializeEditModal);
+} else if (document.body) {
+  // DOM and body are ready
+  initializeEditModal();
 } else {
-  // DOM already loaded
-  window.editModal = new EditModal();
+  // Fallback: wait for body to be available
+  const bodyWaitInterval = setInterval(() => {
+    if (document.body) {
+      clearInterval(bodyWaitInterval);
+      initializeEditModal();
+    }
+  }, 10);
+  
+  // Clear interval after 5 seconds to prevent memory leak
+  setTimeout(() => clearInterval(bodyWaitInterval), 5000);
 }
