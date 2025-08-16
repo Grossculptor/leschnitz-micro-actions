@@ -119,17 +119,33 @@ class EditModal {
     }
 
     try {
-      const result = await window.githubAPI.authenticate(password);
-      if (result.success) {
+      errorDiv.textContent = 'Authenticating...';
+      const isValid = await window.githubAPI.authenticate(password);
+      
+      if (isValid) {
         document.getElementById('authSection').style.display = 'none';
         document.getElementById('editSection').style.display = 'block';
-        console.log(`Authenticated as GitHub user: ${result.user}`);
+        const user = sessionStorage.getItem('github_user');
+        console.log(`Authenticated as GitHub user: ${user}`);
         this.loadItemData();
       } else {
-        errorDiv.innerHTML = result.error.replace(/\n/g, '<br>');
+        errorDiv.innerHTML = `
+          <div style="color: #ff6b6b;">Authentication failed</div>
+          <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #aaa;">
+            Please ensure your token:
+            <ul style="text-align: left; margin: 0.5rem 0;">
+              <li>Has "repo" scope (full repository access)</li>
+              <li>Is not expired</li>
+              <li>Belongs to the repository owner</li>
+            </ul>
+          </div>
+          <div style="margin-top: 0.5rem;">
+            <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank" style="color: #cfcfcf;">Create new token →</a>
+          </div>
+        `;
       }
     } catch (error) {
-      errorDiv.textContent = 'Authentication failed: ' + error.message;
+      errorDiv.textContent = 'Authentication error: ' + error.message;
     }
   }
 
