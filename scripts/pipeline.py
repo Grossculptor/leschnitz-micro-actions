@@ -49,7 +49,7 @@ KEYWORDS_STRONG = [
 ]
 
 SESSION = requests.Session()
-SESSION.headers.update({"User-Agent":"Leschnitz-MicroActions/1.0 (+github)"})
+SESSION.headers.update({"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"})
 TIMEOUT=10  # Reduced timeout to prevent hanging
 
 def ts_now():
@@ -121,6 +121,8 @@ def parse_feed(url:str):
             return out
     except Exception as e:
         print(f"ERROR: Failed to parse feed {url}: {e}")
+        # Re-raise to ensure error files are created
+        raise
     # HTML fallback - skip for now to avoid hanging
     return []
 
