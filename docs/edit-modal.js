@@ -190,8 +190,17 @@ class EditModal {
   }
 
   async authenticate() {
-    const password = document.getElementById('editPassword').value;
+    const passwordInput = document.getElementById('editPassword');
     const errorDiv = document.getElementById('authError');
+    
+    // Safety check - ensure elements exist
+    if (!passwordInput || !errorDiv) {
+      console.error('Authentication elements not found in DOM');
+      alert('Authentication interface not ready. Please try again.');
+      return;
+    }
+    
+    const password = passwordInput.value;
     
     if (!password) {
       errorDiv.textContent = 'Please enter your GitHub Personal Access Token';
@@ -199,6 +208,13 @@ class EditModal {
     }
 
     try {
+      // Check if githubAPI is available
+      if (!window.githubAPI || typeof window.githubAPI.authenticate !== 'function') {
+        console.error('GitHub API not loaded');
+        errorDiv.textContent = 'GitHub API not loaded. Please refresh the page.';
+        return;
+      }
+      
       errorDiv.textContent = 'Authenticating...';
       const isValid = await window.githubAPI.authenticate(password);
       
@@ -230,46 +246,90 @@ class EditModal {
   }
 
   open(item) {
+    console.log('Opening edit modal for item:', item?.hash);
+    
+    // Step 1: Ensure modal structure exists FIRST
+    if (!this.modal || !document.getElementById('editModal')) {
+      console.log('Modal not initialized, creating now...');
+      this.init();
+      
+      // If still no modal after init, abort with user feedback
+      if (!this.modal || !document.getElementById('editModal')) {
+        console.error('Failed to create modal after initialization');
+        alert('Unable to open editor. Please refresh the page and try again.');
+        return;
+      }
+    }
+    
+    // Step 2: Verify all required child elements exist
+    const authSection = document.getElementById('authSection');
+    const editSection = document.getElementById('editSection');
+    const passwordInput = document.getElementById('editPassword');
+    const errorDiv = document.getElementById('authError');
+    
+    if (!authSection || !editSection || !passwordInput || !errorDiv) {
+      console.error('Modal child elements missing, reinitializing...');
+      // Clear and reinitialize
+      if (this.modal) {
+        this.modal.remove();
+      }
+      this.modal = null;
+      this.init();
+      
+      // Try to get elements again
+      const authSectionRetry = document.getElementById('authSection');
+      const editSectionRetry = document.getElementById('editSection');
+      
+      if (!authSectionRetry || !editSectionRetry) {
+        console.error('Critical: Modal structure corrupt even after reinitialization');
+        alert('Editor initialization failed. Please refresh the page.');
+        return;
+      }
+    }
+    
+    // Step 3: NOW safely proceed with item setup
     // Deep clone the item to prevent reference issues
     this.currentItem = JSON.parse(JSON.stringify(item));
     this.mediaFiles = [];
     
-    // Always show auth section if user clicks edit, even if previously authenticated
-    // This allows users to change tokens
-    if (window.githubAPI.isAuthenticated()) {
+    // Step 4: Safely manipulate DOM elements (they're guaranteed to exist now)
+    const auth = document.getElementById('authSection');
+    const edit = document.getElementById('editSection');
+    const pwd = document.getElementById('editPassword');
+    const err = document.getElementById('authError');
+    
+    // Check if githubAPI is loaded and authenticated
+    if (window.githubAPI && typeof window.githubAPI.isAuthenticated === 'function' && window.githubAPI.isAuthenticated()) {
       const user = sessionStorage.getItem('github_user');
-      document.getElementById('authSection').style.display = 'none';
-      document.getElementById('editSection').style.display = 'block';
-      
-      // Show current user in console
+      auth.style.display = 'none';
+      edit.style.display = 'block';
       console.log(`Currently authenticated as: ${user}`);
       this.loadItemData();
     } else {
-      document.getElementById('authSection').style.display = 'block';
-      document.getElementById('editSection').style.display = 'none';
-      document.getElementById('editPassword').value = '';
-      document.getElementById('authError').innerHTML = '';
+      auth.style.display = 'block';
+      edit.style.display = 'none';
+      pwd.value = '';
+      err.innerHTML = '';
     }
     
-    // Ensure modal exists before trying to display it
-    if (this.modal) {
-      this.modal.style.display = 'flex';
-    } else {
-      console.error('Modal element not found - reinitializing...');
-      this.init();
-      if (this.modal) {
-        this.modal.style.display = 'flex';
-      } else {
-        console.error('Failed to create modal element');
-      }
-    }
+    // Step 5: Display the modal
+    this.modal.style.display = 'flex';
+    console.log('Modal opened successfully');
   }
 
   loadItemData() {
     if (!this.currentItem) return;
     
-    document.getElementById('editTitle').value = this.currentItem.title || '';
-    document.getElementById('editDescription').value = this.currentItem.description || '';
+    const titleInput = document.getElementById('editTitle');
+    const descInput = document.getElementById('editDescription');
+    
+    if (!titleInput || !descInput) {
+      console.error('Edit form elements not found');
+      return;
+    }
+    
+    titleInput.value = this.currentItem.title || '';
+    descInput.value = this.currentItem.description || '';
     
     this.renderMediaPreview();
   }
