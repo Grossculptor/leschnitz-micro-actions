@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate all existing titles as critical questions"""
+"""Fix titles that are still truncated at 45 chars"""
 
 import json
 import re
@@ -55,6 +55,28 @@ def smart_truncate_title(text, min_len=45, max_len=58):
     # Fallback: hard cut at min_len
     return text[:min_len].rstrip() + '?'
 
+def is_truncated(title):
+    """Check if a title appears to be truncated"""
+    if len(title) != 45:
+        return False
+    
+    # Get last word before ?
+    last_word = title[:-1].split()[-1] if title[:-1].split() else ''
+    
+    # Check if last word seems incomplete
+    # Very short words or words that don't end naturally
+    if len(last_word) <= 3:
+        return True
+    if len(last_word) <= 6 and not last_word.endswith(('ing', 'ed', 'er', 'ly', 'ion', 'ent', 'ness')):
+        # Check if it looks like a partial word
+        common_endings = ['tion', 'sion', 'ment', 'ence', 'ance', 'ity', 'ness']
+        looks_partial = True
+        for ending in common_endings:
+            if ending.startswith(last_word[-3:]):
+                return True
+        return True
+    return False
+
 def extract_keywords(title):
     """Extract up to 4 keywords from title"""
     return re.findall(r"[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\-]{4,}", title)[:4]
@@ -109,19 +131,21 @@ def extract_json(text):
     except:
         return {}
 
-def generate_question_title(item):
-    """Generate a critical question title for an item"""
-    kws = extract_keywords(item.get("title", ""))
+def expand_truncated_title(item):
+    """Expand a truncated title to complete the last word"""
+    title = item.get("title", "")
+    kws = extract_keywords(title[:-1])  # Remove ? for keyword extraction
     
     sys_prompt = """You create critical questions revealing hidden PR goals. Grade 9 readability.
-RULES: Title is a QUESTION 45-58 chars exposing the propaganda goal. Use max 3 keywords from source.
+RULES: Title is a QUESTION 45-58 chars exposing the propaganda goal. COMPLETE THE LAST WORD that was cut off.
 English with German place names (Leschnitz, Oppeln, Gross Strehlitz), Polish keywords preserved.
 Focus on marginalization, colonization, bureaucratic pressure. Return JSON with "title" key only."""
     
-    user_prompt = f"""Convert this to a critical question:
-Original: {item.get('title', '')}
-Keywords (use max 3): {kws}
-Create question revealing hidden PR/propaganda goal. 45-58 chars.
+    user_prompt = f"""This title is cut off mid-word. Complete it properly:
+Truncated: {title}
+Last word appears to be: {title[:-1].split()[-1] if title[:-1].split() else ''}
+Keywords: {kws}
+Create a complete question 45-58 chars. FINISH THE LAST WORD.
 Return JSON with "title" key."""
     
     try:
@@ -132,16 +156,32 @@ Return JSON with "title" key."""
         
         js = extract_json(result["choices"][0]["message"]["content"])
         if "title" in js:
-            title = normalize_german_places(js["title"])
-            return smart_truncate_title(title)
+            new_title = normalize_german_places(js["title"])
+            return smart_truncate_title(new_title)
     except Exception as e:
-        print(f"API failed for '{item.get('title', '')[:30]}...': {e}")
+        print(f"    API failed: {e}")
     
-    # Fallback: create simple question from keywords
-    if kws:
-        title = f"Why promote {kws[0]}?"
-        return smart_truncate_title(normalize_german_places(title))
-    return "What's the hidden agenda here?"
+    # Fallback: try to guess the completion
+    last_word = title[:-1].split()[-1] if title[:-1].split() else ''
+    base = title[:-1].rsplit(' ', 1)[0] if ' ' in title[:-1] else title[:-1]
+    
+    # Common word completions
+    completions = {
+        'Contro': 'Control',
+        'profi': 'profit',
+        'tuszuj': 'tuszuje',
+        'marginali': 'marginalize',
+        'Wiejsk': 'Wiejska',
+        'Leschni': 'Leschnitz',
+        'Maskin': 'Masking',
+        'Antwor': 'Antwort',
+        'Rybac': 'Rybaczówka',
+    }
+    
+    if last_word in completions:
+        return smart_truncate_title(f"{base} {completions[last_word]}")
+    
+    return title  # Keep original if can't fix
 
 def main():
     print("Loading projects.json...")
@@ -160,49 +200,48 @@ def main():
         print("ERROR: GROQ_API_KEY not set")
         return 1
     
-    # Process each item
-    updated = 0
-    failed = 0
-    
+    # Find truncated titles
+    truncated_indices = []
     for i, item in enumerate(data):
-        old_title = item.get("title", "")
-        print(f"\n[{i+1}/{len(data)}] Processing: {old_title[:50]}...")
-        
-        # Skip if already a proper question with complete words
-        if old_title.endswith("?") and 45 <= len(old_title) <= 58:
-            # Check if last word before ? is complete (not truncated)
-            words = old_title[:-1].split()
-            if words and len(words[-1]) > 3:  # Likely a complete word
-                print("  Already a proper question, skipping")
-                continue
+        if is_truncated(item["title"]):
+            truncated_indices.append(i)
+    
+    print(f"Found {len(truncated_indices)} truncated titles to fix")
+    
+    # Process truncated titles
+    fixed = 0
+    
+    for idx in truncated_indices:
+        item = data[idx]
+        old_title = item["title"]
+        print(f"\nFixing: {old_title}")
         
         try:
-            new_title = generate_question_title(item)
-            if new_title and new_title != old_title:
-                item["title"] = new_title
-                print(f"  ✓ New: {new_title}")
-                updated += 1
+            new_title = expand_truncated_title(item)
+            if new_title and new_title != old_title and not is_truncated(new_title):
+                data[idx]["title"] = new_title
+                print(f"  ✓ Fixed: {new_title} ({len(new_title)} chars)")
+                fixed += 1
             else:
-                print(f"  - No change")
+                print(f"  - Could not fix")
         except Exception as e:
             print(f"  ✗ Error: {e}")
-            failed += 1
         
         # Rate limiting
-        if i < len(data) - 1:
-            time.sleep(0.5)  # Avoid hitting rate limits
+        if idx < truncated_indices[-1]:
+            time.sleep(0.5)
     
     # Save updated data
-    print(f"\nSaving updated data...")
-    projects_file.write_text(
-        json.dumps(data, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
+    if fixed > 0:
+        print(f"\nSaving {fixed} fixed titles...")
+        projects_file.write_text(
+            json.dumps(data, ensure_ascii=False, indent=2),
+            encoding="utf-8"
+        )
     
     print(f"\nComplete!")
-    print(f"  Updated: {updated} titles")
-    print(f"  Failed: {failed} titles")
-    print(f"  Total: {len(data)} items")
+    print(f"  Fixed: {fixed} titles")
+    print(f"  Total: {len(truncated_indices)} truncated titles")
     
     return 0
 

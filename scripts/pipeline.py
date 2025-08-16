@@ -61,6 +61,33 @@ def normalize_german_places(text:str)->str:
         out = re.sub(pat, repl, out, flags=re.IGNORECASE)
     return out
 
+def smart_truncate_title(text:str, min_len:int=45, max_len:int=58)->str:
+    """Truncate title at word boundary to avoid mid-word cuts"""
+    if not text:
+        return ""
+    
+    # Remove existing ? if present to add it properly later
+    text = text.rstrip('?')
+    
+    # If already short enough, just ensure it ends with ?
+    if len(text) <= min_len:
+        return text + '?'
+    
+    # If within acceptable range, keep it
+    if len(text) <= max_len:
+        return text + '?'
+    
+    # Need to truncate - find last complete word before max_len
+    truncated = text[:max_len]
+    last_space = truncated.rfind(' ')
+    
+    # If we can break at a word boundary after min_len
+    if last_space > min_len:
+        return truncated[:last_space].rstrip() + '?'
+    
+    # Fallback: hard cut at min_len
+    return text[:min_len].rstrip() + '?'
+
 def sha1(s:str)->str:
     return hashlib.sha1(s.encode("utf-8","ignore")).hexdigest()
 
@@ -230,7 +257,7 @@ Content: {(item.get('content') or '')[:1200]}
 def generate_micro(item:dict)->dict:
     sys = _read_system_prompt() + """
 You create critical questions revealing hidden PR goals. Grade 9 readability.
-RULES: Output JSON with "title","datetime","description". Title is a QUESTION max 45 chars exposing the propaganda goal. Use max 3 keywords from source. English title with German place names (Leschnitz, Oppeln, Gross Strehlitz), Polish keywords preserved. Minimal DATAsculptor signature. Focus on marginalization, colonization, bureaucratic pressure on indigenous peoples.
+RULES: Output JSON with "title","datetime","description". Title is a QUESTION 45-58 chars exposing the propaganda goal. Use max 3 keywords from source. English title with German place names (Leschnitz, Oppeln, Gross Strehlitz), Polish keywords preserved. Minimal DATAsculptor signature. Focus on marginalization, colonization, bureaucratic pressure on indigenous peoples.
 """
     kws = re.findall(r"[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\-]{4,}", item.get("title",""))[:4]
     user = f"""Create ONE critical question title.
@@ -238,20 +265,20 @@ Source title: {item.get('title','')}
 Published: {item.get('published','')}
 Available keywords (use max 3): {kws}
 Short gist: {item.get('summary') or (item.get('content') or '')[:400]}
-Title must be a question revealing the hidden PR/propaganda goal. Max 45 chars.
+Title must be a question revealing the hidden PR/propaganda goal. 45-58 chars.
 Return JSON only."""
     try:
         out = _groq_chat([{"role":"system","content":sys},{"role":"user","content":user}])
         js = _extract_json(out["choices"][0]["message"]["content"])
         if {"title","datetime","description"}.issubset(js.keys()):
-            js["title"] = normalize_german_places(js["title"])[:45]
+            js["title"] = smart_truncate_title(normalize_german_places(js["title"]))
             js["description"] = normalize_german_places(js["description"])[:500]
             return js
     except Exception as e:
         print(f"WARN: Generation failed for '{item.get('title','')[:50]}...': {e}")
     # Fallback: stitch minimal micro
     return {
-        "title": normalize_german_places(item.get("title",""))[:45],
+        "title": smart_truncate_title(normalize_german_places(item.get("title",""))),
         "datetime": item.get("published", dt.datetime.utcnow().isoformat()),
         "description": normalize_german_places((item.get("summary") or item.get("content",""))[:480])
     }
@@ -351,7 +378,7 @@ def main():
         except Exception as e:
             print(f"WARN: Generation failed, using fallback: {e}")
             micros.append({
-                "title": normalize_german_places(it.get("title",""))[:45],
+                "title": smart_truncate_title(normalize_german_places(it.get("title",""))),
                 "datetime": it.get("published", dt.datetime.utcnow().isoformat()),
                 "description": normalize_german_places((it.get("summary") or it.get("content",""))[:500]),
                 "source": it.get("link") or it.get("source"),
