@@ -19,6 +19,26 @@
 <footer>
   <small>All place names shown in German. Content auto-generated from local public sources in O/S every 6 hours.</small>
 </footer>
+<script>
+  // Global error handler to catch script loading errors
+  window.addEventListener('error', function(e) {
+    console.error('Script error caught:', e.filename, e.message, e.error);
+    if (e.filename && e.filename.includes('github-api.js')) {
+      console.error('GitHub API script failed to load/execute properly');
+      // Create emergency fallback
+      if (!window.githubAPI) {
+        window.githubAPI = {
+          isAuthenticated: () => false,
+          authenticate: async () => {
+            alert('GitHub API script failed to load. Please refresh the page.');
+            return false;
+          },
+          logout: () => sessionStorage.clear()
+        };
+      }
+    }
+  });
+</script>
 <script src="config.js" defer></script>
 <script src="github-api.js" defer></script>
 <script src="edit-modal.js" defer></script>

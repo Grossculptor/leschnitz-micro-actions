@@ -1,9 +1,13 @@
+// Immediate logging to verify script execution
+console.log('github-api.js: Script loaded and executing');
+
 class GitHubAPI {
   constructor() {
-    // Use config if available, otherwise use defaults
-    this.owner = window.REPO_CONFIG?.owner || 'Grossculptor';
-    this.repo = window.REPO_CONFIG?.repo || 'leschnitz-micro-actions';
-    this.branch = window.REPO_CONFIG?.branch || 'main';
+    console.log('GitHubAPI: Constructor called');
+    // Use config if available, otherwise use defaults (avoid optional chaining for compatibility)
+    this.owner = (window.REPO_CONFIG && window.REPO_CONFIG.owner) || 'Grossculptor';
+    this.repo = (window.REPO_CONFIG && window.REPO_CONFIG.repo) || 'leschnitz-micro-actions';
+    this.branch = (window.REPO_CONFIG && window.REPO_CONFIG.branch) || 'main';
     this.token = null;
     this.password = null;
     console.log(`GitHubAPI configured for: ${this.owner}/${this.repo}`);
@@ -693,39 +697,38 @@ class GitHubAPI {
 }
 
 // Initialize GitHub API with error handling
-function initializeGitHubAPI() {
-  try {
-    if (!window.githubAPI) {
-      window.githubAPI = new GitHubAPI();
-      console.log('GitHub API initialized successfully');
+console.log('github-api.js: About to initialize GitHubAPI');
+
+try {
+  // Create instance immediately
+  window.githubAPI = new GitHubAPI();
+  console.log('github-api.js: GitHubAPI instance created successfully');
+  console.log('github-api.js: window.githubAPI =', window.githubAPI);
+} catch (error) {
+  console.error('github-api.js: CRITICAL ERROR creating GitHubAPI:', error);
+  console.error('github-api.js: Error stack:', error.stack);
+  
+  // Create a minimal fallback object
+  window.githubAPI = {
+    isAuthenticated: () => {
+      console.log('Fallback githubAPI: isAuthenticated called');
+      return false;
+    },
+    authenticate: async (password) => {
+      console.error('Fallback githubAPI: authenticate called but API failed to load');
+      alert('GitHub API failed to initialize. Error: ' + error.message + '\n\nPlease refresh the page.');
+      return false;
+    },
+    logout: () => {
+      console.log('Fallback githubAPI: logout called');
+      sessionStorage.clear();
+    },
+    testConnection: async () => {
+      console.error('Fallback githubAPI: testConnection called but API failed to load');
     }
-  } catch (error) {
-    console.error('Failed to initialize GitHub API:', error);
-    // Create a fallback object with essential methods
-    window.githubAPI = {
-      isAuthenticated: () => false,
-      authenticate: async () => {
-        console.error('GitHub API not properly loaded');
-        alert('GitHub API failed to load. Please refresh the page.');
-        return false;
-      },
-      logout: () => {
-        sessionStorage.clear();
-      },
-      testConnection: async () => {
-        console.error('GitHub API not properly loaded');
-      }
-    };
-  }
+  };
+  console.log('github-api.js: Fallback githubAPI created');
 }
 
-// Initialize immediately
-initializeGitHubAPI();
-
-// Also initialize on DOMContentLoaded as backup
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initializeGitHubAPI);
-} else {
-  // DOM already loaded, ensure initialization
-  setTimeout(initializeGitHubAPI, 0);
-}
+// Log final state
+console.log('github-api.js: Script execution complete. window.githubAPI exists:', !!window.githubAPI);
