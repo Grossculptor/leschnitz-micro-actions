@@ -22,7 +22,18 @@ const editBtn = el.querySelector('.edit-btn');
 if(editBtn) {
   editBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    window.editModal.open(item);
+    if (window.editModal) {
+      window.editModal.open(item);
+    } else {
+      console.error('Edit modal not loaded yet');
+      // Try to initialize it
+      if (typeof EditModal !== 'undefined') {
+        window.editModal = new EditModal();
+        window.editModal.open(item);
+      } else {
+        alert('Edit functionality is loading, please try again in a moment');
+      }
+    }
   });
 }
 const thumbs = el.querySelectorAll('.media-thumb');
@@ -30,7 +41,14 @@ thumbs.forEach(thumb => {
   thumb.addEventListener('click', (e) => {
     e.stopPropagation();
     const index = parseInt(thumb.dataset.index);
-    window.mediaViewer.open(item.media, index);
+    if (window.mediaViewer) {
+      window.mediaViewer.open(item.media, index);
+    } else if (typeof MediaViewer !== 'undefined') {
+      window.mediaViewer = new MediaViewer();
+      window.mediaViewer.open(item.media, index);
+    } else {
+      console.error('Media viewer not loaded yet');
+    }
   });
 });
 return el}
