@@ -162,12 +162,12 @@ class GitHubAPI {
     }
   }
 
-  async updateProjects(projectsData) {
+  async updateProjects(projectsData, retryCount = 0) {
     try {
       const token = await this.getToken();
       
       // Get current file to retrieve SHA
-      const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}`, {
+      const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&t=${Date.now()}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Accept': 'application/vnd.github.v3+json',
@@ -187,6 +187,7 @@ class GitHubAPI {
       }
 
       const fileData = await response.json();
+      console.log('Current SHA:', fileData.sha);
       
       // Encode content properly for GitHub API
       const jsonString = JSON.stringify(projectsData, null, 2);
@@ -212,6 +213,21 @@ class GitHubAPI {
         const errorData = await updateResponse.json();
         console.error('Failed to update projects.json:', errorData);
         
+        // Handle SHA mismatch specifically
+        if (updateResponse.status === 409 || (updateResponse.status === 422 && errorData.message?.includes('does not match'))) {
+          console.log('SHA mismatch detected, file was updated by another process');
+          
+          // Retry once with fresh data
+          if (retryCount === 0) {
+            console.log('Retrying with fresh SHA...');
+            // Wait a bit to avoid race condition
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            return this.updateProjects(projectsData, retryCount + 1);
+          } else {
+            throw new Error('File was modified by another process. Please refresh the page and try again.');
+          }
+        }
+        
         if (updateResponse.status === 403) {
           if (errorData.message?.includes('Resource not accessible')) {
             throw new Error('Your token needs "repo" scope to modify files. Create a new token at https://github.com/settings/tokens/new?scopes=repo');
@@ -222,6 +238,7 @@ class GitHubAPI {
         throw new Error(`Failed to update projects.json: ${errorData.message || updateResponse.statusText}`);
       }
 
+      console.log('Successfully updated projects.json');
       return await updateResponse.json();
     } catch (error) {
       console.error('Update projects error:', error);

@@ -324,28 +324,58 @@ class EditModal {
       }
 
       progressFill.style.width = '75%';
-      progressText.textContent = 'Updating project data...';
+      progressText.textContent = 'Fetching latest data...';
 
-      const items = window.__items || [];
-      const itemIndex = items.findIndex(item => item.hash === this.currentItem.hash);
-      
-      if (itemIndex === -1) {
-        throw new Error('Item not found in the current data');
+      // Fetch fresh data from GitHub to avoid SHA mismatch
+      try {
+        const response = await fetch('data/projects.json?t=' + Date.now(), {
+          cache: 'no-store'
+        });
+        const freshItems = await response.json();
+        
+        progressText.textContent = 'Updating project data...';
+        
+        const itemIndex = freshItems.findIndex(item => item.hash === this.currentItem.hash);
+        
+        if (itemIndex === -1) {
+          throw new Error('Item not found in the current data');
+        }
+        
+        // Update the item
+        freshItems[itemIndex].title = title;
+        freshItems[itemIndex].description = description;
+        
+        // Merge media arrays
+        if (uploadedMedia.length > 0) {
+          freshItems[itemIndex].media = [...(freshItems[itemIndex].media || []), ...uploadedMedia];
+        }
+        
+        freshItems[itemIndex].lastEdited = new Date().toISOString();
+        
+        console.log('Updating projects.json with', freshItems.length, 'items');
+        await window.githubAPI.updateProjects(freshItems);
+      } catch (fetchError) {
+        console.error('Failed to fetch fresh data:', fetchError);
+        // Fallback to using cached data
+        const items = window.__items || [];
+        const itemIndex = items.findIndex(item => item.hash === this.currentItem.hash);
+        
+        if (itemIndex === -1) {
+          throw new Error('Item not found in the current data');
+        }
+        
+        items[itemIndex].title = title;
+        items[itemIndex].description = description;
+        
+        if (uploadedMedia.length > 0) {
+          items[itemIndex].media = [...(items[itemIndex].media || []), ...uploadedMedia];
+        }
+        
+        items[itemIndex].lastEdited = new Date().toISOString();
+        
+        console.log('Retrying with cached data...');
+        await window.githubAPI.updateProjects(items);
       }
-      
-      // Update the item
-      items[itemIndex].title = title;
-      items[itemIndex].description = description;
-      
-      // Merge media arrays
-      if (uploadedMedia.length > 0) {
-        items[itemIndex].media = [...(items[itemIndex].media || []), ...uploadedMedia];
-      }
-      
-      items[itemIndex].lastEdited = new Date().toISOString();
-      
-      console.log('Updating projects.json with', items.length, 'items');
-      await window.githubAPI.updateProjects(items);
       
       progressFill.style.width = '100%';
       progressText.textContent = 'Success! Reloading...';
