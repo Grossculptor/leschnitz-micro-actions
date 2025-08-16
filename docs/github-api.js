@@ -162,16 +162,19 @@ class GitHubAPI {
     }
   }
 
-  async updateProjects(projectsData, retryCount = 0) {
+  async updateSingleProject(itemHash, updates, retryCount = 0) {
+    const maxRetries = 3;
+    
     try {
       const token = await this.getToken();
       
-      // Get current file to retrieve SHA
-      const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&t=${Date.now()}`, {
+      // Get current file to retrieve SHA and latest data
+      const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Accept': 'application/vnd.github.v3+json',
-          'X-GitHub-Api-Version': '2022-11-28'
+          'X-GitHub-Api-Version': '2022-11-28',
+          'Cache-Control': 'no-cache'
         }
       });
 
@@ -187,7 +190,114 @@ class GitHubAPI {
       }
 
       const fileData = await response.json();
-      console.log('Current SHA:', fileData.sha);
+      const currentSha = fileData.sha;
+      console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, currentSha);
+      
+      // Decode and parse current content
+      const currentContent = JSON.parse(atob(fileData.content));
+      
+      // Find and update only the specific item
+      const itemIndex = currentContent.findIndex(item => item.hash === itemHash);
+      if (itemIndex === -1) {
+        throw new Error('Item not found in current data');
+      }
+      
+      // Merge updates into the specific item
+      currentContent[itemIndex] = {
+        ...currentContent[itemIndex],
+        ...updates,
+        lastEdited: new Date().toISOString()
+      };
+      
+      // Encode updated content
+      const jsonString = JSON.stringify(currentContent, null, 2);
+      const content = btoa(unescape(encodeURIComponent(jsonString)));
+
+      const updateResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'X-GitHub-Api-Version': '2022-11-28',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: `Update micro action ${itemHash.substring(0, 8)} via web editor`,
+          content: content,
+          sha: currentSha,
+          branch: this.branch
+        })
+      });
+
+      if (!updateResponse.ok) {
+        const errorData = await updateResponse.json();
+        console.error('Failed to update projects.json:', errorData);
+        
+        // Handle SHA mismatch
+        if (updateResponse.status === 409 || 
+            updateResponse.status === 422 && 
+            (errorData.message?.includes('does not match') || 
+             errorData.message?.includes('is at') && errorData.message?.includes('but expected'))) {
+          
+          console.log('SHA mismatch detected, retrying...');
+          
+          if (retryCount < maxRetries) {
+            const waitTime = Math.min(500 * Math.pow(2, retryCount), 3000);
+            console.log(`Retrying in ${waitTime}ms...`);
+            await new Promise(resolve => setTimeout(resolve, waitTime));
+            return this.updateSingleProject(itemHash, updates, retryCount + 1);
+          } else {
+            throw new Error('Unable to save due to concurrent updates. Please refresh and try again.');
+          }
+        }
+        
+        if (updateResponse.status === 403) {
+          if (errorData.message?.includes('Resource not accessible')) {
+            throw new Error('Your token needs "repo" scope to modify files.');
+          }
+          throw new Error('Permission denied. Check token permissions.');
+        }
+        
+        throw new Error(`Failed to update: ${errorData.message || updateResponse.statusText}`);
+      }
+
+      console.log('Successfully updated item:', itemHash.substring(0, 8));
+      return await updateResponse.json();
+    } catch (error) {
+      console.error('Update error:', error);
+      throw error;
+    }
+  }
+
+  async updateProjects(projectsData, retryCount = 0) {
+    const maxRetries = 3;
+    
+    try {
+      const token = await this.getToken();
+      
+      // Get current file to retrieve SHA
+      const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'X-GitHub-Api-Version': '2022-11-28',
+          'Cache-Control': 'no-cache'
+        }
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('Failed to get projects.json:', errorData);
+        
+        if (response.status === 403) {
+          throw new Error('Token lacks permissions. Please use a token with "repo" scope for full access.');
+        }
+        
+        throw new Error(`Failed to get current projects.json: ${errorData.message || response.statusText}`);
+      }
+
+      const fileData = await response.json();
+      console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, fileData.sha);
       
       // Encode content properly for GitHub API
       const jsonString = JSON.stringify(projectsData, null, 2);
@@ -214,17 +324,21 @@ class GitHubAPI {
         console.error('Failed to update projects.json:', errorData);
         
         // Handle SHA mismatch specifically
-        if (updateResponse.status === 409 || (updateResponse.status === 422 && errorData.message?.includes('does not match'))) {
+        if (updateResponse.status === 409 || 
+            updateResponse.status === 422 && 
+            (errorData.message?.includes('does not match') || 
+             errorData.message?.includes('is at') && errorData.message?.includes('but expected'))) {
+          
           console.log('SHA mismatch detected, file was updated by another process');
           
-          // Retry once with fresh data
-          if (retryCount === 0) {
-            console.log('Retrying with fresh SHA...');
-            // Wait a bit to avoid race condition
-            await new Promise(resolve => setTimeout(resolve, 1000));
+          // Retry with exponential backoff
+          if (retryCount < maxRetries) {
+            const waitTime = Math.min(1000 * Math.pow(2, retryCount), 5000);
+            console.log(`Retrying in ${waitTime}ms...`);
+            await new Promise(resolve => setTimeout(resolve, waitTime));
             return this.updateProjects(projectsData, retryCount + 1);
           } else {
-            throw new Error('File was modified by another process. Please refresh the page and try again.');
+            throw new Error('File is being continuously updated by another process. Please try again in a few moments.');
           }
         }
         

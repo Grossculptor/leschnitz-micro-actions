@@ -324,58 +324,26 @@ class EditModal {
       }
 
       progressFill.style.width = '75%';
-      progressText.textContent = 'Fetching latest data...';
+      progressText.textContent = 'Updating project data...';
 
-      // Fetch fresh data from GitHub to avoid SHA mismatch
-      try {
-        const response = await fetch('data/projects.json?t=' + Date.now(), {
-          cache: 'no-store'
-        });
-        const freshItems = await response.json();
-        
-        progressText.textContent = 'Updating project data...';
-        
-        const itemIndex = freshItems.findIndex(item => item.hash === this.currentItem.hash);
-        
-        if (itemIndex === -1) {
-          throw new Error('Item not found in the current data');
-        }
-        
-        // Update the item
-        freshItems[itemIndex].title = title;
-        freshItems[itemIndex].description = description;
-        
-        // Merge media arrays
-        if (uploadedMedia.length > 0) {
-          freshItems[itemIndex].media = [...(freshItems[itemIndex].media || []), ...uploadedMedia];
-        }
-        
-        freshItems[itemIndex].lastEdited = new Date().toISOString();
-        
-        console.log('Updating projects.json with', freshItems.length, 'items');
-        await window.githubAPI.updateProjects(freshItems);
-      } catch (fetchError) {
-        console.error('Failed to fetch fresh data:', fetchError);
-        // Fallback to using cached data
-        const items = window.__items || [];
-        const itemIndex = items.findIndex(item => item.hash === this.currentItem.hash);
-        
-        if (itemIndex === -1) {
-          throw new Error('Item not found in the current data');
-        }
-        
-        items[itemIndex].title = title;
-        items[itemIndex].description = description;
-        
-        if (uploadedMedia.length > 0) {
-          items[itemIndex].media = [...(items[itemIndex].media || []), ...uploadedMedia];
-        }
-        
-        items[itemIndex].lastEdited = new Date().toISOString();
-        
-        console.log('Retrying with cached data...');
-        await window.githubAPI.updateProjects(items);
+      // Prepare updates for this specific item
+      const updates = {
+        title: title,
+        description: description
+      };
+      
+      // Add media if any were uploaded
+      if (uploadedMedia.length > 0) {
+        updates.media = [...(this.currentItem.media || []), ...uploadedMedia];
+      } else if (this.currentItem.media) {
+        // Keep existing media if no new uploads
+        updates.media = this.currentItem.media;
       }
+      
+      console.log('Updating item:', this.currentItem.hash.substring(0, 8));
+      
+      // Use the new single-item update method that handles SHA conflicts better
+      await window.githubAPI.updateSingleProject(this.currentItem.hash, updates);
       
       progressFill.style.width = '100%';
       progressText.textContent = 'Success! Reloading...';
