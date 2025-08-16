@@ -283,15 +283,22 @@ class GitHubAPI {
       // Find and update only the specific item
       const itemIndex = currentContent.findIndex(item => item.hash === itemHash);
       if (itemIndex === -1) {
+        console.error('Item not found. Hash:', itemHash);
         throw new Error('Item not found in current data');
       }
       
-      // Merge updates into the specific item
+      console.log('Found item at index:', itemIndex);
+      console.log('Current item:', currentContent[itemIndex]);
+      console.log('Updates to apply:', updates);
+      
+      // Merge updates into the specific item - preserve all existing fields
       currentContent[itemIndex] = {
         ...currentContent[itemIndex],
         ...updates,
         lastEdited: new Date().toISOString()
       };
+      
+      console.log('Updated item:', currentContent[itemIndex]);
       
       // Encode updated content
       const jsonString = JSON.stringify(currentContent, null, 2);

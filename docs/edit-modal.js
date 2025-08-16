@@ -345,8 +345,12 @@ class EditModal {
 
       // Prepare updates for this specific item
       const updates = {
-        title: title,
-        description: description
+        title: title.trim(),
+        description: description.trim(),
+        hash: this.currentItem.hash, // Ensure hash is preserved
+        datetime: this.currentItem.datetime, // Preserve original datetime
+        published: this.currentItem.published, // Preserve published date
+        source: this.currentItem.source // Preserve source
       };
       
       // Add media if any were uploaded
@@ -358,16 +362,58 @@ class EditModal {
       }
       
       console.log('Updating item:', this.currentItem.hash.substring(0, 8));
+      console.log('New title:', updates.title);
+      console.log('New description:', updates.description);
       
       // Use the new single-item update method that handles SHA conflicts better
       await window.githubAPI.updateSingleProject(this.currentItem.hash, updates);
       
-      progressFill.style.width = '100%';
-      progressText.textContent = 'Success! Reloading...';
+      progressFill.style.width = '90%';
+      progressText.textContent = 'Verifying save...';
       
-      setTimeout(() => {
-        window.location.reload();
-      }, 1500);
+      // Wait a moment for GitHub to process
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Verify the save by fetching the updated file
+      try {
+        const verifyResponse = await fetch(`https://api.github.com/repos/Grossculptor/leschnitz-micro-actions/contents/docs/data/projects.json?ref=main&_=${Date.now()}`, {
+          headers: {
+            'Authorization': `token ${await window.githubAPI.getToken()}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+        
+        if (verifyResponse.ok) {
+          const verifyData = await verifyResponse.json();
+          const verifyContent = JSON.parse(atob(verifyData.content));
+          const verifiedItem = verifyContent.find(item => item.hash === this.currentItem.hash);
+          
+          if (verifiedItem && verifiedItem.title === title.trim() && verifiedItem.description === description.trim()) {
+            console.log('✓ Changes verified on GitHub');
+            progressFill.style.width = '100%';
+            progressText.textContent = 'Success! Changes saved to GitHub.';
+            
+            // Show cache warning
+            alert('Changes saved successfully!\n\nNote: GitHub Pages may take 1-5 minutes to show your updates.\n\nTry:\n1. Hard refresh (Ctrl+F5 or Cmd+Shift+R)\n2. Clear browser cache\n3. Wait a few minutes for GitHub Pages CDN to update');
+            
+            // Force reload with cache bust
+            setTimeout(() => {
+              window.location.href = window.location.pathname + '?t=' + Date.now();
+            }, 2000);
+          } else {
+            console.warn('Changes may not have saved correctly');
+            progressText.textContent = 'Warning: Changes may not be fully saved';
+          }
+        }
+      } catch (verifyError) {
+        console.error('Could not verify save:', verifyError);
+        progressFill.style.width = '100%';
+        progressText.textContent = 'Saved (verification pending)';
+        
+        setTimeout(() => {
+          window.location.href = window.location.pathname + '?t=' + Date.now();
+        }, 2000);
+      }
       
     } catch (error) {
       console.error('Save error:', error);
