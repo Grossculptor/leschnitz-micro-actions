@@ -1,0 +1,98 @@
+name: Safe Selective Regeneration
+on:
+  workflow_dispatch:
+    inputs:
+      criteria:
+        description: 'What to regenerate'
+        required: true
+        default: 'problems'
+        type: choice
+        options:
+          - problems
+          - datasculptor
+          - encoding
+          - test5
+      confirm:
+        description: 'Type "yes" to confirm'
+        required: true
+        default: 'no'
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.confirm == 'yes'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Analyze current data
+        run: |
+          echo "## Current Data Analysis 📊" >> $GITHUB_STEP_SUMMARY
+          python scripts/safe_regenerate.py --analyze >> analysis.txt
+          cat analysis.txt >> $GITHUB_STEP_SUMMARY
+      
+      - name: Create backup
+        run: |
+          python scripts/safe_regenerate.py --backup
+          echo "✅ Backup created" >> $GITHUB_STEP_SUMMARY
+      
+      - name: Selective regeneration
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          SYSTEM_PROMPT: ${{ secrets.SYSTEM_PROMPT }}
+        run: |
+          if [ "${{ github.event.inputs.criteria }}" = "test5" ]; then
+            echo "Running test regeneration on 5 items..."
+            # For testing, only regenerate 5 DATAsculptor items
+            python scripts/safe_regenerate.py --regenerate datasculptor --max 5 --test
+            echo "⚠️  TEST MODE - Would regenerate 5 items" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "Regenerating items with criteria: ${{ github.event.inputs.criteria }}"
+            # Create the regeneration list
+            echo "yes" | python scripts/safe_regenerate.py --regenerate ${{ github.event.inputs.criteria }}
+            
+            # Check if regeneration list was created
+            if [ -f "docs/data/regenerate_list.json" ]; then
+              # Run actual regeneration
+              python scripts/pipeline.py --regenerate
+              echo "✅ Regeneration complete" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "❌ No items to regenerate" >> $GITHUB_STEP_SUMMARY
+            fi
+          fi
+      
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            echo "ℹ️ No changes detected" >> $GITHUB_STEP_SUMMARY
+          else
+            git commit -m "Safe selective regeneration: ${{ github.event.inputs.criteria }}
+            
+            - Criteria: ${{ github.event.inputs.criteria }}
+            - Backup created before changes
+            - Media and metadata preserved
+            
+            Triggered manually via workflow_dispatch"
+            git push
+            echo "✅ Changes committed and pushed" >> $GITHUB_STEP_SUMMARY
+          fi
+      
+      - name: Final summary
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## Regeneration Complete! 🎨" >> $GITHUB_STEP_SUMMARY
+          echo "- Criteria: **${{ github.event.inputs.criteria }}**" >> $GITHUB_STEP_SUMMARY
+          echo "- Backup available in docs/data/" >> $GITHUB_STEP_SUMMARY
+          echo "- Check the [website](https://grossculptor.github.io/leschnitz-micro-actions/)" >> $GITHUB_STEP_SUMMARY

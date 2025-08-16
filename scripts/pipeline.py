@@ -329,7 +329,9 @@ def regenerate_existing():
             # Update the item, preserving metadata
             item["title"] = new_micro.get("title", item["title"])
             item["description"] = new_micro.get("description", item["description"])
-            # Keep existing: datetime, source, hash
+            # Keep existing: datetime, source, hash, media, lastEdited
+            # Explicitly preserve media and edit history
+            # Media field is preserved automatically since we only update title/description
             
             updated += 1
             print(f"  ✓ Regenerated: {item['title']}")
