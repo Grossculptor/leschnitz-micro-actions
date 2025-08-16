@@ -137,4 +137,12 @@ class MediaViewer {
   }
 }
 
-window.mediaViewer = new MediaViewer();
+// Wait for DOM to be ready before creating viewer
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    window.mediaViewer = new MediaViewer();
+  });
+} else {
+  // DOM already loaded
+  window.mediaViewer = new MediaViewer();
+}

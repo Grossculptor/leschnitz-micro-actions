@@ -202,7 +202,18 @@ class EditModal {
       document.getElementById('authError').innerHTML = '';
     }
     
-    this.modal.style.display = 'flex';
+    // Ensure modal exists before trying to display it
+    if (this.modal) {
+      this.modal.style.display = 'flex';
+    } else {
+      console.error('Modal element not found - reinitializing...');
+      this.init();
+      if (this.modal) {
+        this.modal.style.display = 'flex';
+      } else {
+        console.error('Failed to create modal element');
+      }
+    }
   }
 
   loadItemData() {
@@ -470,4 +481,12 @@ class EditModal {
   }
 }
 
-window.editModal = new EditModal();
+// Wait for DOM to be ready before creating modal
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    window.editModal = new EditModal();
+  });
+} else {
+  // DOM already loaded
+  window.editModal = new EditModal();
+}
