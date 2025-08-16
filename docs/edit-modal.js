@@ -181,7 +181,12 @@ class EditModal {
     const preview = document.getElementById('mediaPreview');
     preview.innerHTML = '';
 
-    if (this.currentItem.media) {
+    // Ensure media array exists
+    if (!this.currentItem.media) {
+      this.currentItem.media = [];
+    }
+
+    if (this.currentItem.media && this.currentItem.media.length > 0) {
       this.currentItem.media.forEach((media, index) => {
         const item = document.createElement('div');
         item.className = 'preview-item existing';
@@ -253,16 +258,26 @@ class EditModal {
 
     try {
       progressDiv.style.display = 'block';
-      progressText.textContent = 'Uploading media...';
       
+      // Upload media files if any
       const uploadedMedia = [];
-      for (let i = 0; i < this.mediaFiles.length; i++) {
-        const file = this.mediaFiles[i];
-        progressFill.style.width = `${(i / this.mediaFiles.length) * 50}%`;
-        progressText.textContent = `Uploading ${file.name}...`;
+      if (this.mediaFiles.length > 0) {
+        progressText.textContent = 'Uploading media files...';
         
-        const mediaData = await window.githubAPI.uploadMedia(file, this.currentItem.hash);
-        uploadedMedia.push(mediaData);
+        for (let i = 0; i < this.mediaFiles.length; i++) {
+          const file = this.mediaFiles[i];
+          progressFill.style.width = `${(i / this.mediaFiles.length) * 50}%`;
+          progressText.textContent = `Uploading ${file.name} (${i + 1}/${this.mediaFiles.length})...`;
+          
+          try {
+            const mediaData = await window.githubAPI.uploadMedia(file, this.currentItem.hash);
+            uploadedMedia.push(mediaData);
+            console.log(`Successfully uploaded: ${file.name}`);
+          } catch (uploadError) {
+            console.error(`Failed to upload ${file.name}:`, uploadError);
+            throw new Error(`Failed to upload ${file.name}: ${uploadError.message}`);
+          }
+        }
       }
 
       progressFill.style.width = '75%';
@@ -271,25 +286,57 @@ class EditModal {
       const items = window.__items || [];
       const itemIndex = items.findIndex(item => item.hash === this.currentItem.hash);
       
-      if (itemIndex !== -1) {
-        items[itemIndex].title = title;
-        items[itemIndex].description = description;
-        items[itemIndex].media = [...(this.currentItem.media || []), ...uploadedMedia];
-        items[itemIndex].lastEdited = new Date().toISOString();
-        
-        await window.githubAPI.updateProjects(items);
-        
-        progressFill.style.width = '100%';
-        progressText.textContent = 'Success!';
-        
-        setTimeout(() => {
-          window.location.reload();
-        }, 1000);
+      if (itemIndex === -1) {
+        throw new Error('Item not found in the current data');
       }
+      
+      // Update the item
+      items[itemIndex].title = title;
+      items[itemIndex].description = description;
+      
+      // Merge media arrays
+      if (uploadedMedia.length > 0) {
+        items[itemIndex].media = [...(items[itemIndex].media || []), ...uploadedMedia];
+      }
+      
+      items[itemIndex].lastEdited = new Date().toISOString();
+      
+      console.log('Updating projects.json with', items.length, 'items');
+      await window.githubAPI.updateProjects(items);
+      
+      progressFill.style.width = '100%';
+      progressText.textContent = 'Success! Reloading...';
+      
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+      
     } catch (error) {
       console.error('Save error:', error);
-      alert('Failed to save changes: ' + error.message);
-      progressDiv.style.display = 'none';
+      progressText.textContent = 'Error: ' + error.message;
+      progressFill.style.backgroundColor = '#ff4444';
+      
+      // More detailed error message
+      let errorMessage = 'Failed to save changes:\n\n';
+      if (error.message.includes('401')) {
+        errorMessage += 'Authentication failed. Please check your GitHub token has the correct permissions.';
+      } else if (error.message.includes('404')) {
+        errorMessage += 'File or repository not found. Please check the repository settings.';
+      } else if (error.message.includes('422')) {
+        errorMessage += 'Invalid request. The file may be too large or in an unsupported format.';
+      } else {
+        errorMessage += error.message;
+      }
+      
+      alert(errorMessage);
+      
+      // Reset progress bar after 3 seconds
+      setTimeout(() => {
+        progressDiv.style.display = 'none';
+        progressFill.style.width = '0%';
+        progressFill.style.backgroundColor = '#4a7c4a';
+        progressText.textContent = 'Uploading...';
+      }, 3000);
     }
   }
 

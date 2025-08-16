@@ -77,9 +77,10 @@ class GitHubAPI {
     try {
       const token = await this.getToken();
       
+      // Check if file already exists
       let sha = null;
       try {
-        const existing = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/${filePath}`, {
+        const existing = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/${filePath}?ref=${this.branch}`, {
           headers: {
             'Authorization': `token ${token}`,
             'Accept': 'application/vnd.github.v3+json'
@@ -89,9 +90,10 @@ class GitHubAPI {
         if (existing.ok) {
           const data = await existing.json();
           sha = data.sha;
+          console.log('File exists, will update:', filePath);
         }
       } catch (e) {
-        console.log('File does not exist, creating new');
+        console.log('File does not exist, creating new:', filePath);
       }
 
       const body = {
@@ -115,7 +117,9 @@ class GitHubAPI {
       });
 
       if (!response.ok) {
-        throw new Error(`Failed to upload file: ${response.statusText}`);
+        const errorData = await response.json();
+        console.error('GitHub API error:', errorData);
+        throw new Error(`Failed to upload file: ${response.status} - ${errorData.message || response.statusText}`);
       }
 
       return await response.json();
@@ -129,7 +133,8 @@ class GitHubAPI {
     try {
       const token = await this.getToken();
       
-      const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
+      // Get current file to retrieve SHA
+      const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}`, {
         headers: {
           'Authorization': `token ${token}`,
           'Accept': 'application/vnd.github.v3+json'
@@ -137,11 +142,16 @@ class GitHubAPI {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to get current projects.json');
+        const errorData = await response.json();
+        console.error('Failed to get projects.json:', errorData);
+        throw new Error(`Failed to get current projects.json: ${errorData.message || response.statusText}`);
       }
 
       const fileData = await response.json();
-      const content = btoa(unescape(encodeURIComponent(JSON.stringify(projectsData, null, 2))));
+      
+      // Encode content properly for GitHub API
+      const jsonString = JSON.stringify(projectsData, null, 2);
+      const content = btoa(unescape(encodeURIComponent(jsonString)));
 
       const updateResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
         method: 'PUT',
@@ -159,7 +169,9 @@ class GitHubAPI {
       });
 
       if (!updateResponse.ok) {
-        throw new Error('Failed to update projects.json');
+        const errorData = await updateResponse.json();
+        console.error('Failed to update projects.json:', errorData);
+        throw new Error(`Failed to update projects.json: ${errorData.message || updateResponse.statusText}`);
       }
 
       return await updateResponse.json();
@@ -179,9 +191,13 @@ class GitHubAPI {
       });
 
       const base64Content = fileContent.split(',')[1];
-      const fileName = `${Date.now()}_${file.name}`;
+      
+      // Sanitize filename - remove special characters and spaces
+      const sanitizedName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+      const fileName = `${Date.now()}_${sanitizedName}`;
       const filePath = `docs/media/${itemHash}/${fileName}`;
 
+      console.log('Uploading file:', filePath);
       await this.uploadFile(filePath, base64Content, `Upload media: ${fileName}`);
 
       let thumbPath = null;
@@ -189,8 +205,10 @@ class GitHubAPI {
         const thumbnail = await this.generateThumbnail(file);
         if (thumbnail) {
           const thumbBase64 = thumbnail.split(',')[1];
-          thumbPath = `docs/media/${itemHash}/thumb_${fileName.replace(/\.[^.]+$/, '.jpg')}`;
-          await this.uploadFile(thumbPath, thumbBase64, `Upload thumbnail: thumb_${fileName}`);
+          const thumbFileName = fileName.replace(/\.[^.]+$/, '') + '_thumb.jpg';
+          thumbPath = `docs/media/${itemHash}/${thumbFileName}`;
+          console.log('Uploading thumbnail:', thumbPath);
+          await this.uploadFile(thumbPath, thumbBase64, `Upload thumbnail: ${thumbFileName}`);
         }
       }
 
