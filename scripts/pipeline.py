@@ -50,7 +50,7 @@ KEYWORDS_STRONG = [
 
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"})
-TIMEOUT=10  # Reduced timeout to prevent hanging
+TIMEOUT=20  # Increased timeout for slow feeds like BIP Lesnica
 
 def ts_now():
     return dt.datetime.utcnow().strftime("%Y%m%d-%H%M%S")
@@ -88,9 +88,8 @@ def pull_fulltext(url:str)->str:
 
 def parse_feed(url:str):
     try:
-        # Use requests to fetch feed with timeout
-        response = SESSION.get(url, timeout=TIMEOUT)
-        response.raise_for_status()
+        # Use fetch function which has retry logic with exponential backoff
+        response = fetch(url)
         fp = feedparser.parse(response.text)
         if fp.entries:
             out = []
