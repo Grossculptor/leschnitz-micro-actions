@@ -34,8 +34,11 @@ def has_encoding_issues(text):
     """Check if text has encoding issues (ÃÂÃÂ patterns)"""
     if not text:
         return False
-    # Look for repeated encoding issue patterns
-    return "ÃÂ" in text or "Ã‚" in text
+    # Look for UTF-8 corruption patterns (including control characters)
+    # These patterns indicate multi-byte UTF-8 was incorrectly decoded
+    return ("Â" in text and "Ã" in text) or \
+           any(ord(c) in [0x80, 0x81, 0x82, 0x83] for c in text) or \
+           text.count("Â") > 2 or text.count("Ã") > 2
 
 def has_datasculptor(item):
     """Check if item contains DATAsculptor references"""
