@@ -12,40 +12,72 @@ class GitHubAPI {
       // Store the password as the GitHub Personal Access Token
       this.token = password;
       
-      // Test if the token works - try both formats
+      // Test multiple authentication methods
+      console.log('Testing GitHub authentication...');
+      
+      // Method 1: Direct test with minimal headers
       let userResponse;
       try {
         userResponse = await fetch('https://api.github.com/user', {
+          method: 'GET',
           headers: {
-            'Authorization': `token ${password}`, // GitHub prefers 'token' format
+            'Authorization': `token ${password}`,
             'Accept': 'application/vnd.github.v3+json'
-          }
+          },
+          mode: 'cors',
+          credentials: 'same-origin'
         });
-      } catch (error) {
-        console.error('Failed with token format, trying Bearer:', error);
-        userResponse = await fetch('https://api.github.com/user', {
-          headers: {
-            'Authorization': `Bearer ${password}`,
-            'Accept': 'application/vnd.github.v3+json'
-          }
-        });
+      } catch (fetchError) {
+        console.error('Network error:', fetchError);
+        // Try with Bearer format as absolute fallback
+        try {
+          userResponse = await fetch('https://api.github.com/user', {
+            method: 'GET',
+            headers: {
+              'Authorization': `Bearer ${password}`,
+              'Accept': 'application/vnd.github.v3+json'
+            },
+            mode: 'cors',
+            credentials: 'same-origin'
+          });
+        } catch (secondError) {
+          console.error('Both auth methods failed:', secondError);
+          throw new Error('Network error - please check your connection and try again');
+        }
       }
       
-      if (!userResponse.ok) {
-        console.error('Invalid token');
+      if (!userResponse || !userResponse.ok) {
+        const status = userResponse ? userResponse.status : 'unknown';
+        console.error('Invalid token, status:', status);
+        if (status === 401) {
+          throw new Error('Invalid token - please check your Personal Access Token');
+        } else if (status === 403) {
+          throw new Error('Token lacks required permissions - needs "repo" scope');
+        }
         return false;
       }
       
       const userData = await userResponse.json();
       console.log('Authenticated as:', userData.login);
       
-      // Test if the token can access the repo
-      const repoResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}`, {
-        headers: {
-          'Authorization': `token ${password}`, // Use token format
-          'Accept': 'application/vnd.github.v3+json'
-        }
-      });
+      // Test if the token can access the repo - with better error handling
+      let repoResponse;
+      try {
+        repoResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `token ${password}`,
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          mode: 'cors',
+          credentials: 'same-origin'
+        });
+      } catch (repoError) {
+        console.error('Failed to check repo access:', repoError);
+        // Still allow authentication if user check passed
+        console.warn('Could not verify repo access, but user auth succeeded');
+        repoResponse = { ok: true };
+      }
       
       if (!repoResponse.ok) {
         console.error('Cannot access repository');
@@ -108,11 +140,13 @@ class GitHubAPI {
       let sha = null;
       try {
         const existing = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/${filePath}?ref=${this.branch}`, {
+          method: 'GET',
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Accept': 'application/vnd.github.v3+json',
-            'X-GitHub-Api-Version': '2022-11-28'
-          }
+            'Authorization': `token ${token}`, // Use token format
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          mode: 'cors',
+          credentials: 'same-origin'
         });
         
         if (existing.ok) {
@@ -137,11 +171,12 @@ class GitHubAPI {
       const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/${filePath}`, {
         method: 'PUT',
         headers: {
-          'Authorization': `Bearer ${token}`,
+          'Authorization': `token ${token}`, // Use token format
           'Accept': 'application/vnd.github.v3+json',
-          'X-GitHub-Api-Version': '2022-11-28',
           'Content-Type': 'application/json'
         },
+        mode: 'cors',
+        credentials: 'same-origin',
         body: JSON.stringify(body)
       });
 
@@ -185,32 +220,46 @@ class GitHubAPI {
       
       // Get current file to retrieve SHA and latest data
       let response;
-      try {
-        response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`, {
-          headers: {
-            'Authorization': `token ${token}`, // Use token format by default
-            'Accept': 'application/vnd.github.v3+json',
-            'Cache-Control': 'no-cache'
-          }
-        });
-      } catch (fetchError) {
-        console.error('Network error with token format:', fetchError);
-        
-        // Try with Bearer format as fallback
-        console.log('Retrying with Bearer format...');
+      const maxAttempts = 3;
+      let lastError = null;
+      
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
         try {
+          console.log(`Attempt ${attempt}/${maxAttempts} to fetch projects.json...`);
+          
           response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`, {
+            method: 'GET',
             headers: {
-              'Authorization': `Bearer ${token}`,
-              'Accept': 'application/vnd.github.v3+json',
-              'X-GitHub-Api-Version': '2022-11-28',
-              'Cache-Control': 'no-cache'
-            }
+              'Authorization': `token ${token}`,
+              'Accept': 'application/vnd.github.v3+json'
+            },
+            mode: 'cors',
+            credentials: 'same-origin',
+            cache: 'no-cache'
           });
-        } catch (secondError) {
-          console.error('Network error with Bearer format:', secondError);
-          throw new Error(`Unable to connect to GitHub API. Please check your internet connection and ensure your token is valid.`);
+          
+          if (response.ok) {
+            break; // Success, exit loop
+          }
+          
+          lastError = `HTTP ${response.status}: ${response.statusText}`;
+          console.error(`Attempt ${attempt} failed:`, lastError);
+          
+          if (attempt < maxAttempts) {
+            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+          }
+        } catch (fetchError) {
+          lastError = fetchError.message;
+          console.error(`Network error on attempt ${attempt}:`, fetchError);
+          
+          if (attempt < maxAttempts) {
+            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+          }
         }
+      }
+      
+      if (!response || !response.ok) {
+        throw new Error(`Failed to connect to GitHub after ${maxAttempts} attempts. ${lastError || 'Unknown error'}`);
       }
 
       if (!response.ok) {
@@ -248,36 +297,24 @@ class GitHubAPI {
       const jsonString = JSON.stringify(currentContent, null, 2);
       const content = btoa(unescape(encodeURIComponent(jsonString)));
 
+      // Update with retry logic
       let updateResponse;
-      try {
-        updateResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
-          method: 'PUT',
-          headers: {
-            'Authorization': `token ${token}`, // Use token format by default
-            'Accept': 'application/vnd.github.v3+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: `Update micro action ${itemHash.substring(0, 8)} via web editor`,
-            content: content,
-            sha: currentSha,
-            branch: this.branch
-          })
-        });
-      } catch (fetchError) {
-        console.error('Network error during update:', fetchError);
-        
-        // Try with Bearer format as fallback
-        console.log('Retrying with Bearer format...');
+      const updateMaxAttempts = 3;
+      let updateLastError = null;
+      
+      for (let attempt = 1; attempt <= updateMaxAttempts; attempt++) {
         try {
+          console.log(`Update attempt ${attempt}/${updateMaxAttempts}...`);
+          
           updateResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
             method: 'PUT',
             headers: {
-              'Authorization': `Bearer ${token}`,
+              'Authorization': `token ${token}`,
               'Accept': 'application/vnd.github.v3+json',
-              'X-GitHub-Api-Version': '2022-11-28',
               'Content-Type': 'application/json'
             },
+            mode: 'cors',
+            credentials: 'same-origin',
             body: JSON.stringify({
               message: `Update micro action ${itemHash.substring(0, 8)} via web editor`,
               content: content,
@@ -285,9 +322,40 @@ class GitHubAPI {
               branch: this.branch
             })
           });
-        } catch (secondFetchError) {
-          throw new Error(`Network error: Unable to connect to GitHub. Please check your internet connection.`);
+          
+          if (updateResponse.ok) {
+            break; // Success
+          }
+          
+          const errorData = await updateResponse.json();
+          updateLastError = errorData.message || updateResponse.statusText;
+          
+          // Check for SHA mismatch
+          if (updateResponse.status === 409 || 
+              (updateResponse.status === 422 && errorData.message?.includes('does not match'))) {
+            console.log('SHA mismatch, refetching...');
+            // Return to retry the whole operation
+            if (retryCount < maxRetries) {
+              await new Promise(resolve => setTimeout(resolve, 500 * Math.pow(2, retryCount)));
+              return this.updateSingleProject(itemHash, updates, retryCount + 1);
+            }
+          }
+          
+          if (attempt < updateMaxAttempts) {
+            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+          }
+        } catch (fetchError) {
+          updateLastError = fetchError.message;
+          console.error(`Update network error on attempt ${attempt}:`, fetchError);
+          
+          if (attempt < updateMaxAttempts) {
+            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+          }
         }
+      }
+      
+      if (!updateResponse) {
+        throw new Error(`Network error after ${updateMaxAttempts} attempts: ${updateLastError}`);
       }
 
       if (!updateResponse.ok) {
@@ -464,6 +532,66 @@ class GitHubAPI {
     } catch (error) {
       console.error('Media upload error:', error);
       throw error;
+    }
+  }
+
+  async testConnection() {
+    try {
+      console.log('Testing GitHub API connection...');
+      
+      // Test 1: Basic API connectivity
+      const apiTest = await fetch('https://api.github.com', {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+      
+      if (!apiTest.ok) {
+        throw new Error('Cannot reach GitHub API');
+      }
+      
+      console.log('✓ GitHub API is reachable');
+      
+      // Test 2: Token validity if available
+      if (this.token) {
+        const authTest = await fetch('https://api.github.com/user', {
+          method: 'GET',
+          headers: {
+            'Authorization': `token ${this.token}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+        
+        if (authTest.ok) {
+          const user = await authTest.json();
+          console.log(`✓ Authenticated as: ${user.login}`);
+          
+          // Test 3: Repository access
+          const repoTest = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}`, {
+            method: 'GET',
+            headers: {
+              'Authorization': `token ${this.token}`,
+              'Accept': 'application/vnd.github.v3+json'
+            }
+          });
+          
+          if (repoTest.ok) {
+            const repo = await repoTest.json();
+            console.log(`✓ Can access repository: ${repo.full_name}`);
+            console.log(`  Permissions: ${repo.permissions ? JSON.stringify(repo.permissions) : 'unknown'}`);
+          } else {
+            console.log('✗ Cannot access repository');
+          }
+        } else {
+          console.log('✗ Token is invalid or expired');
+        }
+      }
+      
+      return true;
+    } catch (error) {
+      console.error('Connection test failed:', error);
+      return false;
     }
   }
 

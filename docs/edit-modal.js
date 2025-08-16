@@ -79,6 +79,23 @@ class EditModal {
     const dropZone = document.getElementById('dropZone');
     const fileInput = document.getElementById('fileInput');
     const logoutBtn = document.getElementById('logoutButton');
+    
+    // Add connection test functionality
+    setTimeout(() => {
+      const testBtn = document.querySelector('#authSection button:not(#authButton)');
+      if (!testBtn) {
+        const authSection = document.getElementById('authSection');
+        const testButton = document.createElement('button');
+        testButton.textContent = 'Test Connection';
+        testButton.style.cssText = 'margin-top: 10px; padding: 5px 10px; background: #555; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;';
+        testButton.onclick = async () => {
+          testButton.textContent = 'Testing...';
+          await window.githubAPI.testConnection();
+          testButton.textContent = 'Test Connection (check console)';
+        };
+        authSection.appendChild(testButton);
+      }
+    }, 100);
 
     closeBtn.addEventListener('click', () => this.close());
     cancelBtn.addEventListener('click', () => this.close());
