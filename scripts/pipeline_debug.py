@@ -155,7 +155,7 @@ def _groq_chat(messages, model="llama-3.1-70b-versatile"):
         raise ValueError("GROQ_API_KEY not set")
     
     print(f"DEBUG: Using model {model}")
-    print(f"DEBUG: API key present: {api_key[:10]}...")
+    print("DEBUG: API key configured")
     
     req = urllib.request.Request(
         "https://api.groq.com/openai/v1/chat/completions",
@@ -276,7 +276,7 @@ def main():
     if not api_key:
         print("ERROR: GROQ_API_KEY missing from environment")
         raise RuntimeError("GROQ_API_KEY missing")
-    print(f"DEBUG: GROQ_API_KEY found: {api_key[:10]}...")
+    print("DEBUG: GROQ_API_KEY found and configured")
     
     try:
         prompt = _read_system_prompt()

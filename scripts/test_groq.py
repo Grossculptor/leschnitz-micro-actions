@@ -11,7 +11,7 @@ def test_groq_api():
         print("ERROR: GROQ_API_KEY not set")
         return False
     
-    print(f"Using API key: {api_key[:10]}...")
+    print("Using configured API key")
     
     headers = {
         "Authorization": f"Bearer {api_key}",

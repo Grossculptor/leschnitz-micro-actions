@@ -261,7 +261,7 @@ def main():
     if not api_key:
         print("ERROR: GROQ_API_KEY not found in environment")
         raise RuntimeError("GROQ_API_KEY missing")
-    print(f"INFO: GROQ_API_KEY found (first 10 chars: {api_key[:10]}...)")
+    print("INFO: GROQ_API_KEY found and configured")
     
     # Check system prompt
     try:

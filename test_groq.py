@@ -14,7 +14,7 @@ def test_groq_api():
         print("Please set it with: export GROQ_API_KEY='your-key-here'")
         return False
     
-    print(f"✓ API Key found: {api_key[:10]}...")
+    print("✓ API Key found and configured")
     
     # Test with moonshotai/kimi-k2-instruct model
     model = "moonshotai/kimi-k2-instruct"
