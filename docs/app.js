@@ -1,5 +1,5 @@
 const elList=document.getElementById('list');const elQ=document.getElementById('q');const elCount=document.getElementById('count');
-async function load(){try{const r=await fetch('data/projects.json',{cache:'no-store'});const items=await r.json();render(items)}catch{elList.innerHTML=`<p style="color:#9a9a9a">No data yet. The scheduler will populate <code>docs/data/projects.json</code>.</p>`}}
+async function load(){try{const r=await fetch('data/projects.json',{cache:'no-store'});const items=await r.json();items.sort((a,b)=>{const dateA=new Date(a.datetime||a.published||0);const dateB=new Date(b.datetime||b.published||0);return dateB-dateA});render(items)}catch{elList.innerHTML=`<p style="color:#9a9a9a">No data yet. The scheduler will populate <code>docs/data/projects.json</code>.</p>`}}
 function card(item){const el=document.createElement('article');el.className='card';el.innerHTML=`
 <div class="row">
   <h2 class="title">${escapeHTML(item.title)}</h2>
