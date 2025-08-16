@@ -208,25 +208,17 @@ class EditModal {
     }
 
     try {
-      // Wait for githubAPI to be available (with timeout)
-      let attempts = 0;
-      while ((!window.githubAPI || typeof window.githubAPI.authenticate !== 'function') && attempts < 10) {
-        console.log(`Waiting for GitHub API to load... attempt ${attempts + 1}`);
-        await new Promise(resolve => setTimeout(resolve, 200));
-        attempts++;
-      }
-      
-      // Check if githubAPI is available after waiting
+      // GitHub API should already be loaded due to event-based initialization
       if (!window.githubAPI || typeof window.githubAPI.authenticate !== 'function') {
-        console.error('GitHub API not loaded after waiting');
+        console.error('GitHub API not available during authentication');
         errorDiv.innerHTML = `
-          <div style="color: #ff6b6b;">GitHub API failed to load</div>
+          <div style="color: #ff6b6b;">GitHub API not available</div>
           <div style="margin-top: 0.5rem; font-size: 0.85rem;">
-            Please try:
+            This shouldn't happen. Please:
             <ul style="text-align: left; margin: 0.5rem 0;">
-              <li>Refresh the page (Ctrl+F5 or Cmd+Shift+R)</li>
               <li>Check browser console for errors</li>
-              <li>Disable ad blockers temporarily</li>
+              <li>Refresh the page (Ctrl+F5 or Cmd+Shift+R)</li>
+              <li>Disable ad blockers if any</li>
             </ul>
           </div>
         `;
@@ -608,8 +600,8 @@ class EditModal {
   }
 }
 
-// Wait for DOM to be ready before creating modal
-// Enhanced initialization with multiple fallbacks
+// Wait for both DOM and GitHub API to be ready before creating modal
+// Enhanced initialization with event-based coordination
 function initializeEditModal() {
   try {
     if (!window.editModal) {
@@ -623,20 +615,63 @@ function initializeEditModal() {
   }
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initializeEditModal);
-} else if (document.body) {
-  // DOM and body are ready
-  initializeEditModal();
-} else {
-  // Fallback: wait for body to be available
-  const bodyWaitInterval = setInterval(() => {
-    if (document.body) {
-      clearInterval(bodyWaitInterval);
-      initializeEditModal();
-    }
-  }, 10);
+let domReady = false;
+let githubAPIReady = false;
+
+function checkAndInitialize() {
+  console.log('edit-modal.js: Checking initialization conditions', {
+    domReady,
+    githubAPIReady,
+    githubAPIExists: !!window.githubAPI
+  });
   
-  // Clear interval after 5 seconds to prevent memory leak
-  setTimeout(() => clearInterval(bodyWaitInterval), 5000);
+  if (domReady && githubAPIReady) {
+    console.log('edit-modal.js: Both DOM and GitHub API ready, initializing modal');
+    initializeEditModal();
+  }
 }
+
+// Wait for GitHub API ready event
+window.addEventListener('githubAPIReady', (event) => {
+  console.log('edit-modal.js: Received githubAPIReady event', event.detail);
+  githubAPIReady = true;
+  checkAndInitialize();
+});
+
+// Also check if GitHub API was already loaded (in case event was dispatched before this script)
+if (window.githubAPILoaded) {
+  console.log('edit-modal.js: GitHub API already loaded (flag set)');
+  githubAPIReady = true;
+}
+
+// Wait for DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('edit-modal.js: DOM content loaded');
+    domReady = true;
+    checkAndInitialize();
+  });
+} else {
+  console.log('edit-modal.js: DOM already ready');
+  domReady = true;
+  // Check after a micro-task to allow githubAPIReady event to be processed
+  setTimeout(checkAndInitialize, 0);
+}
+
+// Fallback: If GitHub API hasn't loaded after 10 seconds, show error
+setTimeout(() => {
+  if (!githubAPIReady) {
+    console.error('edit-modal.js: GitHub API failed to load after 10 seconds');
+    // Create a minimal edit modal that shows error
+    window.editModal = {
+      open: () => {
+        alert('GitHub API failed to load. The editor cannot function.\n\n' +
+              'Possible causes:\n' +
+              '• Ad blocker blocking github-api.js\n' +
+              '• Network error loading the script\n' +
+              '• JavaScript error in github-api.js\n\n' +
+              'Please check browser console and refresh the page.');
+      }
+    };
+  }
+}, 10000);

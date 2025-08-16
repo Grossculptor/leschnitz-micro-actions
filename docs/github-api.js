@@ -699,14 +699,19 @@ class GitHubAPI {
 // Initialize GitHub API with error handling
 console.log('github-api.js: About to initialize GitHubAPI');
 
+let apiInitialized = false;
+let initError = null;
+
 try {
   // Create instance immediately
   window.githubAPI = new GitHubAPI();
   console.log('github-api.js: GitHubAPI instance created successfully');
   console.log('github-api.js: window.githubAPI =', window.githubAPI);
+  apiInitialized = true;
 } catch (error) {
   console.error('github-api.js: CRITICAL ERROR creating GitHubAPI:', error);
   console.error('github-api.js: Error stack:', error.stack);
+  initError = error;
   
   // Create a minimal fallback object
   window.githubAPI = {
@@ -716,7 +721,7 @@ try {
     },
     authenticate: async (password) => {
       console.error('Fallback githubAPI: authenticate called but API failed to load');
-      alert('GitHub API failed to initialize. Error: ' + error.message + '\n\nPlease refresh the page.');
+      alert('GitHub API failed to initialize. Error: ' + initError.message + '\n\nPlease refresh the page.');
       return false;
     },
     logout: () => {
@@ -732,3 +737,21 @@ try {
 
 // Log final state
 console.log('github-api.js: Script execution complete. window.githubAPI exists:', !!window.githubAPI);
+
+// Dispatch custom event to signal GitHub API is ready (or failed with fallback)
+const githubAPIReadyEvent = new CustomEvent('githubAPIReady', {
+  detail: {
+    success: apiInitialized,
+    error: initError ? initError.message : null,
+    hasFallback: !apiInitialized
+  }
+});
+
+// Dispatch event after a micro-task to ensure all scripts have loaded
+setTimeout(() => {
+  console.log('github-api.js: Dispatching githubAPIReady event', githubAPIReadyEvent.detail);
+  window.dispatchEvent(githubAPIReadyEvent);
+}, 0);
+
+// Also set a flag for synchronous checking
+window.githubAPILoaded = true;
