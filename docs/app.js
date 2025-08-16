@@ -11,7 +11,7 @@ ${item.media && item.media.length > 0 ? `
     <div class="media-thumb" data-index="${i}">
       ${m.type === 'image' || m.type === 'video' ? 
         `<img src="${m.thumb || m.url}" alt="Media">` :
-        `<div class="audio-thumb">🎵</div>`
+        `<div class="audio-thumb">▶️</div>`
       }
       ${m.type === 'video' ? '<span class="media-badge">▶</span>' : ''}
     </div>

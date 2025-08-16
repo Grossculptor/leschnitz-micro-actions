@@ -648,10 +648,14 @@ class GitHubAPI {
       canvas.width = 120;
       canvas.height = 120;
 
+      // Apply grayscale filter
+      ctx.filter = 'grayscale(100%)';
+
       if (file.type.startsWith('image/')) {
         const img = new Image();
         img.onload = () => {
-          const scale = Math.min(canvas.width / img.width, canvas.height / img.height);
+          // Use cover mode: scale to fill entire canvas (crop if needed)
+          const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
           const x = (canvas.width / 2) - (img.width / 2) * scale;
           const y = (canvas.height / 2) - (img.height / 2) * scale;
           ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
@@ -665,7 +669,8 @@ class GitHubAPI {
           video.currentTime = 1;
         };
         video.onseeked = () => {
-          const scale = Math.min(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
+          // Use cover mode: scale to fill entire canvas (crop if needed)
+          const scale = Math.max(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
           const x = (canvas.width / 2) - (video.videoWidth / 2) * scale;
           const y = (canvas.height / 2) - (video.videoHeight / 2) * scale;
           ctx.drawImage(video, x, y, video.videoWidth * scale, video.videoHeight * scale);

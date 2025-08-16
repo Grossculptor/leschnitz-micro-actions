@@ -279,7 +279,7 @@ class EditModal {
         `;
       } else if (file.type.startsWith('audio/')) {
         item.innerHTML = `
-          <div class="audio-icon">🎵</div>
+          <div class="audio-icon">▶️</div>
           <button class="remove-media" data-index="${index}">&times;</button>
           <span class="media-type">audio</span>
         `;

@@ -87,7 +87,7 @@ class MediaViewer {
       const audioContainer = document.createElement('div');
       audioContainer.className = 'audio-player';
       audioContainer.innerHTML = `
-        <div class="audio-icon-large">🎵</div>
+        <div class="audio-icon-large">▶️</div>
         <audio controls autoplay>
           <source src="${media.url}" type="audio/mpeg">
           Your browser does not support the audio element.
