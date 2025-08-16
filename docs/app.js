@@ -1,10 +1,39 @@
 const elList=document.getElementById('list');const elQ=document.getElementById('q');const elCount=document.getElementById('count');
 async function load(){try{const r=await fetch('data/projects.json',{cache:'no-store'});const items=await r.json();items.sort((a,b)=>{const dateA=new Date(a.datetime||a.published||0);const dateB=new Date(b.datetime||b.published||0);return dateB-dateA});render(items)}catch{elList.innerHTML=`<p style="color:#9a9a9a">No data yet. The scheduler will populate <code>docs/data/projects.json</code>.</p>`}}
 function card(item){const el=document.createElement('article');el.className='card '+getShadeClass(item.source);el.innerHTML=`
+<button class="edit-btn" title="Edit" data-hash="${item.hash}">✏️</button>
 <h2 class="title">${escapeHTML(item.title)}</h2>
 <div class="meta"><span>${new Date(item.datetime||item.published||Date.now()).toLocaleString()}</span><span>${(item.hash||'').slice(0,8)}</span><a class="source" href="${escapeAttr(item.source||'#')}" target="_blank" rel="noopener">source</a></div>
 <p class="desc">${escapeHTML(item.description||'')}</p>
-`;el.addEventListener('pointermove',e=>{el.style.setProperty('--mx',`${e.offsetX}px`);el.style.setProperty('--my',`${e.offsetY}px`)});return el}
+${item.media && item.media.length > 0 ? `
+<div class="media-thumbnails">
+  ${item.media.map((m, i) => `
+    <div class="media-thumb" data-index="${i}">
+      ${m.type === 'image' || m.type === 'video' ? 
+        `<img src="${m.thumb || m.url}" alt="Media">` :
+        `<div class="audio-thumb">🎵</div>`
+      }
+      ${m.type === 'video' ? '<span class="media-badge">▶</span>' : ''}
+    </div>
+  `).join('')}
+</div>` : ''}
+`;el.addEventListener('pointermove',e=>{el.style.setProperty('--mx',`${e.offsetX}px`);el.style.setProperty('--my',`${e.offsetY}px`)});
+const editBtn = el.querySelector('.edit-btn');
+if(editBtn) {
+  editBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    window.editModal.open(item);
+  });
+}
+const thumbs = el.querySelectorAll('.media-thumb');
+thumbs.forEach(thumb => {
+  thumb.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const index = parseInt(thumb.dataset.index);
+    window.mediaViewer.open(item.media, index);
+  });
+});
+return el}
 function render(items){window.__items=items;applyFilter()}
 function applyFilter(){const q=(elQ.value||'').toLowerCase();const items=(window.__items||[]).filter(it=>{const blob=`${it.title} ${it.description}`.toLowerCase();return !q||blob.includes(q)});elList.innerHTML='';items.forEach(it=>elList.appendChild(card(it)));elCount.textContent=`${items.length} micro actions`;elList.setAttribute('aria-busy','false')}
 function escapeHTML(s){return (s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
