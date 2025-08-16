@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import os, re, json, time, hashlib, pathlib, datetime as dt
+import os, re, json, time, hashlib, pathlib, datetime as dt, argparse
 import requests, feedparser
 from bs4 import BeautifulSoup
 from dateutil import parser as dparser
@@ -231,12 +231,10 @@ def _extract_json(text:str):
     return {}
 
 def classify_with_kimi(item:dict)->dict:
-    sys = _read_system_prompt() + "\nYou are a relevance filter for Leschnitz (Leśnica) / Kreis Gross Strehlitz (Strzelce County) / Oppeln (Opole) and surroundings in Oberschlesien. Focus on local history, culture, regulations, bureaucracy, indigenous inhabitants, Germans, displaced persons, nationalism. Respond ONLY with compact JSON."
+    sys = _read_system_prompt() + "\nRespond ONLY with compact JSON."
     user = f"""
-Decide if the following article is relevant to Leschnitz / Kreis Gross Strehlitz / Oppeln environs (Oberschlesien).
+Classify if this article is relevant to the local area.
 Return JSON with keys: "relevant": boolean, "why": string, "places_german": [string].
-Include: local history, culture, regulations, bureaucracy, indigenous issues, German heritage, displacement, nationalism.
-Ignore: guides/gossip/TV/clickbait/ads. Include BIP Leschnitz and Strzelce local civic content.
 Title: {item.get('title','')}
 Summary: {item.get('summary','')}
 Content: {(item.get('content') or '')[:1200]}
@@ -256,16 +254,13 @@ Content: {(item.get('content') or '')[:1200]}
 
 def generate_micro(item:dict)->dict:
     sys = _read_system_prompt() + """
-You create critical questions revealing hidden PR goals. Grade 9 readability.
-RULES: Output JSON with "title","datetime","description". Title is a QUESTION 45-58 chars exposing the propaganda goal. Use max 3 keywords from source. English title with German place names (Leschnitz, Oppeln, Gross Strehlitz), Polish keywords preserved. Minimal DATAsculptor signature. Focus on marginalization, colonization, bureaucratic pressure on indigenous peoples.
-"""
+Output JSON with exactly these keys: "title", "datetime", "description"."""
     kws = re.findall(r"[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\-]{4,}", item.get("title",""))[:4]
-    user = f"""Create ONE critical question title.
+    user = f"""Transform this news item into artistic micro action.
 Source title: {item.get('title','')}
 Published: {item.get('published','')}
-Available keywords (use max 3): {kws}
-Short gist: {item.get('summary') or (item.get('content') or '')[:400]}
-Title must be a question revealing the hidden PR/propaganda goal. 45-58 chars.
+Available keywords: {kws}
+Content: {item.get('summary') or (item.get('content') or '')[:400]}
 Return JSON only."""
     try:
         out = _groq_chat([{"role":"system","content":sys},{"role":"user","content":user}])
@@ -282,6 +277,78 @@ Return JSON only."""
         "datetime": item.get("published", dt.datetime.utcnow().isoformat()),
         "description": normalize_german_places((item.get("summary") or item.get("content",""))[:480])
     }
+
+def regenerate_existing():
+    """Regenerate all existing micro actions with new prompt system"""
+    print(f"INFO: Starting regeneration mode at {dt.datetime.utcnow().isoformat()}")
+    
+    # Check API key
+    api_key = os.getenv("GROQ_API_KEY")
+    if not api_key:
+        print("ERROR: GROQ_API_KEY not found in environment")
+        raise RuntimeError("GROQ_API_KEY missing")
+    
+    # Check system prompt
+    try:
+        prompt = _read_system_prompt()
+        print(f"INFO: System prompt loaded (length: {len(prompt)} chars)")
+    except Exception as e:
+        print(f"ERROR: Failed to load system prompt: {e}")
+        raise
+    
+    # Load existing projects
+    projects_file = DOCS / "projects.json"
+    if not projects_file.exists():
+        print("ERROR: projects.json not found")
+        return
+    
+    data = json.loads(projects_file.read_text(encoding="utf-8"))
+    print(f"INFO: Loaded {len(data)} existing micro actions for regeneration")
+    
+    # Regenerate each item
+    updated = 0
+    failed = 0
+    
+    for i, item in enumerate(data):
+        print(f"INFO: Regenerating {i+1}/{len(data)}: {item.get('title', '')[:50]}...")
+        
+        # Create a fake RSS item for the generator
+        rss_item = {
+            "title": item.get("title", ""),
+            "summary": item.get("description", ""),
+            "content": item.get("description", ""),
+            "published": item.get("datetime", ""),
+            "link": item.get("source", ""),
+            "source": item.get("source", "")
+        }
+        
+        try:
+            # Generate new content
+            new_micro = generate_micro(rss_item)
+            
+            # Update the item, preserving metadata
+            item["title"] = new_micro.get("title", item["title"])
+            item["description"] = new_micro.get("description", item["description"])
+            # Keep existing: datetime, source, hash
+            
+            updated += 1
+            print(f"  ✓ Regenerated: {item['title']}")
+            
+        except Exception as e:
+            print(f"  ✗ Failed: {e}")
+            failed += 1
+        
+        # Rate limiting
+        if i < len(data) - 1:
+            time.sleep(0.5)
+    
+    # Save updated data
+    projects_file.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    
+    print(f"INFO: Regeneration complete!")
+    print(f"INFO: Updated: {updated} items")
+    print(f"INFO: Failed: {failed} items")
+    print(f"INFO: Saved to {projects_file}")
 
 def main():
     print(f"INFO: Starting pipeline at {dt.datetime.utcnow().isoformat()}")
@@ -418,4 +485,12 @@ def main():
     print(f"INFO: Output saved to {projects_file}")
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="RSS aggregation and micro action generation pipeline")
+    parser.add_argument("--regenerate", action="store_true", 
+                       help="Regenerate all existing micro actions with new prompt system")
+    args = parser.parse_args()
+    
+    if args.regenerate:
+        regenerate_existing()
+    else:
+        main()

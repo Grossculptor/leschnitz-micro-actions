@@ -1,0 +1,57 @@
+name: Regenerate All Content
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "yes" to confirm regeneration of all micro actions'
+        required: true
+        default: 'no'
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.confirm == 'yes'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Regenerate all micro actions
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          SYSTEM_PROMPT: ${{ secrets.SYSTEM_PROMPT }}
+        run: |
+          echo "Starting regeneration of all micro actions..."
+          python scripts/pipeline.py --regenerate
+      
+      - name: Commit regenerated content
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/projects.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Regenerate all micro actions with new prompt system
+            
+            - Updated all titles and descriptions
+            - Removed DATAsculptor references
+            - Applied atmospheric and sensual language
+            - Used alternative terms for colonial references
+            
+            Triggered manually via workflow_dispatch"
+            git push
+          fi
+      
+      - name: Summary
+        run: |
+          echo "## Regeneration Complete! 🎨" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All micro actions have been regenerated with the new prompt system." >> $GITHUB_STEP_SUMMARY
+          echo "Check the [website](https://grossculptor.github.io/leschnitz-micro-actions/) to see the updated content." >> $GITHUB_STEP_SUMMARY
