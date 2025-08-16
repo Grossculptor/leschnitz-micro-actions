@@ -1,10 +1,12 @@
 class GitHubAPI {
   constructor() {
-    this.owner = 'Grossculptor';
-    this.repo = 'leschnitz-micro-actions';
-    this.branch = 'main';
+    // Use config if available, otherwise use defaults
+    this.owner = window.REPO_CONFIG?.owner || 'Grossculptor';
+    this.repo = window.REPO_CONFIG?.repo || 'leschnitz-micro-actions';
+    this.branch = window.REPO_CONFIG?.branch || 'main';
     this.token = null;
     this.password = null;
+    console.log(`GitHubAPI configured for: ${this.owner}/${this.repo}`);
   }
 
   async authenticate(password) {
@@ -690,4 +692,40 @@ class GitHubAPI {
   }
 }
 
-window.githubAPI = new GitHubAPI();
+// Initialize GitHub API with error handling
+function initializeGitHubAPI() {
+  try {
+    if (!window.githubAPI) {
+      window.githubAPI = new GitHubAPI();
+      console.log('GitHub API initialized successfully');
+    }
+  } catch (error) {
+    console.error('Failed to initialize GitHub API:', error);
+    // Create a fallback object with essential methods
+    window.githubAPI = {
+      isAuthenticated: () => false,
+      authenticate: async () => {
+        console.error('GitHub API not properly loaded');
+        alert('GitHub API failed to load. Please refresh the page.');
+        return false;
+      },
+      logout: () => {
+        sessionStorage.clear();
+      },
+      testConnection: async () => {
+        console.error('GitHub API not properly loaded');
+      }
+    };
+  }
+}
+
+// Initialize immediately
+initializeGitHubAPI();
+
+// Also initialize on DOMContentLoaded as backup
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeGitHubAPI);
+} else {
+  // DOM already loaded, ensure initialization
+  setTimeout(initializeGitHubAPI, 0);
+}

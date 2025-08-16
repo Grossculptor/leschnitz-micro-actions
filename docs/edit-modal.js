@@ -208,10 +208,28 @@ class EditModal {
     }
 
     try {
-      // Check if githubAPI is available
+      // Wait for githubAPI to be available (with timeout)
+      let attempts = 0;
+      while ((!window.githubAPI || typeof window.githubAPI.authenticate !== 'function') && attempts < 10) {
+        console.log(`Waiting for GitHub API to load... attempt ${attempts + 1}`);
+        await new Promise(resolve => setTimeout(resolve, 200));
+        attempts++;
+      }
+      
+      // Check if githubAPI is available after waiting
       if (!window.githubAPI || typeof window.githubAPI.authenticate !== 'function') {
-        console.error('GitHub API not loaded');
-        errorDiv.textContent = 'GitHub API not loaded. Please refresh the page.';
+        console.error('GitHub API not loaded after waiting');
+        errorDiv.innerHTML = `
+          <div style="color: #ff6b6b;">GitHub API failed to load</div>
+          <div style="margin-top: 0.5rem; font-size: 0.85rem;">
+            Please try:
+            <ul style="text-align: left; margin: 0.5rem 0;">
+              <li>Refresh the page (Ctrl+F5 or Cmd+Shift+R)</li>
+              <li>Check browser console for errors</li>
+              <li>Disable ad blockers temporarily</li>
+            </ul>
+          </div>
+        `;
         return;
       }
       
