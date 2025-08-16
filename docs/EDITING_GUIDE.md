@@ -35,7 +35,7 @@ You have two options:
 
 ## How to Edit
 
-1. **Click the pencil icon** (✏️) on any micro action card
+1. **Click the pencil icon** (✎) on any micro action card
 2. **Enter your GitHub token** when prompted
 3. **Edit the content**:
    - Modify the title

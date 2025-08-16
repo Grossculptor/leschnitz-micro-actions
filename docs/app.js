@@ -1,7 +1,7 @@
 const elList=document.getElementById('list');const elQ=document.getElementById('q');const elCount=document.getElementById('count');
 async function load(){try{const timestamp=Date.now();const r=await fetch(`data/projects.json?t=${timestamp}`,{cache:'no-store',headers:{'Cache-Control':'no-cache','Pragma':'no-cache'}});const items=await r.json();console.log(`Loaded ${items.length} items from projects.json`);items.sort((a,b)=>{const dateA=new Date(a.datetime||a.published||0);const dateB=new Date(b.datetime||b.published||0);return dateB-dateA});render(items)}catch(e){console.error('Failed to load projects.json:',e);elList.innerHTML=`<p style="color:#9a9a9a">No data yet. The scheduler will populate <code>docs/data/projects.json</code>.</p>`}}
 function card(item){const el=document.createElement('article');el.className='card '+getShadeClass(item.source);el.innerHTML=`
-<button class="edit-btn" title="Edit" data-hash="${item.hash}">✏️</button>
+<button class="edit-btn" title="Edit" data-hash="${item.hash}">✎</button>
 <h2 class="title">${escapeHTML(item.title)}</h2>
 <div class="meta"><span>${new Date(item.datetime||item.published||Date.now()).toLocaleString()}</span><span>${(item.hash||'').slice(0,8)}</span><a class="source" href="${escapeAttr(item.source||'#')}" target="_blank" rel="noopener">source</a></div>
 <p class="desc">${escapeHTML(item.description||'')}</p>

@@ -36,7 +36,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:1rem;text-ali
 }
 
 /* Edit button styles */
-.edit-btn{position:absolute;top:1rem;right:1rem;background:transparent;border:none;cursor:pointer;opacity:0.3;font-size:1.2rem;padding:0.25rem;transition:opacity 0.2s}
+.edit-btn{position:absolute;bottom:1rem;right:1rem;background:transparent;border:none;cursor:pointer;opacity:0.3;font-size:1.2rem;padding:0.25rem;transition:opacity 0.2s}
 .edit-btn:hover{opacity:0.8}
 
 /* Media thumbnails */
