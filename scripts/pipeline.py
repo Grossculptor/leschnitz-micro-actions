@@ -47,7 +47,10 @@ KEYWORDS_STRONG = [
   "Leśnica","Lesnica","Leschnitz","Strzelce Opolskie","Gross Strehlitz",
   "powiat strzelecki","Kreis Gross Strehlitz","Góra Św. Anny","Sankt Annaberg",
   "Grodzisko","Gąsiorowice","Gasiorowice","Oppeln","Opole","Opolski",
-  "Opolszczyzna","Opolszczyźnie","Opolszczyznę","Opolszczyzny"
+  "Opolszczyzna","Opolszczyźnie","Opolszczyznę","Opolszczyzny",
+  "Zalesie Śląskie","Zalesie Slaskie","Zalesie OS",
+  "Raszowa","Raschowa","Poręba","Poremba","Lichinia","Lichynia","Żyrowa","Zyrowa","Zdzieszowice","Deschowitz",
+  "Dolna","Dollna","Kadłubiec","Kadlubietz"
 ]
 
 SESSION = requests.Session()
