@@ -6,6 +6,7 @@ class EditModal {
     this.maxFiles = 4;
     this.initRetries = 0;
     this.maxRetries = 50; // Maximum 2.5 seconds of retrying
+    this.pendingBackgroundIndex = null;
     this.init();
   }
 
@@ -381,10 +382,17 @@ class EditModal {
       this.currentItem.media.forEach((media, index) => {
         const item = document.createElement('div');
         item.className = 'preview-item existing';
+        const isBackground = this.currentItem.backgroundImage === media.url;
         item.innerHTML = `
           <img src="${media.thumb || media.url}" alt="Media">
           <button class="remove-media" data-index="${index}" data-existing="true">&times;</button>
           <span class="media-type">${media.type}</span>
+          ${media.type === 'image' ? `
+            <label class="background-check" title="Use as background">
+              <input type="checkbox" class="set-background" data-url="${media.url}" ${isBackground ? 'checked' : ''}>
+              <span class="bg-icon">🖼</span>
+            </label>
+          ` : ''}
         `;
         preview.appendChild(item);
       });
@@ -400,6 +408,10 @@ class EditModal {
           <img src="${url}" alt="${file.name}">
           <button class="remove-media" data-index="${index}">&times;</button>
           <span class="media-type">image</span>
+          <label class="background-check" title="Use as background">
+            <input type="checkbox" class="set-background" data-new-index="${index}">
+            <span class="bg-icon">🖼</span>
+          </label>
         `;
       } else if (file.type.startsWith('video/')) {
         item.innerHTML = `
@@ -433,6 +445,31 @@ class EditModal {
         this.renderMediaPreview();
       });
     });
+
+    // Add event listeners for background checkboxes
+    preview.querySelectorAll('.set-background').forEach(checkbox => {
+      checkbox.addEventListener('change', (e) => {
+        // Uncheck all other checkboxes first
+        preview.querySelectorAll('.set-background').forEach(cb => {
+          if (cb !== checkbox) cb.checked = false;
+        });
+        
+        if (checkbox.checked) {
+          // Set the background image URL
+          if (checkbox.dataset.url) {
+            // Existing image
+            this.currentItem.backgroundImage = checkbox.dataset.url;
+          } else if (checkbox.dataset.newIndex !== undefined) {
+            // New image - mark it for later processing
+            this.pendingBackgroundIndex = parseInt(checkbox.dataset.newIndex);
+          }
+        } else {
+          // Clear background image
+          this.currentItem.backgroundImage = null;
+          this.pendingBackgroundIndex = null;
+        }
+      });
+    });
   }
 
   async save() {
@@ -452,6 +489,8 @@ class EditModal {
       
       // Upload media files if any
       const uploadedMedia = [];
+      let newBackgroundImageUrl = null;
+      
       if (this.mediaFiles.length > 0) {
         progressText.textContent = 'Uploading media files...';
         
@@ -463,6 +502,12 @@ class EditModal {
           try {
             const mediaData = await window.githubAPI.uploadMedia(file, this.currentItem.hash);
             uploadedMedia.push(mediaData);
+            
+            // Check if this is the selected background image
+            if (this.pendingBackgroundIndex === i) {
+              newBackgroundImageUrl = mediaData.url;
+            }
+            
             console.log(`Successfully uploaded: ${file.name}`);
           } catch (uploadError) {
             console.error(`Failed to upload ${file.name}:`, uploadError);
@@ -482,6 +527,13 @@ class EditModal {
       
       // Always update media field to reflect removals and additions
       updates.media = [...(this.currentItem.media || []), ...uploadedMedia];
+      
+      // Handle background image
+      if (newBackgroundImageUrl) {
+        updates.backgroundImage = newBackgroundImageUrl;
+      } else if (this.currentItem.backgroundImage !== undefined) {
+        updates.backgroundImage = this.currentItem.backgroundImage;
+      }
       
       console.log('Updating item with hash:', this.currentItem.hash);
       console.log('Original title:', this.currentItem.title);

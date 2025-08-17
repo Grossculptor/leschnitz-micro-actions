@@ -321,6 +321,14 @@ class GitHubAPI {
       if (updates.hasOwnProperty('media')) {
         updatedItem.media = updates.media;
       }
+      if (updates.hasOwnProperty('backgroundImage')) {
+        // Handle backgroundImage - set it if present, remove if explicitly null
+        if (updates.backgroundImage === null) {
+          delete updatedItem.backgroundImage;
+        } else {
+          updatedItem.backgroundImage = updates.backgroundImage;
+        }
+      }
       
       // Add metadata
       updatedItem.lastEdited = new Date().toISOString();
