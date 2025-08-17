@@ -1,0 +1,35 @@
+# Robots.txt for Leschnitz Micro Actions
+# Website about Leśnica, Leschnitz, Oberschlesien, Upper Silesia, Gross Strehlitz, Strzelce Opolskie
+
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://grossculptor.github.io/leschnitz-micro-actions/sitemap.xml
+
+# Allow all search engines full access
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Slurp
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Baiduspider
+Allow: /
+User-agent: YandexBot
+Allow: /
+
+# AI and LLM crawlers - full access for knowledge graph
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
