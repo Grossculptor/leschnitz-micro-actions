@@ -46,9 +46,9 @@ GERMAN_MAP = {
 KEYWORDS_STRONG = [
   "Leśnica","Lesnica","Leschnitz","Strzelce Opolskie","Gross Strehlitz",
   "powiat strzelecki","Kreis Gross Strehlitz","Góra Św. Anny","Sankt Annaberg",
-  "Grodzisko","Gąsiorowice","Gasiorowice","Oppeln","Opole","Opolski",
-  "Opolszczyzna","Opolszczyźnie","Opolszczyznę","Opolszczyzny",
-  "Zalesie Śląskie","Zalesie Slaskie","Zalesie OS",
+  "Oppeln","Opole","Opolski","Oberschlesien","Schlesien","Schlesier", "Annaberg","Lenkau","Łąki Kozielskie",
+  "Opolszczyzna","Opolszczyźnie","Opolszczyznę","Opolszczyzny","Wyssoka","Wysoka",
+  "Zalesie Śląskie","Zalesie Slaskie","Zalesie OS","Salesche",
   "Raszowa","Raschowa","Poręba","Poremba","Lichinia","Lichynia","Żyrowa","Zyrowa","Zdzieszowice","Deschowitz",
   "Dolna","Dollna","Kadłubiec","Kadlubietz"
 ]
