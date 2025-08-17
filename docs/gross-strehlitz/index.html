@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Gross Strehlitz (Strzelce Opolskie) - Upper Silesia | Micro Actions</title>
+<meta name="description" content="Discover Gross Strehlitz (Strzelce Opolskie) through artistic micro actions. District capital in Upper Silesia (Oberschlesien), Poland. Cultural events and local news from Strzelce County." />
+<meta name="keywords" content="Gross Strehlitz, Groß Strehlitz, Strzelce Opolskie, Upper Silesia, Oberschlesien, Górny Śląsk, Poland, Oppeln, Opole, Leschnitz, Leśnica, district capital, powiat strzelecki" />
+<meta name="robots" content="index, follow" />
+<meta name="geo.region" content="PL-OP" />
+<meta name="geo.placename" content="Strzelce Opolskie, Poland" />
+<meta name="geo.position" content="50.5097;18.3003" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Gross Strehlitz (Strzelce Opolskie) - Upper Silesia" />
+<meta property="og:description" content="Artistic micro actions from Gross Strehlitz/Strzelce Opolskie, district capital in Upper Silesia." />
+<meta property="og:url" content="https://grossculptor.github.io/leschnitz-micro-actions/gross-strehlitz/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+
+<link rel="canonical" href="https://grossculptor.github.io/leschnitz-micro-actions/gross-strehlitz/" />
+<link rel="alternate" hreflang="en" href="https://grossculptor.github.io/leschnitz-micro-actions/gross-strehlitz/" />
+
+<link rel="stylesheet" href="../styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Gross Strehlitz (Strzelce Opolskie)",
+  "description": "District capital in Upper Silesia",
+  "url": "https://grossculptor.github.io/leschnitz-micro-actions/gross-strehlitz/",
+  "inLanguage": "en",
+  "about": {
+    "@type": "City",
+    "name": "Strzelce Opolskie",
+    "alternateName": ["Gross Strehlitz", "Groß Strehlitz"],
+    "description": "District capital in the Opole Voivodeship, Upper Silesia, Poland",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.5097,
+      "longitude": 18.3003
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://grossculptor.github.io/leschnitz-micro-actions/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Gross Strehlitz",
+        "item": "https://grossculptor.github.io/leschnitz-micro-actions/gross-strehlitz/"
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<header>
+  <nav><a href="../">← Back to main page</a></nav>
+  <h1>Gross Strehlitz / Strzelce Opolskie</h1>
+  <p class="subtitle">District Capital in Upper Silesia • Micro Artistic Actions</p>
+</header>
+
+<main>
+  <section>
+    <h2>About Gross Strehlitz</h2>
+    <p>Gross Strehlitz (Polish: Strzelce Opolskie, German: Groß Strehlitz) is a town in Upper Silesia and the capital of Strzelce County in the Opole Voivodeship of Poland. Located approximately 30 kilometers southeast of Opole (Oppeln), it serves as an important administrative and cultural center for the surrounding region.</p>
+    
+    <h2>Historical Significance</h2>
+    <p>First mentioned in historical records in the 13th century, Gross Strehlitz developed as an important market town and later industrial center. The town's German heritage is evident in its architecture and urban planning, while its current Polish identity shapes its contemporary cultural life. The district includes numerous smaller towns and villages, including Leschnitz (Leśnica), each with their own unique histories.</p>
+    
+    <h2>Modern Strzelce Opolskie</h2>
+    <p>Today's Strzelce Opolskie is a vibrant district capital that balances its historical heritage with modern development. The town hosts various cultural events, maintains active civic organizations, and serves as an economic hub for the region. The micro actions from this area reflect the dynamic interplay between tradition and progress.</p>
+    
+    <h2>District Towns and Villages</h2>
+    <ul>
+      <li><a href="../leschnitz/">Leschnitz / Leśnica</a> - Historic town with medieval roots</li>
+      <li>Zawadzkie (Andreashütte) - Industrial heritage town</li>
+      <li>Ujazd (Ujest) - Historic market town</li>
+      <li>Kolonowskie (Colonnowska) - Former iron production center</li>
+      <li>Jemielnica (Himmelwitz) - Cistercian monastery town</li>
+      <li>Izbicko (Stubendorf) - Agricultural community</li>
+    </ul>
+    
+    <h2>Regional Connections</h2>
+    <ul>
+      <li><a href="../oppeln/">Oppeln / Opole</a> - Voivodeship capital (30 km northwest)</li>
+      <li><a href="../oberschlesien/">Upper Silesia</a> - The broader historical region</li>
+      <li>Krapkowice (Krappitz) - Neighboring district</li>
+      <li>Kędzierzyn-Koźle (Kandrzin-Cosel) - Industrial center</li>
+    </ul>
+  </section>
+  
+  <section id="actions">
+    <h2>Micro Actions from Gross Strehlitz District</h2>
+    <div id="strehlitz-actions" class="actions-grid"></div>
+  </section>
+</main>
+
+<footer>
+  <small>Gross Strehlitz Micro Actions · Art and culture from Strzelce Opolskie district</small>
+</footer>
+
+<script>
+// Load and filter actions for Gross Strehlitz/Strzelce Opolskie
+async function loadStrehlitzActions() {
+  try {
+    const response = await fetch('../data/projects.json');
+    const actions = await response.json();
+    
+    // Filter for Gross Strehlitz/Strzelce related content
+    const strehlitzActions = actions.filter(action => {
+      const text = (action.title + ' ' + action.description).toLowerCase();
+      return text.includes('strehlitz') || text.includes('strzelce') || 
+             text.includes('gross') || text.includes('groß');
+    });
+    
+    // Display actions
+    const container = document.getElementById('strehlitz-actions');
+    if (strehlitzActions.length > 0) {
+      container.innerHTML = strehlitzActions.slice(0, 25).map(action => `
+        <article class="card">
+          <h3>${action.title}</h3>
+          <p>${action.description}</p>
+          <div class="meta">
+            <time>${new Date(action.datetime).toLocaleDateString()}</time>
+            <a href="${action.source}" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+      `).join('');
+    } else {
+      // If no specific matches, show recent actions from the region
+      container.innerHTML = actions.slice(0, 20).map(action => `
+        <article class="card">
+          <h3>${action.title}</h3>
+          <p>${action.description}</p>
+          <div class="meta">
+            <time>${new Date(action.datetime).toLocaleDateString()}</time>
+            <a href="${action.source}" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+      `).join('');
+    }
+  } catch (error) {
+    console.error('Error loading actions:', error);
+    document.getElementById('strehlitz-actions').innerHTML = '<p>Loading current actions...</p>';
+  }
+}
+
+loadStrehlitzActions();
+</script>
+</body>
+</html>

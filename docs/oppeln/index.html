@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Oppeln (Opole) - Capital of Upper Silesia | Micro Actions</title>
+<meta name="description" content="Explore Oppeln (Opole), the capital of Opole Voivodeship in Upper Silesia. Artistic micro actions from the cultural and administrative center of the region. Historic German Oppeln, modern Polish Opole." />
+<meta name="keywords" content="Oppeln, Opole, Upper Silesia, Oberschlesien, Górny Śląsk, Poland, voivodeship capital, Opolskie, Leschnitz, Gross Strehlitz, cultural center, Oder river" />
+<meta name="robots" content="index, follow" />
+<meta name="geo.region" content="PL-OP" />
+<meta name="geo.placename" content="Opole, Poland" />
+<meta name="geo.position" content="50.6751;17.9213" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Oppeln (Opole) - Capital of Upper Silesia" />
+<meta property="og:description" content="Artistic micro actions from Oppeln/Opole, the capital city of Opole Voivodeship in Upper Silesia." />
+<meta property="og:url" content="https://grossculptor.github.io/leschnitz-micro-actions/oppeln/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+
+<link rel="canonical" href="https://grossculptor.github.io/leschnitz-micro-actions/oppeln/" />
+<link rel="alternate" hreflang="en" href="https://grossculptor.github.io/leschnitz-micro-actions/oppeln/" />
+
+<link rel="stylesheet" href="../styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Oppeln (Opole) - Capital of Upper Silesia",
+  "description": "Capital city of Opole Voivodeship in Upper Silesia",
+  "url": "https://grossculptor.github.io/leschnitz-micro-actions/oppeln/",
+  "inLanguage": "en",
+  "about": {
+    "@type": "City",
+    "name": "Opole",
+    "alternateName": ["Oppeln", "Oppeln O/S"],
+    "description": "Capital of Opole Voivodeship in Upper Silesia, Poland",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.6751,
+      "longitude": 17.9213
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://grossculptor.github.io/leschnitz-micro-actions/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Oppeln",
+        "item": "https://grossculptor.github.io/leschnitz-micro-actions/oppeln/"
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<header>
+  <nav><a href="../">← Back to main page</a></nav>
+  <h1>Oppeln / Opole</h1>
+  <p class="subtitle">Capital of Upper Silesia • Cultural Center of the Region</p>
+</header>
+
+<main>
+  <section>
+    <h2>About Oppeln</h2>
+    <p>Oppeln (Polish: Opole, German: Oppeln) is the capital city of the Opole Voivodeship in southern Poland. Located on the Oder River (Odra), it has served as the historical capital of Upper Silesia and remains the region's most important cultural and administrative center. With a population of approximately 130,000, it is the largest city in the western part of Upper Silesia.</p>
+    
+    <h2>Historical Legacy</h2>
+    <p>Oppeln's history spans over 1000 years, with the city serving as the capital of various Silesian duchies throughout the medieval period. The city's strategic location on the Oder River made it an important trade center. Its architecture reflects centuries of Polish, German, Czech, and Austrian influences, creating a unique urban landscape that tells the story of Central European history.</p>
+    
+    <h2>Cultural Significance</h2>
+    <p>Modern Opole is known as the "Polish Song Capital" due to its famous National Festival of Polish Song. The city hosts numerous cultural institutions including:</p>
+    <ul>
+      <li>Opole Philharmonic</li>
+      <li>Museum of Opole Silesia</li>
+      <li>Puppet and Actor Theatre</li>
+      <li>University of Opole</li>
+      <li>Opole University of Technology</li>
+    </ul>
+    
+    <h2>Districts and Neighborhoods</h2>
+    <p>The greater Oppeln/Opole region encompasses numerous districts and satellite communities, each contributing to the region's diverse character. The historic city center on Pasieka Island remains the cultural heart, while modern districts extend in all directions.</p>
+    
+    <h2>Regional Connections</h2>
+    <ul>
+      <li><a href="../gross-strehlitz/">Gross Strehlitz / Strzelce Opolskie</a> - Major district town (30 km southeast)</li>
+      <li><a href="../leschnitz/">Leschnitz / Leśnica</a> - Historic town (50 km southeast)</li>
+      <li><a href="../oberschlesien/">Upper Silesia</a> - The broader historical region</li>
+      <li>Brieg (Brzeg) - Historic duchy seat (40 km north)</li>
+      <li>Neisse (Nysa) - Episcopal city (50 km southwest)</li>
+      <li>Kreuzburg (Kluczbork) - Northern district (40 km northeast)</li>
+    </ul>
+    
+    <h2>Economic and Educational Hub</h2>
+    <p>As the voivodeship capital, Oppeln/Opole serves as the economic engine for the region. Major industries include cement production, food processing, and increasingly, the service and technology sectors. The city's universities attract students from across Poland and Europe, contributing to its vibrant, cosmopolitan atmosphere.</p>
+  </section>
+  
+  <section id="actions">
+    <h2>Micro Actions from Oppeln Region</h2>
+    <div id="oppeln-actions" class="actions-grid"></div>
+  </section>
+</main>
+
+<footer>
+  <small>Oppeln Micro Actions · Art and culture from the capital of Upper Silesia</small>
+</footer>
+
+<script>
+// Load and filter actions for Oppeln/Opole
+async function loadOppelnActions() {
+  try {
+    const response = await fetch('../data/projects.json');
+    const actions = await response.json();
+    
+    // Filter for Oppeln/Opole related content
+    const oppelnActions = actions.filter(action => {
+      const text = (action.title + ' ' + action.description).toLowerCase();
+      return text.includes('oppeln') || text.includes('opole') || 
+             text.includes('opolsk');
+    });
+    
+    // Display actions
+    const container = document.getElementById('oppeln-actions');
+    if (oppelnActions.length > 0) {
+      container.innerHTML = oppelnActions.slice(0, 25).map(action => `
+        <article class="card">
+          <h3>${action.title}</h3>
+          <p>${action.description}</p>
+          <div class="meta">
+            <time>${new Date(action.datetime).toLocaleDateString()}</time>
+            <a href="${action.source}" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+      `).join('');
+    } else {
+      // If no specific matches, show recent regional actions
+      container.innerHTML = actions.slice(0, 20).map(action => `
+        <article class="card">
+          <h3>${action.title}</h3>
+          <p>${action.description}</p>
+          <div class="meta">
+            <time>${new Date(action.datetime).toLocaleDateString()}</time>
+            <a href="${action.source}" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+      `).join('');
+    }
+  } catch (error) {
+    console.error('Error loading actions:', error);
+    document.getElementById('oppeln-actions').innerHTML = '<p>Loading current actions...</p>';
+  }
+}
+
+loadOppelnActions();
+</script>
+</body>
+</html>

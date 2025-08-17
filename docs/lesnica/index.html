@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Leśnica - Miasto w województwie opolskim | Micro Actions</title>
+<meta name="description" content="Odkryj Leśnicę na Śląsku Opolskim poprzez artystyczne mikro-akcje. Współczesne życie i historia miasta Leśnica, powiat strzelecki, województwo opolskie. Wydarzenia lokalne i kultura." />
+<meta name="keywords" content="Leśnica, województwo opolskie, powiat strzelecki, Strzelce Opolskie, Opole, Śląsk, Górny Śląsk, Polska, kultura, sztuka, wydarzenia lokalne" />
+<meta name="robots" content="index, follow" />
+<meta name="geo.region" content="PL-OP" />
+<meta name="geo.placename" content="Leśnica, województwo opolskie" />
+<meta name="geo.position" content="50.4297;18.1875" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Leśnica - Miasto w województwie opolskim" />
+<meta property="og:description" content="Artystyczne mikro-akcje z Leśnicy. Współczesne życie i kultura miasta w powiecie strzeleckim." />
+<meta property="og:url" content="https://grossculptor.github.io/leschnitz-micro-actions/lesnica/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pl_PL" />
+
+<link rel="canonical" href="https://grossculptor.github.io/leschnitz-micro-actions/lesnica/" />
+<link rel="alternate" hreflang="pl" href="https://grossculptor.github.io/leschnitz-micro-actions/lesnica/" />
+<link rel="alternate" hreflang="de" href="https://grossculptor.github.io/leschnitz-micro-actions/leschnitz/" />
+<link rel="alternate" hreflang="en" href="https://grossculptor.github.io/leschnitz-micro-actions/" />
+
+<link rel="stylesheet" href="../styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Leśnica - Miasto w województwie opolskim",
+  "description": "Współczesna perspektywa na Leśnicę w województwie opolskim",
+  "url": "https://grossculptor.github.io/leschnitz-micro-actions/lesnica/",
+  "inLanguage": "pl",
+  "about": {
+    "@type": "City",
+    "name": "Leśnica",
+    "alternateName": ["Leschnitz"],
+    "description": "Miasto w powiecie strzeleckim, województwo opolskie, Polska",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.4297,
+      "longitude": 18.1875
+    },
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Powiat strzelecki",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Województwo opolskie"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Strona główna",
+        "item": "https://grossculptor.github.io/leschnitz-micro-actions/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Leśnica",
+        "item": "https://grossculptor.github.io/leschnitz-micro-actions/lesnica/"
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<header>
+  <nav><a href="../">← Powrót do strony głównej</a></nav>
+  <h1>Leśnica</h1>
+  <p class="subtitle">Miasto w województwie opolskim • Mikro-akcje artystyczne</p>
+</header>
+
+<main>
+  <section>
+    <h2>O Leśnicy</h2>
+    <p>Leśnica to miasto położone w województwie opolskim, w powiecie strzeleckim. Jest to jedno z najstarszych miast na Śląsku Opolskim, z bogatą historią sięgającą średniowiecza. Miasto leży około 20 km na południowy wschód od Strzelec Opolskich.</p>
+    
+    <h2>Współczesność</h2>
+    <p>Dzisiejsza Leśnica to dynamicznie rozwijające się miasto, które łączy swoją historyczną tożsamość z nowoczesnością. Miasto jest ważnym ośrodkiem lokalnym, oferującym mieszkańcom i odwiedzającym bogaty program kulturalny i społeczny.</p>
+    
+    <h2>Kultura i wydarzenia</h2>
+    <p>Leśnica jest gospodarzem wielu wydarzeń kulturalnych, festiwali i inicjatyw lokalnych. Mikro-akcje prezentowane na tej stronie odzwierciedlają puls współczesnego życia miasta i jego mieszkańców.</p>
+    
+    <h2>Połączenia z innymi miejscami</h2>
+    <ul>
+      <li><a href="../gross-strehlitz/">Strzelce Opolskie</a> - Miasto powiatowe</li>
+      <li><a href="../oppeln/">Opole</a> - Stolica województwa</li>
+      <li><a href="../oberschlesien/">Górny Śląsk</a> - Region historyczny</li>
+      <li>Zawadzkie - Sąsiednia gmina</li>
+      <li>Ujazd - Pobliskie miasto</li>
+    </ul>
+  </section>
+  
+  <section id="actions">
+    <h2>Mikro-akcje z Leśnicy</h2>
+    <div id="lesnica-actions" class="actions-grid"></div>
+  </section>
+</main>
+
+<footer>
+  <small>Leśnica Micro Actions · Sztuka i współczesność z województwa opolskiego</small>
+</footer>
+
+<script>
+// Load and filter actions for Leśnica
+async function loadLesnicaActions() {
+  try {
+    const response = await fetch('../data/projects.json');
+    const actions = await response.json();
+    
+    // Filter for Leśnica-related content
+    const lesnicaActions = actions.filter(action => {
+      const text = (action.title + ' ' + action.description).toLowerCase();
+      return text.includes('leśnica') || text.includes('lesnica') || text.includes('leschnitz');
+    });
+    
+    // Display actions
+    const container = document.getElementById('lesnica-actions');
+    if (lesnicaActions.length > 0) {
+      container.innerHTML = lesnicaActions.slice(0, 20).map(action => `
+        <article class="card">
+          <h3>${action.title}</h3>
+          <p>${action.description}</p>
+          <div class="meta">
+            <time>${new Date(action.datetime).toLocaleDateString('pl-PL')}</time>
+            <a href="${action.source}" target="_blank" rel="noopener">Źródło</a>
+          </div>
+        </article>
+      `).join('');
+    } else {
+      container.innerHTML = '<p>Ładowanie aktualnych akcji...</p>';
+    }
+  } catch (error) {
+    console.error('Error loading actions:', error);
+  }
+}
+
+loadLesnicaActions();
+</script>
+</body>
+</html>

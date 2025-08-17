@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Leschnitz - Deutsche Geschichte und Kultur in Oberschlesien | Micro Actions</title>
+<meta name="description" content="Entdecken Sie Leschnitz (heute Leśnica) in Oberschlesien durch künstlerische Mikro-Aktionen. Geschichte, Kultur und Gegenwart der deutschen Vergangenheit in Schlesien. Gross Strehlitz, Oppeln und Umgebung." />
+<meta name="keywords" content="Leschnitz, Oberschlesien, Schlesien, Gross Strehlitz, Oppeln, deutsche Geschichte, Upper Silesia, Leśnica, Kultur, Heimat, Vertreibung, 1945" />
+<meta name="robots" content="index, follow" />
+<meta name="geo.region" content="PL-OP" />
+<meta name="geo.placename" content="Leschnitz, Oberschlesien" />
+<meta name="geo.position" content="50.4297;18.1875" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Leschnitz - Deutsche Geschichte in Oberschlesien" />
+<meta property="og:description" content="Künstlerische Mikro-Aktionen aus Leschnitz in Oberschlesien. Geschichte und Gegenwart der deutschen Kultur in Schlesien." />
+<meta property="og:url" content="https://grossculptor.github.io/leschnitz-micro-actions/leschnitz/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="de_DE" />
+
+<link rel="canonical" href="https://grossculptor.github.io/leschnitz-micro-actions/leschnitz/" />
+<link rel="alternate" hreflang="de" href="https://grossculptor.github.io/leschnitz-micro-actions/leschnitz/" />
+<link rel="alternate" hreflang="pl" href="https://grossculptor.github.io/leschnitz-micro-actions/lesnica/" />
+<link rel="alternate" hreflang="en" href="https://grossculptor.github.io/leschnitz-micro-actions/" />
+
+<link rel="stylesheet" href="../styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Leschnitz - Deutsche Geschichte in Oberschlesien",
+  "description": "Historische und kulturelle Perspektive auf Leschnitz in Oberschlesien",
+  "url": "https://grossculptor.github.io/leschnitz-micro-actions/leschnitz/",
+  "inLanguage": "de",
+  "about": {
+    "@type": "Place",
+    "name": "Leschnitz",
+    "alternateName": ["Leśnica", "Leschnitz O/S"],
+    "description": "Historische deutsche Stadt in Oberschlesien, heute Leśnica in Polen",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.4297,
+      "longitude": 18.1875
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://grossculptor.github.io/leschnitz-micro-actions/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Leschnitz",
+        "item": "https://grossculptor.github.io/leschnitz-micro-actions/leschnitz/"
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<header>
+  <nav><a href="../">← Zurück zur Hauptseite</a></nav>
+  <h1>Leschnitz in Oberschlesien</h1>
+  <p class="subtitle">Deutsche Geschichte und Kultur • Mikro-Aktionen aus der Heimat</p>
+</header>
+
+<main>
+  <section>
+    <h2>Über Leschnitz</h2>
+    <p>Leschnitz (polnisch: Leśnica) ist eine Stadt in Oberschlesien im heutigen Polen. Als Teil des historischen deutschen Schlesiens hat Leschnitz eine reiche Geschichte, die bis ins Mittelalter zurückreicht. Die Stadt liegt im Kreis Gross Strehlitz (Strzelce Opolskie) in der Woiwodschaft Oppeln (Opole).</p>
+    
+    <h2>Geschichte</h2>
+    <p>Erstmals urkundlich erwähnt im 13. Jahrhundert, war Leschnitz jahrhundertelang ein wichtiger Ort in Oberschlesien. Die deutsche Bevölkerung prägte die Stadt bis 1945. Nach dem Zweiten Weltkrieg wurde die Region Teil Polens und die deutsche Bevölkerung wurde vertrieben oder musste fliehen.</p>
+    
+    <h2>Kultur und Traditionen</h2>
+    <p>Die deutsche Kultur und Sprache prägten Leschnitz über Jahrhunderte. Noch heute zeugen Architektur, Friedhöfe und Denkmäler von dieser Vergangenheit. Die Mikro-Aktionen auf dieser Seite erkunden diese historischen Schichten und deren Bedeutung für die Gegenwart.</p>
+    
+    <h2>Verbindungen zu anderen Orten</h2>
+    <ul>
+      <li><a href="../gross-strehlitz/">Gross Strehlitz</a> - Kreisstadt</li>
+      <li><a href="../oppeln/">Oppeln</a> - Hauptstadt der Region</li>
+      <li><a href="../oberschlesien/">Oberschlesien</a> - Die historische Region</li>
+    </ul>
+  </section>
+  
+  <section id="actions">
+    <h2>Mikro-Aktionen aus Leschnitz</h2>
+    <div id="leschnitz-actions" class="actions-grid"></div>
+  </section>
+</main>
+
+<footer>
+  <small>Leschnitz Micro Actions · Kunst und Erinnerung aus Oberschlesien</small>
+</footer>
+
+<script>
+// Load and filter actions for Leschnitz
+async function loadLeschnitzActions() {
+  try {
+    const response = await fetch('../data/projects.json');
+    const actions = await response.json();
+    
+    // Filter for Leschnitz-related content
+    const leschnitzActions = actions.filter(action => {
+      const text = (action.title + ' ' + action.description).toLowerCase();
+      return text.includes('leschnitz') || text.includes('leśnica') || text.includes('lesnica');
+    });
+    
+    // Display actions
+    const container = document.getElementById('leschnitz-actions');
+    if (leschnitzActions.length > 0) {
+      container.innerHTML = leschnitzActions.slice(0, 20).map(action => `
+        <article class="card">
+          <h3>${action.title}</h3>
+          <p>${action.description}</p>
+          <div class="meta">
+            <time>${new Date(action.datetime).toLocaleDateString('de-DE')}</time>
+            <a href="${action.source}" target="_blank" rel="noopener">Quelle</a>
+          </div>
+        </article>
+      `).join('');
+    } else {
+      container.innerHTML = '<p>Aktuelle Aktionen werden geladen...</p>';
+    }
+  } catch (error) {
+    console.error('Error loading actions:', error);
+  }
+}
+
+loadLeschnitzActions();
+</script>
+</body>
+</html>
