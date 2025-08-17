@@ -39,13 +39,15 @@ GERMAN_MAP = {
   r"\bJemielnica\b": "Imielnitz",
   r"\bŁąki Kozielskie\b|\bLaki Kozielskie\b": "Wiesen Kandrzin",
   r"\bZalesie Śląskie\b|\bZalesie Slaskie\b": "Zalesie OS",
-  r"\bGóra Św\.? Anny\b|\bGora Sw\.? Anny\b": "Sankt Annaberg"
+  r"\bGóra Św\.? Anny\b|\bGora Sw\.? Anny\b": "Sankt Annaberg",
+  r"\bOpolszczyz(na|nie|ną|ny|nę|nej|nach)\b|\bOpolszczy[źż](nie|nia|nię|ni|nej|nach)\b": "Oberschlesien"
 }
 
 KEYWORDS_STRONG = [
   "Leśnica","Lesnica","Leschnitz","Strzelce Opolskie","Gross Strehlitz",
   "powiat strzelecki","Kreis Gross Strehlitz","Góra Św. Anny","Sankt Annaberg",
-  "Grodzisko","Gąsiorowice","Gasiorowice","Oppeln","Opole","Opolski"
+  "Grodzisko","Gąsiorowice","Gasiorowice","Oppeln","Opole","Opolski",
+  "Opolszczyzna","Opolszczyźnie","Opolszczyznę","Opolszczyzny"
 ]
 
 SESSION = requests.Session()
