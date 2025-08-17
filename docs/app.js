@@ -1,6 +1,10 @@
 const elList=document.getElementById('list');const elQ=document.getElementById('q');const elCount=document.getElementById('count');
 async function load(){try{const timestamp=Date.now();const r=await fetch(`data/projects.json?t=${timestamp}`,{cache:'no-store',headers:{'Cache-Control':'no-cache','Pragma':'no-cache'}});const items=await r.json();console.log(`Loaded ${items.length} items from projects.json`);items.sort((a,b)=>{const dateA=new Date(a.datetime||a.published||0);const dateB=new Date(b.datetime||b.published||0);return dateB-dateA});render(items)}catch(e){console.error('Failed to load projects.json:',e);elList.innerHTML=`<p style="color:#9a9a9a">No data yet. The scheduler will populate <code>docs/data/projects.json</code>.</p>`}}
-function card(item){const el=document.createElement('article');el.className='card '+getShadeClass(item.source);el.innerHTML=`
+function card(item){const el=document.createElement('article');el.className='card '+getShadeClass(item.source)+(item.backgroundImage?' has-background':'');
+// Add background image if present
+if(item.backgroundImage){el.style.backgroundImage=`url(${item.backgroundImage})`;el.style.backgroundSize='cover';el.style.backgroundPosition='center';}
+el.innerHTML=`
+<div class="content-wrapper">
 <button class="edit-btn" title="Edit" data-hash="${item.hash}">✎</button>
 <h2 class="title">${escapeHTML(item.title)}</h2>
 <div class="meta"><span>${new Date(item.datetime||item.published||Date.now()).toLocaleString()}</span><span>${(item.hash||'').slice(0,8)}</span><a class="source" href="${escapeAttr(item.source||'#')}" target="_blank" rel="noopener">source</a></div>
@@ -17,6 +21,7 @@ ${item.media && item.media.length > 0 ? `
     </div>
   `).join('')}
 </div>` : ''}
+</div>
 `;el.addEventListener('pointermove',e=>{el.style.setProperty('--mx',`${e.offsetX}px`);el.style.setProperty('--my',`${e.offsetY}px`)});
 const editBtn = el.querySelector('.edit-btn');
 if(editBtn) {
@@ -51,6 +56,22 @@ thumbs.forEach(thumb => {
     }
   });
 });
+// Add click handler for cards with background images
+if(item.backgroundImage){
+  el.addEventListener('click', (e) => {
+    // Don't open if clicking on edit button, media thumbnails, or any links
+    if(e.target.closest('.edit-btn') || e.target.closest('.media-thumb') || e.target.closest('a')) return;
+    
+    if(window.cardExpand) {
+      window.cardExpand.open(item);
+    } else if(typeof CardExpand !== 'undefined') {
+      window.cardExpand = new CardExpand();
+      window.cardExpand.open(item);
+    } else {
+      console.error('Card expand not loaded yet');
+    }
+  });
+}
 return el}
 function render(items){window.__items=items;applyFilter()}
 function applyFilter(){const q=(elQ.value||'').toLowerCase();const items=(window.__items||[]).filter(it=>{const blob=`${it.title} ${it.description}`.toLowerCase();return !q||blob.includes(q)});elList.innerHTML='';items.forEach(it=>elList.appendChild(card(it)));elCount.textContent=`${items.length} micro actions`;elList.setAttribute('aria-busy','false')}

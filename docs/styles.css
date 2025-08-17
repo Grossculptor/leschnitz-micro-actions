@@ -35,8 +35,16 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:1rem;text-ali
   .card.shade-5{background:radial-gradient(300px 180px at var(--mx,50%) var(--my,50%),#141b2e 0%,#1a243d 70%)}
 }
 
+/* Cards with background images */
+.card.has-background{filter:grayscale(100%);background-repeat:no-repeat;cursor:pointer}
+.card.has-background:hover{filter:grayscale(80%)}
+.card.has-background .content-wrapper{background:linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.8));padding:1rem;border-radius:10px;backdrop-filter:blur(2px)}
+.card.has-background .title{color:#fff;text-shadow:1px 1px 2px rgba(0,0,0,0.8)}
+.card.has-background .desc{color:#e6e6e6;text-shadow:1px 1px 1px rgba(0,0,0,0.6)}
+.card.has-background .meta{color:#b0b0b0}
+
 /* Edit button styles */
-.edit-btn{position:absolute;bottom:1rem;right:1rem;background:transparent;border:none;cursor:pointer;opacity:0.5;font-size:1.2rem;padding:0.25rem;transition:opacity 0.2s}
+.edit-btn{position:absolute;bottom:1rem;right:1rem;background:transparent;border:none;cursor:pointer;opacity:0.5;font-size:1.2rem;padding:0.25rem;transition:opacity 0.2s;z-index:10}
 .edit-btn:hover{opacity:0.8}
 
 /* Media thumbnails */
@@ -81,6 +89,10 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:1rem;text-ali
 .preview-item .media-type{position:absolute;bottom:4px;left:4px;background:rgba(0,0,0,0.7);color:white;padding:2px 6px;border-radius:3px;font-size:0.7rem}
 .preview-item.existing{border:2px solid #2a2a2a}
 .preview-item.new{border:2px solid #4a4a4a}
+.background-check{position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.8);border-radius:4px;padding:2px 4px;cursor:pointer;display:flex;align-items:center;gap:4px}
+.background-check input{display:none}
+.background-check .bg-icon{font-size:1rem;opacity:0.5;transition:opacity 0.2s}
+.background-check input:checked+.bg-icon{opacity:1;filter:drop-shadow(0 0 3px #fff)}
 .modal-footer{display:flex;gap:1rem;justify-content:flex-end;padding-top:1rem;border-top:1px solid var(--line)}
 .btn-save,.btn-cancel{padding:0.75rem 1.5rem;border:none;border-radius:6px;cursor:pointer;transition:background 0.2s}
 .btn-save{background:#2d5a2d;color:white}
@@ -113,3 +125,29 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:1rem;text-ali
 .viewer-info span{display:block;margin:0.25rem 0}
 #viewerTitle{font-size:1.1rem}
 #viewerCounter{color:#aaa;font-size:0.9rem}
+
+/* Card expand modal styles */
+.card-expand-modal{display:none;position:fixed;z-index:1500;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.9);align-items:center;justify-content:center}
+.expand-content{width:90%;height:85%;max-width:1400px;display:flex;flex-direction:column;position:relative}
+.expand-close{position:absolute;top:-40px;right:0;background:transparent;border:none;color:white;font-size:2.5rem;cursor:pointer;z-index:1501;padding:0}
+.expand-close:hover{color:#ccc}
+.expand-layout{display:flex;height:100%;gap:2rem;background:#111;border-radius:12px;overflow:hidden}
+.expand-image-side{flex:1.5;display:flex;align-items:center;justify-content:center;background:#000;position:relative}
+.expand-image-side img{max-width:100%;max-height:100%;object-fit:contain}
+.expand-text-side{flex:1;padding:2rem;overflow-y:auto;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px)}
+.expand-text-wrapper h2{color:#fff;margin:0 0 1rem;font-size:1.8rem;line-height:1.3}
+.expand-meta{color:#999;font-size:0.9rem;margin-bottom:1.5rem;display:flex;gap:1rem;flex-wrap:wrap}
+.expand-meta a{color:#8f8f8f;text-decoration:none;border-bottom:1px dotted #444}
+.expand-text-wrapper p{color:#e6e6e6;line-height:1.7;font-size:1.05rem;margin:0 0 1.5rem}
+.expand-thumbnails{display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:2rem;padding-top:2rem;border-top:1px solid #333}
+.expand-thumb{width:80px;height:80px;border-radius:6px;overflow:hidden;cursor:pointer;background:#1a1a1a;display:flex;align-items:center;justify-content:center;transition:transform 0.2s;border:2px solid transparent}
+.expand-thumb:hover{transform:scale(1.05);border-color:#444}
+.expand-thumb img{width:100%;height:100%;object-fit:cover}
+
+/* Responsive styles for card expand modal */
+@media (max-width: 768px) {
+  .expand-layout{flex-direction:column;gap:0}
+  .expand-image-side{flex:none;height:40vh}
+  .expand-text-side{flex:none;height:60vh}
+  .expand-close{top:10px;right:10px;font-size:2rem;background:rgba(0,0,0,0.5);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+}
