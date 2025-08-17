@@ -19,8 +19,17 @@
     "description": "Find an empty bench opposite the 3 Linden in Leschnitz, where old women once traded herbs. Place 144 leaves, one for each official town, and then remove three for each Silesian village that has been erased from memory. Whisper the names of these places to the wind. Return at dusk: if the leaves remain in place, the voices of the indigenous inhabitants will still echo. The scent of linden and loss hangs in the damp air like unfulfilled promises",
     "source": "https://nto.pl/oto-najstarsze-miasta-na-opolszczyznie-bedziecie-zaskoczeni-niektorymi-z-nich/ar/c7-17183813",
     "hash": "f19b073914230ed90709236249288c7c36c9af99",
-    "media": [],
-    "lastEdited": "2025-08-17T18:49:11.213Z"
+    "media": [
+      {
+        "type": "image",
+        "url": "media/f19b073914230ed90709236249288c7c36c9af99/1755460702200_leschnitz_2017.jpg",
+        "thumb": "media/f19b073914230ed90709236249288c7c36c9af99/1755460702200_leschnitz_2017_thumb.jpg",
+        "name": "leschnitz_2017.jpg",
+        "size": 278665
+      }
+    ],
+    "lastEdited": "2025-08-17T19:58:27.385Z",
+    "backgroundImage": "media/f19b073914230ed90709236249288c7c36c9af99/1755460702200_leschnitz_2017.jpg"
   },
   {
     "title": "Who gets erased when 100k zł decides our shared future?",
