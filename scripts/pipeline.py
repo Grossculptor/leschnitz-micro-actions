@@ -96,6 +96,44 @@ def smart_truncate_title(text:str, min_len:int=45, max_len:int=58)->str:
 def sha1(s:str)->str:
     return hashlib.sha1(s.encode("utf-8","ignore")).hexdigest()
 
+def normalize_url(url: str) -> str:
+    """Normalize URL to prevent duplicates from tracking parameters and variations."""
+    if not url:
+        return ""
+    
+    # Parse URL components
+    from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
+    
+    parsed = urlparse(url)
+    
+    # Remove common tracking parameters
+    tracking_params = {
+        'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
+        'fbclid', 'gclid', 'ref', 'source', 'mc_cid', 'mc_eid'
+    }
+    
+    # Parse query parameters and filter out tracking ones
+    params = parse_qs(parsed.query)
+    filtered_params = {
+        k: v for k, v in params.items() 
+        if k.lower() not in tracking_params
+    }
+    
+    # Rebuild query string
+    new_query = urlencode(filtered_params, doseq=True)
+    
+    # Rebuild URL without fragment and with filtered query
+    normalized = urlunparse((
+        parsed.scheme,
+        parsed.netloc.lower(),  # Normalize domain to lowercase
+        parsed.path.rstrip('/'),  # Remove trailing slash
+        parsed.params,
+        new_query,
+        ''  # Remove fragment
+    ))
+    
+    return normalized
+
 @retry(wait=wait_exponential(multiplier=1, max=20), stop=stop_after_attempt(4))
 def fetch(url:str)->requests.Response:
     r = SESSION.get(url, timeout=TIMEOUT)
@@ -404,6 +442,7 @@ def main():
     FEEDS = load_feeds()
 
     all_items = []
+    seen_urls = set()  # Track URLs seen in this pipeline run
     print(f"INFO: Processing {len(FEEDS)} feeds...")
     for idx, url in enumerate(FEEDS, 1):
         print(f"INFO: Processing feed {idx}/{len(FEEDS)}: {url}")
@@ -411,12 +450,27 @@ def main():
             items = parse_feed(url) or []
             print(f"INFO: Found {len(items)} items from {url}")
             for it in items:
-                it["id"] = sha1((it.get("link") or it.get("title","")) + it.get("published",""))
+                # Normalize the URL for deduplication
+                item_url = it.get("link") or it.get("source", "")
+                normalized = normalize_url(item_url) if item_url else ""
+                
+                # Skip if we've already seen this URL in this run
+                if normalized and normalized in seen_urls:
+                    print(f"INFO: Skipping duplicate URL: {item_url[:60]}...")
+                    continue
+                
+                # Generate hash based on normalized URL only (not including date)
+                it["id"] = sha1(normalized) if normalized else sha1(it.get("title", "") + it.get("published", ""))
+                
                 blob = " ".join([it.get("title",""), it.get("summary",""), it.get("content","")])
                 it["preselect"] = strong_keyword_hit(blob) or ("bip.lesnica.pl" in url) or ("strzelce360" in url)
                 # extra conservative pre-gate for NTO
                 if "nto.pl/rss" in url and not it["preselect"]:
                     continue
+                
+                # Add to seen URLs and items list
+                if normalized:
+                    seen_urls.add(normalized)
                 all_items.append(it)
             if items:
                 (raw_dir / (sha1(url)+"_feed.json")).write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
