@@ -101,10 +101,22 @@ def normalize_url(url: str) -> str:
     if not url:
         return ""
     
+    import re
     # Parse URL components
     from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
     
     parsed = urlparse(url)
+    path = parsed.path
+    
+    # Special handling for nto.pl comment section identifiers
+    # Convert /ar/c1-18744833, /ar/c7-18744833 etc to /ar/c-18744833
+    if 'nto.pl' in parsed.netloc.lower() and '/ar/c' in path:
+        path = re.sub(r'/ar/c\d+(-\d+)', r'/ar/c\1', path)
+    
+    # Special handling for strzelce360.pl article IDs
+    # Remove trailing commas and normalize article paths
+    if 'strzelce360.pl' in parsed.netloc.lower() and '/artykul/' in path:
+        path = re.sub(r'/artykul/(\d+),.*', r'/artykul/\1', path)
     
     # Remove common tracking parameters
     tracking_params = {
@@ -126,7 +138,7 @@ def normalize_url(url: str) -> str:
     normalized = urlunparse((
         parsed.scheme,
         parsed.netloc.lower(),  # Normalize domain to lowercase
-        parsed.path.rstrip('/'),  # Remove trailing slash
+        path.rstrip('/'),  # Use normalized path without trailing slash
         parsed.params,
         new_query,
         ''  # Remove fragment
@@ -441,6 +453,19 @@ def main():
     raw_dir.mkdir(parents=True, exist_ok=True); rel_dir.mkdir(parents=True, exist_ok=True)
     FEEDS = load_feeds()
 
+    # Load existing projects to check for duplicates early
+    existing = []
+    projects_file = DOCS / "projects.json"
+    if projects_file.exists():
+        try:
+            existing = json.loads(projects_file.read_text(encoding="utf-8"))
+            print(f"INFO: Loaded {len(existing)} existing micro actions for duplicate checking")
+        except Exception as e:
+            print(f"WARN: Could not load existing projects.json: {e}")
+    
+    # Build set of existing normalized source URLs
+    existing_sources = {normalize_url(item.get("source", "")) for item in existing if item.get("source")}
+    
     all_items = []
     seen_urls = set()  # Track URLs seen in this pipeline run
     print(f"INFO: Processing {len(FEEDS)} feeds...")
@@ -456,7 +481,12 @@ def main():
                 
                 # Skip if we've already seen this URL in this run
                 if normalized and normalized in seen_urls:
-                    print(f"INFO: Skipping duplicate URL: {item_url[:60]}...")
+                    print(f"INFO: Skipping duplicate URL in current run: {item_url[:60]}...")
+                    continue
+                
+                # Skip if this normalized URL already exists in projects.json
+                if normalized and normalized in existing_sources:
+                    print(f"INFO: Skipping existing URL: {item_url[:60]}...")
                     continue
                 
                 # Generate hash based on normalized URL only (not including date)
@@ -522,23 +552,30 @@ def main():
                 "fallback_used": True
             })
 
-    # Load existing projects and merge with new ones
+    # Merge with existing projects (already loaded at the beginning)
     DOCS.mkdir(parents=True, exist_ok=True)
-    projects_file = DOCS / "projects.json"
     
-    existing = []
-    if projects_file.exists():
-        try:
-            existing = json.loads(projects_file.read_text(encoding="utf-8"))
-            print(f"INFO: Loaded {len(existing)} existing micro actions")
-        except Exception as e:
-            print(f"WARN: Could not load existing projects.json: {e}")
-    
-    # Create a set of existing hashes to avoid duplicates
+    # Create sets for deduplication based on both hash AND normalized source URL
     existing_hashes = {item.get("hash") for item in existing if item.get("hash")}
+    existing_sources = {normalize_url(item.get("source", "")) for item in existing if item.get("source")}
     
-    # Add only new micros (not already in existing)
-    new_micros = [m for m in micros if m.get("hash") not in existing_hashes]
+    # Add only new micros (not already in existing by hash OR normalized source)
+    new_micros = []
+    skipped_count = 0
+    for m in micros:
+        normalized_source = normalize_url(m.get("source", ""))
+        if m.get("hash") in existing_hashes:
+            print(f"INFO: Skipping duplicate (by hash): {m.get('title', '')[:50]}...")
+            skipped_count += 1
+        elif normalized_source and normalized_source in existing_sources:
+            print(f"INFO: Skipping duplicate (by source): {m.get('title', '')[:50]}...")
+            print(f"      Source: {m.get('source', '')}")
+            skipped_count += 1
+        else:
+            new_micros.append(m)
+    
+    if skipped_count > 0:
+        print(f"INFO: Skipped {skipped_count} duplicate micro actions")
     
     # Combine new and existing, with new ones first
     combined = new_micros + existing
