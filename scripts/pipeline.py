@@ -276,11 +276,16 @@ Return JSON only."""
             return js
     except Exception as e:
         print(f"WARN: Generation failed for '{item.get('title','')[:50]}...': {e}")
-    # Fallback: stitch minimal micro
+    # Fallback: create generic micro action when AI fails
+    print(f"WARN: Using fallback generation - item needs manual review")
+    title_base = normalize_german_places(item.get("title",""))[:40]
     return {
-        "title": smart_truncate_title(normalize_german_places(item.get("title",""))),
+        "title": f"What story remains untold in {title_base[:30]}...?",
         "datetime": item.get("published", dt.datetime.utcnow().isoformat()),
-        "description": normalize_german_places((item.get("summary") or item.get("content",""))[:480])
+        "description": f"[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+        "needs_regeneration": True,
+        "original_title": item.get("title",""),
+        "fallback_used": True
     }
 
 def regenerate_existing():
@@ -451,12 +456,16 @@ def main():
             micros.append(m)
         except Exception as e:
             print(f"WARN: Generation failed, using fallback: {e}")
+            title_base = normalize_german_places(it.get("title",""))[:40]
             micros.append({
-                "title": smart_truncate_title(normalize_german_places(it.get("title",""))),
+                "title": f"What story remains untold in {title_base[:30]}...?",
                 "datetime": it.get("published", dt.datetime.utcnow().isoformat()),
-                "description": normalize_german_places((it.get("summary") or it.get("content",""))[:500]),
+                "description": f"[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
                 "source": it.get("link") or it.get("source"),
-                "hash": it.get("id")
+                "hash": it.get("id"),
+                "needs_regeneration": True,
+                "original_title": it.get("title",""),
+                "fallback_used": True
             })
 
     # Load existing projects and merge with new ones
