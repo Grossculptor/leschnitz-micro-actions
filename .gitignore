@@ -12,3 +12,13 @@ Thumbs.db
 *.log
 # Claude guidance file (local only)
 CLAUDE.md
+
+# Test files
+test_*.py
+test_*.html
+
+# Temporary documentation
+REVERT_*.md
+
+# Environment templates (keep locally if needed)
+.env.template
