@@ -96,6 +96,101 @@ def smart_truncate_title(text:str, min_len:int=45, max_len:int=58)->str:
 def sha1(s:str)->str:
     return hashlib.sha1(s.encode("utf-8","ignore")).hexdigest()
 
+def extract_article_slug(url: str) -> str:
+    """Extract a normalized article slug that can identify the same article across different domains."""
+    if not url:
+        return ""
+    
+    import re
+    from urllib.parse import urlparse
+    
+    url_lower = url.lower()
+    parsed = urlparse(url_lower)
+    path = parsed.path
+    
+    # Pattern: /slug/ar/c7-12345 -> slug
+    match = re.search(r'/([a-z0-9-]+)/ar/c\d+-\d+', path)
+    if match:
+        return match.group(1)
+    
+    # Pattern: /slug,12345 -> slug
+    match = re.search(r'/([a-z0-9-]+),\d+', path)
+    if match:
+        return match.group(1)
+    
+    # Pattern: /artykul/slug,12345 -> slug
+    match = re.search(r'/artykul/([a-z0-9-]+)', path)
+    if match:
+        return match.group(1)
+    
+    # Extract longest slug-like pattern from the path
+    slugs = re.findall(r'[a-z0-9-]{15,}', path)
+    if slugs:
+        return max(slugs, key=len)
+    
+    # Fallback: clean path and return last segment
+    clean_path = re.sub(r'/ar/c\d+-\d+$', '', path)
+    clean_path = re.sub(r',\d+$', '', clean_path)
+    clean_path = re.sub(r'\.html?$', '', clean_path)
+    clean_path = clean_path.strip('/')
+    
+    if '/' in clean_path:
+        segments = clean_path.split('/')
+        last_segment = segments[-1]
+        if len(last_segment) > 10 and re.match(r'^[a-z0-9-]+$', last_segment):
+            return last_segment
+    
+    return clean_path
+
+def is_cross_domain_duplicate(url: str, existing_urls: list) -> bool:
+    """Check if URL is a duplicate article on a different domain."""
+    from urllib.parse import urlparse
+    from difflib import SequenceMatcher
+    
+    if not url or not existing_urls:
+        return False
+    
+    domain = urlparse(url).netloc.lower()
+    slug = extract_article_slug(url)
+    
+    if not slug or len(slug) < 10:
+        return False
+    
+    # Known syndication groups
+    syndicated_domains = [
+        {'nto.pl', 'strzelceopolskie.naszemiasto.pl', 'naszemiasto.pl'},
+        {'strzelce360.pl', 'strzelce.pl'},
+        {'radio.opole.pl', 'opole.pl'}
+    ]
+    
+    for existing_url in existing_urls:
+        existing_domain = urlparse(existing_url).netloc.lower()
+        
+        # Skip if same domain
+        if domain == existing_domain:
+            continue
+        
+        # Check if domains are in known syndication group
+        threshold = 0.85
+        for group in syndicated_domains:
+            if domain in group and existing_domain in group:
+                threshold = 0.80
+                break
+        
+        existing_slug = extract_article_slug(existing_url)
+        if not existing_slug or len(existing_slug) < 10:
+            continue
+        
+        # Check exact match or high similarity
+        if slug == existing_slug:
+            return True
+        
+        similarity = SequenceMatcher(None, slug, existing_slug).ratio()
+        if similarity >= threshold:
+            return True
+    
+    return False
+
 def normalize_url(url: str) -> str:
     """Normalize URL to prevent duplicates from tracking parameters and variations."""
     if not url:
@@ -463,8 +558,9 @@ def main():
         except Exception as e:
             print(f"WARN: Could not load existing projects.json: {e}")
     
-    # Build set of existing normalized source URLs
+    # Build set of existing normalized source URLs and raw URLs for cross-domain check
     existing_sources = {normalize_url(item.get("source", "")) for item in existing if item.get("source")}
+    existing_raw_urls = [item.get("source", "") for item in existing if item.get("source")]
     
     all_items = []
     seen_urls = set()  # Track URLs seen in this pipeline run
@@ -487,6 +583,11 @@ def main():
                 # Skip if this normalized URL already exists in projects.json
                 if normalized and normalized in existing_sources:
                     print(f"INFO: Skipping existing URL: {item_url[:60]}...")
+                    continue
+                
+                # Check for cross-domain duplicates (same article on different domain)
+                if item_url and is_cross_domain_duplicate(item_url, existing_raw_urls):
+                    print(f"INFO: Skipping cross-domain duplicate: {item_url[:60]}...")
                     continue
                 
                 # Generate hash based on normalized URL only (not including date)
@@ -558,6 +659,7 @@ def main():
     # Create sets for deduplication based on both hash AND normalized source URL
     existing_hashes = {item.get("hash") for item in existing if item.get("hash")}
     existing_sources = {normalize_url(item.get("source", "")) for item in existing if item.get("source")}
+    existing_raw_urls = [item.get("source", "") for item in existing if item.get("source")]
     
     # Add only new micros (not already in existing by hash OR normalized source)
     new_micros = []
@@ -569,6 +671,10 @@ def main():
             skipped_count += 1
         elif normalized_source and normalized_source in existing_sources:
             print(f"INFO: Skipping duplicate (by source): {m.get('title', '')[:50]}...")
+            print(f"      Source: {m.get('source', '')}")
+            skipped_count += 1
+        elif m.get("source") and is_cross_domain_duplicate(m.get("source"), existing_raw_urls):
+            print(f"INFO: Skipping cross-domain duplicate: {m.get('title', '')[:50]}...")
             print(f"      Source: {m.get('source', '')}")
             skipped_count += 1
         else:
