@@ -32,7 +32,25 @@
     "datetime": "2025-08-19T03:40:20+00:00",
     "description": "Walk Leschnitz walls at dawn carrying invisible ink made from ash of 1945 documents. Trace missing names between vibrant murals celebrating newcomers. The morning mist carries their erased voices back through brick pores. Return at dusk when streetlights reveal your ghost sentences rising like bruises. Document which stories the official tours avoid photographing. Breathe deep - the sour smell of fresh paint hides older, sweeter sorrow of indigenous families never depicted.",
     "source": "https://strzelceopolskie.naszemiasto.pl/opolszczyzna-zaczyna-slynac-z-murali-niektore-to-prawdziwe/ar/c1-9839729",
-    "hash": "05f46ea57d450f679323f0af04515e8122a5fe07"
+    "hash": "05f46ea57d450f679323f0af04515e8122a5fe07",
+    "media": [
+      {
+        "type": "image",
+        "url": "media/05f46ea57d450f679323f0af04515e8122a5fe07/1755585025832_Leschniitz.jpg",
+        "thumb": "media/05f46ea57d450f679323f0af04515e8122a5fe07/1755585025832_Leschniitz_thumb.jpg",
+        "name": "Leschniitz.jpg",
+        "size": 318031
+      },
+      {
+        "type": "image",
+        "url": "media/05f46ea57d450f679323f0af04515e8122a5fe07/1755585031448_Leschnitz-2015.jpg",
+        "thumb": "media/05f46ea57d450f679323f0af04515e8122a5fe07/1755585031448_Leschnitz-2015_thumb.jpg",
+        "name": "Leschnitz-2015.jpg",
+        "size": 293815
+      }
+    ],
+    "backgroundImage": "media/05f46ea57d450f679323f0af04515e8122a5fe07/1755585025832_Leschniitz.jpg",
+    "lastEdited": "2025-08-19T06:30:37.080Z"
   },
   {
     "title": "How do Festspiele jokes mask the silent absence of?",
