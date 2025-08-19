@@ -14,8 +14,24 @@
     "description": "Walk barefoot the fresh asphalt between house 38 and SA-Straße. Leave small bundles of sage every 144 steps. Smell of hot tar mixes with memory. A child from the Schlesien family that once farmed here places a wild plum pit in the sidewalk seam. The pit will crack the settler's road one winter at a time",
     "source": "https://www.strzelce360.pl/artykul/10440,chodnik-przy-nowowiejskiej-coraz-dluzszy-bedzie-kolejny-odcinek",
     "hash": "a85fe58b89587b2020bcbf3610d6f0c2b1cf6d14",
-    "media": [],
-    "lastEdited": "2025-08-19T06:33:08.881Z"
+    "media": [
+      {
+        "type": "image",
+        "url": "media/a85fe58b89587b2020bcbf3610d6f0c2b1cf6d14/1755585673719_leschnitz-2025-pflaume.jpg",
+        "thumb": "media/a85fe58b89587b2020bcbf3610d6f0c2b1cf6d14/1755585673719_leschnitz-2025-pflaume_thumb.jpg",
+        "name": "leschnitz-2025-pflaume.jpg",
+        "size": 313697
+      },
+      {
+        "type": "image",
+        "url": "media/a85fe58b89587b2020bcbf3610d6f0c2b1cf6d14/1755585679140_leschnitz-pflaume.jpg",
+        "thumb": "media/a85fe58b89587b2020bcbf3610d6f0c2b1cf6d14/1755585679140_leschnitz-pflaume_thumb.jpg",
+        "name": "leschnitz-pflaume.jpg",
+        "size": 379350
+      }
+    ],
+    "lastEdited": "2025-08-19T06:41:24.588Z",
+    "backgroundImage": "media/a85fe58b89587b2020bcbf3610d6f0c2b1cf6d14/1755585679140_leschnitz-pflaume.jpg"
   },
   {
     "title": "Why does the new path celebrate Invader heritage while?",
