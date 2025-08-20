@@ -75,6 +75,7 @@ class EditModal {
                 <div id="mediaPreview" class="media-preview"></div>
               </div>
               <div class="modal-footer">
+                <button id="deleteButton" class="btn-delete">Delete</button>
                 <button id="saveButton" class="btn-save">Save Changes</button>
                 <button id="cancelButton" class="btn-cancel">Cancel</button>
                 <div id="uploadProgress" class="upload-progress" style="display:none;">
@@ -126,6 +127,7 @@ class EditModal {
     const passwordInput = document.getElementById('editPassword');
     const saveBtn = document.getElementById('saveButton');
     const cancelBtn = document.getElementById('cancelButton');
+    const deleteBtn = document.getElementById('deleteButton');
     const dropZone = document.getElementById('dropZone');
     const fileInput = document.getElementById('fileInput');
     const logoutBtn = document.getElementById('logoutButton');
@@ -170,6 +172,7 @@ class EditModal {
     });
 
     saveBtn.addEventListener('click', () => this.save());
+    deleteBtn.addEventListener('click', () => this.delete());
 
     dropZone.addEventListener('click', () => fileInput.click());
     dropZone.addEventListener('dragover', (e) => {
@@ -634,6 +637,88 @@ class EditModal {
       
       alert(errorMessage);
       
+      // Reset progress bar after 3 seconds
+      setTimeout(() => {
+        progressDiv.style.display = 'none';
+        progressFill.style.width = '0%';
+        progressFill.style.backgroundColor = '#4a7c4a';
+        progressText.textContent = 'Uploading...';
+      }, 3000);
+    }
+  }
+
+  async delete() {
+    if (!this.currentItem || !this.currentItem.hash) {
+      alert('Cannot delete: item not properly loaded');
+      return;
+    }
+
+    // Confirm deletion
+    if (!confirm('Are you sure you want to delete this micro action? This cannot be undone.')) {
+      return;
+    }
+
+    const progressDiv = document.getElementById('uploadProgress');
+    const progressFill = progressDiv.querySelector('.progress-fill');
+    const progressText = progressDiv.querySelector('.progress-text');
+    const saveBtn = document.getElementById('saveButton');
+    const deleteBtn = document.getElementById('deleteButton');
+    const cancelBtn = document.getElementById('cancelButton');
+
+    try {
+      // Disable all buttons during deletion
+      saveBtn.disabled = true;
+      deleteBtn.disabled = true;
+      cancelBtn.disabled = true;
+
+      progressDiv.style.display = 'block';
+      progressFill.style.width = '25%';
+      progressText.textContent = 'Deleting micro action...';
+
+      // Call the delete API
+      await window.githubAPI.deleteSingleProject(this.currentItem.hash);
+
+      progressFill.style.width = '75%';
+      progressText.textContent = 'Verifying deletion...';
+
+      // Wait a moment for GitHub to process
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      progressFill.style.width = '100%';
+      progressText.textContent = 'Success! Micro action deleted.';
+
+      // Show success message
+      alert('Micro action deleted successfully!\n\nNote: GitHub Pages may take 1-5 minutes to reflect the changes.');
+
+      // Force reload with cache bust
+      setTimeout(() => {
+        window.location.href = window.location.pathname + '?t=' + Date.now();
+      }, 1500);
+
+    } catch (error) {
+      console.error('Delete error:', error);
+      progressText.textContent = 'Error: ' + error.message;
+      progressFill.style.backgroundColor = '#ff4444';
+
+      // More detailed error message
+      let errorMessage = 'Failed to delete micro action:\n\n';
+      if (error.message.includes('401')) {
+        errorMessage += 'Authentication failed. Please check your GitHub token.';
+      } else if (error.message.includes('404')) {
+        errorMessage += 'Item not found in the repository.';
+      } else if (error.message.includes('403')) {
+        errorMessage += 'Permission denied. Check token permissions.';
+      } else {
+        errorMessage += error.message;
+      }
+
+      alert(errorMessage);
+
+      // Re-enable buttons on failure
+      saveBtn.disabled = false;
+      deleteBtn.disabled = false;
+      cancelBtn.disabled = false;
+
       // Reset progress bar after 3 seconds
       setTimeout(() => {
         progressDiv.style.display = 'none';

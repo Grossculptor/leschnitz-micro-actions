@@ -659,6 +659,210 @@ class GitHubAPI {
     }
   }
 
+  async deleteSingleProject(itemHash, retryCount = 0) {
+    const maxRetries = 3;
+    
+    try {
+      const token = await this.getToken();
+      
+      if (!token) {
+        throw new Error('No authentication token available. Please login again.');
+      }
+      
+      console.log('Fetching current projects.json for deletion...');
+      
+      // Get current file to retrieve SHA and latest data
+      let response;
+      const maxAttempts = 3;
+      let lastError = null;
+      
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        try {
+          console.log(`Attempt ${attempt}/${maxAttempts} to fetch projects.json...`);
+          
+          response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`, {
+            method: 'GET',
+            headers: {
+              'Authorization': `token ${token}`,
+              'Accept': 'application/vnd.github.v3+json'
+            },
+            mode: 'cors',
+            credentials: 'same-origin',
+            cache: 'no-cache'
+          });
+          
+          if (response.ok) {
+            break; // Success, exit loop
+          }
+          
+          lastError = `HTTP ${response.status}: ${response.statusText}`;
+          console.error(`Attempt ${attempt} failed:`, lastError);
+          
+          if (attempt < maxAttempts) {
+            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+          }
+        } catch (fetchError) {
+          lastError = fetchError.message;
+          console.error(`Network error on attempt ${attempt}:`, fetchError);
+          
+          if (attempt < maxAttempts) {
+            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+          }
+        }
+      }
+      
+      if (!response || !response.ok) {
+        throw new Error(`Failed to connect to GitHub after ${maxAttempts} attempts. ${lastError || 'Unknown error'}`);
+      }
+
+      const fileData = await response.json();
+      const currentSha = fileData.sha;
+      console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, currentSha);
+      
+      // Decode and parse current content with UTF-8 support
+      const binaryString = atob(fileData.content);
+      const bytes = Uint8Array.from(binaryString, char => char.charCodeAt(0));
+      const jsonString = new TextDecoder().decode(bytes);
+      const currentContent = JSON.parse(jsonString);
+      
+      // Find and remove the specific item
+      const itemIndex = currentContent.findIndex(item => item.hash === itemHash);
+      if (itemIndex === -1) {
+        console.error('Item not found for deletion. Looking for hash:', itemHash);
+        console.error('Available hashes:', currentContent.map(i => i.hash));
+        throw new Error(`Item with hash ${itemHash} not found in current data`);
+      }
+      
+      const originalLength = currentContent.length;
+      console.log('Found item at index:', itemIndex);
+      console.log('Item to delete:', JSON.stringify(currentContent[itemIndex]));
+      
+      // Remove the item from the array
+      currentContent.splice(itemIndex, 1);
+      
+      // Data integrity checks
+      const newLength = currentContent.length;
+      if (newLength !== originalLength - 1) {
+        throw new Error('Data integrity check failed: Expected length to decrease by 1');
+      }
+      
+      // Check for duplicate hashes
+      const uniqueHashes = new Set(currentContent.map(i => i.hash));
+      if (uniqueHashes.size !== newLength) {
+        throw new Error('Data integrity check failed: Duplicate hashes detected after deletion');
+      }
+      
+      console.log(`Successfully removed item. New length: ${newLength} (was ${originalLength})`);
+      
+      // Encode updated content with proper UTF-8 support (matching updateSingleProject)
+      const updatedJsonString = JSON.stringify(currentContent, null, 2);
+      
+      // Convert to base64 with UTF-8 encoding
+      const utf8Bytes = new TextEncoder().encode(updatedJsonString);
+      const binaryStringEncoded = Array.from(utf8Bytes, byte => String.fromCharCode(byte)).join('');
+      const content = btoa(binaryStringEncoded);
+
+      // Update with retry logic
+      let updateResponse;
+      const updateMaxAttempts = 3;
+      let updateLastError = null;
+      
+      for (let attempt = 1; attempt <= updateMaxAttempts; attempt++) {
+        try {
+          console.log(`Delete update attempt ${attempt}/${updateMaxAttempts}...`);
+          
+          updateResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
+            method: 'PUT',
+            headers: {
+              'Authorization': `token ${token}`,
+              'Accept': 'application/vnd.github.v3+json',
+              'Content-Type': 'application/json'
+            },
+            mode: 'cors',
+            credentials: 'same-origin',
+            body: JSON.stringify({
+              message: `Delete micro action ${itemHash.substring(0, 8)} via web editor`,
+              content: content,
+              sha: currentSha,
+              branch: this.branch
+            })
+          });
+          
+          if (updateResponse.ok) {
+            break; // Success
+          }
+          
+          const errorData = await updateResponse.json();
+          updateLastError = errorData.message || updateResponse.statusText;
+          
+          // Check for SHA mismatch
+          if (updateResponse.status === 409 || 
+              (updateResponse.status === 422 && errorData.message?.includes('does not match'))) {
+            console.log('SHA mismatch, refetching...');
+            // Return to retry the whole operation
+            if (retryCount < maxRetries) {
+              await new Promise(resolve => setTimeout(resolve, 500 * Math.pow(2, retryCount)));
+              return this.deleteSingleProject(itemHash, retryCount + 1);
+            }
+          }
+          
+          if (attempt < updateMaxAttempts) {
+            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+          }
+        } catch (fetchError) {
+          updateLastError = fetchError.message;
+          console.error(`Delete update network error on attempt ${attempt}:`, fetchError);
+          
+          if (attempt < updateMaxAttempts) {
+            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+          }
+        }
+      }
+      
+      if (!updateResponse) {
+        throw new Error(`Network error after ${updateMaxAttempts} attempts: ${updateLastError}`);
+      }
+
+      if (!updateResponse.ok) {
+        const errorData = await updateResponse.json();
+        console.error('Failed to update projects.json for deletion:', errorData);
+        
+        // Handle SHA mismatch
+        if (updateResponse.status === 409 || 
+            updateResponse.status === 422 && 
+            (errorData.message?.includes('does not match') || 
+             errorData.message?.includes('is at') && errorData.message?.includes('but expected'))) {
+          
+          console.log('SHA mismatch detected, retrying...');
+          
+          if (retryCount < maxRetries) {
+            const waitTime = Math.min(500 * Math.pow(2, retryCount), 3000);
+            console.log(`Retrying in ${waitTime}ms...`);
+            await new Promise(resolve => setTimeout(resolve, waitTime));
+            return this.deleteSingleProject(itemHash, retryCount + 1);
+          } else {
+            throw new Error('Unable to delete due to concurrent updates. Please refresh and try again.');
+          }
+        }
+        
+        if (updateResponse.status === 403) {
+          if (errorData.message?.includes('Resource not accessible')) {
+            throw new Error('Your token needs "repo" scope to delete files.');
+          }
+          throw new Error('Permission denied. Check token permissions.');
+        }
+        
+        throw new Error(`Failed to delete: ${errorData.message || updateResponse.statusText}`);
+      }
+
+      console.log('Successfully deleted item:', itemHash.substring(0, 8));
+      return await updateResponse.json();
+    } catch (error) {
+      console.error('Delete error:', error);
+      throw error;
+    }
+  }
+
   async generateThumbnail(file) {
     return new Promise((resolve) => {
       const canvas = document.createElement('canvas');
