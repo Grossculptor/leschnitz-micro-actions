@@ -48,6 +48,13 @@ class CardExpand {
   }
 
   open(item) {
+    // Track card expansion event
+    if(typeof gtag !== 'undefined') {
+      gtag('event', 'card_expand', {
+        has_background: true,
+        item_title: (item.title || '').substring(0, 100)
+      });
+    }
     if (!item.backgroundImage) return;
     
     this.currentItem = item;

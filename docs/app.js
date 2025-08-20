@@ -7,7 +7,7 @@ el.innerHTML=`
 <div class="content-wrapper">
 <button class="edit-btn" title="Edit" data-hash="${item.hash}">✎</button>
 <h2 class="title">${escapeHTML(item.title)}</h2>
-<div class="meta"><span>${new Date(item.datetime||item.published||Date.now()).toLocaleString()}</span><span>${(item.hash||'').slice(0,8)}</span><a class="source" href="${escapeAttr(item.source||'#')}" target="_blank" rel="noopener">source</a></div>
+<div class="meta"><span>${new Date(item.datetime||item.published||Date.now()).toLocaleString()}</span><span>${(item.hash||'').slice(0,8)}</span><a class="source" href="${escapeAttr(item.source||'#')}" target="_blank" rel="noopener" onclick="if(typeof gtag!=='undefined')gtag('event','source_click',{source_url:'${escapeAttr(item.source||'')}',item_title:'${escapeAttr((item.title||'').substring(0,100))}'});">source</a></div>
 <p class="desc">${escapeHTML(item.description||'')}</p>
 ${item.media && item.media.length > 0 ? `
 <div class="media-thumbnails">
@@ -74,7 +74,8 @@ if(item.backgroundImage){
 }
 return el}
 function render(items){window.__items=items;applyFilter()}
-function applyFilter(){const q=(elQ.value||'').toLowerCase();const items=(window.__items||[]).filter(it=>{const blob=`${it.title} ${it.description}`.toLowerCase();return !q||blob.includes(q)});elList.innerHTML='';items.forEach(it=>elList.appendChild(card(it)));elCount.textContent=`${items.length} micro actions`;elList.setAttribute('aria-busy','false')}
+let searchTimeout;function applyFilter(){const q=(elQ.value||'').toLowerCase();const items=(window.__items||[]).filter(it=>{const blob=`${it.title} ${it.description}`.toLowerCase();return !q||blob.includes(q)});elList.innerHTML='';items.forEach(it=>elList.appendChild(card(it)));elCount.textContent=`${items.length} micro actions`;elList.setAttribute('aria-busy','false');// Track search with debouncing (only track after user stops typing for 500ms)
+if(q){clearTimeout(searchTimeout);searchTimeout=setTimeout(()=>{if(typeof gtag!=='undefined'){gtag('event','search',{search_term:q,results_count:items.length});}},500);}}
 function escapeHTML(s){return (s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function escapeAttr(s){return String(s||'').replace(/"/g,'%22')}
 function getShadeClass(url){if(!url)return'shade-3';try{const domain=new URL(url).hostname.toLowerCase();if(domain.includes('bip.lesnica.pl'))return'shade-1';if(domain==='lesnica.pl')return'shade-2';if(domain.includes('strzelce360'))return'shade-3';if(domain.includes('workers.dev'))return'shade-4';if(domain.includes('nto.pl'))return'shade-5';return'shade-3'}catch{return'shade-3'}}

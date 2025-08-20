@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Google Analytics Test</title>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CQT69LP63B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CQT69LP63B', {
+    anonymize_ip: true,
+    send_page_view: true,
+    debug_mode: true
+  });
+</script>
+</head>
+<body>
+<h1>Analytics Test Page</h1>
+<p>This page tests Google Analytics implementation.</p>
+
+<button onclick="gtag('event', 'test_click', {test_param: 'hello'})">Test Event</button>
+
+<h2>Check these:</h2>
+<ol>
+  <li>Open Chrome DevTools (F12)</li>
+  <li>Go to Network tab</li>
+  <li>Filter by "collect" or "gtag"</li>
+  <li>You should see requests to google-analytics.com</li>
+  <li>Or install "Google Analytics Debugger" Chrome extension</li>
+</ol>
+
+<h2>GA4 Real-time Check:</h2>
+<ol>
+  <li>Go to <a href="https://analytics.google.com" target="_blank">Google Analytics</a></li>
+  <li>Select your property</li>
+  <li>Go to Reports → Realtime</li>
+  <li>You should see yourself as an active user</li>
+</ol>
+
+<p><a href="index.html">Back to main site</a></p>
+</body>
+</html>
