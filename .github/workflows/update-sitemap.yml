@@ -4,15 +4,20 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'docs/**'
       - 'scripts/generate_sitemap.py'
+      - 'docs/data/projects.json'  # Update sitemap when content changes
   workflow_dispatch:  # Allow manual trigger
   schedule:
     - cron: '0 12 * * 1'  # Run weekly on Mondays at noon UTC
 
+concurrency:
+  group: sitemap-update
+  cancel-in-progress: true
+
 jobs:
   update-sitemap:
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # Prevent hanging sitemap generation
     
     steps:
     - name: Checkout repository
@@ -24,6 +29,10 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        pip install python-dateutil
     
     - name: Generate sitemap
       run: |

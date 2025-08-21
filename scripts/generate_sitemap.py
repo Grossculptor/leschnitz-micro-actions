@@ -5,6 +5,7 @@ import json
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
+from dateutil import parser as dparser
 
 def generate_sitemap():
     """Generate sitemap.xml from projects.json data."""
@@ -17,10 +18,14 @@ def generate_sitemap():
     # Create XML structure
     urlset = ET.Element('urlset', xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
     
+    # Determine last modification date from newest project
+    last_update = max((dparser.parse(p.get('created_at', '')) for p in projects if p.get('created_at')), default=datetime.now())
+    last_update_str = last_update.strftime('%Y-%m-%d')
+    
     # Add main page with highest priority
     main_url = ET.SubElement(urlset, 'url')
     ET.SubElement(main_url, 'loc').text = 'https://grossculptor.github.io/leschnitz-micro-actions/'
-    ET.SubElement(main_url, 'lastmod').text = datetime.now().strftime('%Y-%m-%d')
+    ET.SubElement(main_url, 'lastmod').text = last_update_str
     ET.SubElement(main_url, 'changefreq').text = 'hourly'
     ET.SubElement(main_url, 'priority').text = '1.0'
     
@@ -36,14 +41,14 @@ def generate_sitemap():
     for page, desc in location_pages:
         url = ET.SubElement(urlset, 'url')
         ET.SubElement(url, 'loc').text = f'https://grossculptor.github.io/leschnitz-micro-actions/{page}/'
-        ET.SubElement(url, 'lastmod').text = datetime.now().strftime('%Y-%m-%d')
+        ET.SubElement(url, 'lastmod').text = last_update_str
         ET.SubElement(url, 'changefreq').text = 'daily'
         ET.SubElement(url, 'priority').text = '0.9'
     
     # Add about page
     about_url = ET.SubElement(urlset, 'url')
     ET.SubElement(about_url, 'loc').text = 'https://grossculptor.github.io/leschnitz-micro-actions/about/'
-    ET.SubElement(about_url, 'lastmod').text = datetime.now().strftime('%Y-%m-%d')
+    ET.SubElement(about_url, 'lastmod').text = last_update_str
     ET.SubElement(about_url, 'changefreq').text = 'weekly'
     ET.SubElement(about_url, 'priority').text = '0.8'
     
