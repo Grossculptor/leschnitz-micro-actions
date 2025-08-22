@@ -50,7 +50,13 @@ KEYWORDS_STRONG = [
   "Opolszczyzna","Opolszczyźnie","Opolszczyznę","Opolszczyzny","Wyssoka","Wysoka",
   "Zalesie Śląskie","Zalesie Slaskie","Zalesie OS","Salesche",
   "Raszowa","Raschowa","Poręba","Poremba","Lichinia","Lichynia","Żyrowa","Zyrowa","Zdzieszowice","Deschowitz",
-  "Dolna","Dollna","Kadłubiec","Kadlubietz"
+  "Dolna","Dollna","Kadłubiec","Kadlubietz",
+  # Cultural and linguistic keywords
+  "godka","gwara","śląska","śląski","ślonski","dialekt","Ślonsko",
+  "haberfloki","krepel","ucek","wodzionka","żymlok","karminadle",
+  # Community keywords  
+  "mieszkańcy","mieszkaniec","sołtys","sołectwo","wieś","wsie","gmina",
+  "wioska","społeczność","obywatel","obywatele","rada miejska","rada gminy"
 ]
 
 SESSION = requests.Session()
@@ -305,6 +311,21 @@ def parse_feed(url:str):
 def strong_keyword_hit(text:str)->bool:
     t=(text or "").lower()
     return any(k.lower() in t for k in [*KEYWORDS_STRONG,"oppeln","gross strehlitz","leschnitz"])
+
+def cultural_content_hit(text: str) -> bool:
+    """Detect cultural preservation and community tension topics"""
+    import re
+    patterns = [
+        r'god[kc][aiey]|gwar[aęy]|dialekt|śl[ąo]nsk',  # dialect variations including "godki"
+        r'mieszka[ńn]c[yów]|sołtys|wie[śs]|wiosk',  # community
+        r'tradycj|zwycza[ij]|kultur|dziedzictw',  # tradition
+        r'hałas|śmie[ćc]i|imprez|zabaw[ay]|głośn',  # community tensions
+        r'słownik|leksykon|mowa|język|regionali',  # language preservation
+        r'konflikt|spór|problem|skarż|narzekan',  # tensions
+        r'klasówk|quiz|test.*śląsk|profesor.*wons'  # educational content about dialect
+    ]
+    t = (text or "").lower()
+    return any(re.search(p, t, re.IGNORECASE) for p in patterns)
 
 # --- Groq OpenAI-compatible client ---
 def _read_system_prompt()->str:
@@ -594,9 +615,12 @@ def main():
                 it["id"] = sha1(normalized) if normalized else sha1(it.get("title", "") + it.get("published", ""))
                 
                 blob = " ".join([it.get("title",""), it.get("summary",""), it.get("content","")])
-                it["preselect"] = strong_keyword_hit(blob) or ("bip.lesnica.pl" in url) or ("strzelce360" in url)
-                # extra conservative pre-gate for NTO
-                if "nto.pl/rss" in url and not it["preselect"]:
+                it["preselect"] = (strong_keyword_hit(blob) or 
+                                   cultural_content_hit(blob) or
+                                   ("bip.lesnica.pl" in url) or 
+                                   ("strzelce360" in url))
+                # extra conservative pre-gate for NTO - but allow cultural content
+                if "nto.pl/rss" in url and not it["preselect"] and not cultural_content_hit(blob):
                     continue
                 
                 # Add to seen URLs and items list
