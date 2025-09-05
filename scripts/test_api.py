@@ -12,7 +12,7 @@ def test_api(api_key):
     }
     
     payload = {
-        "model": "moonshotai/kimi-k2-instruct",
+        "model": "moonshotai/Kimi-K2-Instruct-0905",
         "messages": [
             {"role": "system", "content": "Reply with JSON: {\"status\": \"ok\"}"},
             {"role": "user", "content": "Test"}

@@ -344,7 +344,7 @@ def _read_system_prompt()->str:
         return p.read_text(encoding="utf-8")
     raise RuntimeError("SYSTEM_PROMPT missing: provide env var or secrets/SYSTEM_PROMPT.local.txt")
 
-def _groq_chat(messages, model="moonshotai/kimi-k2-instruct"):
+def _groq_chat(messages, model="moonshotai/Kimi-K2-Instruct-0905"):
     print(f"DEBUG: Making Groq API call with model {model}")
     api_key = os.environ.get('GROQ_API_KEY')
     if not api_key:
@@ -559,7 +559,7 @@ def main():
         print(f"ERROR: API connectivity test failed: {e}")
         print("ERROR: The Groq API is not accessible. Check:")
         print("  1. GROQ_API_KEY is valid")
-        print("  2. The model 'moonshotai/kimi-k2-instruct' is available")
+        print("  2. The model 'moonshotai/Kimi-K2-Instruct-0905' is available")
         print("  3. Your account has credits/access")
         raise RuntimeError(f"Cannot proceed without working API: {e}")
     

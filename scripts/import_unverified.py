@@ -214,7 +214,7 @@ def read_system_prompt() -> str:
         return p.read_text(encoding="utf-8")
     raise RuntimeError("SYSTEM_PROMPT missing: provide env var or secrets/SYSTEM_PROMPT.local.txt")
 
-def groq_chat(messages: List[Dict], model: str = "moonshotai/kimi-k2-instruct") -> Dict:
+def groq_chat(messages: List[Dict], model: str = "moonshotai/Kimi-K2-Instruct-0905") -> Dict:
     """Call Groq API"""
     api_key = os.environ.get('GROQ_API_KEY')
     if not api_key:

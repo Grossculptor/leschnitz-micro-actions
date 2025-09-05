@@ -73,7 +73,7 @@ def groq_chat(messages):
     }
     
     payload = {
-        "model": "moonshotai/kimi-k2-instruct",
+        "model": "moonshotai/Kimi-K2-Instruct-0905",
         "messages": messages,
         "temperature": 0.7,
         "max_tokens": 200
