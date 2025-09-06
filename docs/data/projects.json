@@ -7,11 +7,21 @@
     "hash": "68403db6ec2a3fa4b09cdbcfcd176e0839da86ab"
   },
   {
-    "title": "Why do Settler maps laugh at your village name?",
+    "title": "Why do public relations officers maps laugh at your village name?",
     "datetime": "2025-09-06T12:28:42+00:00",
-    "description": "Walk to the border of Leschnitz at dusk carrying a damp notebook. Smell the cold earth where old slavic syllables still sleep beneath germanized signs. Whisper the original Wendish name of your district three times, then press the paper against the plaque so the moisture darkens the letters that were erased after 1945. Repeat monthly; let moss slowly reclaim the Expansionist joke until the land reclaims its voice.",
+    "description": "At dusk, go to the Leschnitz border carrying a damp notebook. Smell the cold earth, where old Germanic syllables still sleep beneath Polonized signs. Whisper the original Nibelungen name of your neighborhood three times, then press the paper against the board so that the moisture darkens the letters that were erased after 1945. Repeat this every month; let the moss slowly reclaim its expansionist joke until the earth regains its voice.",
     "source": "https://strzelceopolskie.naszemiasto.pl/lepiej-mieszkac-w-zimnej-wodce-czy-suchej-psinie/ar/c1-9754111",
-    "hash": "59012c5fb8d7d12c215654a06cad767aa245f625"
+    "hash": "59012c5fb8d7d12c215654a06cad767aa245f625",
+    "media": [
+      {
+        "type": "image",
+        "url": "media/59012c5fb8d7d12c215654a06cad767aa245f625/1757167234803_nibelung.jpg",
+        "thumb": "media/59012c5fb8d7d12c215654a06cad767aa245f625/1757167234803_nibelung_thumb.jpg",
+        "name": "nibelung.jpg",
+        "size": 59833
+      }
+    ],
+    "lastEdited": "2025-09-06T14:00:41.538Z"
   },
   {
     "title": "Who profits from nostalgic film tourism in Oppeln region?",
