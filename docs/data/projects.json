@@ -64,7 +64,18 @@
     "datetime": "2025-09-18T07:49:00+02:00",
     "description": "Smell the fresh paint on fake timber frames. At dawn, wrap one historic cottage in Leschnitz with biodegradable gold foil. Leave a note: 'Beauty contest entry #27'. Photograph how plastic petals fade under Oppeln sun. Post the wilting images on the Gemeinde notice board. Count how many weeks until officials peel off the shame. Let settlers' glossy brochures rot beside your living picture of what locals really cherish.",
     "source": "https://nto.pl/oto-najpiekniejsze-wioski-na-opolszczyznie-mieszkancy-zrobili-z-tych-miejsc-perelki/ar/c1-17589529",
-    "hash": "e44a2a24707fc75f3c5a8f7849da106b1b88f387"
+    "hash": "e44a2a24707fc75f3c5a8f7849da106b1b88f387",
+    "media": [
+      {
+        "type": "image",
+        "url": "media/e44a2a24707fc75f3c5a8f7849da106b1b88f387/1758208009992_leschnitz_sun.jpg",
+        "thumb": "media/e44a2a24707fc75f3c5a8f7849da106b1b88f387/1758208009992_leschnitz_sun_thumb.jpg",
+        "name": "leschnitz_sun.jpg",
+        "size": 97483
+      }
+    ],
+    "backgroundImage": "media/e44a2a24707fc75f3c5a8f7849da106b1b88f387/1758208009992_leschnitz_sun.jpg",
+    "lastEdited": "2025-09-18T15:06:59.485Z"
   },
   {
     "title": "Why does Settler nostalgia win awards in Oppeln villages?",
