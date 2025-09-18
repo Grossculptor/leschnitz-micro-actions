@@ -9,9 +9,20 @@
   {
     "title": "Who decides which settler stones deserve golden plaques?",
     "datetime": "2025-09-18T12:33:07+00:00",
-    "description": "At dusk, walk to the least visited Pomniki in Oppeln. Bring a pocket of damp forest earth. Rub a whisper-thin layer over the official plaque until only the smell of moss remains. Snap a photo, leave before security lamps click on. Repeat with every neglected marker on the list; let the missing shine brighter than the chosen seven.",
+    "description": "At dusk, walk to the least visited Sehenswürdigkeiten in Oppeln. Bring a pocket of damp forest earth. Rub a whisper-thin layer over the official plaque until only the smell of moss remains. Snap a photo, leave before security lamps click on. Repeat with every neglected marker on the list; let the missing shine brighter than the chosen seven.",
     "source": "https://strzelceopolskie.naszemiasto.pl/opolskie-pomniki-historii-jest-juz-siedem-takich/ar/c1-9519915",
-    "hash": "291f798b5d3d2aaf366d58242b4692e26007e417"
+    "hash": "291f798b5d3d2aaf366d58242b4692e26007e417",
+    "media": [
+      {
+        "type": "image",
+        "url": "media/291f798b5d3d2aaf366d58242b4692e26007e417/1758207667880_oppeln.jpg",
+        "thumb": "media/291f798b5d3d2aaf366d58242b4692e26007e417/1758207667880_oppeln_thumb.jpg",
+        "name": "oppeln.jpg",
+        "size": 149944
+      }
+    ],
+    "backgroundImage": "media/291f798b5d3d2aaf366d58242b4692e26007e417/1758207667880_oppeln.jpg",
+    "lastEdited": "2025-09-18T15:01:13.436Z"
   },
   {
     "title": "Why does the Settler mayor's notice smell of fresh paint?",
