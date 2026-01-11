@@ -564,7 +564,17 @@ class EditModal {
         });
         
         if (verifyResponse.ok) {
-          const verifyData = await verifyResponse.json();
+          let verifyData;
+          try {
+            verifyData = await verifyResponse.json();
+          } catch (parseError) {
+            console.warn('Could not parse verify response:', parseError);
+            verifyData = null;
+          }
+          if (!verifyData) {
+            console.log('Verification skipped - could not parse response');
+            return;
+          }
           const verifyContent = JSON.parse(atob(verifyData.content));
           const verifiedItem = verifyContent.find(item => item.hash === this.currentItem.hash);
           

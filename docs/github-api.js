@@ -1,6 +1,21 @@
 // Immediate logging to verify script execution
 console.log('github-api.js: Script loaded and executing');
 
+// Helper function to safely parse JSON from a Response object
+// Returns parsed JSON or a fallback object with status info if parsing fails
+async function safeJsonParse(response, fallbackMessage = 'Unknown error') {
+  try {
+    const text = await response.text();
+    if (!text || text.trim() === '') {
+      return { message: response.statusText || fallbackMessage, _parseError: true };
+    }
+    return JSON.parse(text);
+  } catch (parseError) {
+    console.warn('Could not parse response as JSON:', parseError.message);
+    return { message: response.statusText || fallbackMessage, _parseError: true };
+  }
+}
+
 class GitHubAPI {
   constructor() {
     console.log('GitHubAPI: Constructor called');
@@ -62,8 +77,11 @@ class GitHubAPI {
         }
         return false;
       }
-      
-      const userData = await userResponse.json();
+
+      const userData = await safeJsonParse(userResponse, 'Failed to parse user data');
+      if (userData._parseError) {
+        throw new Error('Failed to authenticate: Could not parse response');
+      }
       console.log('Authenticated as:', userData.login);
       
       // Test if the token can access the repo - with better error handling
@@ -156,9 +174,11 @@ class GitHubAPI {
         });
         
         if (existing.ok) {
-          const data = await existing.json();
-          sha = data.sha;
-          console.log('File exists, will update:', filePath);
+          const data = await safeJsonParse(existing, 'Failed to parse existing file data');
+          if (!data._parseError) {
+            sha = data.sha;
+            console.log('File exists, will update:', filePath);
+          }
         }
       } catch (e) {
         console.log('File does not exist, creating new:', filePath);
@@ -187,9 +207,9 @@ class GitHubAPI {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
+        const errorData = await safeJsonParse(response, 'Upload failed');
         console.error('GitHub API error:', errorData);
-        
+
         // Provide more specific error messages
         if (response.status === 403) {
           if (errorData.message?.includes('Resource not accessible')) {
@@ -201,11 +221,11 @@ class GitHubAPI {
         } else if (response.status === 422) {
           throw new Error('Invalid request. File may be too large or path invalid.');
         }
-        
+
         throw new Error(`Failed to upload file: ${response.status} - ${errorData.message || response.statusText}`);
       }
 
-      return await response.json();
+      return await safeJsonParse(response, 'Upload response parsing failed');
     } catch (error) {
       console.error('Upload error:', error);
       throw error;
@@ -268,21 +288,13 @@ class GitHubAPI {
         throw new Error(`Failed to connect to GitHub after ${maxAttempts} attempts. ${lastError || 'Unknown error'}`);
       }
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error('Failed to get projects.json:', errorData);
-        
-        if (response.status === 403) {
-          throw new Error('Token lacks permissions. Please use a token with "repo" scope for full access.');
-        }
-        
-        throw new Error(`Failed to get current projects.json: ${errorData.message || response.statusText}`);
+      const fileData = await safeJsonParse(response, 'Failed to parse file data');
+      if (fileData._parseError) {
+        throw new Error(`Failed to get current projects.json: ${fileData.message}`);
       }
-
-      const fileData = await response.json();
       const currentSha = fileData.sha;
       console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, currentSha);
-      
+
       // Decode and parse current content
       // Properly decode base64 with UTF-8 support
       const binaryString = atob(fileData.content);
@@ -467,7 +479,7 @@ class GitHubAPI {
       }
 
       console.log('Successfully updated item:', itemHash.substring(0, 8));
-      return await updateResponse.json();
+      return await safeJsonParse(updateResponse, 'Update response parsing failed');
     } catch (error) {
       console.error('Update error:', error);
       throw error;
@@ -491,17 +503,20 @@ class GitHubAPI {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
+        const errorData = await safeJsonParse(response, 'Failed to get projects');
         console.error('Failed to get projects.json:', errorData);
-        
+
         if (response.status === 403) {
           throw new Error('Token lacks permissions. Please use a token with "repo" scope for full access.');
         }
-        
+
         throw new Error(`Failed to get current projects.json: ${errorData.message || response.statusText}`);
       }
 
-      const fileData = await response.json();
+      const fileData = await safeJsonParse(response, 'Failed to parse file data');
+      if (fileData._parseError) {
+        throw new Error(`Failed to get current projects.json: ${fileData.message}`);
+      }
       console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, fileData.sha);
       
       // Encode content properly for GitHub API
@@ -525,17 +540,17 @@ class GitHubAPI {
       });
 
       if (!updateResponse.ok) {
-        const errorData = await updateResponse.json();
+        const errorData = await safeJsonParse(updateResponse, 'Update failed');
         console.error('Failed to update projects.json:', errorData);
-        
+
         // Handle SHA mismatch specifically
-        if (updateResponse.status === 409 || 
-            updateResponse.status === 422 && 
-            (errorData.message?.includes('does not match') || 
+        if (updateResponse.status === 409 ||
+            updateResponse.status === 422 &&
+            (errorData.message?.includes('does not match') ||
              errorData.message?.includes('is at') && errorData.message?.includes('but expected'))) {
-          
+
           console.log('SHA mismatch detected, file was updated by another process');
-          
+
           // Retry with exponential backoff
           if (retryCount < maxRetries) {
             const waitTime = Math.min(1000 * Math.pow(2, retryCount), 5000);
@@ -546,19 +561,19 @@ class GitHubAPI {
             throw new Error('File is being continuously updated by another process. Please try again in a few moments.');
           }
         }
-        
+
         if (updateResponse.status === 403) {
           if (errorData.message?.includes('Resource not accessible')) {
             throw new Error('Your token needs "repo" scope to modify files. Create a new token at https://github.com/settings/tokens/new?scopes=repo');
           }
           throw new Error('Permission denied. Check that your token has "repo" scope.');
         }
-        
+
         throw new Error(`Failed to update projects.json: ${errorData.message || updateResponse.statusText}`);
       }
 
       console.log('Successfully updated projects.json');
-      return await updateResponse.json();
+      return await safeJsonParse(updateResponse, 'Update response parsing failed');
     } catch (error) {
       console.error('Update projects error:', error);
       throw error;
@@ -640,9 +655,11 @@ class GitHubAPI {
         });
         
         if (authTest.ok) {
-          const user = await authTest.json();
-          console.log(`✓ Authenticated as: ${user.login}`);
-          
+          const user = await safeJsonParse(authTest, 'Failed to parse user data');
+          if (!user._parseError) {
+            console.log(`✓ Authenticated as: ${user.login}`);
+          }
+
           // Test 3: Repository access
           const repoTest = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}`, {
             method: 'GET',
@@ -651,11 +668,13 @@ class GitHubAPI {
               'Accept': 'application/vnd.github.v3+json'
             }
           });
-          
+
           if (repoTest.ok) {
-            const repo = await repoTest.json();
-            console.log(`✓ Can access repository: ${repo.full_name}`);
-            console.log(`  Permissions: ${repo.permissions ? JSON.stringify(repo.permissions) : 'unknown'}`);
+            const repo = await safeJsonParse(repoTest, 'Failed to parse repo data');
+            if (!repo._parseError) {
+              console.log(`✓ Can access repository: ${repo.full_name}`);
+              console.log(`  Permissions: ${repo.permissions ? JSON.stringify(repo.permissions) : 'unknown'}`);
+            }
           } else {
             console.log('✗ Cannot access repository');
           }
@@ -727,10 +746,13 @@ class GitHubAPI {
         throw new Error(`Failed to connect to GitHub after ${maxAttempts} attempts. ${lastError || 'Unknown error'}`);
       }
 
-      const fileData = await response.json();
+      const fileData = await safeJsonParse(response, 'Failed to parse file data');
+      if (fileData._parseError) {
+        throw new Error(`Failed to get current projects.json: ${fileData.message}`);
+      }
       const currentSha = fileData.sha;
       console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, currentSha);
-      
+
       // Decode and parse current content with UTF-8 support
       const binaryString = atob(fileData.content);
       const bytes = Uint8Array.from(binaryString, char => char.charCodeAt(0));
@@ -880,7 +902,7 @@ class GitHubAPI {
       }
 
       console.log('Successfully deleted item:', itemHash.substring(0, 8));
-      return await updateResponse.json();
+      return await safeJsonParse(updateResponse, 'Delete response parsing failed');
     } catch (error) {
       console.error('Delete error:', error);
       throw error;
