@@ -453,6 +453,7 @@ class GitHubAPI {
       let updateResponse;
       const updateMaxAttempts = 3;
       let updateLastError = null;
+      let updateLastErrorData = null;
       
       for (let attempt = 1; attempt <= updateMaxAttempts; attempt++) {
         try {
@@ -479,18 +480,12 @@ class GitHubAPI {
             break; // Success
           }
 
-          let errorData = {};
-          try {
-            errorData = await updateResponse.json();
-          } catch (parseError) {
-            console.warn('Could not parse error response as JSON:', parseError);
-            errorData = { message: updateResponse.statusText || 'Unknown error' };
-          }
-          updateLastError = errorData.message || updateResponse.statusText;
+          updateLastErrorData = await safeJsonParse(updateResponse, 'Update failed');
+          updateLastError = updateLastErrorData.message || updateResponse.statusText;
 
           // Check for SHA mismatch
           if (updateResponse.status === 409 ||
-              (updateResponse.status === 422 && errorData.message?.includes('does not match'))) {
+              (updateResponse.status === 422 && updateLastErrorData.message?.includes('does not match'))) {
             console.log('SHA mismatch, refetching...');
             // Return to retry the whole operation
             if (retryCount < maxRetries) {
@@ -517,13 +512,7 @@ class GitHubAPI {
       }
 
       if (!updateResponse.ok) {
-        let errorData = {};
-        try {
-          errorData = await updateResponse.json();
-        } catch (parseError) {
-          console.warn('Could not parse error response as JSON:', parseError);
-          errorData = { message: updateResponse.statusText || 'Unknown error' };
-        }
+        const errorData = updateLastErrorData || { message: updateResponse.statusText || 'Unknown error', _parseError: true };
         console.error('Failed to update projects.json:', errorData);
 
         // Handle SHA mismatch
@@ -848,6 +837,7 @@ class GitHubAPI {
       let updateResponse;
       const updateMaxAttempts = 3;
       let updateLastError = null;
+      let updateLastErrorData = null;
       
       for (let attempt = 1; attempt <= updateMaxAttempts; attempt++) {
         try {
@@ -874,18 +864,12 @@ class GitHubAPI {
             break; // Success
           }
 
-          let errorData = {};
-          try {
-            errorData = await updateResponse.json();
-          } catch (parseError) {
-            console.warn('Could not parse error response as JSON:', parseError);
-            errorData = { message: updateResponse.statusText || 'Unknown error' };
-          }
-          updateLastError = errorData.message || updateResponse.statusText;
+          updateLastErrorData = await safeJsonParse(updateResponse, 'Delete update failed');
+          updateLastError = updateLastErrorData.message || updateResponse.statusText;
 
           // Check for SHA mismatch
           if (updateResponse.status === 409 ||
-              (updateResponse.status === 422 && errorData.message?.includes('does not match'))) {
+              (updateResponse.status === 422 && updateLastErrorData.message?.includes('does not match'))) {
             console.log('SHA mismatch, refetching...');
             // Return to retry the whole operation
             if (retryCount < maxRetries) {
@@ -912,13 +896,7 @@ class GitHubAPI {
       }
 
       if (!updateResponse.ok) {
-        let errorData = {};
-        try {
-          errorData = await updateResponse.json();
-        } catch (parseError) {
-          console.warn('Could not parse error response as JSON:', parseError);
-          errorData = { message: updateResponse.statusText || 'Unknown error' };
-        }
+        const errorData = updateLastErrorData || { message: updateResponse.statusText || 'Unknown error', _parseError: true };
         console.error('Failed to update projects.json for deletion:', errorData);
         
         // Handle SHA mismatch
