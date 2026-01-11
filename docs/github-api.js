@@ -25,10 +25,12 @@ class GitHubAPI {
     this.branch = (window.REPO_CONFIG && window.REPO_CONFIG.branch) || 'main';
     this.token = null;
     this.password = null;
+    this.lastError = null;
     console.log(`GitHubAPI configured for: ${this.owner}/${this.repo}`);
   }
 
   async authenticate(password) {
+    this.lastError = null;
     try {
       // Store the password as the GitHub Personal Access Token
       this.token = password;
@@ -42,7 +44,7 @@ class GitHubAPI {
         userResponse = await fetch('https://api.github.com/user', {
           method: 'GET',
           headers: {
-            'Authorization': `token ${password}`,
+            'Authorization': `Bearer ${password}`,
             'Accept': 'application/vnd.github.v3+json'
           },
           mode: 'cors',
@@ -55,7 +57,7 @@ class GitHubAPI {
           userResponse = await fetch('https://api.github.com/user', {
             method: 'GET',
             headers: {
-              'Authorization': `Bearer ${password}`,
+              'Authorization': `token ${password}`,
               'Accept': 'application/vnd.github.v3+json'
             },
             mode: 'cors',
@@ -63,7 +65,8 @@ class GitHubAPI {
           });
         } catch (secondError) {
           console.error('Both auth methods failed:', secondError);
-          throw new Error('Network error - please check your connection and try again');
+          this.lastError = 'Network error - please check your connection and try again';
+          throw new Error(this.lastError);
         }
       }
       
@@ -71,16 +74,19 @@ class GitHubAPI {
         const status = userResponse ? userResponse.status : 'unknown';
         console.error('Invalid token, status:', status);
         if (status === 401) {
-          throw new Error('Invalid token - please check your Personal Access Token');
+          this.lastError = 'Invalid token - please check your Personal Access Token';
+          throw new Error(this.lastError);
         } else if (status === 403) {
-          throw new Error('Token lacks required permissions - needs "repo" scope');
+          this.lastError = 'Token lacks required permissions - needs "repo" scope';
+          throw new Error(this.lastError);
         }
         return false;
       }
 
       const userData = await safeJsonParse(userResponse, 'Failed to parse user data');
       if (userData._parseError) {
-        throw new Error('Failed to authenticate: Could not parse response');
+        this.lastError = 'Failed to authenticate: Could not parse response';
+        throw new Error(this.lastError);
       }
       console.log('Authenticated as:', userData.login);
       
@@ -90,7 +96,7 @@ class GitHubAPI {
         repoResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}`, {
           method: 'GET',
           headers: {
-            'Authorization': `token ${password}`,
+            'Authorization': `Bearer ${password}`,
             'Accept': 'application/vnd.github.v3+json'
           },
           mode: 'cors',
@@ -105,7 +111,21 @@ class GitHubAPI {
       
       if (!repoResponse.ok) {
         console.error('Cannot access repository');
+        this.lastError = `Cannot access repository ${this.owner}/${this.repo}. If you're on the upstream site, you likely need to fork the repo or be added as a collaborator.`;
         return false;
+      }
+
+      // If we can read repo metadata, ensure this user/token can actually push.
+      try {
+        const repoData = await safeJsonParse(repoResponse, 'Failed to parse repo data');
+        if (!repoData._parseError && repoData.permissions && repoData.permissions.push === false) {
+          this.lastError =
+            `Authenticated as ${userData.login}, but you do NOT have push access to ${this.owner}/${this.repo}. ` +
+            'Fork the repo and edit your fork, or ask the owner to add you as a collaborator.';
+          return false;
+        }
+      } catch (e) {
+        console.warn('Could not verify repo push permissions:', e);
       }
       
       // Store authentication
@@ -118,6 +138,9 @@ class GitHubAPI {
       return true;
     } catch (error) {
       console.error('Auth error:', error);
+      if (!this.lastError) {
+        this.lastError = error.message || 'Authentication failed';
+      }
       return false;
     }
   }
@@ -166,7 +189,7 @@ class GitHubAPI {
         const existing = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/${filePath}?ref=${this.branch}`, {
           method: 'GET',
           headers: {
-            'Authorization': `token ${token}`, // Use token format
+            'Authorization': `Bearer ${token}`,
             'Accept': 'application/vnd.github.v3+json'
           },
           mode: 'cors',
@@ -197,7 +220,7 @@ class GitHubAPI {
       const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/${filePath}`, {
         method: 'PUT',
         headers: {
-          'Authorization': `token ${token}`, // Use token format
+          'Authorization': `Bearer ${token}`,
           'Accept': 'application/vnd.github.v3+json',
           'Content-Type': 'application/json'
         },
@@ -213,11 +236,11 @@ class GitHubAPI {
         // Provide more specific error messages
         if (response.status === 403) {
           if (errorData.message?.includes('Resource not accessible')) {
-            throw new Error('Token lacks required permissions. Please use a token with "repo" scope.');
+            throw new Error(`No push permission to ${this.owner}/${this.repo}. If you're on the upstream site, fork the repo or get collaborator access. Also ensure the token has write permissions ("repo" for classic PAT).`);
           }
           throw new Error('Permission denied. Check token permissions.');
         } else if (response.status === 404) {
-          throw new Error('Repository or file path not found.');
+          throw new Error('Repository or file path not found (or you do not have write access). If you are on the upstream site, fork the repo or get collaborator access.');
         } else if (response.status === 422) {
           throw new Error('Invalid request. File may be too large or path invalid.');
         }
@@ -241,7 +264,7 @@ class GitHubAPI {
     const metaResponse = await fetch(url, {
       method: 'GET',
       headers: {
-        'Authorization': `token ${token}`,
+        'Authorization': `Bearer ${token}`,
         'Accept': 'application/vnd.github.object+json'
       },
       mode: 'cors',
@@ -277,7 +300,7 @@ class GitHubAPI {
       const rawResponse = await fetch(url, {
         method: 'GET',
         headers: {
-          'Authorization': `token ${token}`,
+          'Authorization': `Bearer ${token}`,
           'Accept': 'application/vnd.github.raw+json'
         },
         mode: 'cors',
@@ -438,7 +461,7 @@ class GitHubAPI {
           updateResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
             method: 'PUT',
             headers: {
-              'Authorization': `token ${token}`,
+              'Authorization': `Bearer ${token}`,
               'Accept': 'application/vnd.github.v3+json',
               'Content-Type': 'application/json'
             },
@@ -702,7 +725,7 @@ class GitHubAPI {
         const authTest = await fetch('https://api.github.com/user', {
           method: 'GET',
           headers: {
-            'Authorization': `token ${this.token}`,
+            'Authorization': `Bearer ${this.token}`,
             'Accept': 'application/vnd.github.v3+json'
           }
         });
@@ -717,7 +740,7 @@ class GitHubAPI {
           const repoTest = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}`, {
             method: 'GET',
             headers: {
-              'Authorization': `token ${this.token}`,
+              'Authorization': `Bearer ${this.token}`,
               'Accept': 'application/vnd.github.v3+json'
             }
           });
@@ -833,7 +856,7 @@ class GitHubAPI {
           updateResponse = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json`, {
             method: 'PUT',
             headers: {
-              'Authorization': `token ${token}`,
+              'Authorization': `Bearer ${token}`,
               'Accept': 'application/vnd.github.v3+json',
               'Content-Type': 'application/json'
             },

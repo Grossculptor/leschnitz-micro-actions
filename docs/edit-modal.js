@@ -239,8 +239,10 @@ class EditModal {
         console.log(`Authenticated as GitHub user: ${user}`);
         this.loadItemData();
       } else {
+        const reason = (window.githubAPI && window.githubAPI.lastError) ? window.githubAPI.lastError : null;
         errorDiv.innerHTML = `
           <div style="color: #ff6b6b;">Authentication failed</div>
+          ${reason ? `<div style="margin-top: 0.5rem; font-size: 0.9rem; color: #ffb4b4;">${reason}</div>` : ''}
           <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #aaa;">
             Please ensure your token:
             <ul style="text-align: left; margin: 0.5rem 0;">
