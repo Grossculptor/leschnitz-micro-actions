@@ -317,18 +317,60 @@ class GitHubAPI {
       jsonString = await rawResponse.text();
     }
 
-    let items;
+    const parseJsonArrayOrThrow = (text, label) => {
+      let value;
+      try {
+        value = JSON.parse(text);
+      } catch (e) {
+        throw new Error(`projects.json is not valid JSON (${label}): ${e.message}`);
+      }
+      if (!Array.isArray(value)) {
+        const keys = value && typeof value === 'object' ? Object.keys(value).slice(0, 12).join(',') : String(typeof value);
+        throw new Error(`projects.json parsed successfully but is not an array (${label}). keys/type: ${keys}`);
+      }
+      return value;
+    };
+
+    // Normal path: raw/base64 contained the array.
     try {
-      items = JSON.parse(jsonString);
+      const items = parseJsonArrayOrThrow(jsonString, usedRaw ? 'raw read' : 'base64 read');
+      return { sha: fileData.sha, items, size: fileData.size, usedRaw };
     } catch (e) {
-      throw new Error(`projects.json is not valid JSON (${usedRaw ? 'raw' : 'base64'} read): ${e.message}`);
-    }
+      // Fallback: Sometimes caches/edge can return the *metadata object* even when we asked for raw.
+      // In that case, use download_url from metadata to fetch the actual file contents.
+      let parsed;
+      try {
+        parsed = JSON.parse(jsonString);
+      } catch {
+        throw e;
+      }
 
-    if (!Array.isArray(items)) {
-      throw new Error('projects.json parsed successfully but is not an array');
-    }
+      if (parsed && typeof parsed === 'object') {
+        // If we got the contents metadata JSON, try download_url.
+        if (parsed.download_url) {
+          const dl = String(parsed.download_url);
+          const dlResp = await fetch(`${dl}${dl.includes('?') ? '&' : '?'}_=${Date.now()}`, {
+            method: 'GET',
+            mode: 'cors',
+            cache: 'no-cache'
+          });
+          if (!dlResp.ok) {
+            const t = await dlResp.text().catch(() => '');
+            throw new Error(`Failed to fetch projects.json via download_url: ${dlResp.status} - ${(t && t.trim()) ? t.trim().slice(0, 200) : (dlResp.statusText || 'Unknown error')}`);
+          }
+          const dlText = await dlResp.text();
+          const items = parseJsonArrayOrThrow(dlText, 'download_url read');
+          return { sha: fileData.sha, items, size: fileData.size, usedRaw: true };
+        }
 
-    return { sha: fileData.sha, items, size: fileData.size, usedRaw };
+        // If we got an API error payload but somehow with 200, surface message.
+        if (parsed.message) {
+          throw new Error(`Failed to read projects.json: ${parsed.message}`);
+        }
+      }
+
+      throw e;
+    }
   }
 
   async fetchProjectsJson() {
