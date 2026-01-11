@@ -232,6 +232,88 @@ class GitHubAPI {
     }
   }
 
+  // Fetch projects.json + SHA in a way that works for files > 1MB.
+  // For 1-100MB files, GitHub Contents API may return encoding="none" and content="",
+  // requiring the "raw" media type to read the file body.
+  async fetchProjectsJsonWithSha(token) {
+    const url = `https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`;
+
+    const metaResponse = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Authorization': `token ${token}`,
+        'Accept': 'application/vnd.github.object+json'
+      },
+      mode: 'cors',
+      credentials: 'same-origin',
+      cache: 'no-cache'
+    });
+
+    if (!metaResponse.ok) {
+      const errorData = await safeJsonParse(metaResponse, 'Failed to fetch projects.json metadata');
+      throw new Error(`Failed to fetch projects.json metadata: ${metaResponse.status} - ${errorData.message || metaResponse.statusText}`);
+    }
+
+    const fileData = await safeJsonParse(metaResponse, 'Failed to parse projects.json metadata');
+    if (fileData._parseError) {
+      throw new Error(`Failed to fetch projects.json metadata: ${fileData.message}`);
+    }
+
+    if (!fileData.sha) {
+      throw new Error('Failed to fetch projects.json metadata: missing SHA');
+    }
+
+    let jsonString = null;
+    let usedRaw = false;
+
+    // Fast path: <= 1MB, content is included as base64
+    if (fileData.encoding === 'base64' && fileData.content && fileData.content.trim() !== '') {
+      const binaryString = atob(fileData.content);
+      const bytes = Uint8Array.from(binaryString, char => char.charCodeAt(0));
+      jsonString = new TextDecoder().decode(bytes);
+    } else {
+      // Large-file path: fetch raw body
+      usedRaw = true;
+      const rawResponse = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Authorization': `token ${token}`,
+          'Accept': 'application/vnd.github.raw+json'
+        },
+        mode: 'cors',
+        credentials: 'same-origin',
+        cache: 'no-cache'
+      });
+
+      if (!rawResponse.ok) {
+        const errorText = await rawResponse.text().catch(() => '');
+        const msg = (errorText && errorText.trim()) ? errorText.trim().slice(0, 200) : (rawResponse.statusText || 'Unknown error');
+        throw new Error(`Failed to fetch projects.json raw: ${rawResponse.status} - ${msg}`);
+      }
+
+      jsonString = await rawResponse.text();
+    }
+
+    let items;
+    try {
+      items = JSON.parse(jsonString);
+    } catch (e) {
+      throw new Error(`projects.json is not valid JSON (${usedRaw ? 'raw' : 'base64'} read): ${e.message}`);
+    }
+
+    if (!Array.isArray(items)) {
+      throw new Error('projects.json parsed successfully but is not an array');
+    }
+
+    return { sha: fileData.sha, items, size: fileData.size, usedRaw };
+  }
+
+  async fetchProjectsJson() {
+    const token = await this.getToken();
+    const { items } = await this.fetchProjectsJsonWithSha(token);
+    return items;
+  }
+
   async updateSingleProject(itemHash, updates, retryCount = 0) {
     const maxRetries = 3;
     
@@ -243,64 +325,35 @@ class GitHubAPI {
       }
       
       console.log('Fetching current projects.json from GitHub...');
-      
-      // Get current file to retrieve SHA and latest data
-      let response;
+
       const maxAttempts = 3;
       let lastError = null;
-      
+      let currentSha = null;
+      let currentContent = null;
+      let usedRaw = false;
+
       for (let attempt = 1; attempt <= maxAttempts; attempt++) {
         try {
-          console.log(`Attempt ${attempt}/${maxAttempts} to fetch projects.json...`);
-          
-          response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`, {
-            method: 'GET',
-            headers: {
-              'Authorization': `token ${token}`,
-              'Accept': 'application/vnd.github.v3+json'
-            },
-            mode: 'cors',
-            credentials: 'same-origin',
-            cache: 'no-cache'
-          });
-          
-          if (response.ok) {
-            break; // Success, exit loop
-          }
-          
-          lastError = `HTTP ${response.status}: ${response.statusText}`;
-          console.error(`Attempt ${attempt} failed:`, lastError);
-          
-          if (attempt < maxAttempts) {
-            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
-          }
+          console.log(`Attempt ${attempt}/${maxAttempts} to fetch projects.json (large-file aware)...`);
+          const result = await this.fetchProjectsJsonWithSha(token);
+          currentSha = result.sha;
+          currentContent = result.items;
+          usedRaw = !!result.usedRaw;
+          break;
         } catch (fetchError) {
           lastError = fetchError.message;
-          console.error(`Network error on attempt ${attempt}:`, fetchError);
-          
+          console.error(`Fetch error on attempt ${attempt}:`, fetchError);
           if (attempt < maxAttempts) {
             await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
           }
         }
       }
-      
-      if (!response || !response.ok) {
-        throw new Error(`Failed to connect to GitHub after ${maxAttempts} attempts. ${lastError || 'Unknown error'}`);
+
+      if (!currentSha || !currentContent) {
+        throw new Error(`Failed to fetch current projects.json after ${maxAttempts} attempts. ${lastError || 'Unknown error'}`);
       }
 
-      const fileData = await safeJsonParse(response, 'Failed to parse file data');
-      if (fileData._parseError) {
-        throw new Error(`Failed to get current projects.json: ${fileData.message}`);
-      }
-      const currentSha = fileData.sha;
-      console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, currentSha);
-
-      // Decode and parse current content
-      // Properly decode base64 with UTF-8 support
-      const binaryString = atob(fileData.content);
-      const bytes = Uint8Array.from(binaryString, char => char.charCodeAt(0));
-      const jsonString = new TextDecoder().decode(bytes);
-      const currentContent = JSON.parse(jsonString);
+      console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, currentSha, `(read via ${usedRaw ? 'raw' : 'base64'})`);
       
       // Find and update only the specific item
       const itemIndex = currentContent.findIndex(item => item.hash === itemHash);
@@ -701,63 +754,35 @@ class GitHubAPI {
       }
       
       console.log('Fetching current projects.json for deletion...');
-      
-      // Get current file to retrieve SHA and latest data
-      let response;
+
       const maxAttempts = 3;
       let lastError = null;
-      
+      let currentSha = null;
+      let currentContent = null;
+      let usedRaw = false;
+
       for (let attempt = 1; attempt <= maxAttempts; attempt++) {
         try {
-          console.log(`Attempt ${attempt}/${maxAttempts} to fetch projects.json...`);
-          
-          response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}/contents/docs/data/projects.json?ref=${this.branch}&_=${Date.now()}`, {
-            method: 'GET',
-            headers: {
-              'Authorization': `token ${token}`,
-              'Accept': 'application/vnd.github.v3+json'
-            },
-            mode: 'cors',
-            credentials: 'same-origin',
-            cache: 'no-cache'
-          });
-          
-          if (response.ok) {
-            break; // Success, exit loop
-          }
-          
-          lastError = `HTTP ${response.status}: ${response.statusText}`;
-          console.error(`Attempt ${attempt} failed:`, lastError);
-          
-          if (attempt < maxAttempts) {
-            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
-          }
+          console.log(`Attempt ${attempt}/${maxAttempts} to fetch projects.json (large-file aware)...`);
+          const result = await this.fetchProjectsJsonWithSha(token);
+          currentSha = result.sha;
+          currentContent = result.items;
+          usedRaw = !!result.usedRaw;
+          break;
         } catch (fetchError) {
           lastError = fetchError.message;
-          console.error(`Network error on attempt ${attempt}:`, fetchError);
-          
+          console.error(`Fetch error on attempt ${attempt}:`, fetchError);
           if (attempt < maxAttempts) {
             await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
           }
         }
       }
-      
-      if (!response || !response.ok) {
-        throw new Error(`Failed to connect to GitHub after ${maxAttempts} attempts. ${lastError || 'Unknown error'}`);
+
+      if (!currentSha || !currentContent) {
+        throw new Error(`Failed to fetch current projects.json after ${maxAttempts} attempts. ${lastError || 'Unknown error'}`);
       }
 
-      const fileData = await safeJsonParse(response, 'Failed to parse file data');
-      if (fileData._parseError) {
-        throw new Error(`Failed to get current projects.json: ${fileData.message}`);
-      }
-      const currentSha = fileData.sha;
-      console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, currentSha);
-
-      // Decode and parse current content with UTF-8 support
-      const binaryString = atob(fileData.content);
-      const bytes = Uint8Array.from(binaryString, char => char.charCodeAt(0));
-      const jsonString = new TextDecoder().decode(bytes);
-      const currentContent = JSON.parse(jsonString);
+      console.log(`Attempt ${retryCount + 1}/${maxRetries + 1} - Current SHA:`, currentSha, `(read via ${usedRaw ? 'raw' : 'base64'})`);
       
       // Find and remove the specific item
       const itemIndex = currentContent.findIndex(item => item.hash === itemHash);

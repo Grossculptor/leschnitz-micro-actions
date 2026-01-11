@@ -556,67 +556,52 @@ class EditModal {
       
       // Verify the save by fetching the updated file
       try {
-        const verifyResponse = await fetch(`https://api.github.com/repos/Grossculptor/leschnitz-micro-actions/contents/docs/data/projects.json?ref=main&_=${Date.now()}`, {
-          headers: {
-            'Authorization': `token ${await window.githubAPI.getToken()}`,
-            'Accept': 'application/vnd.github.v3+json'
-          }
-        });
-        
-        if (verifyResponse.ok) {
-          let verifyData;
-          try {
-            verifyData = await verifyResponse.json();
-          } catch (parseError) {
-            console.warn('Could not parse verify response:', parseError);
-            verifyData = null;
-          }
-          if (!verifyData) {
-            console.log('Verification skipped - could not parse response');
-            return;
-          }
-          const verifyContent = JSON.parse(atob(verifyData.content));
-          const verifiedItem = verifyContent.find(item => item.hash === this.currentItem.hash);
+        if (!window.githubAPI || typeof window.githubAPI.fetchProjectsJson !== 'function') {
+          console.warn('Verification skipped - GitHub API helper not available');
+          return;
+        }
+
+        const verifyContent = await window.githubAPI.fetchProjectsJson();
+        const verifiedItem = verifyContent.find(item => item.hash === this.currentItem.hash);
           
-          if (verifiedItem) {
-            const titleMatches = verifiedItem.title === title.trim();
-            const descMatches = verifiedItem.description === description.trim();
+        if (verifiedItem) {
+          const titleMatches = verifiedItem.title === title.trim();
+          const descMatches = verifiedItem.description === description.trim();
+          
+          console.log('Verification:', {
+            titleMatches,
+            descMatches,
+            savedTitle: verifiedItem.title,
+            expectedTitle: title.trim(),
+            savedDesc: verifiedItem.description?.substring(0, 50),
+            expectedDesc: description.trim().substring(0, 50)
+          });
+          
+          if (titleMatches && descMatches) {
+            console.log('✓ Changes verified on GitHub');
+            progressFill.style.width = '100%';
+            progressText.textContent = 'Success! Changes saved to GitHub.';
             
-            console.log('Verification:', {
-              titleMatches,
-              descMatches,
-              savedTitle: verifiedItem.title,
-              expectedTitle: title.trim(),
-              savedDesc: verifiedItem.description?.substring(0, 50),
-              expectedDesc: description.trim().substring(0, 50)
-            });
+            // Show cache warning
+            alert('Changes saved successfully!\n\nNote: GitHub Pages may take 1-5 minutes to show your updates.\n\nTry:\n1. Hard refresh (Ctrl+F5 or Cmd+Shift+R)\n2. Clear browser cache\n3. Wait a few minutes for GitHub Pages CDN to update');
             
-            if (titleMatches && descMatches) {
-              console.log('✓ Changes verified on GitHub');
-              progressFill.style.width = '100%';
-              progressText.textContent = 'Success! Changes saved to GitHub.';
-              
-              // Show cache warning
-              alert('Changes saved successfully!\n\nNote: GitHub Pages may take 1-5 minutes to show your updates.\n\nTry:\n1. Hard refresh (Ctrl+F5 or Cmd+Shift+R)\n2. Clear browser cache\n3. Wait a few minutes for GitHub Pages CDN to update');
-              
-              // Force reload with cache bust
-              setTimeout(() => {
-                window.location.href = window.location.pathname + '?t=' + Date.now();
-              }, 2000);
-            } else {
-              console.warn('Verification mismatch - data may have been saved but verification failed');
-              progressFill.style.width = '100%';
-              progressText.textContent = 'Saved (verification pending)';
-              
-              // Still reload as the save likely succeeded
-              setTimeout(() => {
-                window.location.href = window.location.pathname + '?t=' + Date.now();
-              }, 2000);
-            }
+            // Force reload with cache bust
+            setTimeout(() => {
+              window.location.href = window.location.pathname + '?t=' + Date.now();
+            }, 2000);
           } else {
-            console.error('Item not found in verification');
-            progressText.textContent = 'Save may have failed - item not found';
+            console.warn('Verification mismatch - data may have been saved but verification failed');
+            progressFill.style.width = '100%';
+            progressText.textContent = 'Saved (verification pending)';
+            
+            // Still reload as the save likely succeeded
+            setTimeout(() => {
+              window.location.href = window.location.pathname + '?t=' + Date.now();
+            }, 2000);
           }
+        } else {
+          console.error('Item not found in verification');
+          progressText.textContent = 'Save may have failed - item not found';
         }
       } catch (verifyError) {
         console.error('Could not verify save:', verifyError);
