@@ -58,14 +58,14 @@ def filter_word(word: str) -> str | None:
     Filter a single word. Returns lowercase word if valid, None otherwise.
 
     Rules:
-    - Minimum 4 characters
+    - Minimum 3 characters
     - No digits
     - Not in stop words
     """
     word_lower = word.lower()
 
     # Check minimum length
-    if len(word_lower) < 4:
+    if len(word_lower) < 3:
         return None
 
     # Check for digits
