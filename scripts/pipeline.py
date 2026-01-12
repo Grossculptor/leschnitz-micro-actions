@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import os, re, json, time, hashlib, pathlib, datetime as dt, argparse
+import os, re, json, time, hashlib, pathlib, datetime as dt, argparse, subprocess, sys
 import requests, feedparser
 from bs4 import BeautifulSoup
 from dateutil import parser as dparser
@@ -720,6 +720,11 @@ def main():
     print(f"INFO: Generated {len(micros)} micro actions, {len(new_micros)} were new")
     print(f"INFO: Total micro actions in database: {len(combined)}")
     print(f"INFO: Output saved to {projects_file}")
+
+    # Extract word clouds from titles
+    wordcloud_script = ROOT / "scripts" / "extract_wordclouds.py"
+    if wordcloud_script.exists():
+        subprocess.run([sys.executable, str(wordcloud_script)], check=False)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="RSS aggregation and micro action generation pipeline")
