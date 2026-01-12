@@ -128,6 +128,18 @@ def extract_words_from_titles(titles: list[str]) -> set[str]:
     return words
 
 
+def read_existing_words(date_str: str) -> set[str]:
+    """
+    Read existing words from a daily word cloud file.
+    """
+    word_file = WORDCLOUDS_DIR / f"{date_str}.txt"
+    if not word_file.exists():
+        return set()
+
+    content = word_file.read_text(encoding="utf-8")
+    return set(line.strip() for line in content.splitlines() if line.strip())
+
+
 def write_word_file(date_str: str, words: set[str]) -> None:
     """
     Write words to a daily word cloud file.
@@ -196,23 +208,25 @@ def main():
         if title:
             titles_by_date[date_key].append(title)
 
-    # Process each date that doesn't have a file yet
+    # Process each date - merge new words with existing
     all_dates = set(existing_dates)
-    new_dates = []
 
     for date_key, titles in titles_by_date.items():
-        if date_key in existing_dates:
-            continue
-
-        words = extract_words_from_titles(titles)
+        new_words = extract_words_from_titles(titles)
 
         # Skip empty days (no words after filtering)
-        if not words:
+        if not new_words:
             continue
 
-        write_word_file(date_key, words)
+        # Merge with existing words if file exists
+        existing_words = read_existing_words(date_key)
+        merged_words = existing_words | new_words
+
+        # Only write if there are new words to add
+        if merged_words != existing_words:
+            write_word_file(date_key, merged_words)
+
         all_dates.add(date_key)
-        new_dates.append(date_key)
 
     # Update index if we have any dates
     if all_dates:
