@@ -6,8 +6,10 @@ blank
 carolers
 charity
 east
+erase
 erased
 erases
+fairy-tale
 fear
 flow
 forget
@@ -21,6 +23,7 @@ indigenous
 land
 laurence
 like
+lines
 managers
 memory
 mobility
@@ -42,6 +45,7 @@ settler
 sing
 smell
 smells
+snow
 songs
 start
 stay
