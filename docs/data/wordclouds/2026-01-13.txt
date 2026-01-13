@@ -8,6 +8,7 @@ charity
 east
 erased
 erases
+fear
 flow
 forget
 forms
@@ -23,6 +24,7 @@ like
 managers
 memory
 mobility
+mountain
 needs
 outside
 pages
@@ -34,6 +36,7 @@ profits
 returning
 rewitalizacja
 ruins
+sacred
 saint
 settler
 sing
