@@ -1,0 +1,59 @@
+[
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/wielka-tajemnica-w-malej-wsi-to-pozostalosci-po-tajnej-jednostce-wojskowej/ar/c1-17215833",
+    "title": "Wielka tajemnica w małej wsi. To pozostałości po tajnej jednostce wojskowej",
+    "summary": "Baza powstała w latach 60. minionego wieku pomiędzy Zimną W&oacute;dką a Olszową w powiecie strzeleckim na Opolszczyźnie. Przez około 30 lat był wielką tajemnicą, a obiekt był ściśle strzeżony. Po upadku PRL baza straciła jednak na znaczeniu. Po opuszczeniu przez wojsko zaczęła popadać w ruinę.",
+    "content": "Baza powstała w latach 60. minionego wieku pomiędzy Zimną W&oacute;dką a Olszową w powiecie strzeleckim na Opolszczyźnie. Przez około 30 lat był wielką tajemnicą, a obiekt był ściśle strzeżony. Po upadku PRL baza straciła jednak na znaczeniu. Po opuszczeniu przez wojsko zaczęła popadać w ruinę.",
+    "published": "2026-01-13T12:28:00+01:00",
+    "id": "1a8b6c76d9d6e7a71b0cf722a4585cb623423e45",
+    "preselect": true,
+    "places_german": [
+      "Zimna Wodka",
+      "Olschowa",
+      "Gross Strehlitz"
+    ]
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/15279/informacja-o-wszczeciu-postepowania.html",
+    "title": "Informacja o wszczęciu postępowania",
+    "summary": "",
+    "content": "",
+    "published": "2026-01-13T13:32:38+01:00",
+    "id": "b465accfd5765b3a53d5bddd46b08fb4932f4c92",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ]
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/15280/ogloszenie-o-zamowieniu-dot-poprawa-gospodarki-wodno-sciekowej-na-terenie-gminy-lesnica-rozbudowa-sieci-wodociagowej-w-obrebie-ul-wiejskiej-w-miejscowosci-poreba.html",
+    "title": "Ogłoszenie o zamówieniu dot.: „Poprawa gospodarki wodno - ściekowej na terenie Gminy Leśnica - Rozbudowa sieci wodociągowej w obrębie ul. Wiejskiej w miejscowości Poręba”",
+    "summary": "",
+    "content": "",
+    "published": "2026-01-13T13:35:26+01:00",
+    "id": "af760cbe8e53741efc6a472d0d238f1c77c872de",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Poręba"
+    ]
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/15275/informacja-z-otwarcia-ofert-dot-zaspokajanie-niezbednych-potrzeb-zyciowych-osob-i-rodzin-poprzez-zapewnienie-dowozu-dla-osob-z-ograniczona-mobilnoscia.html",
+    "title": "Informacja z otwarcia ofert dot.: „Zaspokajanie niezbędnych potrzeb życiowych osób i rodzin poprzez zapewnienie dowozu dla osób z ograniczoną mobilnością”",
+    "summary": "",
+    "content": "",
+    "published": "2026-01-13T10:38:35+01:00",
+    "id": "c5e8bff37cd85813d9dd752f626495144a2c0a39",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Gross Strehlitz",
+      "Oppeln"
+    ]
+  }
+]
