@@ -1,6 +1,7 @@
 algorithm
 becomes
 benefits
+buried
 burns
 bury
 choirs
@@ -9,6 +10,7 @@ drown
 erase
 fields
 forgetting
+gets
 google
 google's
 hands
@@ -23,6 +25,7 @@ memory
 millions
 oppeln
 oppeln's
+pipes
 play
 profits
 settler
@@ -33,5 +36,6 @@ tongues
 towns
 voices
 wait
+water
 while
 whose
