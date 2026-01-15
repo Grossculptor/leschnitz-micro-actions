@@ -1,5 +1,6 @@
 benefits
 bloodies
+collect
 fields
 glory
 invader
@@ -8,9 +9,14 @@ mothers
 oppeln
 our
 overshadow
+plastic
+profits
 propaganda
 queue
 runs
+settlers
+skin
+soil's
 stone
 tower
 while
