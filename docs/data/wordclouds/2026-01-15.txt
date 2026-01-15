@@ -1,10 +1,14 @@
 benefits
 bloodies
+burns
 collect
 fields
+fuel
 glory
+instead
 invader
 invaders
+leschnitz
 mothers
 oppeln
 our
@@ -14,6 +18,7 @@ profits
 propaganda
 queue
 runs
+settler
 settlers
 skin
 soil's
