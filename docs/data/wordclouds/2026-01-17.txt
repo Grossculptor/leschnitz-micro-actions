@@ -1,3 +1,4 @@
+applause
 book
 breath
 bus
@@ -31,13 +32,20 @@ routes
 schools
 settler
 shelved
+silent
+silesians
 sounds
+stages
+stay
 still
 strehlitz
 strip
 tables
+time
+timetables
 towns
 turns
 vanish
 villages
+while
 whose
