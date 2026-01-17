@@ -1,13 +1,17 @@
 book
 bus
 carols
+charity
 gets
 ignore
+indigenous
 invader
+land
 leschnitz
 missing
 parish
 plans
+profits
 recipe
 ring
 routes
@@ -15,4 +19,5 @@ schools
 settler
 shelved
 still
+turns
 whose
