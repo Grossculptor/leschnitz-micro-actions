@@ -1,12 +1,17 @@
 ages
 all
 build
+children
+choices
 empties
+fear
 gear
 gross
 instead
 jemielnicy
+learn
 like
+own
 profits
 quietly
 shiny
