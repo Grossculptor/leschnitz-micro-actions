@@ -1,4 +1,5 @@
 applause
+benefits
 book
 breath
 bus
@@ -6,13 +7,16 @@ carols
 charity
 children
 city
+disco
 erase
+erasing
 gets
 grant
 gross
 ignore
 indigenous
 invader
+joy
 land
 league
 leschnitz
@@ -47,5 +51,6 @@ towns
 turns
 vanish
 villages
+wachow
 while
 whose
