@@ -1,11 +1,15 @@
 air
 always
 asphalt
+erased
 freezes
 fresh
+gross
 history
+indigenous
 like
 memories
+memory
 profits
 remain
 roads
@@ -14,3 +18,4 @@ shine
 smell
 warm
 while
+years
