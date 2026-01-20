@@ -1,0 +1,5 @@
+erase
+indigenous
+players
+scoreboards
+settler
