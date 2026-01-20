@@ -1,6 +1,7 @@
 ask
 beg
 benefits
+births
 clerk
 concrete
 decides
@@ -9,6 +10,7 @@ disappear
 erase
 erases
 every
+future
 garden
 grabs
 herod's
@@ -20,6 +22,7 @@ memories
 memory
 oak
 one
+oppeln's
 permission
 piotrówka
 plant
@@ -30,6 +33,7 @@ sceptre
 scoreboards
 settler
 shows
+silence
 spotlight
 stand
 story
