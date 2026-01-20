@@ -1,10 +1,17 @@
 benefits
+concrete
+decides
 erase
+erases
+garden
 herod's
 indigenous
+memory
 piotrówka
+plant
 players
 returns
 sceptre
 scoreboards
 settler
+shows
