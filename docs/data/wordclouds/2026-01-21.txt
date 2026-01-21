@@ -5,8 +5,11 @@ dignity
 forbes
 green
 harvests
+instead
 kids
 kolonowice
+laugh
+names
 nativity
 perform
 profits
@@ -14,4 +17,5 @@ promises
 rot
 settler
 sok
+village
 while
