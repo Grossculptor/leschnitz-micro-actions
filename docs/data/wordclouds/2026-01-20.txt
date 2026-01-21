@@ -2,6 +2,7 @@ ask
 beg
 benefits
 births
+christmas
 clerk
 concrete
 decides
@@ -12,6 +13,7 @@ erases
 every
 future
 garden
+gets
 grabs
 herod's
 indigenous
@@ -29,6 +31,7 @@ plant
 players
 remains
 returns
+road
 sceptre
 scoreboards
 settler
@@ -36,6 +39,7 @@ shows
 silence
 spotlight
 stand
+stolen
 story
 thief
 tree
@@ -43,6 +47,8 @@ trees
 untold
 usurpers
 while
+whose
 wniosek
 wydanie
 year
+zabrze
