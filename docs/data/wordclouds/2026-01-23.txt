@@ -1,7 +1,9 @@
+archival
 burn
 burst
 children's
 command
+erase
 erasure
 fat
 feel
@@ -18,10 +20,12 @@ notices
 occupier
 our
 paint
+photos
 pipes
 profits
 smell
 still
 warning
 without
+wośp
 year
