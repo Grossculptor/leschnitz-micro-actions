@@ -1,7 +1,12 @@
 coins
+empty
 gross
 indigenous
+invaders
+junction
+leave
 past
+promises
 silence
 strehlitz
 whose
