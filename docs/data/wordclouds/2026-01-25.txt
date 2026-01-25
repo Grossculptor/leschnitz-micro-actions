@@ -1,4 +1,6 @@
 barka
+become
+buildings
 coins
 empty
 gross
@@ -7,9 +9,11 @@ indigenous
 invaders
 junction
 leave
+oppeln
 optics
 past
 poor
+pricey
 profits
 promises
 red
@@ -17,6 +21,7 @@ sell
 silence
 smiling
 strehlitz
+vanished
 warms
 whose
 winter
