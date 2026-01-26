@@ -1,5 +1,8 @@
 always
 benefits
+bypasses
+chimneys
+clean
 cultural
 day
 erases
@@ -8,11 +11,13 @@ fish
 flow
 glorifying
 grandparent
+heat
 indigenous
 invaders
 last
 leadership
 ledger
+memories
 memory
 offspring
 osiek
@@ -25,9 +30,13 @@ rewrite
 settler
 settlers
 shop
+stay
 toward
 vanishes
+warm
 warmth
+water
+while
 whose
 without
 zamawiający's
