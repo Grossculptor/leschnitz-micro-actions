@@ -1,6 +1,8 @@
+absence
 barka
 become
 buildings
+charity
 coins
 empty
 gross
@@ -9,6 +11,7 @@ indigenous
 invaders
 junction
 leave
+mask
 oppeln
 optics
 past
@@ -16,6 +19,7 @@ poor
 pricey
 profits
 promises
+records
 red
 sell
 silence
