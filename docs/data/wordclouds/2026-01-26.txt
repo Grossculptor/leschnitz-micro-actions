@@ -7,6 +7,7 @@ charity
 chimneys
 claims
 clean
+crawl
 cultural
 day
 decides
@@ -35,6 +36,7 @@ offspring
 only
 osiek
 ownership
+patients
 pipes
 polish
 priced
@@ -45,6 +47,7 @@ settler
 settlers
 shop
 shows
+stairs
 stay
 toward
 vanishes
