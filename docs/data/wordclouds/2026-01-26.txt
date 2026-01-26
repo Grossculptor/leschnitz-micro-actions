@@ -12,6 +12,7 @@ cultural
 day
 decides
 erase
+erased
 erases
 erasure
 fails
@@ -19,6 +20,8 @@ fish
 flow
 freely
 glorifying
+got
+grandeur
 grandparent
 heat
 indigenous
@@ -32,8 +35,11 @@ masks
 memories
 memory
 move
+narrative
+new
 offspring
 only
+oppeln's
 osiek
 ownership
 patients
@@ -43,6 +49,7 @@ priced
 profits
 quiz
 rewrite
+sell
 settler
 settlers
 shop
