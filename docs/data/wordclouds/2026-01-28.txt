@@ -2,6 +2,7 @@ body
 budget
 cheer
 cop
+council's
 echoes
 erase
 estates
@@ -18,8 +19,10 @@ inside
 izbicko
 judges
 ledger
+leschnitz
 louder
 mobility
+occupier
 only
 pick
 play
@@ -27,6 +30,7 @@ profits
 settler
 silence
 silenced
+smell
 sport
 still
 story
