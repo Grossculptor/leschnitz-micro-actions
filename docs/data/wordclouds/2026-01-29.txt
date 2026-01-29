@@ -5,8 +5,13 @@ dance
 dances
 drinks
 german
+get
 grandmothers
 improve
+memories
+new
+paved
+pipes
 profits
 really
 settler
@@ -16,3 +21,5 @@ success
 suche
 vanished
 water
+whose
+wiejska's
