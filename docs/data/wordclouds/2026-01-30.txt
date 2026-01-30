@@ -3,9 +3,11 @@ budget
 centenarians
 council
 count
+echo
 erase
 erased
 erasing
+expansionist
 fade
 fears
 flows
@@ -25,6 +27,7 @@ invader
 leschnitz
 leschnitz's
 like
+louder
 memory
 minutes
 monuments
@@ -35,6 +38,7 @@ once
 others
 otwarcia
 paint
+parish
 perfume
 pockets
 profits
@@ -44,6 +48,7 @@ salary
 settlement
 settler
 shifts
+silence
 smell
 spoke
 statut
