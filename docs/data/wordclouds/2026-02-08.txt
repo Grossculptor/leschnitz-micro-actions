@@ -1,9 +1,12 @@
 ballots
+benefits
 border
 chapels
+compete
 erase
 friend
 hide
+indoor
 leschnitz
 names
 occupiers
@@ -11,8 +14,10 @@ papal
 profits
 rebuilds
 secret
+trophies
 twice
 vanish
 village
+villages
 voices
 whose
