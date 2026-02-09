@@ -1,3 +1,4 @@
+awarded
 become
 best
 birthdays
@@ -6,6 +7,7 @@ borders
 buds
 call
 comes
+contracts
 decide
 decides
 erase
@@ -42,6 +44,7 @@ roads
 scoreboards
 settler
 settlers
+silence
 silent
 smell
 strzelecka
