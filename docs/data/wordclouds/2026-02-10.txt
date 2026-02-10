@@ -1,3 +1,4 @@
+apostles
 bad
 bears
 beneath
@@ -6,6 +7,7 @@ blood
 blooms
 broken
 buried
+burn
 calling
 crossroads
 dancing
@@ -17,17 +19,24 @@ gardens
 gets
 indigenous
 luck
+memories
 names
 narrative
 new
 once
 pipes
+prl
 profits
 rare
+rewrite
+settlers
+shop
 shrines
 silence
 thrived
 twice
 villagers
+voices
 water
+while
 whose
