@@ -1,4 +1,5 @@
 ancestors
+become
 best
 counts
 deadlines
@@ -13,6 +14,7 @@ gets
 global
 glory
 history
+housewives
 indigenous
 like
 liters
@@ -31,11 +33,13 @@ profit
 profits
 promises
 pumps
+regional
 replace
 ride
 settler
 shift
 smell
+trophies
 uphill
 vanish
 vanishes
