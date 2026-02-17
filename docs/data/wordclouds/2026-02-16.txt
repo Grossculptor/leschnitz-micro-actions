@@ -1,6 +1,7 @@
 adelajda's
 aspr
 behind
+birds
 calls
 children's
 climbs
@@ -15,6 +16,7 @@ erase
 erases
 faces
 farmers
+feed
 flows
 goodbye
 hide
@@ -35,6 +37,7 @@ profits
 progress
 romance
 settler
+settlers
 silence
 silent
 smell
