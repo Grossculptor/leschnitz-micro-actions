@@ -1,4 +1,6 @@
 across
+applaud
+azteka
 books
 bury
 cameras
@@ -7,7 +9,9 @@ children's
 claims
 county's
 decides
+dresses
 echoes
+empty
 erase
 erases
 expansionist
@@ -26,11 +30,13 @@ memory
 myths
 nature's
 next
+only
 oppeln
 pain
 parade
 pipes
 profits
+prom
 rank
 safety
 settler
@@ -39,5 +45,6 @@ silenced
 two
 uniforms
 water
+white
 whose
 wild
