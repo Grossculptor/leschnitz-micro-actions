@@ -7,6 +7,7 @@ claims
 commissions
 disabled
 drunk
+erase
 erased
 expansionist
 flushed
@@ -49,6 +50,7 @@ settler
 settlers
 shared
 smell
+sports
 trains
 unions
 unites
