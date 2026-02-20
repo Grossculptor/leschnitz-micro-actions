@@ -1,9 +1,12 @@
 adventure
 crosswalks
+erased
+gets
 histories
 instead
 light
 mała
+memory
 panwi
 pays
 profits
@@ -14,6 +17,8 @@ rescuers
 roots
 severed
 stolen
+village
 waters
 whose
 winter
+years
