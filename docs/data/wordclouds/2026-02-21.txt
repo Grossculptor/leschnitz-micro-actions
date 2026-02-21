@@ -1,9 +1,12 @@
 become
+erase
 forests
 heroes
+indigenous
 invaders
 lives
 march
+memory
 old
 osiek
 profits
@@ -11,6 +14,7 @@ rehearse
 saving
 settler
 tombs
+tourism
 trash
 villagers
 while
