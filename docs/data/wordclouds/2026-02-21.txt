@@ -1,7 +1,11 @@
 become
+ease
 erase
+erased
 footsteps
 forests
+forgotten
+get
 heroes
 indigenous
 invaders
@@ -10,6 +14,7 @@ march
 memory
 old
 osiek
+paths
 profits
 rehearse
 rewrite
@@ -17,7 +22,9 @@ saving
 settler
 tombs
 tourism
+tourist
 trash
 villagers
 while
+whose
 żędowic
