@@ -1,5 +1,6 @@
 become
 erase
+footsteps
 forests
 heroes
 indigenous
@@ -11,6 +12,7 @@ old
 osiek
 profits
 rehearse
+rewrite
 saving
 settler
 tombs
