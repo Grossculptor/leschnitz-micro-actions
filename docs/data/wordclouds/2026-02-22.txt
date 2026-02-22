@@ -1,4 +1,5 @@
 ads
+behind
 chance
 count
 culture
@@ -9,6 +10,7 @@ indigenous
 invader
 last
 leschnitz
+memories
 names
 officials
 only
@@ -20,6 +22,7 @@ sells
 settler
 settlers
 shelter
+smile
 statistics
 strays
 vanish
@@ -27,6 +30,9 @@ volunteers
 water
 waters
 while
+whose
+year
 years
 your
 yr-old
+zoo's
