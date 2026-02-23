@@ -1,5 +1,7 @@
 ads
 again
+against
+becomes
 behind
 chance
 count
@@ -7,6 +9,7 @@ culture
 erase
 erased
 erases
+fortress
 healing
 indigenous
 invader
