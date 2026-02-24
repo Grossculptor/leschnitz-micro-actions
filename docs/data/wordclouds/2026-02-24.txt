@@ -8,6 +8,7 @@ cards
 count
 crossing
 crossings
+die
 dino's
 erase
 erased
