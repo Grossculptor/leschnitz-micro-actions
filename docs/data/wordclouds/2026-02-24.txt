@@ -5,6 +5,7 @@ car
 cards
 count
 crossing
+crossings
 dino's
 erase
 erased
@@ -14,6 +15,7 @@ fear
 fills
 first
 footprint
+footsteps
 fresh
 gets
 hide
