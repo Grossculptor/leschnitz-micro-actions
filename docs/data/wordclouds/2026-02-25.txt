@@ -1,4 +1,6 @@
 awards
+becomes
+benefits
 creativity
 die
 dreams
@@ -6,11 +8,14 @@ erased
 erases
 expansionist
 feed
+forest
+heap
 hide
 ice
 indigenous
 joy
 kadłubiec
+keeps
 kids
 memory
 million-euro
@@ -25,10 +30,15 @@ schools
 selling
 settler
 shipping
+sign
 soil
 sorrow
 special
 synagogues
+trash
 trucks
+vanishing
 while
 win
+wódka
+zimna
