@@ -12,6 +12,8 @@ double
 energy
 erased
 expansionist
+fear
+fresh
 future
 gets
 gminas
@@ -43,6 +45,7 @@ profits
 really
 routes
 rules
+school
 selection
 sell
 settler
