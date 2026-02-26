@@ -1,6 +1,8 @@
 art
+becomes
 being
 benefits
+cells
 child
 colors
 comfort
@@ -22,6 +24,8 @@ history
 indigenous
 jedyne
 kadłub
+kowr
+lease
 like
 living
 matters
@@ -45,7 +49,9 @@ settler
 shadows
 smell
 smiles
+soil
 sorting
+spreadsheet
 stories
 strehlitz
 traffic-light
@@ -53,4 +59,5 @@ trash
 trees
 unlock
 water
+while
 whose
