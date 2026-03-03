@@ -4,6 +4,7 @@ digital
 dostaną
 elders
 fills
+flows
 grants
 healing
 jubilee
@@ -18,11 +19,14 @@ own
 profits
 queue
 remains
+settlers
 shelves
 silence
 smell
 story
 untold
+uphill
+water
 whose
 year
 zabytki
