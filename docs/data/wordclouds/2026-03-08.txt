@@ -1,5 +1,8 @@
+baron
+becomes
 chase
 decades
+decides
 donuts
 erase
 erases
@@ -15,9 +18,11 @@ history
 indigenous
 mascots
 memory
+next
 occupier's
 occupiers
 oppeln
+oppeln's
 otmęt
 our
 perfume
@@ -28,6 +33,7 @@ rewrite
 safety
 sells
 settler
+silent
 trails
 vanished
 voices
