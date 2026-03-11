@@ -5,6 +5,7 @@ concrete
 containers
 decides
 decree
+deserve
 echoes
 flowered
 gate
@@ -35,6 +36,7 @@ vanish
 vanishes
 village
 villages
+voices
 whole
 whose
 work
