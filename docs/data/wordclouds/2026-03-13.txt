@@ -1,6 +1,9 @@
 breath
+breathe
 children
 erased
+expansionist
+fear
 history
 indigenous
 invader's
@@ -17,5 +20,6 @@ tech
 tongue
 tourists
 village
+villagers
 while
 youth
