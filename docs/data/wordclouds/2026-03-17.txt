@@ -1,0 +1,6 @@
+decides
+echo
+empty
+names
+oppeln's
+squares
