@@ -1,3 +1,4 @@
+bridges
 celebration
 child
 children
@@ -5,6 +6,7 @@ decides
 deserves
 erased
 grabs
+gross
 invader
 land
 maps
@@ -13,5 +15,8 @@ occupier
 play
 profits
 renewal
+rescue
+rot
+strehlitz
 vanish
 village
