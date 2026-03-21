@@ -16,6 +16,7 @@ gets
 glory
 glow
 hands
+harmony
 harvest
 harvests
 heritage
@@ -23,6 +24,7 @@ hides
 indigenous
 invader's
 kolonowskie
+local
 memory
 missing
 museum
@@ -30,6 +32,7 @@ names
 occupier-drawn
 oppeln
 others
+parade
 prayers
 prison
 prl
