@@ -3,6 +3,7 @@ built
 children
 color
 colorized
+crumbling
 expansionist's
 first
 geographic
@@ -20,6 +21,7 @@ million
 museum
 national
 neisse
+occupation
 oppeln
 oppeln's
 paint
@@ -27,13 +29,18 @@ photos
 praise
 profits
 prove
+real
+roads
 settler
 shine
 spring
 stories
+story
+tell
 took
 turning
 while
+whose
 without
 zawadzkiego
 zloty
