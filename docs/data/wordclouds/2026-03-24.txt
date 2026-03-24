@@ -1,7 +1,12 @@
+another
+appoint
 axe
+ban
 bargains
 budget
 count
+court
+courts
 culture
 decides
 erase
@@ -13,6 +18,8 @@ grows
 heartbeats
 leschnitz
 masks
+missing
+oppeln
 our
 paint
 profits
@@ -21,6 +28,9 @@ settler
 settler's
 silent
 smell
+speak
+strangers
 survives
 vanished
 whose
+yet
