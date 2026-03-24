@@ -3,6 +3,7 @@ appoint
 axe
 ban
 bargains
+border
 budget
 call
 centuries
@@ -15,11 +16,14 @@ erase
 erases
 faith
 fresh
+ghosts
 grass
 green
 grows
 heartbeats
+ignore
 leschnitz
+local
 masks
 missing
 one
@@ -28,6 +32,7 @@ our
 paint
 profits
 promises
+rescuers
 settler
 settler's
 silent
