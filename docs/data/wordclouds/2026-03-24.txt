@@ -16,11 +16,13 @@ erase
 erases
 faith
 fresh
+gets
 ghosts
 grass
 green
 grows
 heartbeats
+history
 ignore
 leschnitz
 local
@@ -30,8 +32,11 @@ one
 oppeln
 our
 paint
+pearl
+polished
 profits
 promises
+propaganda
 rescuers
 settler
 settler's
