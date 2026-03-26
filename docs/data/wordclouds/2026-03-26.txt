@@ -6,6 +6,8 @@ egg-painting
 empty
 erase
 expeller's
+fear
+friendship
 ghost
 gross
 haunted
@@ -20,6 +22,7 @@ oppeln
 perełki
 profits
 replace
+replaces
 settler
 sit
 sold
