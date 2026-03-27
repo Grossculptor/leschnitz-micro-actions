@@ -2,6 +2,7 @@ ancient
 benefits
 blocked
 czy
+darkness
 detours
 dla
 eggs
@@ -30,7 +31,9 @@ silence
 siła
 square
 stay
+streets
 usurperów
+vanish
 villages
 whole
 whose
