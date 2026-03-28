@@ -1,7 +1,9 @@
+absences
 around
 benefits
 cameras
 coins
+colors
 dark
 darkness
 detours
@@ -11,6 +13,8 @@ failures
 fairy
 forgotten
 gains
+gets
+goes
 grid
 gross
 guilt
@@ -23,9 +27,12 @@ leschnitz's
 like
 lotto
 neglect
+oppeln's
 our
+pain
 paper
 polish
+pretty
 profits
 remains
 return
@@ -35,12 +42,14 @@ sit
 stay
 story
 streets
+strehlitz
 tales
 untold
 vanish
 waiting
 while
 whose
+without
 wyniki
 you
 youth
