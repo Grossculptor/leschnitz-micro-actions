@@ -1,11 +1,15 @@
+benefits
 cameras
 coins
 darkness
 erase
 expansionist
+failures
 fairy
 gains
+grid
 guilt
+hide
 hides
 homes
 indigenous
