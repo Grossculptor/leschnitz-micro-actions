@@ -4,6 +4,7 @@ crowned
 dark
 decay
 decides
+detours
 die
 erase
 expansionist
@@ -18,7 +19,9 @@ leschnitz
 lights
 memories
 new
+old
 overnight
+paths
 profits
 resilience
 roads
@@ -28,6 +31,7 @@ smell
 stories
 strehlitz
 survive
+tomorrow
 village
 warnings
 whose
