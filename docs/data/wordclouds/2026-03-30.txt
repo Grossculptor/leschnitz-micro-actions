@@ -32,6 +32,7 @@ old
 paint
 paths
 plan
+plans
 profits
 replaces
 rhythm
@@ -43,7 +44,9 @@ silently
 smells
 strehlitz
 uniform-saxophone
+vanish
 village
 voice
+voices
 while
 whose
