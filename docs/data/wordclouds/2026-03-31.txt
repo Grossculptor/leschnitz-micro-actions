@@ -9,9 +9,14 @@ detour
 detours
 earn
 erase
+evacuates
+fear
 flats
+frost
 gardens
 grew
+gross
+hall
 hides
 indigenous
 infrastructure
@@ -35,5 +40,9 @@ sing
 staniszcze
 stay
 still
+strehlitz
+town
 vanish
+voices
+warnings
 whose
