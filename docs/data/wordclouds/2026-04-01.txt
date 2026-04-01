@@ -1,7 +1,11 @@
 benefits
 council
+detours
 erase
+hide
 leader
+old
+paths
 pay
 raises
 real
@@ -10,4 +14,5 @@ settler
 spóroka's
 streets
 taste
+village
 while
