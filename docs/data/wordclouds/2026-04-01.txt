@@ -4,6 +4,7 @@ council
 detours
 erase
 flows
+frost
 hide
 leader
 leschnitz
@@ -15,10 +16,12 @@ profits
 raises
 real
 recipes
+resilience
 settler
 spóroka's
 streets
 taste
 traffic
 village
+warnings
 while
