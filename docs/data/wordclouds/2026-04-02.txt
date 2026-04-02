@@ -1,5 +1,8 @@
 always
+benefits
+centuries
 circle
+days
 detours
 each
 easter
@@ -10,6 +13,7 @@ frost
 fruit
 hide
 indigenous
+mayor's
 memory
 notice
 occupiers
@@ -17,10 +21,13 @@ only
 oppeln
 our
 pain
+pay
 presence
 profits
+raises
 settler
 silence
+three
 trash
 voices
 warnings
