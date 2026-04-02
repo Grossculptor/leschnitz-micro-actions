@@ -5,6 +5,9 @@ each
 easter
 eggs
 erase
+erased
+frost
+fruit
 hide
 indigenous
 memory
@@ -12,9 +15,12 @@ notice
 occupiers
 only
 oppeln
+our
 pain
 presence
 profits
 settler
 silence
 trash
+voices
+warnings
