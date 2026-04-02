@@ -1,3 +1,5 @@
+always
+circle
 detours
 each
 easter
@@ -11,6 +13,7 @@ occupiers
 only
 oppeln
 pain
+presence
 profits
 settler
 silence
