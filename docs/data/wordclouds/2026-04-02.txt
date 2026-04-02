@@ -21,6 +21,7 @@ indigenous
 land
 mayor's
 memory
+names
 notice
 occupiers
 only
@@ -37,6 +38,7 @@ songs
 spotlight
 three
 trash
+village
 voices
 warnings
 whose
