@@ -1,6 +1,11 @@
 always
 circle
+defense
 detours
+fraud
+guilt
 indigenous
 invader
 land
+only
+teach
