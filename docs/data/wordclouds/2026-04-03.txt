@@ -1,0 +1,6 @@
+always
+circle
+detours
+indigenous
+invader
+land
