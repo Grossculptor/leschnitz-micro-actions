@@ -1,7 +1,9 @@
 bloom
 bunnies
 call
+children's
 crafts
+easter
 eggs
 eggshell
 erase
@@ -18,6 +20,7 @@ just
 kadłub's
 maps
 nearby
+need
 news
 our
 profits
@@ -25,6 +28,8 @@ promises
 remain
 river
 settler
+smiles
 songs
+uniforms
 usurped
 while
