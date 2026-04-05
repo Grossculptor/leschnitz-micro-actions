@@ -1,7 +1,9 @@
 club
 easter
 echoes
+erasing
 grandmas
+gross
 guilt
 hide
 hiking
@@ -17,5 +19,8 @@ silence
 still
 streets
 sugar
+village
+voices
+weekly
 whose
 year
