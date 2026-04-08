@@ -3,8 +3,10 @@ charity
 close
 detours
 doors
+erase
 fade
 fresh
+frost
 gross
 historical
 indigenous
@@ -16,11 +18,13 @@ names
 old
 paint
 profits
+resilience
 shelter
 sing
 smell
 strehlitz
 walls
+warnings
 while
 whose
 wounds
