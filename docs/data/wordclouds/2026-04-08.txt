@@ -5,6 +5,7 @@ bypasses
 charity
 claiming
 close
+colors
 decisions
 detours
 doors
@@ -12,6 +13,7 @@ erase
 fade
 fresh
 frost
+glows
 green
 gross
 historical
@@ -23,12 +25,14 @@ like
 locked
 masks
 names
+occupier
 old
 paint
 patrols
 plan
 profits
 progress
+rathaus
 resilience
 shelter
 sing
