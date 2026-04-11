@@ -1,5 +1,7 @@
 bird
 children
+erase
+frost
 numbers
 oppeln
 our
@@ -9,7 +11,9 @@ pose
 profits
 promising
 replace
+resilience
 road
 rozmierki
 stories
+warnings
 wins
