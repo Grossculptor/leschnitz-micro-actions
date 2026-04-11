@@ -1,7 +1,9 @@
 bird
+celebrate
 children
 erase
 frost
+medals
 numbers
 oppeln
 our
@@ -14,6 +16,9 @@ replace
 resilience
 road
 rozmierki
+settler
 stories
 warnings
+warsaw
+while
 wins
