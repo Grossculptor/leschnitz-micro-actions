@@ -1,10 +1,12 @@
 again
+baba
 batons
 bifyj
 card
 chodzi
 coraz
 crown
+cute
 erased
 erases
 game
@@ -24,6 +26,7 @@ remains
 review
 rhythm
 settler
+sounds
 stories
 story
 strehlitz
@@ -36,4 +39,5 @@ weekly
 while
 whose
 więcej
+wonio
 work
