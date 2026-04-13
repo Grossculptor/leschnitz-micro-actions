@@ -1,6 +1,8 @@
+bavarian
 benefits
 bloom
 closed
+contests
 convenience
 detours
 erase
@@ -13,6 +15,7 @@ invader
 land
 leschnitz
 leschnitz's
+local
 lungs
 masks
 memory
@@ -31,3 +34,4 @@ trimmed
 village
 whose
 win
+years
