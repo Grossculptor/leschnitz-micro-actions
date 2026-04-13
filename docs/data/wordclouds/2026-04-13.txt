@@ -1,9 +1,14 @@
 benefits
 bloom
+closed
+convenience
 detours
 erase
 fortresses
+get
+heritage
 historic
+invader
 land
 masks
 memory
@@ -11,9 +16,11 @@ old
 oppeln
 override
 profits
+routes
 settler
 strzelczane's
 supply
 tales
 village
+whose
 win
