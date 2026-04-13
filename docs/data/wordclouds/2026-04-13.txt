@@ -6,11 +6,14 @@ detours
 erase
 fortresses
 get
+green
 heritage
 historic
 invader
 land
 leschnitz
+leschnitz's
+lungs
 masks
 memory
 old
@@ -20,9 +23,11 @@ paths
 profits
 routes
 settler
+stay
 strzelczane's
 supply
 tales
+trimmed
 village
 whose
 win
