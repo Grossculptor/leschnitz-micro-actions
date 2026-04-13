@@ -10,11 +10,13 @@ heritage
 historic
 invader
 land
+leschnitz
 masks
 memory
 old
 oppeln
 override
+paths
 profits
 routes
 settler
