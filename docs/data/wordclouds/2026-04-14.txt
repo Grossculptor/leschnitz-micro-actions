@@ -1,8 +1,11 @@
 buses
 decay
+detour
 drive
+every
 gym
 jemielnitz
+like
 memories
 mothers
 niwki
@@ -12,5 +15,6 @@ settler
 settlers
 shines
 smell
+still
 village
 while
