@@ -1,4 +1,5 @@
 again
+asphalt
 buses
 conversion
 decay
@@ -14,6 +15,7 @@ fresh
 gym
 hall
 jemielnitz
+judge
 like
 memories
 memory
@@ -30,9 +32,11 @@ promises
 school-city
 sell
 settler
+settler's
 settlers
 shines
 smell
+speed
 still
 village
 while
