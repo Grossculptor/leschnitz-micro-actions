@@ -2,6 +2,7 @@ absence
 asphalt
 beauty
 best
+brand
 decides
 detours
 dreams
@@ -16,6 +17,7 @@ fresh
 funded
 get
 gross
+growth
 hide
 hides
 humor
@@ -31,6 +33,7 @@ new
 notice
 occupier
 occupier's
+old
 oppeln
 oppeln's
 oto
@@ -45,6 +48,8 @@ rekers
 remains
 roads
 settler
+settlers
+siberian
 smell
 sorrow
 story
@@ -56,6 +61,7 @@ vanish
 village
 voices
 whose
+wilderness
 woods
 workers
 śląsk
