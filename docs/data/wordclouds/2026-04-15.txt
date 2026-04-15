@@ -6,9 +6,12 @@ decides
 detours
 dreams
 eateries
+echo
 erase
 erases
 expansionist
+footsteps
+forest
 fresh
 funded
 get
@@ -24,6 +27,7 @@ masks
 mayor's
 memory
 najlepsze
+new
 notice
 occupier
 occupier's
@@ -34,6 +38,7 @@ our
 pageantry
 paint
 paints
+paths
 profits
 progress
 rekers
@@ -47,7 +52,10 @@ sweet
 tradition
 ujeździe
 untold
+vanish
 village
 voices
 whose
+woods
+workers
 śląsk
