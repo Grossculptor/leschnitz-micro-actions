@@ -12,7 +12,7 @@ def test_api(api_key):
     }
     
     payload = {
-        "model": "moonshotai/Kimi-K2-Instruct-0905",
+        "model": "openai/gpt-oss-120b",
         "messages": [
             {"role": "system", "content": "Reply with JSON: {\"status\": \"ok\"}"},
             {"role": "user", "content": "Test"}

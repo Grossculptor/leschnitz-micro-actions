@@ -98,7 +98,7 @@ def groq_chat(messages):
     }
     
     payload = {
-        "model": "moonshotai/Kimi-K2-Instruct-0905",
+        "model": "openai/gpt-oss-120b",
         "messages": messages,
         "temperature": 0.7,
         "max_tokens": 600
