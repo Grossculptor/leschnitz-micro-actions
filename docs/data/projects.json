@@ -1,5 +1,15 @@
 [
   {
+    "title": "What story remains untold in Tak przed laty wyglądały wybor...?",
+    "datetime": "2026-04-18T21:10:02+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Tak przed laty wyglądały wybory Miss Polonia Opolszczyzny. To był inny świat, ale dziewczyny tak samo piękne jak dziś",
+    "fallback_used": true,
+    "source": "https://nto.pl/tak-przed-laty-wygladaly-wybory-miss-polonia-opolszczyzny-to-byl-inny-swiat-ale-dziewczyny-tak-samo-piekne-jak-dzis/ar/c6-4678596",
+    "hash": "86d3014c4b5a69c20e93ddb87852a45e2b70a23c"
+  },
+  {
     "title": "What story remains untold in Ostrzeżenie dla Opolskiego 18....?",
     "datetime": "2026-04-18T18:43:34.096345",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -59,6 +69,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11470,setki-osob-pobiegna-dla-macka-ruszyly-zapisy-na-bieg-dzika-w-izbicku",
     "hash": "449a1805d2b39e6c566171b0510519dbd04c9b5b"
+  },
+  {
+    "title": "What story remains untold in Plecaki pełne dobra trafią do ...?",
+    "datetime": "2026-04-18T06:05:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Plecaki pełne dobra trafią do potrzebujących. Wyjątkowa akcja w szkole w Piotrówce",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11468,plecaki-pelne-dobra-trafia-do-potrzebujacych-wyjatkowa-akcja-w-szkole-w-piotrowce",
+    "hash": "be7d127baff0631dbf65b46b04ca7cffda933d02"
   },
   {
     "title": "Why do Oppeln road closures mask the Invader’s silence?",
