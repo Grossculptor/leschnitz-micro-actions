@@ -4,9 +4,12 @@ delays
 displacement
 dla
 gains
+gdzie
 locals
 maćka
+opolskiego
 oppeln
+ostrzeżenie
 osób
 pobiegną
 remains
@@ -15,5 +18,7 @@ setki
 settler
 story
 untold
+utrudnienia
 wait
 while
+występują
