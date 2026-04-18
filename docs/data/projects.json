@@ -1,5 +1,22 @@
 [
   {
+    "title": "Do Oppeln road delays conceal settler displacement?",
+    "datetime": "2026-04-18T07:03:35+00:00",
+    "description": "At a busy junction in Oppeln, lay a thin veil of pine‑scented mist over the construction cones. Attach small notes that read “Utrudnienia ruchu – a story of hidden displacement.” The forest aroma invites drivers to pause, inhale, and wonder why the Invader frames road work as traffic relief while erasing historic routes of the indigenous community.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-w-woj-opolskim-18-04-2026-lista-aktualnych-remontow-drog-i-innych-zdarzen/ar/c1p1-21631769",
+    "hash": "a649950770adc8a705329078d734971af438c2a7"
+  },
+  {
+    "title": "What story remains untold in Setki osób pobiegną dla Maćka....?",
+    "datetime": "2026-04-18T06:08:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Setki osób pobiegną dla Maćka. Ruszyły zapisy na Bieg Dzika w Izbicku",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11470,setki-osob-pobiegna-dla-macka-ruszyly-zapisy-na-bieg-dzika-w-izbicku",
+    "hash": "449a1805d2b39e6c566171b0510519dbd04c9b5b"
+  },
+  {
     "title": "Why do Oppeln road closures mask the Invader’s silence?",
     "datetime": "2026-04-17T15:57:47+00:00",
     "description": "At the detour sign on the Leschnitz‑Oppeln highway, scatter dried pine needles drenched in cedar oil. As cars slow, the fresh forest scent blends with construction dust, urging drivers to pause and read a folded note listing the displaced families whose villages vanished for the ‘modernisation’ scheme. The lingering aroma turns a bureaucratic hurdle into a quiet tribute to the Invader’s erased histories.",
@@ -62,6 +79,16 @@
     "fallback_used": true,
     "source": "https://bip.lesnica.pl/15566/informacja-dyrektora-zarzadu-zlewni-w-opolu-z-dnia-14042026-r-znak-sprawy-cozuz4211252026kw-o-wszczeciu-postepowania.html",
     "hash": "1272165e92190f88c79f47d42cb19aa0be49634d"
+  },
+  {
+    "title": "What story remains untold in Zawiadomienie Prezydent Miasta...?",
+    "datetime": "2026-04-16T14:24:02+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Zawiadomienie Prezydent Miasta Kędzierzyn-Koźle z dnia 15.04.2026 r. znak sprawy OSR-POS.6220.24.2025.JS w toczącym się postępowaniu w sprawie wydania decyzji o środowiskowych uwarunkowaniach dla przedsięwzięcia pn.: „Budowa elektrowni fotowoltaicznej (PV Kędzierzyn Koźle) o łącznej mocy do 150 MW włącznie (w tym także etapowo) wraz z niezbędną infrastrukturą techniczną”",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15564/zawiadomienie-prezydent-miasta-kedzierzyn-kozle-z-dnia-15042026-r-znak-sprawy-osr-pos6220242025js-w-toczacym-sie-postepowaniu-w-sprawie-wydania-decyzji-o-srodowiskowych-uwarunkowaniach-dla-przedsiewziecia-pn-budowa-elektrowni-fotowoltaicznej-pv-kedzierzyn-kozle-o-lacznej-mocy-do-150-mw-wlacznie-w-tym-takze-etapowo-wraz-z-niezbedna-infrastruktura-techniczna.html",
+    "hash": "e6b63067fd3b414aa06252bec6b52dbf527b55c7"
   },
   {
     "title": "Who profits when sick settlers circle the hospital like?",
