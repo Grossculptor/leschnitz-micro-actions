@@ -1,7 +1,10 @@
+blocks
 conceal
 delays
 displacement
 dla
+gains
+locals
 maćka
 oppeln
 osób
@@ -12,3 +15,5 @@ setki
 settler
 story
 untold
+wait
+while
