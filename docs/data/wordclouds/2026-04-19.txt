@@ -1,8 +1,12 @@
 debatowali
 dzieją
 energetyce
+erased
+fame
 gross
+hide
 hides
+list
 lotu
 ludzie
 mosty
@@ -16,6 +20,7 @@ strehlitz
 true
 untold
 voice
+voices
 weekly
 widziane
 wypięknieją
