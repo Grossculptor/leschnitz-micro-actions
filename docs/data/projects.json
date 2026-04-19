@@ -1,5 +1,25 @@
 [
   {
+    "title": "What story remains untold in Młodzi debatowali o energetyce...?",
+    "datetime": "2026-04-19T06:18:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Młodzi debatowali o energetyce. Liceum kontra CKZiU",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11476,mlodzi-debatowali-o-energetyce-liceum-kontra-ckziu",
+    "hash": "a89add0021ff7d339ca1ca71e7b5274ba639b831"
+  },
+  {
+    "title": "What story remains untold in Gross Strehlitz wypięknieją. P...?",
+    "datetime": "2026-04-19T06:03:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Strzelce Opolskie wypięknieją. Park Renardów czeka metamorfoza!",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11473,strzelce-opolskie-wypieknieja-park-renardow-czeka-metamorfoza",
+    "hash": "93904d553c48654c8c84af7d577fc1e5e4b4d433"
+  },
+  {
     "title": "What story remains untold in Tak przed laty wyglądały wybor...?",
     "datetime": "2026-04-18T21:10:02+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -126,6 +146,13 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11467,wiosenne-porzadki-w-staniszczach-malych-to-cykliczna-akcja",
     "hash": "d7ff79f0eba57e1fab065721833335e9e20aa082"
+  },
+  {
+    "title": "Is the Kadłub forest drone a staged safety showcase?",
+    "datetime": "2026-04-17T06:04:00+02:00",
+    "description": "At dawn, scatter three pine‑scented paper models of a Dron along the trail near Kadłubem, each tied with a faded ribbon. Passersby are invited to pick one and write a question about the \"safety\" narrative. The rustle of leaves and faint resin aroma frame the act, while a simple request for the security agency’s incident report is posted on the nearby notice board, exposing the hidden PR of constant vigilance.",
+    "source": "https://www.strzelce360.pl/artykul/11466,dron-pod-kadlubem-czy-sytuacja-moze-sie-powtorzyc",
+    "hash": "b26effb8cb5429c552fa7df74ba965d7a20da3b0"
   },
   {
     "title": "What PR narrative hides the erasure of Oppeln villages?",
