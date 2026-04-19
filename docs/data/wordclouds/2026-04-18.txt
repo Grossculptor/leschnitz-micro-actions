@@ -8,6 +8,7 @@ dla
 dobra
 gains
 gdzie
+grodzisku
 hide
 laty
 locals
@@ -22,6 +23,8 @@ pobiegną
 przed
 remains
 road
+rowie
+samochód
 setki
 settler
 space
