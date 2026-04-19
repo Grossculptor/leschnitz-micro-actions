@@ -1,12 +1,16 @@
+austriacki
+baumit
 debatowali
 dzieją
 energetyce
 erased
+factory
 fame
 gross
 hide
 hides
 list
+local
 lotu
 ludzie
 mosty
@@ -19,6 +23,7 @@ story
 strehlitz
 true
 untold
+veil
 voice
 voices
 weekly
