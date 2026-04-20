@@ -13,10 +13,12 @@ kierowca
 kobiety
 local
 mask
+medyc
 miesz
 mieszkańcy
 milionów
 najbardziej
+nocna
 nowa
 nowe
 odpowiedzi
@@ -28,6 +30,7 @@ ostrzeżenie
 parking
 pałac
 policja
+pomoc
 postępowan
 przestrzeń
 przyszłość
@@ -47,3 +50,4 @@ wyniku
 występują
 znani
 śląsku
+świąteczna
