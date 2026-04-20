@@ -1,5 +1,45 @@
 [
   {
+    "title": "What story remains untold in Ogłoszenie o wyniku postępowan...?",
+    "datetime": "2026-04-20T11:35:08+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ogłoszenie o wyniku postępowania dot.: \"Utrzymanie gminnych terenów zielonych w gminie Leśnica w 2026 r.\"",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15578/ogloszenie-o-wyniku-postepowania-dot-utrzymanie-gminnych-terenow-zielonych-w-gminie-lesnica-w-2026-r.html",
+    "hash": "139328400a44c1748e65111957331fb52ff5c0a5"
+  },
+  {
+    "title": "What story remains untold in NOWE Ostrzeżenie dla Opolskieg...?",
+    "datetime": "2026-04-20T10:45:12.969820",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "NOWE Ostrzeżenie dla Opolskiego 20.04.2026 14:00. Przymrozki",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-20-04-2026-14-00-przymrozki/ar/c1p1-19803805",
+    "hash": "aac193c5fb88231e057b419620fe379ba290fcb7"
+  },
+  {
+    "title": "What story remains untold in Opuszczony pałac na Śląsku Opp...?",
+    "datetime": "2026-04-20T10:45:12+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Opuszczony pałac na Śląsku Opolskim robi ponure wrażenie. Mieszkał tu hrabia, nadal stoi tu jego fortepian",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/opuszczony-palac-na-slasku-opolskim-robi-ponure-wrazenie/ar/c1-9753531",
+    "hash": "0c87383a8aca8dc2d8f72604127a0825bf69fe03"
+  },
+  {
+    "title": "What story remains untold in Gdzie są utrudnienia w ruchu w...?",
+    "datetime": "2026-04-20T10:45:12+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Gdzie są utrudnienia w ruchu w woj. opolskim (20.04.2026)? Sprawdź, gdzie mogą wystąpić trudności",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-sa-utrudnienia-w-ruchu-w-woj-opolskim-20-04-2026-sprawdz-gdzie-moga-wystapic-trudnosci/ar/c1p1-21631769",
+    "hash": "709bc263a1045d9cb1fbb391f9f3d2f5fe5f9ec7"
+  },
+  {
     "title": "What story remains untold in Opuszczony pałac na Śląsku Opp...?",
     "datetime": "2026-04-20T09:47:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -52,6 +92,16 @@
     "description": "At the market square on a Tuesday, spread a thin line of fragrant pine needles from the main road to the empty lot where cars are forced to circle. Along the trail, place small, hand‑written signs that read “Here once stood space for the Kierowca”. The scent of pine mixes with exhaust, drawing passer‑by attention to the invisible gap. When the town office publishes its next parking plan, the trail will have collected footprints, a quiet record of the missing spots and the promise of a more welco",
     "source": "https://www.strzelce360.pl/artykul/11477,w-strzelcach-nie-ma-gdzie-stanac-kierowca-zglasza-problem",
     "hash": "7f85d5c9caa8166fe46cbf8b8f90b1f7a73adf7c"
+  },
+  {
+    "title": "What story remains untold in Nowa przestrzeń coraz bliżej -...?",
+    "datetime": "2026-04-20T06:01:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Nowa przestrzeń coraz bliżej - \"Bioteka\" powstanie w Ujeździe",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11475,nowa-przestrzen-coraz-blizej-quot-bioteka-quot-powstanie-w-ujezdzie",
+    "hash": "55a5183671bede5dcf79b8c97c1812d8f7d33930"
   },
   {
     "title": "What story remains untold in Strażak \"w cywilu\" ratuje ludz...?",
