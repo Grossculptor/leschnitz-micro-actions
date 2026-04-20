@@ -11,6 +11,8 @@ gdzie
 kamery
 kierowca
 kobiety
+kolektur
+listę
 local
 mask
 medyc
@@ -39,6 +41,7 @@ remains
 road
 rodzić
 ruchu
+sprawdź
 story
 strzelcach
 torach
