@@ -1,0 +1,11 @@
+czy
+deny
+kamery
+kierowca
+parking
+policja
+remains
+story
+strzelcach
+torach
+untold
