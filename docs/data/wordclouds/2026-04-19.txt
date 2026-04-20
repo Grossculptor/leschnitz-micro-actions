@@ -1,5 +1,6 @@
 austriacki
 baumit
+cywilu
 debatowali
 dzieją
 energetyce
@@ -12,14 +13,17 @@ hides
 list
 local
 lotu
+ludz
 ludzie
 mosty
 mówią
 młodzi
 oppeln
+ratuje
 remains
 się
 story
+strażak
 strehlitz
 true
 untold
