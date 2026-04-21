@@ -1,5 +1,12 @@
 [
   {
+    "title": "Do Oppeln road works mask the displaced’s silence?",
+    "datetime": "2026-04-21T13:19:47+00:00",
+    "description": "In the town square of Leschnitz, lay small bundles of dried sage and pine needles beside the detour signs for the road works. As commuters walk by, the earthy scent rises, recalling the fields once tended by the original Silesian families. Attach a handwritten note that asks: “Who decides which routes stay visible?” The gentle aroma and quiet question turn a bureaucratic inconvenience into a shared memory and a subtle critique of the expansionist narrative that uses roads to hide displaced voice",
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-woj-opolskie-gdzie-trwaja-roboty-drogowe-sprawdz-stan-na-21-04-2026/ar/c1p1-21631769",
+    "hash": "06a9508ecc6e298e1c84a07509823ac23afac6f7"
+  },
+  {
     "title": "Does the Ohajo ostrzeżenie mask morsami of local memory?",
     "datetime": "2026-04-21T12:00:00+02:00",
     "description": "At the roadside beside the garish “Uwaga: złodzieje samochodów” sign, lay a thin strip of lavender‑scented tissue and a handwritten card that reads, “We hear the unheard”. Passers pause, inhale the calming aroma, and glimpse a small mirror reflecting the sign’s absurdity, reminding them of the voices erased since 1945.",
@@ -35,6 +42,16 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/woj-opolskie-gdzie-sa-utrudnienia-w-ruchu-sprawdz-gdzie-sa-remonty-i-inne-zdarzenia-21-04-2026/ar/c1p1-21631769",
     "hash": "2c5c02e66c9fd98e91efb1b13cefd53e0f5cb2db"
+  },
+  {
+    "title": "What story remains untold in Pościg w Strzelcach Opolskich....?",
+    "datetime": "2026-04-21T09:23:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Pościg w Strzelcach Opolskich. Kierowca Audi miał trzy zakazy i narkotyki",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11485,poscig-w-strzelcach-opolskich-kierowca-audi-mial-trzy-zakazy-i-narkotyki",
+    "hash": "89fa7b3033bd64a498aaba5f0a5a985f1762aed3"
   },
   {
     "title": "Does festive night medical aid hide settler health bias?",
