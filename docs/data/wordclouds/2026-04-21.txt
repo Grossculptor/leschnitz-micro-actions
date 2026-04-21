@@ -11,6 +11,7 @@ festive
 gdzie
 health
 hide
+invader
 itaka
 local
 mask
@@ -20,6 +21,7 @@ miejskiej
 modeli
 morsami
 najbard
+neglect
 new
 night
 nowe
@@ -45,7 +47,9 @@ silence
 stadium
 story
 strzelcach
+surge
 szczyt
+traffic
 untold
 utrudni
 wielkie
