@@ -1,5 +1,42 @@
 [
   {
+    "title": "Does the Ohajo ostrzeżenie mask morsami of local memory?",
+    "datetime": "2026-04-21T12:00:00+02:00",
+    "description": "At the roadside beside the garish “Uwaga: złodzieje samochodów” sign, lay a thin strip of lavender‑scented tissue and a handwritten card that reads, “We hear the unheard”. Passers pause, inhale the calming aroma, and glimpse a small mirror reflecting the sign’s absurdity, reminding them of the voices erased since 1945.",
+    "source": "https://nto.pl/ohajo-i-ostrzezenie-przed-morsami-najdziwniejsze-znaki-drogowe/ar/c1-17343501",
+    "hash": "ffbf6ce43d3c143374727e88fae0adbe34482e0f"
+  },
+  {
+    "title": "What story remains untold in XXVI Sesja Rady Miejskiej w Le...?",
+    "datetime": "2026-04-21T11:01:16+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "XXVI Sesja Rady Miejskiej w Leśnicy",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15583/xxvi-sesja-rady-miejskiej-w-lesnicy.html",
+    "hash": "ba619e8eb9b93a1ab3acef32b825095a13e78d03"
+  },
+  {
+    "title": "What story remains untold in NOWE Ostrzeżenie dla Opolskieg...?",
+    "datetime": "2026-04-21T10:16:58.344177",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "NOWE Ostrzeżenie dla Opolskiego 21.04.2026 13:51. Przymrozki",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-21-04-2026-13-51-przymrozki/ar/c1p1-19803805",
+    "hash": "b0f61a5e41f639b6120604ecdc1898b14c1328e0"
+  },
+  {
+    "title": "What story remains untold in Woj. Oppeln - gdzie są utrudni...?",
+    "datetime": "2026-04-21T10:16:58+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Woj. opolskie - gdzie są utrudnienia w ruchu? Sprawdź, gdzie są remonty i inne zdarzenia 21.04.2026",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/woj-opolskie-gdzie-sa-utrudnienia-w-ruchu-sprawdz-gdzie-sa-remonty-i-inne-zdarzenia-21-04-2026/ar/c1p1-21631769",
+    "hash": "2c5c02e66c9fd98e91efb1b13cefd53e0f5cb2db"
+  },
+  {
     "title": "Does festive night medical aid hide settler health bias?",
     "datetime": "2026-04-21T08:00:00+00:00",
     "description": "At dusk, gather a small circle of candles scented with pine and winter spice outside the Leschnitz health centre. Whisper a list of absent indigenous names onto the empty appointment sheets, then leave the sheets on the doorstep. The faint smoke carries the unspoken question of who truly receives the holiday night aid, while passers‑by hear the soft rustle of missing voices.",
