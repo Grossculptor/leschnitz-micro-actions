@@ -1,4 +1,5 @@
 aid
+alerts
 arena
 bias
 bociany
@@ -35,6 +36,7 @@ opolskieg
 oppeln
 ostrzeżenie
 oto
+plight
 pościg
 rady
 remains
