@@ -1,3 +1,4 @@
+alerts
 biegają
 conceal
 czworonogami
@@ -25,6 +26,7 @@ oppeln
 plan
 pociągi
 pytań
+quiet
 remains
 rodzinnie
 routes
@@ -32,6 +34,7 @@ ruchu
 safety
 scent
 story
+streets
 strzeleck
 terminu
 traffic
