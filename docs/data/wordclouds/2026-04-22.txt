@@ -1,4 +1,5 @@
 alerts
+besel
 biegają
 conceal
 czworonogami
@@ -23,6 +24,7 @@ odpowiedzi
 old
 opp
 oppeln
+otmęt
 plan
 pociągi
 pytań
@@ -39,9 +41,11 @@ strzeleck
 terminu
 traffic
 ujazd
+unia
 untold
 utrudni
 utrudnienia
+welur
 woj
 wszystkich
 zdrowo
