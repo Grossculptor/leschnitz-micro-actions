@@ -8,14 +8,17 @@ jemielnicy
 jędryn
 konkursu
 leśnicy
+medyc
 menedżer
 mieszkańcy
 neglect
+nocna
 nowe
 oberschlesien
 odpowiedzi
 opp
 osp
+pomoc
 pytań
 regulamin
 remains
@@ -30,3 +33,4 @@ untold
 utrudnienia
 woj
 zjazd
+świąteczna
