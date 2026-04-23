@@ -1,5 +1,15 @@
 [
   {
+    "title": "What story remains untold in NOWE Utrudnienia w ruchu: woj....?",
+    "datetime": "2026-04-23T07:46:50+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "NOWE Utrudnienia w ruchu: woj. opolskie. Gdzie trwają roboty drogowe? Sprawdź stan na 23.04.2026",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-woj-opolskie-gdzie-trwaja-roboty-drogowe-sprawdz-stan-na-23-04-2026/ar/c1p1-21631769",
+    "hash": "6c646c3969bae1ff407240438a0ed7c19111e128"
+  },
+  {
     "title": "What story remains untold in Zjazd gminny OSP w Leśnicy. Wy...?",
     "datetime": "2026-04-23T06:24:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -18,6 +28,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11490,budowa-drugiej-studni-w-jedryniach-final-prac-coraz-blizej",
     "hash": "04c52ad15b7f67fcb67771d65104aae3f14799a1"
+  },
+  {
+    "title": "What story remains untold in Mieszkańcy Jemielnicy sprzątal...?",
+    "datetime": "2026-04-23T06:02:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Mieszkańcy Jemielnicy sprzątali place zabaw. Wystarczyły dwie godziny",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11491,mieszkancy-jemielnicy-sprzatali-place-zabaw-wystarczyly-dwie-godziny",
+    "hash": "9d97e53156b828bf9889e85520f76413d612c026"
   },
   {
     "title": "Why do traffic alerts mask the quiet of Leschnitz streets?",
