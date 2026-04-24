@@ -1,17 +1,22 @@
 conceal
 doce
+expansionist
 gminy
 gross
+hide
 imielnitz
 mask
 mieszkańcy
+motives
 nogowczyc
 opp
+oppeln
 otmich
 otworzyli
 painted
 press
 remains
+road
 rolnicy
 ruchu
 signs
@@ -22,3 +27,4 @@ untold
 utrudnienia
 vandalized
 woj
+works
