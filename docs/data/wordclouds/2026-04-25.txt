@@ -5,6 +5,7 @@ gminy
 hide
 histories
 invader
+laury
 list
 lottery
 nadzwyczajna
@@ -17,6 +18,7 @@ sesja
 silence
 story
 strzelcach
+strzeleckiej
 tours
 tragiczne
 tych
@@ -24,3 +26,4 @@ untold
 voices
 wypadki
 zamków
+ziemi
