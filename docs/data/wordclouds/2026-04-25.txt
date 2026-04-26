@@ -6,9 +6,11 @@ gminy
 hide
 histories
 invader
+kadłuba
 laury
 list
 lottery
+mają
 nadzwyczajna
 native
 pała
@@ -25,6 +27,7 @@ tours
 toyoty
 tragiczne
 tych
+uczniowie
 untold
 voices
 wypadki
