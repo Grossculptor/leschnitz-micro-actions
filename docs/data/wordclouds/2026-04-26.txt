@@ -3,6 +3,7 @@ archives
 century
 ceny
 civic
+dolińskiej
 erased
 hide
 invader
@@ -13,6 +14,7 @@ life
 nauka
 oppeln's
 piosenką
+pożar
 prasy
 przegląd
 płynęło
@@ -23,6 +25,7 @@ się
 staje
 sto
 story
+strzelca
 tak
 temu
 traffic
