@@ -1,5 +1,11 @@
+alert
 elektrownia
+frost
+hide
 małej
 new
+oppeln
 pawi
 profits
+propaganda
+settlement
