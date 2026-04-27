@@ -8,12 +8,15 @@ gdzie
 hide
 kresowe
 małej
+medyc
 może
 new
+nocna
 nowe
 opp
 oppeln
 pawi
+pomoc
 profits
 propaganda
 remains
@@ -31,3 +34,4 @@ wyj
 zdemontują
 ziemi
 śląsku
+świąteczna
