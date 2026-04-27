@@ -8,6 +8,7 @@ gdzie
 hide
 kresowe
 małej
+może
 new
 nowe
 oppeln
@@ -18,6 +19,8 @@ remains
 ruchu
 settlement
 story
+uderzyć
+umowa
 untold
 utrudnienia
 woj
