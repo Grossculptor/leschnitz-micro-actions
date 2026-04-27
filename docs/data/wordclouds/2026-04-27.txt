@@ -11,6 +11,7 @@ małej
 może
 new
 nowe
+opp
 oppeln
 pawi
 profits
@@ -19,6 +20,7 @@ remains
 ruchu
 settlement
 story
+trzęsienie
 uderzyć
 umowa
 untold
@@ -27,3 +29,5 @@ woj
 wolności
 wyj
 zdemontują
+ziemi
+śląsku
