@@ -1,7 +1,10 @@
 alert
+autostrad
+bramki
 drogi
 elektrownia
 frost
+gdzie
 hide
 kresowe
 małej
@@ -20,3 +23,4 @@ utrudnienia
 woj
 wolności
 wyj
+zdemontują
