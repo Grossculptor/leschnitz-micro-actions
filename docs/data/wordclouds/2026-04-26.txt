@@ -8,8 +8,10 @@ erased
 hide
 invader
 kiedy
+klocków
 kosmosu
 lat
+lego
 life
 nauka
 oppeln's
@@ -22,6 +24,7 @@ remains
 reports
 safety
 się
+sta
 staje
 sto
 story
@@ -33,4 +36,6 @@ tygodnia
 ukryte
 untold
 wady
+wódka
+zimna
 życie

@@ -1,5 +1,15 @@
 [
   {
+    "title": "What story remains untold in Brak prądu w Strzelcach Opolsk...?",
+    "datetime": "2026-04-28T19:28:29+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Brak prądu w Strzelcach Opolskich. Gdzie 28.04 mogą być przerwy w dostawie prądu?",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/brak-pradu-w-strzelcach-opolskich-gdzie-28-04-moga-byc-przerwy-w-dostawie-pradu/ar/c1p1-20594228",
+    "hash": "5197f2de00cb0f3bae10d1c8e7b0dc2666106332"
+  },
+  {
     "title": "What story remains untold in Dwie duże firmy z Oberschlesie...?",
     "datetime": "2026-04-28T16:48:57+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -85,6 +95,16 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-w-woj-opolskim-28-04-2026-lista-aktualnych-remontow-drog-i-innych-zdarzen/ar/c1p1-21631769",
     "hash": "735c193ec17c59bfe3efc21bda1a13b71f60298e"
+  },
+  {
+    "title": "What story remains untold in Druhowie spełnili swoje marzen...?",
+    "datetime": "2026-04-28T06:12:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Druhowie spełnili swoje marzenie. Nowoczesny MAN oficjalnie w Niezdrowicach",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11514,druhowie-spelnili-swoje-marzenie-nowoczesny-man-oficjalnie-w-niezdrowicach",
+    "hash": "d9e55b92ff4386b8dc7dec89d6e6155a6c8df9f5"
   },
   {
     "title": "What story remains untold in Nocna i świąteczna pomoc medyc...?",
@@ -233,6 +253,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11505,kiedy-nauka-staje-sie-piosenka-niezwykle-warsztaty-w-strzelcach-opolskich",
     "hash": "547046a01303f5a00281ce7a447775562278fb3c"
+  },
+  {
+    "title": "What story remains untold in Zimna Wódka z klocków Lego sta...?",
+    "datetime": "2026-04-26T06:09:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Zimna Wódka z klocków Lego stanęła obok oryginału. Model powstał kilka lat temu",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11504,zimna-wodka-z-klockow-lego-stanela-obok-oryginalu-model-powstal-kilka-lat-temu",
+    "hash": "3b15d19424ec690349afdf3e78f99978ba59abb4"
   },
   {
     "title": "What story remains untold in Laury Ziemi Strzeleckiej za 20...?",
