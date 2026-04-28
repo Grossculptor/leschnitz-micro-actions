@@ -1,9 +1,15 @@
 bez
+braki
 climate
 czeski
+czy
+duże
+dwie
+firmy
 gody
 hide
 lotto
+oberschlesie
 oberschlesien
 opolski
 opolskiego
@@ -14,6 +20,7 @@ prądu
 remains
 ruchu
 story
+str
 strzelcach
 temat
 tricks
@@ -23,4 +30,5 @@ warning
 wierchlesiu
 woj
 wyniki
+wystąpią
 żelazne
