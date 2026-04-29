@@ -1,8 +1,10 @@
 ale
 będzie
 dla
+drought
 dziewiątka
 fade
+farmers
 funds
 gain
 gdzie
@@ -13,6 +15,7 @@ invader
 jaką
 konkurs
 kwocie
+mask
 najśmieszniejsze
 native
 nie
@@ -22,6 +25,7 @@ opp
 oppeln
 ostrzeżenie
 otwarcia
+pain
 prądu
 radnych
 rady
