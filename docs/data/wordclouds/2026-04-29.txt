@@ -2,6 +2,9 @@ ale
 będzie
 dziewiątka
 gdzie
+informacja
+jaką
+kwocie
 nie
 prądu
 remains
@@ -10,4 +13,7 @@ story
 strze
 strzelcach
 untold
+utrudnienia
+występują
 wyłączenia
+zamaw
