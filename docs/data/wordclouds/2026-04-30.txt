@@ -29,6 +29,7 @@ pofyrtano
 remains
 renovation
 road
+rozmier
 sprzątali
 stories
 story
@@ -41,6 +42,8 @@ uczniowie
 untold
 win
 works
+wydarzenie
+wyjątkowe
 zmiana
 zolyty
 ćmoku
