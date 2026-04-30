@@ -15,6 +15,7 @@ nowe
 nowej
 oberschle
 oppeln
+pofyrtano
 remains
 road
 sprzątali
@@ -27,3 +28,5 @@ uczniowie
 untold
 win
 works
+zolyty
+ćmoku
