@@ -7,6 +7,16 @@
     "hash": "29de947e4872311d52679293a4a9cedecb04feb7"
   },
   {
+    "title": "What story remains untold in Z Opola na szczyt kariery. Oto...?",
+    "datetime": "2026-05-01T11:59:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Z Opola na szczyt kariery. Oto najbardziej znani mieszkańcy Opola",
+    "fallback_used": true,
+    "source": "https://nto.pl/z-opola-na-szczyt-kariery-oto-najbardziej-znani-mieszkancy-opola/ar/c1-17507723",
+    "hash": "ed6742923f346be700fb8aba315b0cd536cdc62c"
+  },
+  {
     "title": "Does the Leschnitz Council PROTOKÓŁ silence local voices?",
     "datetime": "2026-05-01T10:00:00+02:00",
     "description": "At dawn, lay a bundle of dried sage and pine needles on the steps of the Leschnitz Rathaus where the PROTOKÓŁ was signed. The fresh, earthy scent drifts as you invite passers‑by to whisper a forgotten Silesian name of the square. Record the murmurs on a small tape recorder, then let the bundle dissolve with the morning rain, leaving a lingering aroma that hints at the voices the council tried to hush.",
@@ -46,6 +56,16 @@
     "description": "At dawn, spread thin sheets of translucent rice paper scented with pine and burnt wood along the steps of the Gross Strehlitz town hall. Each sheet carries a line from the daily Przegląd prasy that mentions the town, but the words are erased, leaving only the faint smell of ink. Passers pause, inhale the ghostly scent, and notice the missing stories of the Leschnitz families, exposing how the press review hides their voices.",
     "source": "https://strzelceopolskie.naszemiasto.pl/przeglad-prasy-1-05-2026-strzelce-opolskie-zobacz-wczorajsza-prasowke-poznaj-najwazniejsze-informacje-ze-strzelec-opolskich/ar/c1p1-19739151",
     "hash": "1bfe7dd54051f956cc70f36c472d52558786ed3b"
+  },
+  {
+    "title": "What story remains untold in Zniszczone słupy i zerwane kab...?",
+    "datetime": "2026-05-01T06:06:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Zniszczone słupy i zerwane kable w Osieku. Złodzieje liczyli na szybki zysk?",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11528,zniszczone-slupy-i-zerwane-kable-w-osieku-zlodzieje-liczyli-na-szybki-zysk",
+    "hash": "b509d5605d75d36c31495d77fcc7bcc87c291c55"
   },
   {
     "title": "What does the Kolektur list conceal in Gross Strehlitz?",
