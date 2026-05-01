@@ -14,6 +14,23 @@
     "hash": "fad8712bc3a262d91b2ad034c52466fea9aca455"
   },
   {
+    "title": "What story remains untold in Dzieci z gminy Izbicko zapreze...?",
+    "datetime": "2026-05-01T06:18:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Dzieci z gminy Izbicko zaprezentowały talenty wokalne. Królowały polskie hity",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11529,dzieci-z-gminy-izbicko-zaprezentowaly-talenty-wokalne-krolowaly-polskie-hity",
+    "hash": "ce31604673b7b4c7fc579aa45fde21cb4ab38484"
+  },
+  {
+    "title": "Who edits the Strzelce press review to mute locals?",
+    "datetime": "2026-05-01T06:14:03+00:00",
+    "description": "At dawn, spread thin sheets of translucent rice paper scented with pine and burnt wood along the steps of the Gross Strehlitz town hall. Each sheet carries a line from the daily Przegląd prasy that mentions the town, but the words are erased, leaving only the faint smell of ink. Passers pause, inhale the ghostly scent, and notice the missing stories of the Leschnitz families, exposing how the press review hides their voices.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/przeglad-prasy-1-05-2026-strzelce-opolskie-zobacz-wczorajsza-prasowke-poznaj-najwazniejsze-informacje-ze-strzelec-opolskich/ar/c1p1-19739151",
+    "hash": "1bfe7dd54051f956cc70f36c472d52558786ed3b"
+  },
+  {
     "title": "What does the Kolektur list conceal in Gross Strehlitz?",
     "datetime": "2026-04-30T14:30:00+00:00",
     "description": "At noon, place a stack of transparent envelopes on the steps of the Gross Strehlitz town hall, each bearing a name from the published Lista of kolektur. The envelopes emit a faint scent of pine resin, inviting passersby to lift them and read the hidden fees. As each envelope opens, a soft rustle of paper mimics the whisper of displaced families, turning a bureaucratic list into a shared, fragrant reminder of those left out of the official narrative.",
@@ -251,6 +268,16 @@
     "fallback_used": true,
     "source": "https://bip.lesnica.pl/15604/zarzadzenie-nr-00503682026burmistrza-lesnicyz-dnia-20-kwietnia-2026-rzmieniajace-zarzadzenie-w-sprawie-regulaminu-organizacyjnegourzedu-miejskiego-w-lesnicy.html",
     "hash": "99bf1b2b4f9355ec7447ed7ab6881ab61a5c342c"
+  },
+  {
+    "title": "What story remains untold in PROTOKÓŁ nr 13/2025/FIN\r\n\r\nz p...?",
+    "datetime": "2026-04-29T12:13:43+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "PROTOKÓŁ nr 13/2025/FIN\r\n\r\nz posiedzenia Komisji Finansowo-Gospodarczej,\r\n\r\nKomisji Rolnictwa i Ochrony Środowiska,\r\n\r\nKomisji Infrastruktury Społecznej oraz Komisji Rewizyjnej\r\n\r\nw dniu 13 listopada 2025 roku",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15599/protokol-nr-132025finz-posiedzenia-komisji-finansowo-gospodarczejkomisji-rolnictwa-i-ochrony-srodowiskakomisji-infrastruktury-spolecznej-oraz-komisji-rewizyjnejw-dniu-13-listopada-2025-roku.html",
+    "hash": "3082b7c8ded16b2f4027a5c5f70b217c02f1c924"
   },
   {
     "title": "What story remains untold in Informacja z otwarcia ofert do...?",

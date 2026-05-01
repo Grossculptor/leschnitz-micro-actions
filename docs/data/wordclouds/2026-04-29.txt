@@ -5,6 +5,7 @@ drought
 dziewiątka
 fade
 farmers
+fin
 funds
 gain
 gdzie
@@ -26,6 +27,7 @@ oppeln
 ostrzeżenie
 otwarcia
 pain
+protokół
 prądu
 radnych
 rady
