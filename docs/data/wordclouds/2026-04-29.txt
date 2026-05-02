@@ -3,6 +3,7 @@ będzie
 dla
 drought
 dziewiątka
+dziś
 fade
 farmers
 fin
@@ -12,6 +13,7 @@ gdzie
 głosowań
 imienny
 informacja
+innych
 invader
 jaką
 konkurs
@@ -31,12 +33,14 @@ protokół
 prądu
 radnych
 rady
+ratowała
 remains
 rental
 restorations
 roztańczona
 ruchu
 rule
+sama
 stories
 story
 strze
@@ -45,6 +49,7 @@ uchwała
 untold
 utrudnienia
 veil
+wal
 while
 woj
 wykaz
