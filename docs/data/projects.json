@@ -1,5 +1,15 @@
 [
   {
+    "title": "What story remains untold in Sprawdź listę kolektur w Strze...?",
+    "datetime": "2026-05-03T21:38:30+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Sprawdź listę kolektur w Strzelcach Opolskich i wyniki Lotto z 3.05.2026",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/sprawdz-liste-kolektur-w-strzelcach-opolskich-i-wyniki-lotto-z-3-05-2026/ar/c1p1-27024037",
+    "hash": "0f9d6bfd65ae7a6593c0e5dcef8584e4a88dd40f"
+  },
+  {
     "title": "What story remains untold in Utrudnienia w ruchu w woj. Opp...?",
     "datetime": "2026-05-03T18:55:51+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -55,6 +65,16 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/prasowka-tygodniowa-z-3-05-2026-w-strzelcach-opolskich-sprawdz-czy-jestes-na-biezaco/ar/c1p1-28965233",
     "hash": "1ac2d8014a5bd26f4c4c03ef30c674beca4b3c42"
+  },
+  {
+    "title": "What story remains untold in W Kadłubie tradycja darcia pie...?",
+    "datetime": "2026-05-03T06:14:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "W Kadłubie tradycja darcia pierza wciąż żyje. Młodzi uczą się od starszych",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11535,w-kadlubie-tradycja-darcia-pierza-wciaz-zyje-mlodzi-ucza-sie-od-starszych",
+    "hash": "efc77de5177638727af6764a70bdd09f57c30118"
   },
   {
     "title": "What story remains untold in Strażacy z gminy Kolonowskie p...?",
@@ -496,6 +516,16 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-wystepuja-utrudnienia-w-ruchu-w-woj-opolskim-stan-na-29-04-2026/ar/c1p1-21631769",
     "hash": "39c29f6d77fd6b7b075c461613d738a953d69b9b"
+  },
+  {
+    "title": "What story remains untold in Balon z Zawadzkiego doleciał d...?",
+    "datetime": "2026-04-29T06:22:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Balon z Zawadzkiego doleciał do Zabrza. To już tradycja maturzystów",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11520,balon-z-zawadzkiego-dolecial-do-zabrza-to-juz-tradycja-maturzystow",
+    "hash": "7fdadae35191b8c154c6d52d22bf2bb63bddd878"
   },
   {
     "title": "What story remains untold in Roztańczona \"dziewiątka\". Ale ...?",

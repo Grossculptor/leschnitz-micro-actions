@@ -1,6 +1,8 @@
 ale
+balon
 będzie
 dla
+doleciał
 drought
 dziewiątka
 dziś
@@ -58,3 +60,4 @@ wyłączenia
 xxvi
 zamaw
 zarządzenie
+zawadzkiego
