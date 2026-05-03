@@ -1,8 +1,11 @@
+agenda
 atrak
 czesi
 dziesięć
 gminy
+hide
 iii
+invader
 kciuki
 kolonowskie
 lat
@@ -15,7 +18,9 @@ rozbu
 story
 strażacy
 temu
+traffic
 trzymają
 tygodniowa
 untold
+utrudnienia
 wybuchło
