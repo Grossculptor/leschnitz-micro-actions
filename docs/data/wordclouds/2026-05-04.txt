@@ -1,7 +1,9 @@
 dla
 kielcza
 kolejne
+maraton
 mask
+maturalny
 matury
 nowy
 oberschlesien
@@ -10,6 +12,7 @@ oppe
 osp
 play
 remains
+rozpoczęty
 ruchu
 ruszają
 sprzęt
