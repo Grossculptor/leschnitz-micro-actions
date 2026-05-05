@@ -1,11 +1,15 @@
 bije
+closures
 corridor
+erasure
 gains
 grand
+hide
 hides
 imp
 invader
 izbicko
+leschnitz
 majowa
 new
 oppeln
@@ -15,5 +19,6 @@ road
 sieroniowicach
 spóroku
 story
+streets
 tradycja
 untold
