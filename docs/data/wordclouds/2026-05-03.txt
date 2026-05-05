@@ -7,6 +7,7 @@ gminy
 hide
 iii
 invader
+jezdni
 kadłubie
 kciuki
 kolektur
@@ -22,6 +23,7 @@ prasówka
 remains
 rozbu
 ruchu
+samochód
 sprawdź
 story
 strażacy
@@ -35,3 +37,5 @@ untold
 utrudnienia
 woj
 wybuchło
+wypadł
+zat

@@ -1,7 +1,10 @@
 bije
+blooming
+chestnuts
 closures
 corridor
 erasure
+exam
 gains
 grand
 hide
@@ -11,6 +14,7 @@ invader
 izbicko
 leschnitz
 majowa
+narrative
 new
 oppeln
 radar

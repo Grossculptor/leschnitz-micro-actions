@@ -1,5 +1,12 @@
 [
   {
+    "title": "Do blooming chestnuts hide the Invader’s exam narrative?",
+    "datetime": "2026-05-05T12:07:00+02:00",
+    "description": "At the historic schoolyard in Oppeln, early May air carries the sweet scent of blooming kasztany. I will gently lay a thin line of chestnut shells along the path to the exam hall, each shell bearing a tiny folded note with the name of a displaced Silesian family. Passers‑by step on the shells, hear a soft rustle, and glimpse the notes, reminding them that the celebrated matury ceremony also celebrates the Invader’s story while erasing local voices. The act repeats daily until the exams end.",
+    "source": "https://nto.pl/zakwitly-kasztany-i-ruszyly-matury-tak-wygladali-opolscy-maturzysci-sprzed-lat-zdjecia-z-archiwum-nto/ar/c1-17525173",
+    "hash": "143f60c3a50d470ed84d0e0b3062164e1ea825bd"
+  },
+  {
     "title": "Why do road closures hide erasure of Leschnitz’s streets?",
     "datetime": "2026-05-05T10:43:41+00:00",
     "description": "At dusk on a stalled boulevard in Leschnitz, hang a hand‑woven banner scented with pine sap and crushed rye that reads “Utrudnienia rucha w Oppeln – we hear the quiet.” As traffic pauses, volunteers hand out leaflets with ear‑bud recordings of displaced families, turning the official roadwork notice into a fragrant reminder of the Settler’s silence.",
@@ -163,6 +170,16 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/oto-dziesiec-najlepszych-atrakcji-opolszczyzny-wybralo-je/ar/c1-9598267",
     "hash": "af757c93b6e8bcbbaa1c0e3d4c9e0733a30b5f71"
+  },
+  {
+    "title": "What story remains untold in Samochód wypadł z jezdni i zat...?",
+    "datetime": "2026-05-03T09:57:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Samochód wypadł z jezdni i zatrzymał się w rowie. Dwie osoby zabrane do szpitala",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11537,samochod-wypadl-z-jezdni-i-zatrzymal-sie-w-rowie-dwie-osoby-zabrane-do-szpitala",
+    "hash": "7669960c4580c0178ea2ed6d2a4286e37f497698"
   },
   {
     "title": "What story remains untold in Czesi trzymają kciuki za rozbu...?",
