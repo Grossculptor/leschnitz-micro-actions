@@ -8,6 +8,7 @@ dbają
 decree
 decyzja
 gdzie
+hide
 invader
 izbi
 kościoła
@@ -17,6 +18,7 @@ malowanie
 mayor
 mieszkańcy
 mute
+neglect
 nie
 opolski
 order
@@ -26,6 +28,7 @@ przeciw
 prądu
 raszowej
 remains
+road
 ruchu
 silence
 story
@@ -39,5 +42,6 @@ uwaru
 veil
 voices
 wishes
+works
 zarządzenie
 środowiskowych
