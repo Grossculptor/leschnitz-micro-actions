@@ -6,6 +6,7 @@ hide
 invader
 leschnitz
 majowym
+opp
 przy
 remains
 ruchu
@@ -13,4 +14,5 @@ storm
 story
 untold
 utrudnienia
+woj
 śniadanie
