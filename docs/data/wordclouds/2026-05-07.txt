@@ -5,6 +5,7 @@ drogi
 drzewku
 gdzie
 hide
+inf
 invader
 latach
 leschnitz
@@ -13,6 +14,7 @@ miasta
 nowej
 oberschlesien
 opp
+protokół
 przy
 remains
 ruchu
