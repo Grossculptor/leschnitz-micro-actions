@@ -1,10 +1,12 @@
 alerts
 audit
+brak
 burmistrza
 cost
 data
 decyzja
 dot
+early
 erasure
 expansionist
 fumes
@@ -14,11 +16,14 @@ gminy
 grip
 gross
 grupa
+hide
 historic
+history
 humanitarna
 impact
 informacja
 invader
+kits
 leschnitz
 leśni
 line
@@ -29,8 +34,10 @@ miast
 młodzieżowa
 new
 obwieszczenie
+odra
 ofertowe
 oferty
+opolsk
 opolskiego
 oppeln
 plant
@@ -40,6 +47,7 @@ postpone
 prasy
 profit
 przegląd
+prądu
 rada
 remains
 rod
@@ -47,6 +55,7 @@ scent
 settler
 sprawie
 story
+strzelcach
 strzelec
 toll
 tour
