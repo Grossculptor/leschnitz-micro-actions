@@ -1,5 +1,15 @@
 [
   {
+    "title": "What story remains untold in Ostrzeżenie dla Opolskiego 08....?",
+    "datetime": "2026-12-19T12:00:00+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ostrzeżenie dla Opolskiego 08.05.2026 12:19. Susza hydrologiczna",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-08-05-2026-12-19-susza-hydrologiczna/ar/c1p1-19803805",
+    "hash": "f7f7cf2499b5436b0441847d9e15b10b26a3a68b"
+  },
+  {
     "title": "What story remains untold in Ostrzeżenie dla Opolskiego 07....?",
     "datetime": "2026-12-10T12:00:00+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -8,6 +18,60 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-07-05-2026-12-10-burze/ar/c1p1-19803805",
     "hash": "cc2bb6b6a947c1343ab42146faaacad21304bb2a"
+  },
+  {
+    "title": "Does the audit mask the Settler’s data grip in Leschnitz?",
+    "datetime": "2026-05-08T11:46:27+02:00",
+    "description": "At noon, slip hand‑written audit checklists scented with pine and burnt wood into the public notice board of Leschnitz’s Rathaus. The pages echo the official audytu “update” language while the faint smell of smoke reminds passersby of the Settler’s hidden fire‑walls. Observers are invited to note missing entries about the indigenous community, turning the bureaucratic “audit” into a fragrant reminder of erased voices.",
+    "source": "https://bip.lesnica.pl/13873/przeprowadzenie-audytu-kri-oraz-aktualizacja-i-wdrozenie-systemu-zarzadzania-bezpieczenstwem-informacji-dla-jednostek-organizacyjnych-gminy-lesnica-wraz-z-przeszkoleniem-pracownikow.html",
+    "hash": "6556085cb5131c88812842dc66972b396fcb0273"
+  },
+  {
+    "title": "What story remains untold in Zapytanie ofertowe dot. uniesz...?",
+    "datetime": "2026-05-08T11:45:25+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Zapytanie ofertowe dot. unieszkodliwiania wyrobów zawierających azbest z terenu Gminy Leśnica w roku 2023.",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/11469/zapytanie-ofertowe-dot-unieszkodliwiania-wyrobow-zawierajacych-azbest-z-terenu-gminy-lesnica-w-roku-2023.html",
+    "hash": "e8b308e1e62db637d1bde66b04693d7ab0be9641"
+  },
+  {
+    "title": "What story remains untold in ZAPYTANIE OFERTOWE - „Unieszko...?",
+    "datetime": "2026-05-08T11:40:37+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "ZAPYTANIE OFERTOWE - „Unieszkodliwianie wyrobów zawierających azbest z terenu Gminy Leśnica w roku 2021”",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/9002/zapytanie-ofertowe-unieszkodliwianie-wyrobow-zawierajacych-azbest-z-terenu-gminy-lesnica-w-roku-2021.html",
+    "hash": "c710ced15a5a64beb460653996f190091b54aa97"
+  },
+  {
+    "title": "What story remains untold in Informacja o unieważnieniu pos...?",
+    "datetime": "2026-05-08T11:40:17+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Informacja o unieważnieniu postępowania dot. zapytania ofertowego do składania ofert cenowych na zadani pn. \"Usuwanie odpadów z folii rolniczych, siatki i sznurka do owijania balotów, opakowań po nawozach i typu Big Bag” z terenu Gminy Leśnica.",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/7311/informacja-o-uniewaznieniu-postepowania-dot-zapytania-ofertowego-do-skladania-ofert-cenowych-na-zadani-pn-usuwanie-odpadow-z-folii-rolniczych-siatki-i-sznurka-do-owijania-balotow-opakowan-po-nawozach-i-typu-big-bag-z-terenu-gminy-lesnica.html",
+    "hash": "94144fb04190adfd333aee2637472f178a0b9e2f"
+  },
+  {
+    "title": "What story remains untold in Zaproszenie do złożenia oferty...?",
+    "datetime": "2026-05-08T11:40:01+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Zaproszenie do złożenia oferty cenowej na zadanie pn.: \"Usuwanie odpadów z folii rolniczych, siatki i sznurka do owijania balotów, opakowań po nawozach i typu Big Bag” z terenu Gminy Leśnica.",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/7281/zaproszenie-do-zlozenia-oferty-cenowej-na-zadanie-pn-usuwanie-odpadow-z-folii-rolniczych-siatki-i-sznurka-do-owijania-balotow-opakowan-po-nawozach-i-typu-big-bag-z-terenu-gminy-lesnica.html",
+    "hash": "c0926f1eb4219103323e2f35f409e4ad91616ab2"
+  },
+  {
+    "title": "Why do traffic alerts mask the erasure of Silesian voices?",
+    "datetime": "2026-05-08T10:21:45+00:00",
+    "description": "At dawn on the road to Leschnitz, lay a line of white chalk footprints that spell \"utrudnienia\" across the asphalt. As commuters pass, the scent of fresh coffee mixes with exhaust, and a soft recording of an elder’s story about the Oppeln fields plays from hidden speakers. The chalk fades with traffic, exposing how the Expansionist’s road notices divert attention from the quiet disappearance of indigenous voices in Gross Strehlitz.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-sa-utrudnienia-w-ruchu-w-woj-opolskim-8-05-2026-sprawdz-gdzie-moga-wystapic-trudnosci/ar/c1p1-21631769",
+    "hash": "36b327215a94348dc7ac83c70180877c7c6770f7"
   },
   {
     "title": "Does the Obwieszczenie mask the Invader’s toll on locals?",
