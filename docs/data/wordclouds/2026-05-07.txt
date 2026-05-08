@@ -1,9 +1,12 @@
 agenda
 alerts
+autostrad
 budowa
+dachowanie
 drogi
 drzewku
 gdzie
+groźne
 hide
 inf
 invader
