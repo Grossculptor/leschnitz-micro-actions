@@ -10,9 +10,12 @@ expansionist
 fumes
 gas
 gdzie
+gminy
 grip
 gross
+grupa
 historic
+humanitarna
 impact
 informacja
 invader
@@ -23,10 +26,12 @@ locals
 marginalization
 mask
 miast
+młodzieżowa
 new
 obwieszczenie
 ofertowe
 oferty
+opolskiego
 oppeln
 plant
 pos
@@ -35,6 +40,7 @@ postpone
 prasy
 profit
 przegląd
+rada
 remains
 rod
 scent
@@ -47,6 +53,7 @@ tour
 traffic
 true
 uciekamy
+ujazd
 uniesz
 unieszko
 unieważnieniu
