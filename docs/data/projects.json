@@ -20,6 +20,33 @@
     "hash": "cc2bb6b6a947c1343ab42146faaacad21304bb2a"
   },
   {
+    "title": "Why do Oppeln heritage lists ignore Oppeln’s own history?",
+    "datetime": "2026-05-09T19:41:00+02:00",
+    "description": "At dusk, attach thin strips of parchment scented with pine and river mud to the steps of the Oppeln town hall. Each strip bears a single line: “Missing monument, missing memory.” Passers‑by inhale the earthy aroma, pause, and read the quiet question. The scent lingers, inviting locals to notice the empty space where a true Pomniki Historii should stand, exposing the PR narrative that celebrates distant sites while sidelining the city’s own past.",
+    "source": "https://nto.pl/opolskie-pomniki-historii-mamy-siedem-takich-wyjatkowych-zabytkow-warto-je-odwiedzic/ar/c1-18068283",
+    "hash": "1cf3b652f2714362b496346fc1abbc0e7352274f"
+  },
+  {
+    "title": "What story remains untold in Oppeln Pomniki Historii. Mamy ...?",
+    "datetime": "2026-05-09T18:56:37+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Opolskie Pomniki Historii. Mamy siedem takich wyjątkowych zabytków. Warto je odwiedzić",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/opolskie-pomniki-historii-mamy-siedem-takich-wyjatkowych/ar/c1-9519915",
+    "hash": "06382c257852b980c2c9aa528b51037d11d12e47"
+  },
+  {
+    "title": "What story remains untold in Gdzie nie będzie prądu w Strze...?",
+    "datetime": "2026-05-09T18:56:37+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Gdzie nie będzie prądu w Strzelcach Opolskich? Sprawdź, gdzie 9.05 może zabraknąć prądu",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-nie-bedzie-pradu-w-strzelcach-opolskich-sprawdz-gdzie-9-05-moze-zabraknac-pradu/ar/c1p1-20594228",
+    "hash": "090ca17e1dff691923f2c9167ce80c2402f17471"
+  },
+  {
     "title": "Do power cuts in Gross Strehlitz hide the Invader’s agenda?",
     "datetime": "2026-05-09T15:49:06+00:00",
     "description": "At dusk, lay bundles of dried sage and pine beside each temporary power box in Gross Strehlitz. The earthy scent drifts as hand‑written notes in German and Silesian speak of the community’s quiet under the Invader’s electric promises. While the outage lingers, the aroma draws passersby to pause, read, and sense the absent voices that the official prądu notice never names.",
