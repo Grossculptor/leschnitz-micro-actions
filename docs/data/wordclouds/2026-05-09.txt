@@ -2,9 +2,12 @@ archives
 bohaterowie
 braki
 będą
+cuts
 czy
+disappearing
 docenie
 gminny
+hide
 hides
 hymn
 invader
@@ -14,11 +17,14 @@ oberschlesien
 opo
 oppeln
 origins
+power
 prasy
 przegląd
 prądu
 radzie
 remains
+rheumatology
+silence
 story
 str
 strzelcach
@@ -26,6 +32,7 @@ strzelec
 szachowy
 turniej
 tylko
+units
 untold
 wysokiej
 wystąpią
