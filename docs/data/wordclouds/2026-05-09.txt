@@ -1,3 +1,4 @@
+agenda
 archives
 bohaterowie
 braki
@@ -7,6 +8,7 @@ czy
 disappearing
 docenie
 gminny
+gross
 hide
 hides
 hymn
@@ -27,6 +29,7 @@ rheumatology
 silence
 story
 str
+strehlitz
 strzelcach
 strzelec
 szachowy
