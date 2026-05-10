@@ -23,6 +23,7 @@ humanitarna
 impact
 informacja
 invader
+kałuża
 kits
 leschnitz
 leśni
@@ -37,6 +38,7 @@ obwieszczenie
 odra
 ofertowe
 oferty
+oliwia
 opolsk
 opolskiego
 oppeln
@@ -75,5 +77,6 @@ woj
 wydani
 zaproszenie
 zapytanie
+zawadzkiego
 złożenia
 środow
