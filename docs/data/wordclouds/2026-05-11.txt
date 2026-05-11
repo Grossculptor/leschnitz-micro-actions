@@ -1,4 +1,5 @@
 bardzo
+bez
 braki
 budget
 burmistrz
@@ -18,6 +19,7 @@ municipal
 najpiękniejsze
 new
 office
+opolski
 oppeln
 ponad
 profits
