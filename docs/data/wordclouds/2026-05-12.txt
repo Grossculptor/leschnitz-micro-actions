@@ -42,6 +42,7 @@ settler
 silence
 sklepy
 story
+str
 strze
 strzelcach
 szkolnej
@@ -53,6 +54,7 @@ voices
 while
 woj
 works
+wystąpią
 wyłączenia
 zarządzenie
 zegar
