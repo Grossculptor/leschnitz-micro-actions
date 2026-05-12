@@ -40,6 +40,26 @@
     "hash": "0c3ede96cd23489544d788e58bd9294252097218"
   },
   {
+    "title": "What story remains untold in Utrudnienia w ruchu: woj. Oppe...?",
+    "datetime": "2026-05-12T17:07:48+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Utrudnienia w ruchu: woj. opolskie. Gdzie trwają roboty drogowe? Sprawdź stan na 12.05.2026",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-woj-opolskie-gdzie-trwaja-roboty-drogowe-sprawdz-stan-na-12-05-2026/ar/c1p1-21631769",
+    "hash": "8bf19ab04d76ebf740ed8107548fba4452601bbc"
+  },
+  {
+    "title": "What story remains untold in Wyłączenia prądu w Strzelcach ...?",
+    "datetime": "2026-05-12T17:07:48+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Wyłączenia prądu w Strzelcach Opolskich. Gdzie 12.05 będą planowane wyłączenia prądu, a gdzie awarie?",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/wylaczenia-pradu-w-strzelcach-opolskich-gdzie-12-05-beda-planowane-wylaczenia-pradu-a-gdzie-awarie/ar/c1p1-20594228",
+    "hash": "b635f2eb59f17c0576104048584b2f02064b9e36"
+  },
+  {
     "title": "Why does the Burmistrz hide the true cost of Leschnitz’s?",
     "datetime": "2026-05-12T14:30:00+02:00",
     "description": "At the town hall’s glass doors, place translucent rice‑paper sheets scented with pine sap. On each sheet, hand‑write the budget figures from the recent Zarządzenie, then fold the corners into tiny birds. As the wind lifts them, the pine scent drifts, inviting passersby to pause, read, and feel the absent voices of the Leschnitz community that the Invader’s numbers silence.",
@@ -172,6 +192,16 @@
     "fallback_used": true,
     "source": "https://bip.lesnica.pl/15739/zarzadzenie-nr-00502512025burmistrza-lesnicyz-dnia-18-wrzesnia-2025-rw-sprawie-zmian-budzetu-gminy-lesnica-na-2025-rok.html",
     "hash": "c3aa8ee4acea81dde28d573887260a2cb63cb41b"
+  },
+  {
+    "title": "What story remains untold in Łucja Kapica z brązowym medale...?",
+    "datetime": "2026-05-12T13:08:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Łucja Kapica z brązowym medalem Mistrzostw Polski Młodzików",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11568,lucja-kapica-z-brazowym-medalem-mistrzostw-polski-mlodzikow",
+    "hash": "9678a327d2f279719d9da92b0502eb1daa73f454"
   },
   {
     "title": "What story remains untold in Zarządzenie nr 0050.243.2025\r\n...?",

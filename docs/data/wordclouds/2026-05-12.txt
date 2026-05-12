@@ -1,5 +1,6 @@
 agendas
 braki
+brązowym
 burmistrz
 będzie
 będą
@@ -13,6 +14,7 @@ funds
 gdzie
 hide
 jemielnicy
+kapica
 kolono
 koniec
 korzystając
@@ -22,9 +24,11 @@ local
 maja
 mask
 mayor
+medale
 najlep
 nie
 okradała
+oppe
 oppeln
 pod
 podróż
@@ -39,6 +43,7 @@ silence
 sklepy
 story
 strze
+strzelcach
 szkolnej
 true
 ulicami
@@ -46,7 +51,10 @@ untold
 utrudnienia
 voices
 while
+woj
 works
+wyłączenia
 zarządzenie
 zegar
 zmiany
+łucja
