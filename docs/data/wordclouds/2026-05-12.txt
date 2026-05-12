@@ -1,12 +1,15 @@
 agendas
 będzie
 closures
+czasie
 driven
 gdzie
 hide
+kolono
 mask
 nie
 oppeln
+podróż
 prądu
 remains
 road
@@ -14,5 +17,6 @@ settler
 silence
 story
 strze
+ulicami
 untold
 works
