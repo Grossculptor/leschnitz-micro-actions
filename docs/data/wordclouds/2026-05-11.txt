@@ -1,5 +1,6 @@
 bardzo
 bez
+bezpieczeńs
 braki
 budget
 burmistrz
@@ -11,6 +12,7 @@ gminie
 gym
 hidden
 kadry
+kontrowersje
 leschnitz
 local
 mamy
@@ -39,6 +41,7 @@ utrudnienia
 veil
 wieku
 woj
+wokół
 wystąpią
 występują
 wyłączenia

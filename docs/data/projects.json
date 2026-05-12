@@ -40,6 +40,16 @@
     "hash": "0c3ede96cd23489544d788e58bd9294252097218"
   },
   {
+    "title": "What story remains untold in Wyłączenia prądu w Strzelcach ...?",
+    "datetime": "2026-05-12T22:09:27+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Wyłączenia prądu w Strzelcach Opolskich. Sprawdź, gdzie nie będzie prądu 12.05",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/wylaczenia-pradu-w-strzelcach-opolskich-sprawdz-gdzie-nie-bedzie-pradu-12-05/ar/c1p1-20594228",
+    "hash": "16213ea68aa849154459c767fd7293ac99ed5603"
+  },
+  {
     "title": "What story remains untold in Czy wystąpią braki prądu w Str...?",
     "datetime": "2026-05-12T19:46:38+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -664,6 +674,16 @@
     "fallback_used": true,
     "source": "https://bip.lesnica.pl/15646/zarzadzenie-nr-00501502025burmistrza-lesnicyz-dnia-24-lutego-2025-rokuw-sprawie-zmiany-planow-finansowych-na-2025-rok.html",
     "hash": "ce5818224c03903f2c90abc3f0062990ddd9edb0"
+  },
+  {
+    "title": "What story remains untold in Kontrowersje wokół bezpieczeńs...?",
+    "datetime": "2026-05-11T07:04:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Kontrowersje wokół bezpieczeństwa dworca. \"Gdzie jest ogrodzenie?\"",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11560,kontrowersje-wokol-bezpieczenstwa-dworca-quot-gdzie-jest-ogrodzenie-quot",
+    "hash": "ff173f7c1e019f5f1b3da3807f092be2cb8efa80"
   },
   {
     "title": "What story remains untold in Woj. Oppeln - gdzie są utrudni...?",
