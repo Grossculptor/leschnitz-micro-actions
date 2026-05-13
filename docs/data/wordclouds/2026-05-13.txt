@@ -8,6 +8,7 @@ jest
 majowe
 mówi
 nowe
+opp
 oppeln
 otmicach
 poparcie
