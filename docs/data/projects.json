@@ -20,6 +20,13 @@
     "hash": "cc2bb6b6a947c1343ab42146faaacad21304bb2a"
   },
   {
+    "title": "Does the flood alert hide the Invader’s land‑grab plan?",
+    "datetime": "2026-10-13T09:30:00+02:00",
+    "description": "At dawn, lay thin, scented ribbons (wet earth and pine) along the Odra banks near Leschnitz. Each ribbon bears the word Ostrzeżenie and the phrase Gwałtowne wzrosty. Passers‑by inhale the damp aroma, read the warning, then notice a subtle stencil of the historic river path erased by recent levee work – a quiet reminder of the Expander’s silent reshaping of the landscape.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-15-05-2026-10-12-gwaltowne-wzrosty-stanow-wody-1-odra/ar/c1p1-19803805",
+    "hash": "0ed0b290b5ba665b767ed24d4ae55651d8b12191"
+  },
+  {
     "title": "What story remains untold in Ostrzeżenie dla Opolskiego 11....?",
     "datetime": "2026-08-10T12:00:00+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -40,6 +47,13 @@
     "hash": "0c3ede96cd23489544d788e58bd9294252097218"
   },
   {
+    "title": "Who benefits from the mayor's paid land grab in Leschnitz?",
+    "datetime": "2026-05-20T18:00:00+02:00",
+    "description": "At dusk, lay a bundle of dried sage and birch bark on the steps of the Leschnitz town hall. Attach a translucent card quoting Zarządzenie Nr 0050.376.2026, stamped with the Burmistrza’s seal, and whisper the scent of forest to remind passersby of the land’s original breath. The quiet rustle draws eyes to the invisible cost of the paid acquisition, turning bureaucratic language into a fleeting perfume of memory.",
+    "source": "https://bip.lesnica.pl/15759/zarzadzenie-nr-00503762026burmistrza-lesnicyz-dnia-14-maja-2026-rw-sprawie-odplatnego-nabycia-nieruchomosci-na-rzecz-gminy.html",
+    "hash": "0835d194ae9f1e30c65e13cf5ebafdf049768455"
+  },
+  {
     "title": "Who silences the lost Festiwal legend of Oppeln’s streets?",
     "datetime": "2026-05-20T10:00:00+02:00",
     "description": "At dawn, scatter hand‑stitched postcards bearing faded 1960s Festiwal images onto the cobblestones of the market square. Each card is scented with a faint hint of pine sap and roasted chestnuts, recalling the warm crowds that once filled the amphitheatre. Passers‑by pick them up, read the whispered stories, and leave a small stone on the spot, creating a quiet, tactile memorial that smells of history and exposes the quiet erasure of the city’s original song‑keepers.",
@@ -47,11 +61,61 @@
     "hash": "aa3a5d3c4396509e69fb492962ea3c317a6097ce"
   },
   {
+    "title": "What story remains untold in Hala sportowa Okrąglak to duma...?",
+    "datetime": "2026-05-15T11:43:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Hala sportowa Okrąglak to duma Opola. Tak powstawała dzisiejsza Stegu Arena",
+    "fallback_used": true,
+    "source": "https://nto.pl/hala-sportowa-okraglak-to-duma-opola-tak-powstawala-dzisiejsza-stegu-arena/ar/c1-12951131",
+    "hash": "5b7d01298ea9f3fc36389c456f4bdb729d1f2034"
+  },
+  {
+    "title": "What story remains untold in Gdzie występują utrudnienia w ...?",
+    "datetime": "2026-05-15T11:19:42+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Gdzie występują utrudnienia w ruchu w woj. opolskim? Stan na 15.05.2026",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-wystepuja-utrudnienia-w-ruchu-w-woj-opolskim-stan-na-15-05-2026/ar/c1p1-21631769",
+    "hash": "694d49c91535fe0bba202c871ed17fbca1646fd3"
+  },
+  {
+    "title": "What story remains untold in Niektóre Oppeln samorządy wyda...?",
+    "datetime": "2026-05-15T11:19:42+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Niektóre opolskie samorządy wydają na inwestycje krocie, inne grosze. Opole wcale nie jest na szczycie rankingu",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/niektore-opolskie-samorzady-wydaja-na-inwestycje-krocie-inne-grosze-opole-wcale-nie-jest-na-szczycie-rankingu/ar/c1p2-28995205",
+    "hash": "4df801722964e1da20d2d973e3d26afece691361"
+  },
+  {
+    "title": "What story remains untold in Największe Oppeln murale. Te m...?",
+    "datetime": "2026-05-15T11:19:42+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Największe opolskie murale. Te malowidła na ścianach robią wielkie wrażenie 1",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/najwieksze-opolskie-murale-te-malowidla-na-scianach-robia/ar/c1-9536189",
+    "hash": "013328a023d0c2147ac20c97273e2fd99c20c67c"
+  },
+  {
     "title": "Do traffic alerts mask Leschnitz’s displaced voices?",
     "datetime": "2026-05-15T09:00:00+02:00",
     "description": "At dawn, lay thin strips of pine‑scented fabric along the temporary detour near the old market square of Leschnitz. As drivers pause, the fragrant breeze carries whispers of forgotten footpaths. Attach small, hand‑written cards that ask: “Who decides which roads stay and whose histories are rerouted?” The soft rustle and scent turn a routine slowdown into a quiet protest, revealing the PR narrative that frames inconvenience as neutral while erasing the community’s memory.",
     "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-sa-utrudnienia-w-ruchu-w-woj-opolskim-14-05-2026-sprawdz-gdzie-moga-wystapic-trudnosci/ar/c1p1-21631769",
     "hash": "e9180f7a1f0ca3c4b8f7b9e51677a5f98d4ea073"
+  },
+  {
+    "title": "What story remains untold in Największe Oppeln murale. Te m...?",
+    "datetime": "2026-05-15T08:33:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Największe opolskie murale. Te malowidła na ścianach robią wielkie wrażenie",
+    "fallback_used": true,
+    "source": "https://nto.pl/najwieksze-opolskie-murale-te-malowidla-na-scianach-robia-wielkie-wrazenie/ar/c1-18110645",
+    "hash": "3d369fe16071889fbb342c9adcba396cd82bc849"
   },
   {
     "title": "What story remains untold in NOWE Utrudnienia w ruchu 15.05...?",
@@ -62,6 +126,23 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-15-05-2026-w-woj-opolskim-gdzie-sa-dzisiaj-prowadzone-roboty-drogowe/ar/c1p1-21631769",
     "hash": "45e2edda4a3ae9d984dda38187ec95e07c983aee"
+  },
+  {
+    "title": "Does the Gmina’s “safe and tidy” claim hide blind spots?",
+    "datetime": "2026-05-15T06:12:00+02:00",
+    "description": "At dusk, walk the streets of Zawadzki with a small tin of pine‑scented incense. Light a pinch near each surveillance pole and whisper the names of the Silesian families displaced after 1945. The smoke curls into the camera’s view, turning the “safe and tidy” promise into a visible breath of memory, reminding passersby of the hidden gaps the Gmina wants to hide.",
+    "source": "https://www.strzelce360.pl/artykul/11580,bezpieczniej-i-estetyczniej-gmina-zawadzkie-stawia-na-porzadek",
+    "hash": "e00efa228b2fdd6402616882373148416085fdb6"
+  },
+  {
+    "title": "What story remains untold in Echo Krośnicy świętuje 30-leci...?",
+    "datetime": "2026-05-15T06:06:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Echo Krośnicy świętuje 30-lecie istnienia. \"To trzeba po prostu kochać\"",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11579,echo-krosnicy-swietuje-30-lecie-istnienia-quot-to-trzeba-po-prostu-kochac-quot",
+    "hash": "1853ab6978f41f6ce138d82aa8ea1a58b0c12196"
   },
   {
     "title": "Why do Oppeln samorządy spend while the poor starve?",
