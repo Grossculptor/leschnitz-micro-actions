@@ -8,9 +8,11 @@ gdzie
 gmina
 hala
 hide
+kolektur
 krośnicy
 leci
 leschnitz
+lista
 mask
 murale
 największe
@@ -26,6 +28,7 @@ samorządy
 sportowa
 spots
 story
+strzelcach
 tidy
 traffic
 untold
