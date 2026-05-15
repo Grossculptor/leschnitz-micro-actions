@@ -40,11 +40,28 @@
     "hash": "0c3ede96cd23489544d788e58bd9294252097218"
   },
   {
+    "title": "Who silences the lost Festiwal legend of Oppeln’s streets?",
+    "datetime": "2026-05-20T10:00:00+02:00",
+    "description": "At dawn, scatter hand‑stitched postcards bearing faded 1960s Festiwal images onto the cobblestones of the market square. Each card is scented with a faint hint of pine sap and roasted chestnuts, recalling the warm crowds that once filled the amphitheatre. Passers‑by pick them up, read the whispered stories, and leave a small stone on the spot, creating a quiet, tactile memorial that smells of history and exposes the quiet erasure of the city’s original song‑keepers.",
+    "source": "https://nto.pl/festiwal-w-opolu-to-legenda-tak-wygladaly-kiedys-opolskie-festiwale/ar/c1-17619689",
+    "hash": "aa3a5d3c4396509e69fb492962ea3c317a6097ce"
+  },
+  {
     "title": "Do traffic alerts mask Leschnitz’s displaced voices?",
     "datetime": "2026-05-15T09:00:00+02:00",
     "description": "At dawn, lay thin strips of pine‑scented fabric along the temporary detour near the old market square of Leschnitz. As drivers pause, the fragrant breeze carries whispers of forgotten footpaths. Attach small, hand‑written cards that ask: “Who decides which roads stay and whose histories are rerouted?” The soft rustle and scent turn a routine slowdown into a quiet protest, revealing the PR narrative that frames inconvenience as neutral while erasing the community’s memory.",
     "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-sa-utrudnienia-w-ruchu-w-woj-opolskim-14-05-2026-sprawdz-gdzie-moga-wystapic-trudnosci/ar/c1p1-21631769",
     "hash": "e9180f7a1f0ca3c4b8f7b9e51677a5f98d4ea073"
+  },
+  {
+    "title": "What story remains untold in NOWE Utrudnienia w ruchu 15.05...?",
+    "datetime": "2026-05-15T06:32:16+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "NOWE Utrudnienia w ruchu 15.05.2026 w woj. opolskim. Gdzie są dzisiaj prowadzone roboty drogowe?",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-15-05-2026-w-woj-opolskim-gdzie-sa-dzisiaj-prowadzone-roboty-drogowe/ar/c1p1-21631769",
+    "hash": "45e2edda4a3ae9d984dda38187ec95e07c983aee"
   },
   {
     "title": "Why do Oppeln samorządy spend while the poor starve?",
