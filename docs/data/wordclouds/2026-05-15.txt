@@ -1,4 +1,5 @@
 alerts
+bierze
 blind
 claim
 displaced
@@ -13,7 +14,9 @@ krośnicy
 leci
 leschnitz
 lista
+lupę
 mask
+motocy
 murale
 największe
 niektóre
@@ -21,10 +24,14 @@ nowe
 okrąglak
 opp
 oppeln
+pod
+policja
 remains
 ruchu
 safe
 samorządy
+settler
+silence
 sportowa
 spots
 story
