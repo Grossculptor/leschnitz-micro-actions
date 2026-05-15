@@ -17,6 +17,7 @@ największe
 niektóre
 nowe
 okrąglak
+opp
 oppeln
 remains
 ruchu
@@ -30,6 +31,7 @@ traffic
 untold
 utrudnienia
 voices
+woj
 wyda
 występują
 świętuje
