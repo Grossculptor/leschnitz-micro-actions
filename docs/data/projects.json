@@ -54,11 +54,52 @@
     "hash": "0835d194ae9f1e30c65e13cf5ebafdf049768455"
   },
   {
+    "title": "Why does the Komisji Rewizyjnej protocol mask local voices?",
+    "datetime": "2026-05-20T10:00:00+02:00",
+    "description": "At the town square of Leschnitz, place a stack of translucent folders scented with pine and iron, each labeled with the date of the 6 May posiedzenia. Invite passersby to open a folder, read the terse PROTOKÓŁ, then seal it with a drop of red ink that drips onto the cobblestones, leaving a faint rust scent. The lingering iron smell reminds the community of the Occupier’s hidden agenda, while the pine evokes the forest that once belonged to the original Silesian families, restoring a quiet claim ",
+    "source": "https://bip.lesnica.pl/15751/protokol-nr-182026rewz-posiedzenia-komisji-rewizyjnejw-dniu-6-maja-2026-r.html",
+    "hash": "2f889d8e1b1bc6e09e9b5de7e5dbd55695c9142a"
+  },
+  {
     "title": "Who silences the lost Festiwal legend of Oppeln’s streets?",
     "datetime": "2026-05-20T10:00:00+02:00",
     "description": "At dawn, scatter hand‑stitched postcards bearing faded 1960s Festiwal images onto the cobblestones of the market square. Each card is scented with a faint hint of pine sap and roasted chestnuts, recalling the warm crowds that once filled the amphitheatre. Passers‑by pick them up, read the whispered stories, and leave a small stone on the spot, creating a quiet, tactile memorial that smells of history and exposes the quiet erasure of the city’s original song‑keepers.",
     "source": "https://nto.pl/festiwal-w-opolu-to-legenda-tak-wygladaly-kiedys-opolskie-festiwale/ar/c1-17619689",
     "hash": "aa3a5d3c4396509e69fb492962ea3c317a6097ce"
+  },
+  {
+    "title": "What story remains untold in Majowy festyn w Centawie. \"Cie...?",
+    "datetime": "2026-05-16T06:14:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Majowy festyn w Centawie. \"Cieszymy się, że wieś tętni życiem\"",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11584,majowy-festyn-w-centawie-quot-cieszymy-sie-ze-wies-tetni-zyciem-quot",
+    "hash": "d5e7ac6e1d70d1709e794ab1304344c9697ce7c6"
+  },
+  {
+    "title": "Does the Itaka‑Allegro alliance mask tourism’s settler?",
+    "datetime": "2026-05-16T06:12:00+02:00",
+    "description": "At the town square of Leschnitz, spread hand‑crafted postcards scented with fresh pine and river mist, each bearing a faded map of the Silesian hills and a short note: “Your journeys are sold by Itaka and Allegro, but the land remembers its own routes.” Leave them on benches during the morning rush, watch commuters pause, inhale the pine, and read the hidden line that questions the glossy travel ads. Collect the folded cards later to archive the quiet resistance.",
+    "source": "https://www.strzelce360.pl/artykul/11582,itaka-i-allegro-lacza-sily-na-rynek-wchodzi-nowa-platforma-turystyczna",
+    "hash": "25408ebe5d3156146ccf422fda5b639fa49b1d57"
+  },
+  {
+    "title": "What story remains untold in \"Strzelecka Przystań Literacka...?",
+    "datetime": "2026-05-16T06:07:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "\"Strzelecka Przystań Literacka\" przyciągnęła miłośników kryminału",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11583,quot-strzelecka-przystan-literacka-quot-przyciagnela-milosnikow-kryminalu",
+    "hash": "fd2a63cad1b9793159ab4334832f7eb2b1db1db8"
+  },
+  {
+    "title": "Why do Oppeln road works mute Leschnitz’s old paths?",
+    "datetime": "2026-05-16T05:52:19+00:00",
+    "description": "At the stalled intersection near Leschnitz, lay a thin line of pine needles that release a fresh forest scent as cars idle. Attach small hand‑written cards listing the official ‘Utrudnienia’ and ‘ruchu’ notices, but beside each, write the original Silesian place‑name and a short poem about the road’s silence. Passersby inhale the pine, read the juxtaposed list, and pause, sensing the invisible PR rhythm that redirects traffic while erasing local memory.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-w-woj-opolskim-16-05-2026-lista-aktualnych-remontow-drog-i-innych-zdarzen/ar/c1p1-21631769",
+    "hash": "46aecc1ebb422eb827b5812ea73f22645bc91e4c"
   },
   {
     "title": "What story remains untold in Utrudnienia w ruchu: woj. Oppe...?",
@@ -190,6 +231,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11579,echo-krosnicy-swietuje-30-lecie-istnienia-quot-to-trzeba-po-prostu-kochac-quot",
     "hash": "1853ab6978f41f6ce138d82aa8ea1a58b0c12196"
+  },
+  {
+    "title": "What story remains untold in Nowe projekty w Zalesiu Śląski...?",
+    "datetime": "2026-05-15T06:04:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Nowe projekty w Zalesiu Śląskim. Miejscowość stawia na dziedzictwo",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11578,nowe-projekty-w-zalesiu-slaskim-miejscowosc-stawia-na-dziedzictwo",
+    "hash": "2729db9e9acd745e073525faa9c60afde5ba04bf"
   },
   {
     "title": "Why do Oppeln samorządy spend while the poor starve?",

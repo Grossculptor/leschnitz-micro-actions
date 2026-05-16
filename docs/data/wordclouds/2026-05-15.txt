@@ -26,6 +26,7 @@ opp
 oppeln
 pod
 policja
+projekty
 remains
 ruchu
 safe
@@ -44,4 +45,6 @@ voices
 woj
 wyda
 występują
+zalesiu
+śląski
 świętuje
