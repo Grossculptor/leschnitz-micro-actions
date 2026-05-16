@@ -1,10 +1,12 @@
 allegro
 alliance
+było
 centawie
 cie
 festyn
 hide
 itaka
+kin
 leschnitz
 literacka
 lotu
@@ -15,7 +17,9 @@ mute
 old
 oppe
 oppeln
+pamię
 paths
+pełno
 przystań
 ptaka
 remains
