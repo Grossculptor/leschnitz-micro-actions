@@ -3,6 +3,7 @@ alliance
 centawie
 cie
 festyn
+hide
 itaka
 leschnitz
 literacka
@@ -21,10 +22,12 @@ remains
 road
 ruchu
 settler
+silence
 story
 strzelecka
 tourism
 untold
+usurper
 utrudnienia
 woj
 works
