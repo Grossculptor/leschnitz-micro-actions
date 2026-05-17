@@ -1,8 +1,12 @@
+auto
+dfk
 dla
 erase
 gdzie
 gmina
+gminy
 hides
+izbicko
 kolektur
 kozielskiej
 lat
@@ -11,6 +15,7 @@ lista
 masz
 nawi
 oberschlesien
+ofertą
 oppe
 oppeln
 plan
@@ -19,6 +24,8 @@ powiec
 powoduje
 pożar
 prasówka
+płomieniach
+rejonie
 remains
 roadblocks
 ruchu
