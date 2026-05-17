@@ -68,6 +68,13 @@
     "hash": "aa3a5d3c4396509e69fb492962ea3c317a6097ce"
   },
   {
+    "title": "Who hides the true roadblocks of the Oppeln traffic plan?",
+    "datetime": "2026-05-17T10:20:39+00:00",
+    "description": "At dawn, lay a thin line of crushed pine needles on the main bypass in Oppeln, spelling the word \"utrudnienia\" in the dust. As commuters pass, the scent of fresh forest mixes with exhaust, prompting a brief pause. Hand out small cards that ask, \"What traffic is really being redirected?\" The quiet question lingers in the air, exposing the hidden PR narrative that shifts congestion onto lands traditionally tended by the local Silesian families.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/woj-opolskie-gdzie-sa-utrudnienia-w-ruchu-sprawdz-gdzie-sa-remonty-i-inne-zdarzenia-17-05-2026/ar/c1p1-21631769",
+    "hash": "1b40456e52223fa1454a2d51162088fe76ab9622"
+  },
+  {
     "title": "What story remains untold in Gmina Leschnitz stawia na ziel...?",
     "datetime": "2026-05-17T07:20:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -475,6 +482,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11571,dzien-chlopa-w-otmicach-takie-wydarzenia-sa-potrzebne",
     "hash": "4b222f3c8c444d41d1aaec9d9386fc5ef78fa6a3"
+  },
+  {
+    "title": "What story remains untold in Violetta Zalejska nową dyrekto...?",
+    "datetime": "2026-05-13T06:06:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Violetta Zalejska nową dyrektor Biblioteki i Kultury w Zawadzkiem",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11573,violetta-zalejska-nowa-dyrektor-biblioteki-i-kultury-w-zawadzkiem",
+    "hash": "675935a287097bd7b464c268e6c6f13f08483663"
   },
   {
     "title": "What story remains untold in Czy będą braki prądu (13.05) w...?",
