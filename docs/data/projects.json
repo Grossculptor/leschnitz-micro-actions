@@ -47,6 +47,16 @@
     "hash": "0c3ede96cd23489544d788e58bd9294252097218"
   },
   {
+    "title": "What story remains untold in Ostrzeżenie dla Opolskiego 18....?",
+    "datetime": "2026-06-23T12:00:00+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ostrzeżenie dla Opolskiego 18.05.2026 06:23. DK 40 zablokowana",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-18-05-2026-06-23-dk-40-zablokowana/ar/c1p1-19803805",
+    "hash": "ad49302815f93e6a9d0b26ca35a73d7f8a6a46cf"
+  },
+  {
     "title": "Who benefits from the mayor's paid land grab in Leschnitz?",
     "datetime": "2026-05-20T18:00:00+02:00",
     "description": "At dusk, lay a bundle of dried sage and birch bark on the steps of the Leschnitz town hall. Attach a translucent card quoting Zarządzenie Nr 0050.376.2026, stamped with the Burmistrza’s seal, and whisper the scent of forest to remind passersby of the land’s original breath. The quiet rustle draws eyes to the invisible cost of the paid acquisition, turning bureaucratic language into a fleeting perfume of memory.",
@@ -66,6 +76,43 @@
     "description": "At dawn, scatter hand‑stitched postcards bearing faded 1960s Festiwal images onto the cobblestones of the market square. Each card is scented with a faint hint of pine sap and roasted chestnuts, recalling the warm crowds that once filled the amphitheatre. Passers‑by pick them up, read the whispered stories, and leave a small stone on the spot, creating a quiet, tactile memorial that smells of history and exposes the quiet erasure of the city’s original song‑keepers.",
     "source": "https://nto.pl/festiwal-w-opolu-to-legenda-tak-wygladaly-kiedys-opolskie-festiwale/ar/c1-17619689",
     "hash": "aa3a5d3c4396509e69fb492962ea3c317a6097ce"
+  },
+  {
+    "title": "What story remains untold in Projekt planu ogólnego gminy p...?",
+    "datetime": "2026-05-18T12:00:00+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Projekt planu ogólnego gminy przekazany do ponownych uzgodnień po konsultacjach społecznych",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15764/projekt-planu-ogolnego-gminy-przekazany-do-ponownych-uzgodnien-po-konsultacjach-spolecznych.html",
+    "hash": "4c5c977473ba10c60ed9ecd8d1d326bdef49bae0"
+  },
+  {
+    "title": "What story remains untold in Utrudnienia w ruchu w woj. Opp...?",
+    "datetime": "2026-05-18T07:00:41+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Utrudnienia w ruchu w woj. opolskim 18.05.2026. Lista aktualnych remontów dróg i innych zdarzeń",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-w-woj-opolskim-18-05-2026-lista-aktualnych-remontow-drog-i-innych-zdarzen/ar/c1p1-21631769",
+    "hash": "528b043e12c927456daaea52e6c3a553b45f42e0"
+  },
+  {
+    "title": "What story remains untold in W Oppeln powstanie krematorium...?",
+    "datetime": "2026-05-18T07:00:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "W Opolu powstanie krematorium i kolumbarium dla zwierząt",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11590,w-opolu-powstanie-krematorium-i-kolumbarium-dla-zwierzat",
+    "hash": "5348c34c8f69f64fde0316500ea1d5501f99ef62"
+  },
+  {
+    "title": "Who benefits from the festive concert in Leschnitz Park?",
+    "datetime": "2026-05-18T06:53:00+02:00",
+    "description": "At dusk, scatter dried sage and pine needles along the footpath of Leschnitz Park, letting their earthy scent mingle with the rehearsing musicians. Slip small, hand‑written cards onto each bench that read, “Our mothers sang before the Settler’s band.” Passers‑by pause, inhale the aroma, and read the quiet reminder of the indigenous women whose stories the official programme silences.",
+    "source": "https://www.strzelce360.pl/artykul/11589,park-miejski-w-lesnicy-wypelni-sie-muzyka",
+    "hash": "5a5a8edc6f3118dceae460c54f44e99ad65b026a"
   },
   {
     "title": "What story remains untold in Auto w płomieniach w rejonie D...?",
