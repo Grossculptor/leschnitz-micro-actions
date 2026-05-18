@@ -64,6 +64,13 @@
     "hash": "0835d194ae9f1e30c65e13cf5ebafdf049768455"
   },
   {
+    "title": "Does the BURMISTRZA ZARZĄDZENIE conceal Leschnitz’s needs?",
+    "datetime": "2026-05-20T10:00:00+02:00",
+    "description": "At dawn, slip a bundle of dried pine needles scented with forest sap through the open window of the Leschnitz town hall. Whisper a polite request for the tender committee’s minutes, then leave a single white feather on the desk. The fresh pine scent and the quiet rustle remind passers‑by of the forest that once belonged to the original inhabitants, while the feather marks the absence of their voice in the procurement process.",
+    "source": "https://bip.lesnica.pl/15766/zarzadzenie-nr-00503772026-burmistrza-lesnicy-z-dnia-18-maja-2026-r-w-sprawie-powolania-komisji-przetargowej.html",
+    "hash": "0849eb54943475d58ccfef6444229f88b991b99c"
+  },
+  {
     "title": "Why does the Komisji Rewizyjnej protocol mask local voices?",
     "datetime": "2026-05-20T10:00:00+02:00",
     "description": "At the town square of Leschnitz, place a stack of translucent folders scented with pine and iron, each labeled with the date of the 6 May posiedzenia. Invite passersby to open a folder, read the terse PROTOKÓŁ, then seal it with a drop of red ink that drips onto the cobblestones, leaving a faint rust scent. The lingering iron smell reminds the community of the Occupier’s hidden agenda, while the pine evokes the forest that once belonged to the original Silesian families, restoring a quiet claim ",
@@ -76,6 +83,16 @@
     "description": "At dawn, scatter hand‑stitched postcards bearing faded 1960s Festiwal images onto the cobblestones of the market square. Each card is scented with a faint hint of pine sap and roasted chestnuts, recalling the warm crowds that once filled the amphitheatre. Passers‑by pick them up, read the whispered stories, and leave a small stone on the spot, creating a quiet, tactile memorial that smells of history and exposes the quiet erasure of the city’s original song‑keepers.",
     "source": "https://nto.pl/festiwal-w-opolu-to-legenda-tak-wygladaly-kiedys-opolskie-festiwale/ar/c1-17619689",
     "hash": "aa3a5d3c4396509e69fb492962ea3c317a6097ce"
+  },
+  {
+    "title": "What story remains untold in XXVII Sesja Rady Miejskiej w L...?",
+    "datetime": "2026-05-18T15:48:23+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "XXVII Sesja Rady Miejskiej w Leśnicy",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15769/xxvii-sesja-rady-miejskiej-w-lesnicy.html",
+    "hash": "d628ff3da1df3735d607087d2c321f3a80831908"
   },
   {
     "title": "What story remains untold in Gdzie występują utrudnienia w ...?",
@@ -96,6 +113,16 @@
     "fallback_used": true,
     "source": "https://bip.lesnica.pl/15764/projekt-planu-ogolnego-gminy-przekazany-do-ponownych-uzgodnien-po-konsultacjach-spolecznych.html",
     "hash": "4c5c977473ba10c60ed9ecd8d1d326bdef49bae0"
+  },
+  {
+    "title": "What story remains untold in Ogłoszenie o zamówieniu w tryb...?",
+    "datetime": "2026-05-18T10:56:16+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ogłoszenie o zamówieniu w trybie podstawowym pn.: „Przebudowa, nadbudowa oraz termomodernizacja Publicznego Przedszkola w Leśnicy”",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15765/ogloszenie-o-zamowieniu-w-trybie-podstawowym-pn-przebudowa-nadbudowa-oraz-termomodernizacja-publicznego-przedszkola-w-lesnicy.html",
+    "hash": "cce9aa0ec32f5169ac6777cfe56f7ccb88617c82"
   },
   {
     "title": "What story remains untold in Jedna awaria wystarczy, by pra...?",

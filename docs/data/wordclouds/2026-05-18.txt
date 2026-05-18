@@ -7,7 +7,9 @@ gminy
 jedna
 krematorium
 leschnitz
+miejskiej
 ogólnego
+ogłoszenie
 opp
 oppeln
 park
@@ -15,11 +17,16 @@ planu
 powstanie
 pra
 projekt
+rady
 remains
 ruchu
+sesja
 story
+tryb
 untold
 utrudnienia
 woj
 wystarczy
 występują
+xxvii
+zamówieniu

@@ -1,4 +1,6 @@
 benefits
+burmistrza
+conceal
 festiwal
 grab
 komisji
@@ -9,6 +11,7 @@ local
 lost
 mask
 mayor's
+needs
 oppeln
 paid
 protocol
@@ -16,3 +19,4 @@ rewizyjnej
 silences
 streets
 voices
+zarządzenie
