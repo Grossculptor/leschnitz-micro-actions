@@ -78,6 +78,16 @@
     "hash": "aa3a5d3c4396509e69fb492962ea3c317a6097ce"
   },
   {
+    "title": "What story remains untold in Gdzie występują utrudnienia w ...?",
+    "datetime": "2026-05-18T12:26:18+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Gdzie występują utrudnienia w ruchu w woj. opolskim? Stan na 18.05.2026",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-wystepuja-utrudnienia-w-ruchu-w-woj-opolskim-stan-na-18-05-2026/ar/c1p1-21631769",
+    "hash": "3399cbb74c5894cae011eb5031c683b476a27871"
+  },
+  {
     "title": "What story remains untold in Projekt planu ogólnego gminy p...?",
     "datetime": "2026-05-18T12:00:00+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -86,6 +96,16 @@
     "fallback_used": true,
     "source": "https://bip.lesnica.pl/15764/projekt-planu-ogolnego-gminy-przekazany-do-ponownych-uzgodnien-po-konsultacjach-spolecznych.html",
     "hash": "4c5c977473ba10c60ed9ecd8d1d326bdef49bae0"
+  },
+  {
+    "title": "What story remains untold in Jedna awaria wystarczy, by pra...?",
+    "datetime": "2026-05-18T07:11:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Jedna awaria wystarczy, by prawie cała gmina Kolonowskie została bez wody",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11591,jedna-awaria-wystarczy-by-prawie-cala-gmina-kolonowskie-zostala-bez-wody",
+    "hash": "509400395ff1d5690c0024735951aa65aba9a711"
   },
   {
     "title": "What story remains untold in Utrudnienia w ruchu w woj. Opp...?",
