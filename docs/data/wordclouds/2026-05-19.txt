@@ -39,3 +39,4 @@ woj
 wspaniały
 wyborze
 wyższe
+zarządzenie
