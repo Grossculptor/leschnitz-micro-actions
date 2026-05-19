@@ -4,6 +4,7 @@ dla
 dotacje
 dworce
 erase
+gdzie
 hide
 informacja
 invader
@@ -33,6 +34,7 @@ tak
 traffic
 tricks
 untold
+utrudni
 utrudnienia
 villages
 woj
