@@ -5,6 +5,7 @@ burmistrza
 conceal
 dla
 dyszka
+emocje
 festiwal
 fuels
 grab
@@ -25,10 +26,12 @@ oppeln
 paid
 pani
 protocol
+przedszkola
 remains
 rewizyjnej
 road
 rodzi
+rosną
 ruchu
 silences
 story
@@ -37,5 +40,6 @@ untold
 urodziny
 utrudnienia
 voices
+wokół
 wszystkiego
 zarządzenie
