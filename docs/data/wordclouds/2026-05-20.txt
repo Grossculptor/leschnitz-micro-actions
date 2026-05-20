@@ -2,8 +2,11 @@ angeliki
 benefits
 burmistrza
 conceal
+dla
+dyszka
 festiwal
 grab
+jemielnicka
 komisji
 land
 legend
@@ -13,6 +16,7 @@ lost
 mask
 mayor's
 mał
+najlepszego
 needs
 oppeln
 paid
@@ -20,6 +24,7 @@ pani
 protocol
 remains
 rewizyjnej
+rodzi
 ruchu
 silences
 story
@@ -28,4 +33,5 @@ untold
 urodziny
 utrudnienia
 voices
+wszystkiego
 zarządzenie
