@@ -1,3 +1,4 @@
+agenda
 angeliki
 benefits
 burmistrza
@@ -5,7 +6,9 @@ conceal
 dla
 dyszka
 festiwal
+fuels
 grab
+hidden
 jemielnicka
 komisji
 land
@@ -24,6 +27,7 @@ pani
 protocol
 remains
 rewizyjnej
+road
 rodzi
 ruchu
 silences
