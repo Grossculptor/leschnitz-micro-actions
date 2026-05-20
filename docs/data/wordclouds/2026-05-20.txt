@@ -1,3 +1,4 @@
+angeliki
 benefits
 burmistrza
 conceal
@@ -11,12 +12,20 @@ local
 lost
 mask
 mayor's
+mał
 needs
 oppeln
 paid
+pani
 protocol
+remains
 rewizyjnej
+ruchu
 silences
+story
 streets
+untold
+urodziny
+utrudnienia
 voices
 zarządzenie

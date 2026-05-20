@@ -17,8 +17,10 @@ planu
 powstanie
 pra
 projekt
+protokół
 rady
 remains
+rew
 ruchu
 sesja
 story

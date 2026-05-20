@@ -92,6 +92,26 @@
     "hash": "aa3a5d3c4396509e69fb492962ea3c317a6097ce"
   },
   {
+    "title": "What story remains untold in 90. urodziny Pani Angeliki Mał...?",
+    "datetime": "2026-05-20T07:41:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "90. urodziny Pani Angeliki Małek z Szymiszów-Osiedle",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11602,90-urodziny-pani-angeliki-malek-z-szymiszow-osiedle",
+    "hash": "0069148e4523e026c6dffa238a82f3ddc5390d07"
+  },
+  {
+    "title": "What story remains untold in Utrudnienia w ruchu 20.05.2026...?",
+    "datetime": "2026-05-20T06:46:17+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Utrudnienia w ruchu 20.05.2026 w woj. opolskim. Gdzie są dzisiaj prowadzone roboty drogowe?",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-20-05-2026-w-woj-opolskim-gdzie-sa-dzisiaj-prowadzone-roboty-drogowe/ar/c1p1-21631769",
+    "hash": "6a7ff3ad3032e81b3c8c400d7c1673339f0b1e3c"
+  },
+  {
     "title": "What story remains untold in Woj. Oppeln - gdzie są utrudni...?",
     "datetime": "2026-05-19T19:48:27+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -214,6 +234,16 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-wystepuja-utrudnienia-w-ruchu-w-woj-opolskim-stan-na-18-05-2026/ar/c1p1-21631769",
     "hash": "3399cbb74c5894cae011eb5031c683b476a27871"
+  },
+  {
+    "title": "What story remains untold in PROTOKÓŁ Nr 17/2026/REW\r\n\r\nz p...?",
+    "datetime": "2026-05-18T12:25:19+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "PROTOKÓŁ Nr 17/2026/REW\r\n\r\nz posiedzenia Komisji Rewizyjnej\r\n\r\nw dniu 23 kwietnia 2026 roku",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15767/protokol-nr-172026rewz-posiedzenia-komisji-rewizyjnejw-dniu-23-kwietnia-2026-roku.html",
+    "hash": "d5b2030d613b9306e33ddf0dfafb8ae9baa249b8"
   },
   {
     "title": "What story remains untold in Projekt planu ogólnego gminy p...?",
