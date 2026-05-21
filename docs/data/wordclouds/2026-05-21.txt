@@ -2,15 +2,19 @@ agenda
 będ
 decyzję
 delays
+driver
+exclusion
 fuels
 hidden
 hide
 leschnitz
 lotto
+mask
 nie
 oppeln
 plants
 podjął
+police
 policja
 powiecie
 private
@@ -22,6 +26,7 @@ sewage
 silence
 sprawdź
 story
+strzelczanin
 strzeleckim
 untold
 wyniki
