@@ -64,6 +64,20 @@
     "hash": "e326a11c13ed9bddafcb40dce4bb05898ee53876"
   },
   {
+    "title": "What hidden agenda hides behind the court’s costume?",
+    "datetime": "2026-05-22T16:30:00+02:00",
+    "description": "At the entrance of the Regional Court in Gross Strehlitz, scatter hand‑rolled bundles of dried sage and linden that release a cool, earthy scent. Invite passers‑by to inhale, then hand them a translucent badge labelled “Witness the Invisible”. As the courtroom opens for the “Open Night”, the scent lingers, reminding visitors that the same walls once muffled the voices of the indigenous Silesian families displaced after 1945. The badge asks each holder to note what is missing from the official pr",
+    "source": "https://www.strzelce360.pl/artykul/11603,przymierz-toge-poznaj-sedziego-i-zobacz-csi-na-zywo",
+    "hash": "ae441cf3a7a7120e8a61e2480ec8ec1ef6859feb"
+  },
+  {
+    "title": "Do road delays hide the Settler’s silence in Leschnitz?",
+    "datetime": "2026-05-21T03:24:04+00:00",
+    "description": "At dawn, lay a damp bundle of pine needles on the temporary detour sign near Gross Strehlitz. The earthy scent rises as drivers stop, drawn to a handwritten note: “Utrudnienia w ruchu – the silence of the original voices is rerouted.” The paper wilts with the mist, exposing how official traffic notices in Oppeln mask the lingering absence of the indigenous community.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-21-05-2026-w-woj-opolskim-gdzie-sa-dzisiaj-prowadzone-roboty-drogowe/ar/c1p1-21631769",
+    "hash": "60ed8a45c3457098caf5a183e06866e6a3ccebcd"
+  },
+  {
     "title": "Who benefits from the mayor's paid land grab in Leschnitz?",
     "datetime": "2026-05-20T18:00:00+02:00",
     "description": "At dusk, lay a bundle of dried sage and birch bark on the steps of the Leschnitz town hall. Attach a translucent card quoting Zarządzenie Nr 0050.376.2026, stamped with the Burmistrza’s seal, and whisper the scent of forest to remind passersby of the land’s original breath. The quiet rustle draws eyes to the invisible cost of the paid acquisition, turning bureaucratic language into a fleeting perfume of memory.",
@@ -8415,6 +8429,16 @@
     "description": "Smell the bitter diesel drifting over Leschnitz schoolyards. Print 2026 blank receipts, tie them to playground fences at dusk. Each missing signature reveals the silent math: Settler allotments counted, indigenous hearths ignored. Return at sunrise; photograph the wind-stripped paper ghosts—evidence of who the fuel never reached.",
     "source": "https://bip.lesnica.pl/15390/ogloszenie-o-wyniku-postepowania-dot-zakup-i-dostawa-oleju-opalowego-lekkiego-do-kotlowni-dla-jednostek-organizacyjnych-na-terenie-gminy-lesnica-w-roku-2026.html",
     "hash": "58aeb5b72b614e5d66dc41d67bd20f946f3896b9"
+  },
+  {
+    "title": "What story remains untold in Ostrzeżenie dla Opolskiego 21....?",
+    "datetime": "2026-02-11T12:00:00+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ostrzeżenie dla Opolskiego 21.05.2026 02:11. Zablokowana DK A4 - kier. Wrocław",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-21-05-2026-02-11-zablokowana-dk-a4-kier-wroclaw/ar/c1p1-19803805",
+    "hash": "f4923a314ebca26d5aac1ca0ec1720348db629dd"
   },
   {
     "title": "Who profits when water deadlines shift in Zalesie OS?",

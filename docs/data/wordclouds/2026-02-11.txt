@@ -5,6 +5,7 @@ bodies
 counts
 deadlines
 decides
+dla
 erases
 festive
 fields
@@ -27,8 +28,10 @@ memory
 murals
 new
 noise
+opolskiego
 oppeln
 oppeln's
+ostrzeżenie
 ours
 paint
 pizza
@@ -38,12 +41,15 @@ profits
 promises
 pumps
 regional
+remains
 replace
 ride
 settler
 shift
 smell
+story
 trophies
+untold
 uphill
 vanish
 vanishes
