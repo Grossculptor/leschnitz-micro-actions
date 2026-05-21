@@ -1,5 +1,7 @@
 agenda
 będ
+closures
+czynu
 decyzję
 delays
 driver
@@ -16,7 +18,9 @@ plants
 podjął
 police
 policja
+pomnik
 powiecie
+powstańczego
 private
 ratusz
 remains
