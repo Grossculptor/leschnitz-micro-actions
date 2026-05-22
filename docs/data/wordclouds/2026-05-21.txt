@@ -5,8 +5,10 @@ czynu
 decyzję
 delays
 driver
+drogowe
 exclusion
 fuels
+groźne
 hidden
 hide
 leschnitz
@@ -34,3 +36,4 @@ strzelczanin
 strzeleckim
 untold
 wyniki
+zdarzenie
