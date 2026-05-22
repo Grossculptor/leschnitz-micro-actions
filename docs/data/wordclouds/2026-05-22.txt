@@ -6,10 +6,12 @@ dodatkowe
 drives
 gdzie
 hidden
+hide
 hides
 izbicka
 konkurs
 leśnic
+motives
 młodzi
 odcin
 ofert
@@ -21,6 +23,7 @@ polski
 remains
 story
 strażacy
+traffic
 untold
 utrudni
 utrudnienia
