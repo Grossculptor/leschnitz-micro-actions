@@ -13,11 +13,14 @@ hidden
 hide
 leschnitz
 lotto
+masa
 mask
 nie
 oppeln
+piękna
 plants
 podjął
+pogoda
 police
 policja
 pomnik
@@ -34,6 +37,7 @@ sprawdź
 story
 strzelczanin
 strzeleckim
+trakcji
 untold
 wyniki
 zdarzenie
