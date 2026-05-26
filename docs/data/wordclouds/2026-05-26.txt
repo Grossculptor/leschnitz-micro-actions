@@ -1,6 +1,7 @@
 bokowe
 droga
 festiwal
+gdzie
 gmin
 ile
 pasjonató
@@ -10,5 +11,7 @@ starosta
 story
 strzeleck
 untold
+utrudnienia
+występują
 zarabia
 łaziska
