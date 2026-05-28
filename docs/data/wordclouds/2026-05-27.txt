@@ -1,10 +1,12 @@
 agenda
 burmistrza
+była
 dyrektora
 event
 funds
 gains
 gdzie
+grofka
 health
 hide
 informacja
@@ -17,6 +19,7 @@ noc
 nowe
 oppeln
 otwartych
+popularną
 praca
 remains
 ruchu
@@ -31,3 +34,4 @@ wygląda
 wyjątkowe
 zarządu
 zarządzenie
+śląska
