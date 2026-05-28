@@ -1,6 +1,7 @@
 agenda
 budget
 budynki
+był
 cieplejsze
 conceal
 council
@@ -8,6 +9,7 @@ cuts
 część
 elektroo
 gdzie
+impuls
 invader
 lata
 leschnitz
@@ -26,6 +28,7 @@ pytania
 rady
 remains
 rozdawali
+rozwojowy
 ruchu
 sadzonki
 skrywała
@@ -35,6 +38,7 @@ untold
 utrudnienia
 voices
 vote
+wielki
 wieś
 woj
 występują
