@@ -1,13 +1,21 @@
 bez
 chwile
+civic
+cuts
 displaced
+domu
 families
 gminy
+gross
+hide
+jednym
 leschnit
 leschnitz
+neglect
 nowe
 ogłoszenie
 opolski
+power
 prog
 przedszkolaki
 prądu
@@ -20,6 +28,7 @@ ruchu
 silence
 sprawozdanie
 story
+strehlitz
 strzelcach
 sądu
 untold
@@ -27,3 +36,5 @@ utrudnienia
 wielkie
 woj
 zarządzenie
+znaleziono
+zwłok
