@@ -1,3 +1,4 @@
+bez
 chwile
 displaced
 families
@@ -5,9 +6,13 @@ gminy
 leschnit
 leschnitz
 nowe
+ogłoszenie
+opolski
 prog
 przedszkolaki
+prądu
 realizacji
+rejonowego
 remains
 report
 rozmierce
@@ -15,6 +20,8 @@ ruchu
 silence
 sprawozdanie
 story
+strzelcach
+sądu
 untold
 utrudnienia
 wielkie
