@@ -23,6 +23,7 @@ powiatem
 prądu
 remains
 residents
+ruchu
 silence
 story
 strehlitz
@@ -33,6 +34,7 @@ taty
 traffic
 umiejętności
 untold
+utrudnienia
 veil
 voices
 wycieczk
