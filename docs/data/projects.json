@@ -64,6 +64,13 @@
     "hash": "e326a11c13ed9bddafcb40dce4bb05898ee53876"
   },
   {
+    "title": "Do traffic alerts veil Leschnitz’s forgotten voices?",
+    "datetime": "2026-05-30T13:23:05+00:00",
+    "description": "At the main bus stop in Leschnitz, spread a thin veil of pine‑scented ash on the bench. While commuters read the posted alert about ‘utrudnienia w ruchu’, the ash drifts, forming the word ‘silence’ in the dust. Passers‑by whisper the name of a displaced family, letting breath mingle with pine, turning the official notice into a fleeting memorial.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-wystepuja-utrudnienia-w-ruchu-w-woj-opolskim-stan-na-30-05-2026/ar/c1p1-21631769",
+    "hash": "3b1ac86f2f334972bfed8cb7bb1162cb11ae2266"
+  },
+  {
     "title": "Does the Ostrzeżenie hide neglect of Leschnitz?",
     "datetime": "2026-05-30T10:00:00+02:00",
     "description": "At the municipal notice board in Leschnitz, attach a translucent veil scented with wet earth and pine. On it, sketch faint storm clouds that fade each hour, while a handwritten note asks passersby to recall the unserved water wells the Invader left untouched. The veil drifts in the breeze, whispering the hidden gap between official Burze alerts and the community’s real need for safe shelter.",
@@ -368,6 +375,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11631,cieplejsze-budynki-i-nowe-oswietlenie-strzelce-opolskie-siegaja-po-dofinansowania",
     "hash": "8a6f1f67ec8eb9cc04a061f647f54077adf5fafb"
+  },
+  {
+    "title": "What story remains untold in 700 motocykli i wielkie serca ...?",
+    "datetime": "2026-05-28T06:14:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "700 motocykli i wielkie serca na Amazonce. Niezwykły zlot w Kolonowskiem",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11633,700-motocykli-i-wielkie-serca-na-amazonce-niezwykly-zlot-w-kolonowskiem",
+    "hash": "6efe96cd70f8a071126308aab286636b1bf5d90b"
   },
   {
     "title": "What story remains untold in Rozdawali sadzonki za elektroo...?",

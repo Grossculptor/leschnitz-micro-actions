@@ -1,7 +1,9 @@
+alerts
 bez
 cuts
 darmo
 dzień
+forgotten
 gross
 hidden
 hide
@@ -23,6 +25,9 @@ story
 strehlitz
 strzelcach
 taty
+traffic
 umiejętności
 untold
+veil
+voices
 wycieczk

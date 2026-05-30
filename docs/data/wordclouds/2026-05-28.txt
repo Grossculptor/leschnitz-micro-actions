@@ -16,6 +16,7 @@ leschnitz
 list
 mask
 miejskiej
+motocykli
 mute
 native
 nowe
@@ -31,6 +32,7 @@ rozdawali
 rozwojowy
 ruchu
 sadzonki
+serca
 skrywała
 story
 uchwała
@@ -39,6 +41,7 @@ utrudnienia
 voices
 vote
 wielki
+wielkie
 wieś
 woj
 występują
