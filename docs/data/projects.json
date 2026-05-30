@@ -64,11 +64,58 @@
     "hash": "e326a11c13ed9bddafcb40dce4bb05898ee53876"
   },
   {
+    "title": "Does the Ostrzeżenie hide neglect of Leschnitz?",
+    "datetime": "2026-05-30T10:00:00+02:00",
+    "description": "At the municipal notice board in Leschnitz, attach a translucent veil scented with wet earth and pine. On it, sketch faint storm clouds that fade each hour, while a handwritten note asks passersby to recall the unserved water wells the Invader left untouched. The veil drifts in the breeze, whispering the hidden gap between official Burze alerts and the community’s real need for safe shelter.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-30-05-2026-04-25-burze-1/ar/c1p1-19803805",
+    "hash": "47e0ee6496d057d6c87256c85a9468aff70df0bc"
+  },
+  {
     "title": "Will hidden power cuts silence Gross Strehlitz residents?",
     "datetime": "2026-05-30T09:00:00+02:00",
     "description": "At dawn, place a line of unlit, chalk‑drawn sockets along the market square of Gross Strehlitz. The faint scent of ozone lingers as locals pass, their footsteps echoing against the empty outlines. A handwritten note beside each socket asks: \"Do you feel the braki of prądu, or the promise of light?\" The silent array invites passers‑by to record their thoughts on a shared sheet, turning the municipal announcement into a communal scent‑filled inquiry.",
     "source": "https://strzelceopolskie.naszemiasto.pl/czy-wystapia-braki-pradu-w-strzelcach-opolskich-sprawdz-czy-sa-planowane-wylaczenia-pradu-29-05/ar/c1p1-20594228",
     "hash": "c5fdc9b27be61c73c9d52e7f5f78ed28edfdc2fe"
+  },
+  {
+    "title": "What story remains untold in Okazja na jednodniową wycieczk...?",
+    "datetime": "2026-05-30T06:21:10+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Okazja na jednodniową wycieczkę. Atrakcje Dolnego i Górnego Śląska",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/okazja-na-jednodniowa-wycieczke-atrakcje-dolnego-i-gornego/ar/c1-5102445",
+    "hash": "ee994bbfc8d7c385f929ff5a65e6d7d654415ae1"
+  },
+  {
+    "title": "What story remains untold in Nowe umiejętności za darmo - B...?",
+    "datetime": "2026-05-30T06:08:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Nowe umiejętności za darmo - BCU Ekonomia i Rachunkowość zaprosiło na Dni Otwarte",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11639,nowe-umiejetnosci-za-darmo-bcu-ekonomia-i-rachunkowosc-zaprosilo-na-dni-otwarte",
+    "hash": "3be44bb06d678d71aa1a15879b38e1ac940382ff"
+  },
+  {
+    "title": "What story remains untold in Dzień Mamy i Taty w Jemielnicy...?",
+    "datetime": "2026-05-30T06:05:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Dzień Mamy i Taty w Jemielnicy. Nie brakowało wzruszeń",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11641,dzien-mamy-i-taty-w-jemielnicy-nie-brakowalo-wzruszen",
+    "hash": "10e0dbb93528fdb2c1fa2331aec53e948c2707c1"
+  },
+  {
+    "title": "What story remains untold in Okazja na jednodniową wycieczk...?",
+    "datetime": "2026-05-30T05:05:02+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Okazja na jednodniową wycieczkę. Atrakcje Dolnego i Górnego Śląska",
+    "fallback_used": true,
+    "source": "https://nto.pl/okazja-na-jednodniowa-wycieczke-atrakcje-dolnego-i-gornego-slaska/ar/c1-13134253",
+    "hash": "9a10e87168377eec47f8a53723921914dd57a71b"
   },
   {
     "title": "What story remains untold in Bez prądu w Strzelcach Opolski...?",
@@ -183,6 +230,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11637,wielkie-chwile-w-rozmierce-marcin-michalkow-zostal-kaplanem",
     "hash": "4c9b8ba759c95fd57e1f6a43c3ce001832bf7104"
+  },
+  {
+    "title": "What story remains untold in Seniorzy z Piotrówki na wspóln...?",
+    "datetime": "2026-05-29T06:07:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Seniorzy z Piotrówki na wspólnej wyciecze. Odwiedzili pałac w Żyrowej",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11635,seniorzy-z-piotrowki-na-wspolnej-wyciecze-odwiedzili-palac-w-zyrowej",
+    "hash": "c89d47862b737315c803c1012b21ec5efbef0a11"
   },
   {
     "title": "What story remains untold in Przedszkolaki z gminy Leschnit...?",

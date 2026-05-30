@@ -20,6 +20,7 @@ nowe
 odkrycie
 ogłoszenie
 opolski
+piotrówki
 power
 powiedział
 prog
@@ -31,6 +32,7 @@ remains
 report
 rozmierce
 ruchu
+seniorzy
 silence
 sprawozdanie
 story
@@ -42,6 +44,7 @@ untold
 utrudnienia
 wielkie
 woj
+wspóln
 zarządzenie
 znaleziono
 zwłok
