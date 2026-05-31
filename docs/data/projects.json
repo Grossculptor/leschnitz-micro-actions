@@ -64,6 +64,46 @@
     "hash": "e326a11c13ed9bddafcb40dce4bb05898ee53876"
   },
   {
+    "title": "What story remains untold in Prasówka tygodniowa z 31.05.20...?",
+    "datetime": "2026-05-31T08:41:15+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Prasówka tygodniowa z 31.05.2026 w Strzelcach Opolskich. Sprawdź, czy jesteś na bieżąco",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/prasowka-tygodniowa-z-31-05-2026-w-strzelcach-opolskich-sprawdz-czy-jestes-na-biezaco/ar/c1p1-29048765",
+    "hash": "61486af8da3d3504f40fa07bd69dc09ba5e9178c"
+  },
+  {
+    "title": "What story remains untold in Bez prądu w Strzelcach Opolski...?",
+    "datetime": "2026-05-31T08:41:15+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Bez prądu w Strzelcach Opolskich. Sprawdź, gdzie 31.05 planowane są wyłączenia prądu lub awarie",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/bez-pradu-w-strzelcach-opolskich-sprawdz-gdzie-31-05-planowane-sa-wylaczenia-pradu-lub-awarie/ar/c1p1-20594228",
+    "hash": "b5a2b13f335f511ec5c7838ed77af9619ef0d677"
+  },
+  {
+    "title": "What story remains untold in Po 50 latach znów stanęli prze...?",
+    "datetime": "2026-05-31T06:25:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Po 50 latach znów stanęli przed ołtarzem. Wyjątkowa rocznica w parafii św. Wawrzyńca",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11644,po-50-latach-znow-staneli-przed-oltarzem-wyjatkowa-rocznica-w-parafii-sw-wawrzynca",
+    "hash": "f660fc023a1c66336342117f4479b42038092455"
+  },
+  {
+    "title": "What story remains untold in Nowa ulica w Gąsiorowicach. Na...?",
+    "datetime": "2026-05-31T06:04:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Nowa ulica w Gąsiorowicach. Nazwa nawiązuje do lokalnej tradycji",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11645,nowa-ulica-w-gasiorowicach-nazwa-nawiazuje-do-lokalnej-tradycji",
+    "hash": "9514477b943239dca9462d7d8a9290a215be073f"
+  },
+  {
     "title": "What story remains untold in Wyłączenia prądu w Strzelcach ...?",
     "datetime": "2026-05-31T03:31:38+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -72,6 +112,16 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/wylaczenia-pradu-w-strzelcach-opolskich-gdzie-31-05-moze-wystapic-awaria-lub-planowe-wylaczenie-pradu/ar/c1p1-20594228",
     "hash": "80b57fbd1aa56b15c6607e4008bdadef4f688d76"
+  },
+  {
+    "title": "What story remains untold in Zniszczenia po wichurze w Balc...?",
+    "datetime": "2026-05-30T22:42:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Zniszczenia po wichurze w Balcarzowicach. Mogła przejść trąba powietrzna",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11643,zniszczenia-po-wichurze-w-balcarzowicach-mogla-przejsc-traba-powietrzna",
+    "hash": "8e932b5f551c6431a0447c3394fde1294f038ad5"
   },
   {
     "title": "What story remains untold in Utrudnienia w ruchu 30.05.2026...?",

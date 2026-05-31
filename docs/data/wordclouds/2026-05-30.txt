@@ -1,4 +1,5 @@
 alerts
+balc
 bez
 cuts
 darmo
@@ -37,5 +38,7 @@ untold
 utrudnienia
 veil
 voices
+wichurze
 wycieczk
 wyłączenia
+zniszczenia
