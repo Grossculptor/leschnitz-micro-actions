@@ -64,11 +64,70 @@
     "hash": "e326a11c13ed9bddafcb40dce4bb05898ee53876"
   },
   {
+    "title": "What story remains untold in Ogłoszenie o wyniku postępowan...?",
+    "datetime": "2026-06-01T13:21:15+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ogłoszenie o wyniku postępowania dot.: \"Przebudowa wraz ze zmianą sposobu użytkowania byłego Gimnazjum na budynek Urzędu Miejskiego w Leśnicy\"",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15805/ogloszenie-o-wyniku-postepowania-dot-przebudowa-wraz-ze-zmiana-sposobu-uzytkowania-bylego-gimnazjum-na-budynek-urzedu-miejskiego-w-lesnicy.html",
+    "hash": "3224b12dc5319de24d236c596d32776d877e3542"
+  },
+  {
+    "title": "What story remains untold in Projekt planu ogólnego gminy p...?",
+    "datetime": "2026-06-01T12:00:00+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Projekt planu ogólnego gminy przekazany do uchwalenia",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15803/projekt-planu-ogolnego-gminy-przekazany-do-uchwalenia.html",
+    "hash": "ea59ebfaa73844af9fe5b6742ca6b5b3d3c5276f"
+  },
+  {
+    "title": "What story remains untold in Ostrzeżenie dla Opolskiego 01....?",
+    "datetime": "2026-06-01T11:26:20.241635",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ostrzeżenie dla Opolskiego 01.06.2026 05:55. Silny deszcz z burzami",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-01-06-2026-05-55-silny-deszcz-z-burzami/ar/c1p1-19803805",
+    "hash": "003475de85c9fb114ef7dfbd95cc1bcd36001081"
+  },
+  {
+    "title": "Do road repairs mask the Settler’s claim on Oppeln?",
+    "datetime": "2026-06-01T11:26:20+00:00",
+    "description": "At dawn, scatter pine‑scented cones along the detour signs near the Oppeln construction in Oppeln. Attach tiny mirrored tags that catch the official notice, letting drivers see the hidden narrative of the Invader’s traffic control. The fresh aroma and soft rustle invite a pause, turning the ordinary utrudnienia into a sensory clue that questions the promised improvement.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/woj-opolskie-gdzie-sa-utrudnienia-w-ruchu-sprawdz-gdzie-sa-remonty-i-inne-zdarzenia-1-06-2026/ar/c1p1-21631769",
+    "hash": "f3b169201e1a4b170db2434dc65ce128e44e1a43"
+  },
+  {
+    "title": "Does the Occupier's power plan dim Gross Strehlitz?",
+    "datetime": "2026-06-01T11:26:20+00:00",
+    "description": "At the municipal notice board in Gross Strehlitz, attach a handful of tiny glass bulbs filled with a faint ozone scent. Each bulb bears a handwritten question: “Who decides when our lights go out?” The scent drifts as passers‑by read, turning a routine outage notice into a shared, fragrant pause that hints at the Invader’s hidden agenda of controlling daily life.",
+    "keywords": [
+      "braki",
+      "prądu",
+      "Strzelcach"
+    ],
+    "source": "https://strzelceopolskie.naszemiasto.pl/czy-beda-braki-pradu-1-06-w-strzelcach-opolskich-sprawdz-gdzie-moga-byc-przerwy-w-dostawie/ar/c1p1-20594228",
+    "hash": "07a021a8ddebcaa9787300f8c1ee1a4618468b7f"
+  },
+  {
     "title": "Why do tourist brochures hide the Invader’s erased?",
     "datetime": "2026-06-01T09:00:00+00:00",
     "description": "At dawn, lay a bundle of pine needles scented with fresh resin on the trail from Leschnitz to Gross Strehlitz. Beside it, a handwritten card asks walkers to note the missing villages the ‘great places’ guide skips, inviting them to collect a single stone from each erased settlement as a quiet record of the displaced.",
     "source": "https://strzelceopolskie.naszemiasto.pl/swietne-miejsca-na-na-jednodniowa-wycieczke-atrakcje/ar/c1-5102445",
     "hash": "b77b2a9cca8b6d5e529005c38270bcb343aca862"
+  },
+  {
+    "title": "What story remains untold in Spotkali się w szkole po pół w...?",
+    "datetime": "2026-06-01T06:15:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Spotkali się w szkole po pół wieku. Byli mechanicy wspominali dawne lata",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11647,spotkali-sie-w-szkole-po-pol-wieku-byli-mechanicy-wspominali-dawne-lata",
+    "hash": "6f0b1a26c8b2b7dcaf09eea9105f19c876af6e83"
   },
   {
     "title": "Do power cuts in Gross Strehlitz mask service gaps?",
