@@ -20,6 +20,7 @@ legendarn
 leschnitz
 maja
 mask
+miasta
 occupier's
 ogólnego
 ogłoszenie
@@ -31,6 +32,7 @@ planu
 postępowan
 power
 prasy
+prezydent
 projekt
 przegląd
 pół
@@ -54,4 +56,5 @@ untold
 voices
 wyniku
 zamówieniu
+zawiadomienie
 żywioł

@@ -11,6 +11,7 @@ hidden
 informacja
 jaką
 już
+kierowca
 klimatu
 kwocie
 leschnitz
@@ -21,6 +22,7 @@ opolski
 oppeln
 otwarcia
 park
+pijany
 planowane
 prądu
 remains
@@ -37,3 +39,4 @@ utrudnienia
 woj
 wyłączenia
 zamaw
+zatrzymany
