@@ -16,6 +16,7 @@ kwocie
 leschnitz
 nie
 ofert
+ogłoszenie
 opolski
 oppeln
 otwarcia
@@ -25,12 +26,14 @@ prądu
 remains
 renard
 residents
+ruchu
 story
 strzelcach
 takiego
 untold
 urge
 utrudni
+utrudnienia
 woj
 wyłączenia
 zamaw
