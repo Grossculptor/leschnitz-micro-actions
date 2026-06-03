@@ -19,6 +19,7 @@ moc
 nie
 nowe
 opol
+opolskich
 opolskiego
 ostrzeżenie
 piękne
@@ -26,6 +27,7 @@ plan
 pokoleniowa
 power
 powrót
+pościg
 prądu
 remains
 ruchu
