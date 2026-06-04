@@ -1,5 +1,6 @@
 aid
 atrakcji
+balcarzowicach
 będzie
 city
 community
@@ -37,6 +38,7 @@ strze
 strzel
 strzelcach
 tak
+tornadzie
 untold
 utrudnienia
 wiceminister
