@@ -3,6 +3,7 @@ agenda
 art
 conceal
 court
+crumbles
 election
 festiwal
 gdzie
@@ -22,6 +23,7 @@ młodzi
 niezapomn
 oppeln
 osp
+palace
 pio
 polskiej
 pomysłu
@@ -29,6 +31,7 @@ prz
 remains
 scenie
 settler
+silences
 stolica
 story
 strehlitz
@@ -37,6 +40,9 @@ słynne
 untold
 utrudni
 utrudnienia
+valeska
+voice
+while
 woj
 występują
 zarządzenie
