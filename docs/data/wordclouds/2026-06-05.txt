@@ -1,5 +1,6 @@
 absence
 agenda
+art
 conceal
 court
 election
@@ -11,11 +12,13 @@ gwiazdy
 heirs
 hide
 ich
+impuls
 jednodniową
 krośnica
 legendarna
 legendarne
 młodych
+młodzi
 niezapomn
 oppeln
 osp
@@ -24,6 +27,7 @@ polskiej
 pomysłu
 prz
 remains
+scenie
 settler
 stolica
 story
