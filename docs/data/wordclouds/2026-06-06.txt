@@ -1,4 +1,9 @@
+castle
+converting
+flats
+gains
 gminy
+gross
 hides
 nie
 oppeln
@@ -9,6 +14,7 @@ remains
 seniorzy
 siedlca
 story
+strehlitz
 strzelec
 true
 ucz
