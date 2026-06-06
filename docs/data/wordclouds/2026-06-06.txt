@@ -1,0 +1,6 @@
+hides
+oppeln
+press
+strzelec
+true
+voice
