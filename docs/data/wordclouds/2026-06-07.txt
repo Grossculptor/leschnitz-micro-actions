@@ -10,6 +10,8 @@ local
 magdalena
 majcher
 odwiedzi
+piotrów
+podwójna
 przegląd
 remains
 run
@@ -18,4 +20,5 @@ story
 strehlitz
 tygodnia
 untold
+uroczystość
 viii
