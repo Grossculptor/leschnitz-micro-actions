@@ -64,6 +64,13 @@
     "hash": "e326a11c13ed9bddafcb40dce4bb05898ee53876"
   },
   {
+    "title": "Does the VIII Izbicki Charytatywny Run hide local erasure?",
+    "datetime": "2026-06-07T12:09:00+02:00",
+    "description": "At the Izbick starting line, lay a thin line of dried sage and pine needles on the track. As runners move, the fresh, resinous scent drifts over the crowd, evoking the ancient forest that the Invader’s roads have sliced through. Beneath the needles, attach tiny translucent cards bearing the names of families displaced in 1945. When the aroma pauses the race, spectators glimpse the hidden ledger of loss, revealing the polished charity narrative while honoring the silenced indigenous voices.",
+    "source": "https://www.strzelce360.pl/artykul/11682,viii-izbicki-charytatywny-bieg-dzika-wystartowali-by-niesc-pomoc",
+    "hash": "27e17c910de2b3eb2941269ad0e0916d189f39d2"
+  },
+  {
     "title": "What story remains untold in Przegląd tygodnia od 31.05 w S...?",
     "datetime": "2026-06-07T08:52:12+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -669,6 +676,16 @@
     "fallback_used": true,
     "source": "https://bip.lesnica.pl/15805/ogloszenie-o-wyniku-postepowania-dot-przebudowa-wraz-ze-zmiana-sposobu-uzytkowania-bylego-gimnazjum-na-budynek-urzedu-miejskiego-w-lesnicy.html",
     "hash": "3224b12dc5319de24d236c596d32776d877e3542"
+  },
+  {
+    "title": "What story remains untold in Obwieszczenie o przedłużeniu z...?",
+    "datetime": "2026-06-01T12:42:48+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Obwieszczenie o przedłużeniu załatwienia sprawy dot. wydania zmiany do  decyzji o środowiskowych uwarunkowaniach, dla planowanego przedsięwzięcia polegającego pod nazwą: „Budowa zakładu produkcyjnego płyt PIR”",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15804/obwieszczenie-o-przedluzeniu-zalatwienia-sprawy-dot-wydania-zmiany-do-decyzji-o-srodowiskowych-uwarunkowaniach-dla-planowanego-przedsiewziecia-polegajacego-pod-nazwa-budowa-zakladu-produkcyjnego-plyt-pir.html",
+    "hash": "ad570213f9cd13c85793532f9063eb1de1f81dbd"
   },
   {
     "title": "What story remains untold in Projekt planu ogólnego gminy p...?",
