@@ -1,6 +1,7 @@
 agendas
 bajki
 dorotą
+drzew
 gdzie
 gross
 hidden
@@ -8,7 +9,9 @@ koncerty
 mask
 oppeln
 orkiestra
+plany
 prof
+przy
 remains
 road
 ruchu
@@ -21,6 +24,11 @@ traffic
 untold
 utrudnienia
 vanish
+wielki
 works
+wspólne
 zaprasza
+zniszczył
 zus
+świętowanie
+żywioł
