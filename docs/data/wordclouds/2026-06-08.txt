@@ -1,10 +1,12 @@
 agendas
 bajki
+była
 czasach
 czy
 dorotą
 dro
 drzew
+dworcowa
 gdzie
 gross
 hidden
@@ -23,8 +25,10 @@ plany
 prl
 prof
 protesty
+przed
 przy
 remains
+repr
 road
 ruchu
 service
@@ -41,6 +45,7 @@ untold
 utrudnienia
 vanish
 wielki
+wojną
 works
 wspólne
 wyglądała
