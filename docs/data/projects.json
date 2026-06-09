@@ -64,6 +64,33 @@
     "hash": "e326a11c13ed9bddafcb40dce4bb05898ee53876"
   },
   {
+    "title": "Does the Opolskiego storm alert hide local dissent?",
+    "datetime": "2026-06-09T07:30:00",
+    "description": "In the town square of Leschnitz, fold translucent rice paper into tiny umbrellas scented with pine and wet earth. Attach each to a public notice board where the official storm warning is posted. As passersby lift them, the paper releases a faint mist, revealing hidden lines: \"Our voices are not wind‑blown away.\" The act smells of rain, feels like a shared breath, and quietly questions the invader's silence.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-09-06-2026-05-46-burze-1/ar/c1p1-19803805",
+    "hash": "df08b386bb5b232debee8c2c716fcd20c9e18752"
+  },
+  {
+    "title": "What story remains untold in Utrudnienia w ruchu w woj. Opp...?",
+    "datetime": "2026-06-09T06:47:16+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Utrudnienia w ruchu w woj. opolskim 9.06.2026. Lista aktualnych remontów dróg i innych zdarzeń",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-w-woj-opolskim-9-06-2026-lista-aktualnych-remontow-drog-i-innych-zdarzen/ar/c1p1-21631769",
+    "hash": "18f675c96c964bc81a3c6b69190fdf3c6d2911a6"
+  },
+  {
+    "title": "What story remains untold in Wiesz, jak wysoka jest Wieża P...?",
+    "datetime": "2026-06-09T05:05:02+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Wiesz, jak wysoka jest Wieża Piastowska, którą widać na Festiwalu Opole? [QUIZ]",
+    "fallback_used": true,
+    "source": "https://nto.pl/quiz/293,wiesz_jak_wysoka_jest_wieza_piastowska_ktora_widac_na_festiwalu_opole_quiz,q,t.html",
+    "hash": "8af2b5e5b0202c5d2201cc4255cadda65a6a8cba"
+  },
+  {
     "title": "What story remains untold in Dworcowa była przed wojną repr...?",
     "datetime": "2026-06-08T21:42:44+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -207,6 +234,16 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/przeglad-tygodnia-od-31-05-w-strzelcach-opolskich/ar/c1p1-29067849",
     "hash": "3109d21fd43e7d7b363cf53fd2d7676074d84c01"
+  },
+  {
+    "title": "What story remains untold in Burghof w żałobie. \"Wierzyliśm...?",
+    "datetime": "2026-06-07T08:08:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Grodzisko w żałobie. \"Wierzyliśmy i mieliśmy nadzieję na powrót Ewy\"",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11677,grodzisko-w-zalobie-quot-wierzylismy-i-mielismy-nadzieje-na-powrot-ewy-quot",
+    "hash": "d7ea6e1ea0bf8dc3bda5bdb7ce3bf401f037d1bc"
   },
   {
     "title": "What story remains untold in Magdalena Majcher odwiedzi Gro...?",
