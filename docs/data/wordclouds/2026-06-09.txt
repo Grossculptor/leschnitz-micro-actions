@@ -1,11 +1,17 @@
 alert
 dissent
 hide
+informacja
 jak
+jaką
 jest
+kwocie
 local
+ofert
 opolskiego
 opp
+oppe
+otwarcia
 remains
 ruchu
 storm
@@ -16,3 +22,4 @@ wiesz
 wieża
 woj
 wysoka
+zamaw
