@@ -1,5 +1,7 @@
 alert
+biggest
 dissent
+erasure
 gmina
 hide
 informacja
@@ -10,12 +12,15 @@ jubileusz
 korei
 kwocie
 local
+mask
 mikrotur
 ofert
 opolskiego
 opp
 oppe
+oppeln
 otwarcia
+protesty
 remains
 ruchu
 stawia
