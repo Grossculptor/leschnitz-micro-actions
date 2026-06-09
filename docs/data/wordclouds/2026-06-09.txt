@@ -1,3 +1,4 @@
+aed
 alert
 biggest
 dissent
@@ -7,6 +8,7 @@ hide
 informacja
 jak
 jaką
+jemielnicy
 jest
 jubileusz
 korei
@@ -20,9 +22,11 @@ opp
 oppe
 oppeln
 otwarcia
+pojawiło
 protesty
 remains
 ruchu
+się
 stawia
 storm
 story
