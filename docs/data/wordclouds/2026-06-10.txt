@@ -1,5 +1,6 @@
 celebrate
 displaced
+dla
 drafts
 dziecka
 dzień
@@ -11,8 +12,10 @@ jedna
 jubilee
 mask
 masks
+opolskiego
 opolskiego's
 osp
+ostrzeżenie
 plans
 pocztówki
 pokoleń
