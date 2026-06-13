@@ -67,6 +67,16 @@
     "hash": "ad49302815f93e6a9d0b26ca35a73d7f8a6a46cf"
   },
   {
+    "title": "What story remains untold in Barwny korowód przeszedł ulica...?",
+    "datetime": "2026-06-13T16:53:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Barwny korowód przeszedł ulicami Strzelec Opolskich",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11707,barwny-korowod-przeszedl-ulicami-strzelec-opolskich",
+    "hash": "f20ad6819074dd58f6f1d9f7412e4bcc7bd9987d"
+  },
+  {
     "title": "What story remains untold in Dni Strzelec Opolskich pełne s...?",
     "datetime": "2026-06-13T12:27:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -156,6 +166,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11698,nowy-plac-zabaw-przy-strzeleckim-zlobku-dzieci-juz-moga-korzystac",
     "hash": "47179d386167ab730767c1b6ae777501cd12cab0"
+  },
+  {
+    "title": "What story remains untold in Dwa dni pełne atrakcji w przed...?",
+    "datetime": "2026-06-12T06:02:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Dwa dni pełne atrakcji w przedszkolu w Fosowskiem. Dzieci celebrowały swoje święto",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11699,dwa-dni-pelne-atrakcji-w-przedszkolu-w-fosowskiem-dzieci-celebrowaly-swoje-swieto",
+    "hash": "fe9343ff95acc930e9fc6da7286baff49308e608"
   },
   {
     "title": "What story remains untold in Czy będą planowane wyłączenia ...?",
