@@ -1,6 +1,7 @@
 barwny
 dla
 dni
+fine
 korowód
 miniatury
 mistrz
@@ -13,6 +14,8 @@ prasówka
 przed
 przeszedł
 remains
+reward
+speed
 story
 strzelec
 tak
