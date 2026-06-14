@@ -1,6 +1,8 @@
 agenda
+auto
 będzie
 część
+dachowało
 day
 duża
 european
@@ -13,10 +15,13 @@ historii
 jak
 ksiądz
 masks
+miejs
+motoryzacji
 nowym
 opolskich
 parafia
 park
+perły
 pomogła
 prasówka
 remains
@@ -33,3 +38,4 @@ veil
 voices
 weekly
 wik
+zjechały
