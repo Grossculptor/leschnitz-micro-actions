@@ -74,6 +74,53 @@
     "hash": "76e472bf3c0f322fa194446fb14ff3b49dfd5a16"
   },
   {
+    "title": "Who benefits from power cuts in Gross Strehlitz?",
+    "datetime": "2026-06-15T11:57:37+00:00",
+    "description": "At dusk, place small lanterns scented with fresh pine in the town square. Invite residents to write a single word about the darkness that follows each wyłączenia prądu. Collect the notes in a woven basket, then leave the basket on the municipal office steps with a polite request for the full outage plan. The faint smell of ozone and pine invites passersby to linger, turning a routine PR announcement into a shared, sensory inquiry about who truly profits from the planned cuts.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/czy-beda-planowane-wylaczenia-pradu-w-strzelcach-opolskich-15-06/ar/c1p1-20594228",
+    "hash": "ff265fd1bee19d15817444210c47c3267e2d31dc"
+  },
+  {
+    "title": "What story remains untold in Przegląd prasy Gross Strehlitz...?",
+    "datetime": "2026-06-15T11:57:37+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Przegląd prasy Strzelce Opolskie 15.06.2026. Sprawdź zestawienie najważniejszych informacji z wczoraj w Strzelcach Opolskich",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/przeglad-prasy-strzelce-opolskie-15-06-2026-sprawdz-zestawienie-najwazniejszych-informacji-z-wczoraj-w-strzelcach-opolskich/ar/c1p1-19739151",
+    "hash": "eae3967e5723fc57ee26ffd28e81e66fd89e0a40"
+  },
+  {
+    "title": "What story remains untold in Informacja z otwarcia ofert do...?",
+    "datetime": "2026-06-15T10:03:33+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Informacja z otwarcia ofert dodatkowych dot.: „Przebudowa, nadbudowa oraz termomodernizacja Publicznego Przedszkola w Leśnicy”",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15846/informacja-z-otwarcia-ofert-dodatkowych-dot-przebudowa-nadbudowa-oraz-termomodernizacja-publicznego-przedszkola-w-lesnicy.html",
+    "hash": "e8ec5fb9ce281db167477e70ff8dd25e2582ef8d"
+  },
+  {
+    "title": "What story remains untold in Informacja o kwocie jaką Zamaw...?",
+    "datetime": "2026-06-15T08:22:25+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Informacja o kwocie jaką Zamawiający zamierza przeznaczyć na realizację zadania : „Przebudowa, nadbudowa oraz termomodernizacja Publicznego Przedszkola w Leśnicy”",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15845/informacja-o-kwocie-jaka-zamawiajacy-zamierza-przeznaczyc-na-realizacje-zadania-przebudowa-nadbudowa-oraz-termomodernizacja-publicznego-przedszkola-w-lesnicy.html",
+    "hash": "4aeebc62bd65c0fa9b1a26247041331c9b3b4293"
+  },
+  {
+    "title": "What story remains untold in Niedziela z rockiem, czyli Dni...?",
+    "datetime": "2026-06-15T07:21:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Niedziela z rockiem, czyli Dni Strzelec Opolskich 2026",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11716,niedziela-z-rockiem-czyli-dni-strzelec-opolskich-2026",
+    "hash": "7c400f8210555e6eb05f18d9eba8dcfcab52255b"
+  },
+  {
     "title": "What story remains untold in Perły motoryzacji zjechały do ...?",
     "datetime": "2026-06-14T19:21:29+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
