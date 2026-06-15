@@ -4,6 +4,7 @@ cuts
 czyli
 dni
 festive
+gains
 gross
 informacja
 jaką
@@ -14,6 +15,8 @@ odznaczenie
 ofert
 otwarcia
 państwo
+planned
+poważny
 power
 prasy
 prestiżowe
@@ -30,6 +33,7 @@ strehlitz
 strzelcach
 untold
 village
+wypadek
 wyłączenia
 xxviii
 zamaw
