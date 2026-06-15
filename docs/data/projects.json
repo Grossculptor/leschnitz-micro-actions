@@ -67,11 +67,38 @@
     "hash": "ad49302815f93e6a9d0b26ca35a73d7f8a6a46cf"
   },
   {
+    "title": "Does the Strzelcach event conceal settler PR tactics?",
+    "datetime": "2026-06-20T10:00:00+02:00",
+    "description": "At dawn, I slip a bundle of pine‑scented ribbons through the cracked window of the Strzelcach Ośrodek Kultury. Each ribbon bears a short line in Silesian, recalling the voices that vanished before Mama’s show arrives wkrótce. The faint resin aroma lingers, inviting passersby to pause, read, and feel the quiet absence behind the promised laughter.",
+    "source": "https://www.strzelce360.pl/artykul/11718,mama-na-obrotach-wkrotce-w-strzelcach-opolskich-wystapi-z-nowym-programem",
+    "hash": "94d9959d4ad7dc5257d44f27f85ad15be38c4010"
+  },
+  {
     "title": "Who profits from the festive façade on the village square?",
     "datetime": "2026-06-15T18:00:00+02:00",
     "description": "At dusk, scatter a few wilted wildflowers on the benches of the Plac near the village club in Wysokiej. Their faint earth‑and‑pine scent weaves through the children's laughter, while each petal carries a tiny note: “We remember the voices silenced before the Radosne święto.” Passers‑by are invited to add their own scented slip, turning the celebration into a lingering, aromatic reminder of the community’s hidden histories.",
     "source": "https://www.strzelce360.pl/artykul/11704,radosne-swieto-w-wysokiej-plac-przy-klubie-wiejskim-tetnil-zyciem",
     "hash": "76e472bf3c0f322fa194446fb14ff3b49dfd5a16"
+  },
+  {
+    "title": "What story remains untold in Wyłączenia prądu w Strzelcach ...?",
+    "datetime": "2026-06-15T17:17:33+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Wyłączenia prądu w Strzelcach Opolskich. Gdzie może zabraknąć prądu 15.06?",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/wylaczenia-pradu-w-strzelcach-opolskich-gdzie-moze-zabraknac-pradu-15-06/ar/c1p1-20594228",
+    "hash": "60028b7ae35a7e158c24c5d9fb21d7a1360461f3"
+  },
+  {
+    "title": "What story remains untold in XXVIII Sesja Rady Miejskiej w ...?",
+    "datetime": "2026-06-15T16:10:16+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "XXVIII Sesja Rady Miejskiej w Leśnicy",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15848/xxviii-sesja-rady-miejskiej-w-lesnicy.html",
+    "hash": "e3a3732f86ff910444788539020a46d2947006c7"
   },
   {
     "title": "Who benefits from power cuts in Gross Strehlitz?",
@@ -119,6 +146,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11716,niedziela-z-rockiem-czyli-dni-strzelec-opolskich-2026",
     "hash": "7c400f8210555e6eb05f18d9eba8dcfcab52255b"
+  },
+  {
+    "title": "What story remains untold in Prestiżowe odznaczenie państwo...?",
+    "datetime": "2026-06-15T07:11:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Prestiżowe odznaczenie państwowe dla strażaka z gminy Zawadzkie",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11715,prestizowe-odznaczenie-panstwowe-dla-strazaka-z-gminy-zawadzkie",
+    "hash": "d14a852e07095d59c80ca1df0f40560d6661a770"
   },
   {
     "title": "What story remains untold in Perły motoryzacji zjechały do ...?",
