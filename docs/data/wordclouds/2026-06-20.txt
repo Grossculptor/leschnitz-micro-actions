@@ -9,6 +9,7 @@ flats
 fuels
 gross
 hidden
+hołd
 izbicku
 klimatyczne
 leschnitz
@@ -18,6 +19,7 @@ obchody
 piękne
 pla
 powstaną
+powstańcom
 prasówka
 profits
 remains
@@ -34,3 +36,5 @@ ujeździe
 untold
 uroczyste
 zmiany
+złożyli
+śląski
