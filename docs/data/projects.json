@@ -47,6 +47,16 @@
     "hash": "68d6148d7990d5ded36af341ae5162962038d28e"
   },
   {
+    "title": "What story remains untold in Ostrzeżenie dla Opolskiego 20....?",
+    "datetime": "2026-07-05T12:00:00+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ostrzeżenie dla Opolskiego 20.06.2026 07:05. ALERT RCB - Burze",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-20-06-2026-07-05-alert-rcb-burze/ar/c1p1-19803805",
+    "hash": "b2968be63b0554e4451d6e3e62dde0da92ff3132"
+  },
+  {
     "title": "What story remains untold in Ostrzeżenie dla Opolskiego 11....?",
     "datetime": "2026-06-30T12:00:00+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -79,6 +89,26 @@
     "description": "At dawn, I slip a bundle of pine‑scented ribbons through the cracked window of the Strzelcach Ośrodek Kultury. Each ribbon bears a short line in Silesian, recalling the voices that vanished before Mama’s show arrives wkrótce. The faint resin aroma lingers, inviting passersby to pause, read, and feel the quiet absence behind the promised laughter.",
     "source": "https://www.strzelce360.pl/artykul/11718,mama-na-obrotach-wkrotce-w-strzelcach-opolskich-wystapi-z-nowym-programem",
     "hash": "94d9959d4ad7dc5257d44f27f85ad15be38c4010"
+  },
+  {
+    "title": "What story remains untold in Były piękne i klimatyczne. Tak...?",
+    "datetime": "2026-06-20T09:51:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Były piękne i klimatyczne. Tak opolskie miasta wyglądały sto lat temu. Poznajecie swoje miejscowości?",
+    "fallback_used": true,
+    "source": "https://nto.pl/byly-piekne-i-klimatyczne-tak-opolskie-miasta-wygladaly-sto-lat-temu-poznajecie-swoje-miejscowosci/ar/c1-15396780",
+    "hash": "93bcbb1c0b98e56fe5a5ca0cb1ae2a059357e509"
+  },
+  {
+    "title": "What story remains untold in Prasówka 20.06.2026 Gross Stre...?",
+    "datetime": "2026-06-20T08:50:43+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Prasówka 20.06.2026 Strzelce Opolskie. Zestaw najważniejszych informacji z wczoraj. Sprawdź nasz przegląd prasy ze Strzelec Opolskich",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/prasowka-20-06-2026-strzelce-opolskie-zestaw-najwazniejszych-informacji-z-wczoraj-sprawdz-nasz-przeglad-prasy-ze-strzelec-opolskich/ar/c1p1-19739151",
+    "hash": "8e4d3a4a5815a82742c67f52a0b53f5e25a577eb"
   },
   {
     "title": "What story remains untold in Ostrzeżenie dla Opolskiego 19....?",
