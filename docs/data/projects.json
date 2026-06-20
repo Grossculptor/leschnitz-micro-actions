@@ -141,6 +141,13 @@
     "hash": "8e4d3a4a5815a82742c67f52a0b53f5e25a577eb"
   },
   {
+    "title": "Who profits from the new 'powstaną' flats in Ujeździe?",
+    "datetime": "2026-06-20T06:25:00+02:00",
+    "description": "At twilight, place thin sheets of recycled parchment scented with pine resin on the stone steps of ul. Bolesława Chrobrego. Each sheet asks who will claim the new apartments and invites a passerby to write the name of a family displaced from the Piaski district. The faint smell of resin mingles with the dry cement air, turning the official call for tenants into a quiet, tactile reminder of the absent voices in Ujeździe.",
+    "source": "https://www.strzelce360.pl/artykul/11737,w-ujezdzie-powstana-nowe-mieszkania-trwa-nabor-najemcow",
+    "hash": "e8b0a8bf55e2a844735d8723b9902fb3d9a6fec5"
+  },
+  {
     "title": "What story remains untold in Zmiany w szkole w Izbicku. Pla...?",
     "datetime": "2026-06-20T06:11:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -392,6 +399,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11719,pieniadze-dla-seniorow-rusza-nowy-projekt-w-strzelcach-opolskich",
     "hash": "dfef73614f7fde9f0e3bd2d79a0d536d37a57658"
+  },
+  {
+    "title": "What story remains untold in Smaki Grodziska docenione prze...?",
+    "datetime": "2026-06-16T06:14:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Smaki Grodziska docenione przez jury - sukces gospodyń w Mosznej",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11721,smaki-grodziska-docenione-przez-jury-sukces-gospodyn-w-mosznej",
+    "hash": "8d601bd80bf4fd677f9b97c73a208033f46a5ca1"
   },
   {
     "title": "Who gains from the power cut in Gross Strehlitz?",

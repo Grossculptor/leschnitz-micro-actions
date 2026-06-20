@@ -5,6 +5,7 @@ committee
 conceal
 drezynę
 event
+flats
 fuels
 gross
 hidden
@@ -16,7 +17,9 @@ new
 obchody
 piękne
 pla
+powstaną
 prasówka
+profits
 remains
 roweru
 settler
@@ -27,6 +30,7 @@ szkole
 tactics
 tak
 tender
+ujeździe
 untold
 uroczyste
 zmiany
