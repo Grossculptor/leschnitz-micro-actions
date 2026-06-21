@@ -1,14 +1,19 @@
 bishop
+były
 dla
 gross
 hide
+imprezy
 invader
+kiedyś
+kolejne
 mask
 mnóstwo
 mostu
 narratives
 opolskiego
 ostrzeżenie
+pogodowe
 prac
 prasy
 prasówka
@@ -27,3 +32,4 @@ strzelcach
 talentu
 untold
 weekly
+wie
