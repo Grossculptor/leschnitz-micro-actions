@@ -1,6 +1,7 @@
 agenda
 burmistrza
 była
+dla
 dyrektora
 event
 funds
@@ -17,7 +18,9 @@ mieszkańc
 murals
 noc
 nowe
+opolskiego
 oppeln
+ostrzeżenie
 otwartych
 popularną
 praca
