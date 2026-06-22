@@ -2,12 +2,17 @@ alert
 anny
 baseny
 dla
+dróg
 equipment
 flood
 górze
 hide
+jemielnicy
+jesteś
 już
+kibicem
 klub
+odry
 ogłoszenie
 opolskich
 opolskiego
@@ -16,7 +21,9 @@ ostrzeżenie
 pierwsze
 postępowan
 prasówka
+prawdziwym
 propaganda
+przybywa
 purchase
 quiet
 remains

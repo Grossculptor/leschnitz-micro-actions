@@ -87,6 +87,16 @@
     "hash": "ad49302815f93e6a9d0b26ca35a73d7f8a6a46cf"
   },
   {
+    "title": "What story remains untold in Jesteś prawdziwym kibicem Odry...?",
+    "datetime": "2026-06-22T21:45:19+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Jesteś prawdziwym kibicem Odry Opole? To ile zdobędziesz punktów w tym quizie?",
+    "fallback_used": true,
+    "source": "https://nto.pl/quiz/9468,jestes_prawdziwym_kibicem_odry_opole_to_ile_zdobedziesz_punktow_w_tym_quizie,q,t.html",
+    "hash": "cbf0c0017a56096c5ebcba983b3fbf281655de9f"
+  },
+  {
     "title": "What story remains untold in Pierwsze Oppeln baseny już rus...?",
     "datetime": "2026-06-22T16:50:11+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -149,6 +159,16 @@
     "description": "At sunrise on the Leschnitz riverbank, lay thin, water‑soluble ribbons scented with damp moss and pine. Each ribbon bears the exact rise recorded in yesterday’s “Ostrzeżenie”. Passersby inhale the earthy aroma, notice the numbers, then watch officials copy the data into glossy bulletins. The scent lingers, revealing the sudden surge while the polished report smells of empty promises.",
     "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-21-06-2026-09-56-gwaltowne-wzrosty-stanow-wody-1/ar/c1p1-19803805",
     "hash": "360bba055e8be2013b63a0c07b4c4b8917ce703f"
+  },
+  {
+    "title": "What story remains untold in Przybywa dróg w Jemielnicy. Za...?",
+    "datetime": "2026-06-22T06:02:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Przybywa dróg w Jemielnicy. Zakończyła się kolejna inwestycja",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11743,przybywa-drog-w-jemielnicy-zakonczyla-sie-kolejna-inwestycja",
+    "hash": "ee0982c4eb3124973431c357dbd753f41718f0f6"
   },
   {
     "title": "What story remains untold in Ostrzeżenie dla Opolskiego 22....?",
