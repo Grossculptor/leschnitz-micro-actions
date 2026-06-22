@@ -1,8 +1,10 @@
 alert
+anny
 baseny
 dla
 equipment
 flood
+górze
 hide
 już
 klub
@@ -24,4 +26,5 @@ story
 strzelec
 town
 untold
+wicepremier
 wyniku
