@@ -12,6 +12,7 @@ jesteś
 już
 kibicem
 klub
+oddziały
 odry
 ogłoszenie
 opolskich
@@ -35,3 +36,4 @@ town
 untold
 wicepremier
 wyniku
+znikają
