@@ -67,6 +67,13 @@
     "hash": "b2968be63b0554e4451d6e3e62dde0da92ff3132"
   },
   {
+    "title": "Does the Sztafeta mask bojówka propaganda for the Invader?",
+    "datetime": "2026-07-01T07:00:00+02:00",
+    "description": "At dawn, lay a thin line of white chalk on the LZS Staniszcze Wielkie field, tracing the exact relay route. Sprinkle dried sage and pine resin along it so a cool, earthy scent rises as the sun climbs. Invite local Silesian elders to walk the line, whispering stories of displaced families while the fire brigade’s banners flutter. Capture the fading footprints and lingering aroma, then submit the images to the municipal BIP as a quiet call for acknowledgment.",
+    "source": "https://www.strzelce360.pl/artykul/11757,sztafeta-bojowka-i-zar-z-nieba-za-nami-zawody-strazackie-w-gminie-kolonowskie",
+    "hash": "e4dbb5de6ee5f28d5484757d6d744df8163d9bd0"
+  },
+  {
     "title": "What story remains untold in Ostrzeżenie dla Opolskiego 11....?",
     "datetime": "2026-06-30T12:00:00+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -75,6 +82,33 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-11-05-2026-06-30-utrudnienie-na-a4/ar/c1p1-19803805",
     "hash": "0c3ede96cd23489544d788e58bd9294252097218"
+  },
+  {
+    "title": "What story remains untold in Prasówka ze Strzelec Opolskich...?",
+    "datetime": "2026-06-24T06:47:17+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Prasówka ze Strzelec Opolskich 24.06.2026. Przegląd prasy - zestawienie najważniejszych informacji",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/prasowka-ze-strzelec-opolskich-24-06-2026-przeglad-prasy-zestawienie-najwazniejszych-informacji/ar/c1p1-19739151",
+    "hash": "fd5a9f4dd8443fd9fdc2474ebf35379d60855720"
+  },
+  {
+    "title": "Why are Oppeln maternity wards imposing 56‑hour shifts?",
+    "datetime": "2026-06-24T06:47:17+00:00",
+    "description": "At dawn, slip a bundle of lavender‑scented ribbons through the unlocked staff door of the Gross Strehlitz maternity clinic. Each ribbon bears the word ‘Dyżury’ and the number ‘56’. As nurses pause, the fragrance mingles with the antiseptic air, prompting a whispered question about endless godziny without przerw. The quiet accumulation of ribbons becomes a tactile ledger of hidden labor, exposing the hospital’s PR narrative of efficiency while honoring the exhausted caregivers.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/dyzury-po-56-godzin-bez-przerw-szokujace-dane-z-opolskich-porodowek/ar/c1p2-29118013",
+    "hash": "a1a5a5aff91b37f73a2382eae77b088a28d73c57"
+  },
+  {
+    "title": "What story remains untold in Festyn rodzinny w Otmicach. At...?",
+    "datetime": "2026-06-24T06:04:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Festyn rodzinny w Otmicach. Atrakcji i dobrej zabawy nie brakowało",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11756,festyn-rodzinny-w-otmicach-atrakcji-i-dobrej-zabawy-nie-brakowalo",
+    "hash": "32ddc4a357aa23c00cfab25e12ed75398da4e18b"
   },
   {
     "title": "What story remains untold in Samochód Google Street View za...?",
