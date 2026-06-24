@@ -1,6 +1,7 @@
 committee
 community
 dla
+dożywot
 dwa
 festyn
 gains
@@ -11,6 +12,7 @@ initiative
 marszałkowska
 maternity
 mayor
+miał
 miesiące
 ogłoszenie
 opolski
@@ -19,7 +21,9 @@ opolskiego
 oppeln
 ostrzeżenie
 otmicach
+ponad
 prasówka
+promile
 remains
 rodzinny
 shifts
