@@ -1,9 +1,12 @@
 bus
+cen
 close
 five
 invader
+joanna
 kadłub
 maternity
+nie
 opolskich
 oppeln
 osp
@@ -14,6 +17,8 @@ spł
 story
 strażaków
 strzelec
+strzelzyk
 untold
 wards
 wyremontowanych
+żyje
