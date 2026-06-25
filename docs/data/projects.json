@@ -84,6 +84,16 @@
     "hash": "0c3ede96cd23489544d788e58bd9294252097218"
   },
   {
+    "title": "What story remains untold in Informacja z otwarcia ofert do...?",
+    "datetime": "2026-06-25T13:09:41+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Informacja z otwarcia ofert dot.: Zakup wyposażenia dla Klubu Malucha z podziałem na części w ramach zadania pn.: „Budowa Klubu Dziecięcego w Leśnicy”",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15893/informacja-z-otwarcia-ofert-dot-zakup-wyposazenia-dla-klubu-malucha-z-podzialem-na-czesci-w-ramach-zadania-pn-budowa-klubu-dzieciecego-w-lesnicy.html",
+    "hash": "a6a00d12a7d19043f12139d7ce0f024a124e8f3c"
+  },
+  {
     "title": "What story remains untold in Nie żyje Joanna Strzelzyk, cen...?",
     "datetime": "2026-06-25T12:04:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -92,6 +102,20 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11763,nie-zyje-joanna-strzelzyk-ceniona-i-lubiana-nauczycielka",
     "hash": "36a7c6ccdac4819d4569b9248da3d83c63d85519"
+  },
+  {
+    "title": "Who hides the true purpose of Naprzód Cup in Imielnitz?",
+    "datetime": "2026-06-25T12:00:00+02:00",
+    "description": "At dawn, scatter hand‑rolled paper petals scented with pine and rosemary along the main square’s stone steps where the Naprzód Cup banners flutter. Each petal bears a tiny QR code linking to archived testimonies of the Silesian families displaced after the 1945 border shifts. Passersby inhale the fresh aroma, pause, and unknowingly trigger a silent ledger that records every scan, exposing the event’s promotional veneer while honoring the voices the official program omits.",
+    "source": "https://www.strzelce360.pl/artykul/11761,naprzod-cup-2026-takiego-wydarzenia-w-jemielnicy-jeszcze-nie-bylo",
+    "hash": "51365e354eaf20cbff8eb813b587629e52faf793"
+  },
+  {
+    "title": "What hidden budget fuels a children’s club in Leschnitz?",
+    "datetime": "2026-06-25T09:24:47+02:00",
+    "description": "In the early afternoon, scatter lavender‑scented ribbons along the steps of the Leschnitz town hall. Each ribbon bears the word \"Informacja\" and the exact \"kwotie\" the Zamawiający plans to spend. Passers‑by pause, inhale the calming aroma, and read the tiny note that reveals the invisible allocation. The gentle breeze carries the scent, turning a bureaucratic memo into a tactile reminder of the Invader’s quiet re‑branding of community space.",
+    "source": "https://bip.lesnica.pl/15892/informacja-o-kwocie-jaka-zamawiajacy-zamierza-przeznaczyc-na-realizacje-zadania-dot-zakup-wyposazenia-dla-klubu-malucha-z-podzialem-na-czesci-w-ramach-zadania-pn-budowa-klubu-dzieciecego-w-lesnicy.html",
+    "hash": "2b760038829c1ef05483fab0f676abc3b98d3a1a"
   },
   {
     "title": "Why does the Invader close five maternity wards in Oppeln?",
