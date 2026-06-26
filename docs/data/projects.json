@@ -84,6 +84,13 @@
     "hash": "0c3ede96cd23489544d788e58bd9294252097218"
   },
   {
+    "title": "Why does the heat warning mask the Settler’s agenda?",
+    "datetime": "2026-06-26T13:30:00Z",
+    "description": "At noon in Leschnitz’s market square, lay menthol‑scented cotton pads beside the municipal notice board that displays the Ostrzeżenie about the Upał. The cooling vapor draws pedestrians to read the alert, while a small mirror reflects the board’s logo, exposing the Invader’s climate narrative that favors tourists over the indigenous Silesian community. The pine‑fresh scent mingles with sweat, turning the warning into a tactile, sensory reminder of hidden PR motives.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-26-06-2026-13-20-upal/ar/c1p1-19803805",
+    "hash": "085adbb85586f4c09a6201255a0092671a1808dd"
+  },
+  {
     "title": "What story remains untold in Młodzież i seniorzy uczyli się...?",
     "datetime": "2026-06-26T06:38:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -102,6 +109,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11767,klincz-wokol-biometanowni-strony-zostaja-przy-swoich-stanowiskach",
     "hash": "412e45e3c6782bd7d8371e92622a5400a04e5b13"
+  },
+  {
+    "title": "What story remains untold in Burmistrz Kolonowskiego z jedn...?",
+    "datetime": "2026-06-26T06:05:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Burmistrz Kolonowskiego z jednogłośnym wotum zaufania i absolutorium",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11766,burmistrz-kolonowskiego-z-jednoglosnym-wotum-zaufania-i-absolutorium",
+    "hash": "76e756c9e9356bd1a28f6b7c0f96c61b0a077a6c"
   },
   {
     "title": "What story remains untold in Gra terenowa po raz drugi w St...?",
