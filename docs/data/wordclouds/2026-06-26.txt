@@ -1,4 +1,6 @@
+absolutorium
 agenda
+basen
 biometanowni
 burmistrz
 głosowań
@@ -9,6 +11,7 @@ klincz
 kolonowskiego
 mask
 młodzież
+opolskich
 protokół
 radnych
 rady
@@ -19,11 +22,14 @@ settler
 się
 story
 str
+strzelcach
 uchwała
 uczyli
 untold
 warning
 wokół
+wotum
 wykaz
 xxvii
 xxviii
+zaufania
