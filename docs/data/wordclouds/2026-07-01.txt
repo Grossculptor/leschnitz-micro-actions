@@ -1,5 +1,10 @@
 bojówka
 invader
 mask
+mayor
+power
 propaganda
+rada
 sztafeta
+uchwała
+unchecked
