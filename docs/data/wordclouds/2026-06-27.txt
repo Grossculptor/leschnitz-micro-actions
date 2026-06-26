@@ -1,6 +1,11 @@
+alert
 general
+heat
+hide
 indigenous
 leschnitz
 plan
+quiet
 silence
 voices
+yearning
