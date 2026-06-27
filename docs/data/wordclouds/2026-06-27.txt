@@ -7,9 +7,11 @@ heat
 hero
 hide
 indigenous
+kochali
 kąpieliska
 leschnitz
 nad
+nauczy
 oppeln
 plan
 quiet
@@ -18,9 +20,11 @@ settler
 silence
 single
 story
+swoją
 tak
 taki
 tylko
+uczniowie
 untold
 upał
 voices
