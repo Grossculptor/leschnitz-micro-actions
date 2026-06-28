@@ -91,6 +91,16 @@
     "hash": "0c3ede96cd23489544d788e58bd9294252097218"
   },
   {
+    "title": "What story remains untold in Utrudnienia w ruchu w woj. Opp...?",
+    "datetime": "2026-06-28T18:00:09+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Utrudnienia w ruchu w woj. opolskim 28.06.2026. Lista aktualnych remontów dróg i innych zdarzeń",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-w-woj-opolskim-28-06-2026-lista-aktualnych-remontow-drog-i-innych-zdarzen/ar/c1p1-19949817",
+    "hash": "ba1c12e1fdecaae2557fb0de9600f1acd5b3e36d"
+  },
+  {
     "title": "What story remains untold in Ponad 30 mężczyzn z Krośnicy p...?",
     "datetime": "2026-06-28T16:51:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -126,6 +136,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11777,druhowie-osp-pokazywali-jak-ratowac-zycie-i-niesc-pomoc",
     "hash": "0e3e15a875fb667e2bdf003a4891d9b64fec2a32"
+  },
+  {
+    "title": "What story remains untold in Skarb w pałacu na Śląsku Oppel...?",
+    "datetime": "2026-06-28T07:02:13+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Skarb w pałacu na Śląsku Opolskim. Hitlerowskie złoto, którego nikt nie widział, w burdelu, o którym nikt nie słyszał",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/skarb-w-palacu-na-slasku-opolskim-hitlerowskie-zloto/ar/c1-8665397",
+    "hash": "c9b4f419eecc2f6b1876c4691ed25e7c9b2edc16"
   },
   {
     "title": "What story remains untold in Kalwaria na Górze św. Anny. Ka...?",
