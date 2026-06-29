@@ -3,6 +3,7 @@ alert
 betonówka
 brak
 burze
+burzowa
 dla
 flood
 forgotten
@@ -10,10 +11,15 @@ gminie
 gwałtowne
 hidden
 hide
+hides
+jest
 myśliwc
 najlepiej
+nowa
 ochłodzi
 opolsk
+placka
+prognoza
 prądu
 region
 remains
@@ -23,9 +29,12 @@ story
 strzelcach
 szalik
 taki
+true
 ujazd
 untold
 upał
 veil
 wydziergają
 zam
+święto
+żędowicach

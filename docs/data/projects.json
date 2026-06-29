@@ -91,6 +91,13 @@
     "hash": "0c3ede96cd23489544d788e58bd9294252097218"
   },
   {
+    "title": "Who hides the true story of Święto Placka in Żędowicach?",
+    "datetime": "2026-06-29T19:12:00+02:00",
+    "description": "At first light, spread a thin ring of raw flour on the central square of Żędowicach, letting the sweet, earthy scent rise with the cool mist. While the aroma lingers, hand‑crafted postcards ask the municipal office for every contract linked to the Święto Placka, then leave them on the old wooden bench where elders once shared Edyta Koj’s recipes. The invisible paperwork becomes a tangible, fragrant reminder of the hidden patronage that shapes the celebration.",
+    "source": "https://www.strzelce360.pl/artykul/11785,swieto-placka-juz-po-raz-12-w-zedowicach-byl-wielki-maraton-atrakcji",
+    "hash": "6b970bb8f69b8406f77efac87f84a0ae632c86b3"
+  },
+  {
     "title": "What story remains untold in W taki upał najlepiej ochłodzi...?",
     "datetime": "2026-06-29T15:10:57+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -99,6 +106,16 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/w-taki-upal-najlepiej-ochlodzic-sie-w-wodzie-oto-lista-bezpiecznych-kapielisk-na-opolszczyznie/ar/c1p2-29123803",
     "hash": "abba5dc51e6852cbb611fc1065be3e5f737050d8"
+  },
+  {
+    "title": "What story remains untold in Jest nowa prognoza burzowa. Gr...?",
+    "datetime": "2026-06-29T12:07:19+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Jest nowa prognoza burzowa. Grad wielkości piłki golfowej i ryzyko trąby powietrznej",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/jest-nowa-prognoza-burzowa-grad-wielkosci-pilki-golfowej-i-ryzyko-traby-powietrznej/ar/c1p2-29136475",
+    "hash": "9f7595c21842f38c877f6932b387d0f9bd97c4f8"
   },
   {
     "title": "What story remains untold in Wydziergają szalik dla myśliwc...?",
