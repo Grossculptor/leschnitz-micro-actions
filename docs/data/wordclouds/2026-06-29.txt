@@ -11,6 +11,8 @@ gwałtowne
 hidden
 hide
 myśliwc
+najlepiej
+ochłodzi
 opolsk
 prądu
 region
@@ -20,8 +22,10 @@ songs
 story
 strzelcach
 szalik
+taki
 ujazd
 untold
+upał
 veil
 wydziergają
 zam
