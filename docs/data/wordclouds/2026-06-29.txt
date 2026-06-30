@@ -5,7 +5,9 @@ brak
 burza
 burze
 burzowa
+cały
 dla
+dzień
 flood
 forgotten
 gminie
@@ -20,6 +22,7 @@ najlepiej
 nowa
 ochłodzi
 opolsk
+pamiętacie
 placka
 powiatem
 prognoza
@@ -41,6 +44,7 @@ untold
 upał
 veil
 wydziergają
+zabaw
 zam
 święto
 żędowicach
