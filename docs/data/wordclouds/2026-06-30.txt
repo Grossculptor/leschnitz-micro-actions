@@ -1,3 +1,4 @@
+balcarz
 behind
 budowę
 był
@@ -20,6 +21,7 @@ leschnitz
 local
 majątkowe
 married
+miesiąc
 nabor
 native
 need
@@ -43,6 +45,7 @@ story
 straży
 strz
 strzelcach
+tornadzie
 true
 ulic
 untold
