@@ -1,10 +1,14 @@
+behind
 budowę
 był
 closures
 club
 cuts
+deacons
+diocese
 dla
 dyrekto
+grief
 hide
 hides
 informacja
@@ -15,7 +19,9 @@ leader
 leschnitz
 local
 majątkowe
+married
 nabor
+native
 need
 nie
 opolskiego
@@ -27,6 +33,7 @@ pięk
 piłkarskiej
 power
 pożarnej
+prądu
 remains
 road
 settler
@@ -42,4 +49,5 @@ untold
 voices
 wieczór
 wynikach
+wyłączenia
 zakończono
