@@ -1,12 +1,15 @@
 bojówka
+czerwca
 dla
 dni
 dyżurny
 gdzie
 grad
+groźny
 invader
 koncerty
 koniec
+lasu
 mask
 mayor
 ogłoszenie
@@ -15,10 +18,13 @@ opolskiego
 oppeln
 ostrzeżenie
 piłek
+pod
 podczas
 postępowan
 power
+pożar
 prasy
+prasówka
 propaganda
 przegląd
 rada
@@ -39,4 +45,6 @@ wiatr
 wielkości
 woj
 wyniku
+zawadzki
+zesta
 znów

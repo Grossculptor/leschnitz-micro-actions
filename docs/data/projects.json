@@ -81,6 +81,16 @@
     "hash": "4b2a362ba51b3a77bfade72fdce99faed78b6850"
   },
   {
+    "title": "What story remains untold in Prasówka z czerwca 2026. Zesta...?",
+    "datetime": "2026-07-01T15:36:58+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Prasówka z czerwca 2026. Zestawienie najważniejszych wydarzeń miesiąca. Zobacz, czy jesteś na bieżąco",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/prasowka-z-czerwca-2026-zestawienie-najwazniejszych-wydarzen-miesiaca-zobacz-czy-jestes-na-biezaco/ar/c1p1-29145077",
+    "hash": "a40ea3b9edb59ad40d03901c29a3eae4f36a284e"
+  },
+  {
     "title": "What story remains untold in Strzelecki dyżurny znów skutec...?",
     "datetime": "2026-07-01T14:29:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -109,6 +119,16 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/grad-wielkosci-pilek-i-wiatr-do-130-km-h-nad-region-nadchodza-gwaltowne-burze/ar/c1p2-29143569",
     "hash": "1f37e706b416896f7a6f4d712ed02a32602bf3ef"
+  },
+  {
+    "title": "What story remains untold in Groźny pożar lasu pod Zawadzki...?",
+    "datetime": "2026-07-01T10:48:17+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Groźny pożar lasu pod Zawadzkiem. Do akcji wkroczyli strażacy i śmigłowiec",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/grozny-pozar-lasu-pod-zawadzkiem-do-akcji-wkroczyli-strazacy-i-smiglowiec/ar/c1p2-29143011",
+    "hash": "d43b4d7ac670b6759a604e572dc4d7ff54895c8c"
   },
   {
     "title": "Does the Rada’s Uchwała mask the mayor’s unchecked power?",
