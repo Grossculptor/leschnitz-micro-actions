@@ -57,6 +57,13 @@
     "hash": "68d6148d7990d5ded36af341ae5162962038d28e"
   },
   {
+    "title": "Does Leschnitz’s garden grant mask the naboru truth?",
+    "datetime": "2026-07-10T10:00:00+02:00",
+    "description": "At the municipal park in Leschnitz, lay a circle of freshly cut rosemary and pine needles around the empty plot reserved for the ‘family garden grant’. As the scent drifts, hand out handwritten notes that list the exact number of rejected wniosków from the recent naboru, inviting passersby to whisper the names of families left out. The quiet murmur turns the bureaucratic silence into a shared breath, reminding the town of the voices the Invader’s paperwork erased.",
+    "source": "https://bip.lesnica.pl/15936/informacja-z-rozstrzygniecia-naboru-wnioskow-o-udzielenie-dotacji-celowejze-srodkow-budzetu-gminy-lesnica-dla-rodzinnych-ogrodkow-dzialkowych.html",
+    "hash": "c18f5d51276cdfa71301ef910fc8d158f6bb7a40"
+  },
+  {
     "title": "What story remains untold in Ostrzeżenie dla Opolskiego 20....?",
     "datetime": "2026-07-05T12:00:00+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -65,6 +72,13 @@
     "fallback_used": true,
     "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-20-06-2026-07-05-alert-rcb-burze/ar/c1p1-19803805",
     "hash": "b2968be63b0554e4451d6e3e62dde0da92ff3132"
+  },
+  {
+    "title": "Who profits from the free star‑cinema in Kolonowskie?",
+    "datetime": "2026-07-02T10:00:00+02:00",
+    "description": "At dusk, scatter dried pine needles and lavender around the library steps before the “Kino pod gwiazdami”. Invite passersby to pick a blank leaf‑page from a hidden stack and write the name of a forgotten Silesian voice. The resin scent mingles with popcorn, a soft lantern glows, and the free summer attraction becomes a quiet, fragrant protest that asks who really benefits.",
+    "source": "https://www.strzelce360.pl/artykul/11792,moc-atrakcji-na-wakacje-w-gminie-kolonowskie-co-znalazlo-sie-w-programie",
+    "hash": "4b2a362ba51b3a77bfade72fdce99faed78b6850"
   },
   {
     "title": "Does the Rada’s Uchwała mask the mayor’s unchecked power?",
@@ -79,6 +93,46 @@
     "description": "At dawn, lay a thin line of white chalk on the LZS Staniszcze Wielkie field, tracing the exact relay route. Sprinkle dried sage and pine resin along it so a cool, earthy scent rises as the sun climbs. Invite local Silesian elders to walk the line, whispering stories of displaced families while the fire brigade’s banners flutter. Capture the fading footprints and lingering aroma, then submit the images to the municipal BIP as a quiet call for acknowledgment.",
     "source": "https://www.strzelce360.pl/artykul/11757,sztafeta-bojowka-i-zar-z-nieba-za-nami-zawody-strazackie-w-gminie-kolonowskie",
     "hash": "e4dbb5de6ee5f28d5484757d6d744df8163d9bd0"
+  },
+  {
+    "title": "What story remains untold in Woj. Oppeln - gdzie są utrudni...?",
+    "datetime": "2026-07-01T06:36:15+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Woj. opolskie - gdzie są utrudnienia w ruchu? Sprawdź, gdzie są remonty i inne zdarzenia 1.07.2026",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/woj-opolskie-gdzie-sa-utrudnienia-w-ruchu-sprawdz-gdzie-sa-remonty-i-inne-zdarzenia-1-07-2026/ar/c1p1-19949817",
+    "hash": "e5bba9792b3a92536363fcdcc69e638c2164a57a"
+  },
+  {
+    "title": "What story remains untold in Koncerty podczas Dni Strzelec ...?",
+    "datetime": "2026-07-01T06:34:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Koncerty podczas Dni Strzelec Opolskich tanie nie były. Ale bywało drożej",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11791,koncerty-podczas-dni-strzelec-opolskich-tanie-nie-byly-ale-bywalo-drozej",
+    "hash": "58816bef3486702c0bff9db0e87fc3b96f456d84"
+  },
+  {
+    "title": "What story remains untold in Ostrzeżenie dla Opolskiego 01....?",
+    "datetime": "2026-07-01T04:24:11+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ostrzeżenie dla Opolskiego 01.07.2026 09:55. Gwałtowne wzrosty stanów wody/1 Odra gór",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-01-07-2026-09-55-gwaltowne-wzrosty-stanow-wody-1-odra-gor/ar/c1p1-19803805",
+    "hash": "0af975a4dae42369954ff809c2875f017b8ce36d"
+  },
+  {
+    "title": "What story remains untold in Przegląd prasy ze Strzelec Opo...?",
+    "datetime": "2026-07-01T03:55:20+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Przegląd prasy ze Strzelec Opolskich. Sprawdź najważniejsze informacje z wczoraj. Prasówka 1.07.2026",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/przeglad-prasy-ze-strzelec-opolskich-sprawdz-najwazniejsze-informacje-z-wczoraj-prasowka-1-07-2026/ar/c1p1-19739151",
+    "hash": "ac191e824103638e87e660de2d3117528f9e9e42"
   },
   {
     "title": "What story remains untold in Wyłączenia prądu w Strzelcach ...?",
