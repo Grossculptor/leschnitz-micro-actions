@@ -81,11 +81,51 @@
     "hash": "4b2a362ba51b3a77bfade72fdce99faed78b6850"
   },
   {
+    "title": "What story remains untold in Strzelecki dyżurny znów skutec...?",
+    "datetime": "2026-07-01T14:29:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Strzelecki dyżurny znów skuteczny. Zatrzymał złodzieja podczas urlopu",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11794,strzelecki-dyzurny-znow-skuteczny-zatrzymal-zlodzieja-podczas-urlopu",
+    "hash": "1f2cd03b1f525891b6e2589a64d462471b528980"
+  },
+  {
+    "title": "What story remains untold in Ogłoszenie o wyniku postępowan...?",
+    "datetime": "2026-07-01T14:02:12+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ogłoszenie o wyniku postępowania dot.: \"Przebudowa, nadbudowa oraz termomodernizacja Publicznego Przedszkola w Leśnicy\"",
+    "fallback_used": true,
+    "source": "https://bip.lesnica.pl/15942/ogloszenie-o-wyniku-postepowania-dot-przebudowa-nadbudowa-oraz-termomodernizacja-publicznego-przedszkola-w-lesnicy.html",
+    "hash": "ae7ac5a0420527cb96a397f50c0ffcada61537af"
+  },
+  {
+    "title": "What story remains untold in Grad wielkości piłek i wiatr d...?",
+    "datetime": "2026-07-01T11:58:07+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Grad wielkości piłek i wiatr do 130 km/h. Nad region nadchodzą gwałtowne burze",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/grad-wielkosci-pilek-i-wiatr-do-130-km-h-nad-region-nadchodza-gwaltowne-burze/ar/c1p2-29143569",
+    "hash": "1f37e706b416896f7a6f4d712ed02a32602bf3ef"
+  },
+  {
     "title": "Does the Rada’s Uchwała mask the mayor’s unchecked power?",
     "datetime": "2026-07-01T10:00:00+02:00",
     "description": "In the town square of Leschnitz, lay a thin wooden board bearing the full text of the Uchwała granting absolution to the mayor. Drape the board with a veil of dried lavender; its sweet scent drifts, coaxing passersby to pause, read, and feel the weight of omission. Nearby, leave a pine‑scented envelope addressed to the Rada Miejskiej, containing a formal request for the meeting minutes. The aroma and quiet gesture invite citizens to sense what is hidden.",
     "source": "https://bip.lesnica.pl/15897/uchwala-nr-xxviii17326rady-miejskiej-w-lesnicyz-dnia-22-czerwca-2026-rw-sprawie-udzielenia-absolutorium-burmistrzowi-lesnicy.html",
     "hash": "86ce19cbc2af4b6ca5ef780dfc8e48b42c8bf8da"
+  },
+  {
+    "title": "What story remains untold in Koniec taniego tankowania. Spr...?",
+    "datetime": "2026-07-01T09:45:52+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Koniec taniego tankowania. Sprawdziliśmy, gdzie na Opolszczyźnie zapłacisz najmniej",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/koniec-taniego-tankowania-sprawdzilismy-gdzie-na-opolszczyznie-zaplacisz-najmniej/ar/c1p2-29142873",
+    "hash": "06656c8cd58fa67dcea942793dc315c8ea786726"
   },
   {
     "title": "Does the Sztafeta mask bojówka propaganda for the Invader?",
