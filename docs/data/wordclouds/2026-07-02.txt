@@ -7,6 +7,7 @@ free
 gross
 izbicka
 kolonowskie
+krym
 ksiądz
 lake
 marek
@@ -14,6 +15,7 @@ nie
 nową
 opolskiego
 ostrzeżenie
+polski
 prasy
 profits
 remains
@@ -22,6 +24,8 @@ story
 strehlitz
 untold
 wcisło
+wpadł
+wrócił
 zyskają
 światowej
 żyje
