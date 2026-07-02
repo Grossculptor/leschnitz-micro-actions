@@ -74,11 +74,38 @@
     "hash": "b2968be63b0554e4451d6e3e62dde0da92ff3132"
   },
   {
+    "title": "Does the Gross Strehlitz prasy conceal the dried lake?",
+    "datetime": "2026-07-02T10:00:00+02:00",
+    "description": "At sunrise, spread a thin row of cotton pads soaked in the lake‑bed mud along the empty basin in Gross Strehlitz. The pads release a faint, earthy scent that lingers in the cool air. Beside each pad, place a small folded note that asks: “Why does the wójt’s alarm sound empty while the water disappears?” Passersby inhale, read, and are reminded of the forgotten river, exposing the PR silence and honoring the memory of the indigenous community that once relied on these waters.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/przeglad-prasy-2-07-2026-strzelce-opolskie-zobacz-wczorajsza-prasowke-poznaj-najwazniejsze-informacje-ze-strzelec-opolskich/ar/c1p1-19739151",
+    "hash": "abe974787a9d3af632dca01906bd182a5f910653"
+  },
+  {
     "title": "Who profits from the free star‑cinema in Kolonowskie?",
     "datetime": "2026-07-02T10:00:00+02:00",
     "description": "At dusk, scatter dried pine needles and lavender around the library steps before the “Kino pod gwiazdami”. Invite passersby to pick a blank leaf‑page from a hidden stack and write the name of a forgotten Silesian voice. The resin scent mingles with popcorn, a soft lantern glows, and the free summer attraction becomes a quiet, fragrant protest that asks who really benefits.",
     "source": "https://www.strzelce360.pl/artykul/11792,moc-atrakcji-na-wakacje-w-gminie-kolonowskie-co-znalazlo-sie-w-programie",
     "hash": "4b2a362ba51b3a77bfade72fdce99faed78b6850"
+  },
+  {
+    "title": "What story remains untold in Z Izbicka do światowej czołówk...?",
+    "datetime": "2026-07-02T06:29:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Z Izbicka do światowej czołówki. Świetne występy tancerzy Niro Dance School",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11798,z-izbicka-do-swiatowej-czolowki-swietne-wystepy-tancerzy-niro-dance-school",
+    "hash": "c1d809f1a0b5353ab73e28814f9cdda857ed4a10"
+  },
+  {
+    "title": "What story remains untold in Gross Strehlitz zyskają nową p...?",
+    "datetime": "2026-07-02T06:05:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Strzelce Opolskie zyskają nową przestrzeń. Powstanie pole do disc golfa",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11797,strzelce-opolskie-zyskaja-nowa-przestrzen-powstanie-pole-do-disc-golfa",
+    "hash": "0a7aa74561ebd3fbbc3c454da4e921a307f30829"
   },
   {
     "title": "What story remains untold in Zakaz wejścia na staw w Jemiel...?",
