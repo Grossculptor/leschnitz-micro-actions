@@ -1,6 +1,12 @@
 garden
 grant
+hide
+indigenous
+komisji
 leschnitz
 mask
 naboru
+pleas
+protocol
+skarg
 truth
