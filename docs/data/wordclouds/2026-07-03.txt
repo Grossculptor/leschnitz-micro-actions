@@ -1,9 +1,12 @@
 badge
 bans
+bas
+bezpłatny
 cost
 dla
 dzieci
 hide
+jest
 lifelong
 nowa
 police
@@ -18,3 +21,4 @@ strzelce
 treat
 true
 untold
+wakacje
