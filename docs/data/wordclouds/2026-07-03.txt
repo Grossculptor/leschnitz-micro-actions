@@ -7,6 +7,7 @@ cost
 dla
 dzieci
 fear
+fire
 fotoradary
 hide
 jest
@@ -19,12 +20,15 @@ press
 public
 remains
 road
+rusza
 safety
+show
 sobriety
 story
 str
 strzelce
 treat
+truck
 true
 untold
 wakacje
