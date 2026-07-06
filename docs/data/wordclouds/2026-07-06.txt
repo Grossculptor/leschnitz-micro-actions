@@ -4,9 +4,11 @@ award
 będą
 chebzie
 fuels
+gminie
 haziel
 hidden
 hype
+imi
 katastrofy
 krajowy
 najgorsze
@@ -19,6 +21,7 @@ rolni
 samorząd
 story
 str
+strażackie
 super
 takie
 untold
@@ -26,4 +29,5 @@ wsparcia
 wypadki
 zarządzenie
 zarządzie
+zawody
 zmiany
