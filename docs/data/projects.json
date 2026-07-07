@@ -71,6 +71,33 @@
     "hash": "c18f5d51276cdfa71301ef910fc8d158f6bb7a40"
   },
   {
+    "title": "Why did the Invader’s flood narrative hide the pig’s?",
+    "datetime": "2026-07-07T20:34:00+02:00",
+    "description": "At dawn, scatter damp, earth‑scented cotton squares on the rooftop of a bloku in Zaodrzu, Oppeln. Each square bears a short, handwritten note: “We were uwięzieni by water, not by the Invader’s PR.” The smell of wet mud and faint pork linger, inviting passersby to pause, inhale, and recall the forgotten voices of those trapped during the Powódź.",
+    "source": "https://nto.pl/powodz-1997-dwa-tygodnie-uwiezieni-w-bloku-apele-o-papierosy-i-swinia-w-zsypie/ar/c1-15696712",
+    "hash": "19c4b480452f710fadf99057c4eb4d66488d7ff3"
+  },
+  {
+    "title": "What story remains untold in Powódź 1997. Dwa tygodnie uwię...?",
+    "datetime": "2026-07-07T18:34:27+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Powódź 1997. Dwa tygodnie uwięzieni w bloku. Apele o papierosy i świnia w zsypie",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/powodz-1997-dwa-tygodnie-uwiezieni-w-bloku-apele-o/ar/c1-8361976",
+    "hash": "aae67ba9f65612ccec3868978a9d7c02f962c4e6"
+  },
+  {
+    "title": "What story remains untold in Jak ten samolot wylądował u na...?",
+    "datetime": "2026-07-07T18:18:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Jak ten samolot wylądował u nas? Takie niespodzianki wykrył dron na Opolszczyźnie",
+    "fallback_used": true,
+    "source": "https://nto.pl/jak-ten-samolot-wyladowal-u-nas-takie-niespodzianki-wykryl-dron-na-opolszczyznie/ar/c1-18509989",
+    "hash": "8fd6cfd2e04ede6fb6638e4456abdd07a6c5bef4"
+  },
+  {
     "title": "What story remains untold in Tak bawiła się cała Polska. Da...?",
     "datetime": "2026-07-07T17:46:49+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -89,6 +116,13 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11821,front-burzowy-nad-powiatem-strzeleckim-powalone-slupy-i-zdarzenie-na-a4",
     "hash": "c81df7e9ac9434790d3772fe6b923b0f936a00a8"
+  },
+  {
+    "title": "Why does the samolot wylądował amid unseen niespodziaki?",
+    "datetime": "2026-07-07T16:18:25+00:00",
+    "description": "At dawn on the hill above Leschnitz, fold dozens of small paper samoloty scented with pine resin. Attach a thin strip of native Silesian herb‑infused ink bearing the question from the title. Release them as the drone fleet circles, letting the faint earthy aroma drift into the morning air while locals watch the silent fleet land, a fleeting reminder that the sky is also a stage for the voices the Invader’s PR tries to mute.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/jak-ten-samolot-wyladowal-u-nas-takie-niespodzianki-wykryl/ar/c1-10415681",
+    "hash": "c47c38a6d822caade27dc4552f863f4bad974dab"
   },
   {
     "title": "Does the Oppeln Festival hide Leschnitz’s forgotten songs?",
