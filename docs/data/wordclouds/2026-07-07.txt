@@ -1,7 +1,10 @@
 burze
+bypass
 civic
 decision
+displacement
 długu
+hidden
 hit
 komunal
 locals
@@ -17,9 +20,11 @@ remains
 silence
 spór
 story
+strzelec
 trwa
 turystyczny
 untold
+veil
 warning
 zabytkowym
 zapadła
