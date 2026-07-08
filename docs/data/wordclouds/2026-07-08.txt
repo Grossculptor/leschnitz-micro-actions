@@ -1,6 +1,8 @@
 gmin
+informacja
 miasta
 odwiedzi
+oferty
 oppeln
 przysięgę
 remains
@@ -9,6 +11,7 @@ rzeka
 samo
 story
 untold
+wyborze
 zarośnięta
 złożą
 żołnierze
