@@ -71,6 +71,33 @@
     "hash": "c18f5d51276cdfa71301ef910fc8d158f6bb7a40"
   },
   {
+    "title": "Why does the state mask forgotten road crash victims?",
+    "datetime": "2026-07-09T18:45:00+02:00",
+    "description": "At dawn, lay a thin line of white cotton ribbons soaked in pine‑scented oil along the forgotten crash stretch near Leschnitz. As the mist lifts, the faint resin aroma mingles with the cold asphalt, inviting passers‑by to pause, read a small card that lists the names erased from official reports, and place a fresh flower. Each added ribbon quietly records the absent, turning the road into a living memorial that the bureaucracy cannot easily archive.",
+    "source": "https://nto.pl/zapomniane-katastrofy-drogowe-kolejowe-i-lotnicze-kleski-zywiolowe-pochlonely-wiele-ludzkich-istnien/ar/c1-15878421",
+    "hash": "8a68dda3fb3c9c46785bd203d0c8ff4e33c8f3aa"
+  },
+  {
+    "title": "What story remains untold in Tak kiedyś wyglądały nasze dro...?",
+    "datetime": "2026-07-09T17:32:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Tak kiedyś wyglądały nasze drogi. Były zmorą kierowców: dziurawe, wąskie i niebezpieczne",
+    "fallback_used": true,
+    "source": "https://nto.pl/tak-kiedys-wygladaly-nasze-drogi-byly-zmora-kierowcow-dziurawe-waskie-i-niebezpieczne/ar/c1-17614009",
+    "hash": "9dd96839f76f6c76d223889132c437a02171eb7f"
+  },
+  {
+    "title": "What story remains untold in Zapomniane katastrofy drogowe,...?",
+    "datetime": "2026-07-09T16:32:31+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Zapomniane katastrofy drogowe, kolejowe i lotnicze, klęski żywiołowe. Pochłonęły wiele ludzkich istnień",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/zapomniane-katastrofy-drogowe-kolejowe-i-lotnicze-kleski/ar/c1-8525123",
+    "hash": "400eb83a042747143d92af714c32af588caf2b5b"
+  },
+  {
     "title": "What story remains untold in Informacja z otwarcia ofert do...?",
     "datetime": "2026-07-09T12:06:21+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
