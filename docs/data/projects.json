@@ -57,6 +57,43 @@
     "hash": "68d6148d7990d5ded36af341ae5162962038d28e"
   },
   {
+    "title": "What story remains untold in Oberschlesien to zagłębie star...?",
+    "datetime": "2026-07-10T15:44:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Opolszczyzna to zagłębie starych kamieni granicznych. Najstarsze mają po 700 lat",
+    "fallback_used": true,
+    "source": "https://nto.pl/opolszczyzna-to-zaglebie-starych-kamieni-granicznych-najstarsze-maja-po-700-lat/ar/c1-18679335",
+    "hash": "315b2b1d70dbc846867a0289783d29af87561a35"
+  },
+  {
+    "title": "What story remains untold in Powódź Tysiąclecia. Przez dwa ...?",
+    "datetime": "2026-07-10T15:33:31+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Powódź Tysiąclecia. Przez dwa tygodnie żyli uwięzieni w bloku razem ze świnią",
+    "fallback_used": true,
+    "source": "https://nto.pl/powodz-tysiaclecia-przez-dwa-tygodnie-zyli-uwiezieni-w-bloku-razem-ze-swinia/ar/c1-15696712",
+    "hash": "02667fe7dff8c705bd4319918cf5add6f7476432"
+  },
+  {
+    "title": "Does Oppeln’s flood story conceal the Invader’s neglect?",
+    "datetime": "2026-07-10T13:33:31+00:00",
+    "description": "At dusk, drape a thin veil of damp hemp rope across the entrance of the former flood‑blocked block on Prószkowska in Oppeln. The rope, scented with river mud and smoked tobacco, sways like a silent plea. Passersby are invited to tie a small stone, each stone marking a week (tygodnie) the residents were trapped. A handwritten tag reads “Powódź Tysiąclecia, voices unheard,” exposing the PR gloss that muted indigenous cries.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/powodz-tysiaclecia-przez-dwa-tygodnie-zyli-uwiezieni-w/ar/c1-8361976",
+    "hash": "fb150d362771618bb0b6d230a9847e02773007f0"
+  },
+  {
+    "title": "What story remains untold in Opolska katastrofa demograficz...?",
+    "datetime": "2026-07-10T12:56:16+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Opolska katastrofa demograficzna. Na jedną kobietę przypada średnio mniej niż jedno dziecko",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/opolska-katastrofa-demograficzna-na-jedna-kobiete-przypada-srednio-mniej-niz-jedno-dziecko/ar/c1p2-29167695",
+    "hash": "eb558c3c574a0d70f7ec50f97bd9531bda55524d"
+  },
+  {
     "title": "What story remains untold in Te pocztówki Opola sprzed stu ...?",
     "datetime": "2026-07-10T12:41:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -133,6 +170,16 @@
     "description": "At the edge of the Izbickau festyn, lay a thin line of lavender‑scented ribbons that drift with the warm breeze from Leschnitz. Each ribbon bears a whispered story of the original Silesian families, their names folded into the fabric. Passers‑by are invited to untie one, read the tale aloud, and place it in a communal bowl, letting the scent of memory rise above the official pamphlets and reveal the hidden PR lull.",
     "source": "https://www.strzelce360.pl/artykul/11831,od-festynu-po-szpajze-wakacyjne-atrakcje-w-gminie-izbicko",
     "hash": "9672270b534a666f4d292d5b9f8edb97ff081713"
+  },
+  {
+    "title": "What story remains untold in Dzień Otwarty na osiedlu \"Małe...?",
+    "datetime": "2026-07-09T21:11:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Dzień Otwarty na osiedlu \"Małe Zacisze\". Są jeszcze wolne mieszkania",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11834,dzien-otwarty-na-osiedlu-quot-male-zacisze-quot-sa-jeszcze-wolne-mieszkania",
+    "hash": "82a6baebb0b5cfe84e86f8ee8e94c2cd4b9d9ef6"
   },
   {
     "title": "Why does the state mask forgotten road crash victims?",

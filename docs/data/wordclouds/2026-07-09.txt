@@ -8,6 +8,7 @@ doczekał
 dro
 drogowe
 dust
+dzień
 forgotten
 funds
 gminie
@@ -19,6 +20,7 @@ kiedyś
 klucz
 leschnitz
 mask
+małe
 mieszkanie
 młodzież
 nasze
@@ -26,7 +28,9 @@ nowego
 ofert
 opolska
 opolskich
+osiedlu
 otwarcia
+otwarty
 plac
 policja
 pro
