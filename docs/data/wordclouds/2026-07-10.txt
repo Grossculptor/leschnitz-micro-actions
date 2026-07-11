@@ -17,10 +17,12 @@ izby
 jakie
 katastrofa
 komisji
+komżach
 lane
 left
 leschnitz
 mask
+min
 naboru
 neglect
 nowe
@@ -30,6 +32,7 @@ opola
 opolska
 oppeln
 paciulok
+piłkarze
 pleas
 pocztówki
 powódź
@@ -44,6 +47,7 @@ story
 strażacy
 strehlitz
 stu
+sukces
 summer
 truth
 tysiąclecia
