@@ -57,6 +57,16 @@
     "hash": "68d6148d7990d5ded36af341ae5162962038d28e"
   },
   {
+    "title": "What story remains untold in Ostrzeżenie dla Opolskiego 13....?",
+    "datetime": "2026-07-13T14:48:12+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ostrzeżenie dla Opolskiego 13.07.2026 16:36. Susza hydrologiczna",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-13-07-2026-16-36-susza-hydrologiczna/ar/c1p1-19803805",
+    "hash": "e8987f337e56037342a9188802768e537919fadf"
+  },
+  {
     "title": "What story remains untold in To będzie twój nowy proboszcz ...?",
     "datetime": "2026-07-13T13:29:33+00:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -75,6 +85,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11849,wielka-impreza-pod-wiata-w-gasiorowicach-nie-bylo-miejsca-na-nude",
     "hash": "4dee4a23fca159ebc305c490f5cfeb2112bd586e"
+  },
+  {
+    "title": "What story remains untold in Najpierw budowa sieci wodociąg...?",
+    "datetime": "2026-07-13T08:13:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Najpierw budowa sieci wodociągowej, potem remont drogi w Dziewkowicach",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11850,najpierw-budowa-sieci-wodociagowej-potem-remont-drogi-w-dziewkowicach",
+    "hash": "ad3cc9c53bfc0e5c1189eede51a66d9123868a86"
   },
   {
     "title": "What story remains untold in Gross Strehlitz coraz bardziej...?",
