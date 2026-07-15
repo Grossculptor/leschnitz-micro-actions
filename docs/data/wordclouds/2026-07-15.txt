@@ -1,8 +1,10 @@
+auc
 dla
 drogi
 laur
 małgorzaty
 meadow
+niemowlę
 nowa
 opols
 opolski
@@ -16,6 +18,7 @@ profits
 remains
 remont
 ruszył
+samo
 staniszc
 story
 strzelcach
@@ -25,4 +28,5 @@ usługa
 wielolet
 wyśmienita
 zabawa
+zamkniętym
 zmiany
