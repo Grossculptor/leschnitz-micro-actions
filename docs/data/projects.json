@@ -64,6 +64,26 @@
     "hash": "e0436f0380a9697b8bfc07f5e9d953f0613fb8af"
   },
   {
+    "title": "What story remains untold in Są zmiany personalne w opolski...?",
+    "datetime": "2026-07-15T09:29:39+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Są zmiany personalne w opolskich parafiach. Biskup już zdecydował",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/sa-zmiany-personalne-w-opolskich-parafiach-biskup-juz-zdecydowal/ar/c1p2-29068151",
+    "hash": "4dc27aba69a9bc16d228b9d4b9a75c5160932c48"
+  },
+  {
+    "title": "What story remains untold in Ostrzeżenie dla Opolskiego 15....?",
+    "datetime": "2026-07-15T07:18:09+00:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Ostrzeżenie dla Opolskiego 15.07.2026 09:10. Silny deszcz z burzami",
+    "fallback_used": true,
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-15-07-2026-09-10-silny-deszcz-z-burzami/ar/c1p1-19803805",
+    "hash": "7489a8b22744bf3e22695d8199aabf3409821a99"
+  },
+  {
     "title": "What story remains untold in Nowa usługa w Strzelcach Opols...?",
     "datetime": "2026-07-15T07:10:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -82,6 +102,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11858,ruszyl-remont-drogi-w-staniszczach-wielkich-kilka-miesiecy-utrudnien",
     "hash": "b3a41f98720611530ec972f674871196dfd62dca"
+  },
+  {
+    "title": "What story remains untold in Pożegnanie i laur dla wielolet...?",
+    "datetime": "2026-07-15T05:20:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Pożegnanie i laur dla wieloletniej dyrektorki szkoły w Kielczy",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11859,pozegnanie-i-laur-dla-wieloletniej-dyrektorki-szkoly-w-kielczy",
+    "hash": "73d068bfd88e258e142be201d606d7dad1569ab4"
   },
   {
     "title": "What does prison PR hide about smuggled lives?",
