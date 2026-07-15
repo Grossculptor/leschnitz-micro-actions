@@ -19,6 +19,7 @@ personalne
 porcelanowa
 pożegnanie
 profits
+prądu
 remains
 remont
 ruszył
@@ -30,6 +31,7 @@ tłumy
 untold
 usługa
 wielolet
+wyłączenia
 wyśmienita
 zabawa
 zamkniętym
