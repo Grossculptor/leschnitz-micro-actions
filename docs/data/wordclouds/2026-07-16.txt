@@ -9,6 +9,7 @@ dwa
 hidden
 hides
 imielnitz
+imiona
 kadłubie
 latka
 leschnitz
@@ -16,11 +17,13 @@ leśnicy
 medycynę
 miej
 możliwości
+naj
 ogłoszenie
 opolski
 opolskiego
 oppeln
 ostrzeżenie
+polacy
 remains
 remont
 się
@@ -36,6 +39,7 @@ trening
 tyle
 unieważnieniu
 untold
+wybierają
 zabawy
 zarabia
 zdobyli
