@@ -1,0 +1,5 @@
+local
+mask
+potańcówka
+residents
+wishes
