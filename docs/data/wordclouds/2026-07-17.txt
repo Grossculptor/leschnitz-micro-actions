@@ -5,6 +5,7 @@ burze
 danger
 dla
 dwa
+fin
 gain
 hide
 kręcimy
@@ -20,6 +21,7 @@ pod
 podziemny
 potańcówka
 premii
+protokół
 pół
 remains
 residents
