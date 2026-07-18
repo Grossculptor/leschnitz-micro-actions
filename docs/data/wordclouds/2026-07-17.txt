@@ -27,6 +27,7 @@ protokół
 pół
 remains
 residents
+rol
 row
 storm
 story
