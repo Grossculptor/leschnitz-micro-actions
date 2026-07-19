@@ -8,6 +8,7 @@ dwa
 fin
 gain
 hide
+inf
 integrują
 kręcimy
 local
