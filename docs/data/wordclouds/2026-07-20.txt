@@ -1,13 +1,20 @@
+burger
+było
 celebrate
 displaced
 dojazd
 droga
+fabryka
 fallen
 gdzie
 ignoring
+mebli
 mieszkańcy
+muł
 nowa
 oppeln
+pierwszy
+pięknie
 remains
 starego
 story
@@ -18,3 +25,5 @@ utrudni
 while
 wieża
 woj
+znik
+został

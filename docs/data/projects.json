@@ -64,6 +64,16 @@
     "hash": "cb373a1dfcf5925452d9a341d72c273a51fb39e9"
   },
   {
+    "title": "What story remains untold in Fabryka mebli, pierwszy Burger...?",
+    "datetime": "2026-07-20T09:03:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Fabryka mebli, pierwszy Burger King, kultowe nocne kluby. Tak jeszcze niedawno wyglądało życie w Opolu",
+    "fallback_used": true,
+    "source": "https://nto.pl/fabryka-mebli-pierwszy-burger-king-kultowe-nocne-kluby-tak-jeszcze-niedawno-wygladalo-zycie-w-opolu/ar/c1-17549615",
+    "hash": "6e94ecc1c568ecbafb034c253ee124bf81db63e9"
+  },
+  {
     "title": "What story remains untold in Mieszkańcy Starego Ujazdu i Ni...?",
     "datetime": "2026-07-20T07:12:00+02:00",
     "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
@@ -72,6 +82,16 @@
     "fallback_used": true,
     "source": "https://www.strzelce360.pl/artykul/11880,mieszkancy-starego-ujazdu-i-niezdrowic-pielegnuja-dawne-tradycje",
     "hash": "1be60e542919eeb026727a276688ae2525def7d9"
+  },
+  {
+    "title": "What story remains untold in Było pięknie, został muł. Znik...?",
+    "datetime": "2026-07-20T07:06:00+02:00",
+    "description": "[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
+    "needs_regeneration": true,
+    "original_title": "Było pięknie, został muł. Znika krajobraz dawnej Jemielnicy",
+    "fallback_used": true,
+    "source": "https://www.strzelce360.pl/artykul/11879,bylo-pieknie-zostal-mul-znika-krajobraz-dawnej-jemielnicy",
+    "hash": "1cfb57cb42f56a1fee0c6a1bbc95f361c544df4e"
   },
   {
     "title": "What story remains untold in Nowa droga usprawni dojazd do ...?",
