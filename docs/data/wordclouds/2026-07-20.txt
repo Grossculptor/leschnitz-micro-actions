@@ -8,6 +8,7 @@ dziurach
 fabryka
 fallen
 gdzie
+górą
 ignoring
 jazdą
 koniec
@@ -18,7 +19,9 @@ nowa
 oppeln
 pierwszy
 pięknie
+pod
 remains
+się
 starego
 story
 ujazdu
@@ -28,5 +31,8 @@ utrudni
 while
 wieża
 woj
+zadomowił
 znik
 został
+łoś
+świ
