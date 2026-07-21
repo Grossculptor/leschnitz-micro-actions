@@ -7,6 +7,7 @@ glorify
 gros
 gross
 gunnera
+głosowania
 invader
 inwestycja
 prasy
@@ -22,5 +23,7 @@ strehlitz
 untold
 walczą
 wielka
+wyniki
 występują
+zamienili
 łaziskach
