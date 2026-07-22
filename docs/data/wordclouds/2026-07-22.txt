@@ -1,6 +1,10 @@
 chooses
+contract
 gross
+kitchen
 leschnitz
+mute
+native
 our
 prasówka
 remains
@@ -8,4 +12,5 @@ schools
 story
 strehlitz
 untold
+voices
 ósmoklasiści
