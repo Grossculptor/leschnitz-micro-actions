@@ -3,6 +3,7 @@ chooses
 contract
 gminy
 gross
+górą
 kitchen
 leschnitz
 medal
@@ -11,6 +12,7 @@ nasi
 native
 odkrywa
 our
+pod
 powalczą
 prasówka
 remains
@@ -23,5 +25,8 @@ ujazd
 untold
 voices
 wyczuł
+zamieszkał
 zareagował
 ósmoklasiści
+łoś
+święte
