@@ -3,13 +3,17 @@ contract
 gross
 kitchen
 leschnitz
+medal
 mute
+nasi
 native
 our
+powalczą
 prasówka
 remains
 schools
 story
+strażacy
 strehlitz
 untold
 voices
