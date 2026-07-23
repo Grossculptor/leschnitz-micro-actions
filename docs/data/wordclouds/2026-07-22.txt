@@ -1,6 +1,8 @@
 alkohol
+atra
 chooses
 contract
+festyn
 gminy
 gross
 górą
@@ -21,6 +23,7 @@ seniorzy
 story
 strażacy
 strehlitz
+szymiszowie-wsi
 ujazd
 untold
 voices
