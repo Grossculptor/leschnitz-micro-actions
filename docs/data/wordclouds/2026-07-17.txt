@@ -5,6 +5,7 @@ burze
 danger
 dla
 dwa
+dyrektora
 fin
 gain
 hide
@@ -15,6 +16,7 @@ local
 mask
 miesz
 miliona
+obwieszczenie
 opolskiego
 oppeln
 ostrzeżenie
@@ -26,6 +28,7 @@ potańcówka
 premii
 protokół
 pół
+region
 remains
 residents
 rol
