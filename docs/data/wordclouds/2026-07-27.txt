@@ -3,12 +3,14 @@ duties
 hide
 hospital
 inventory
+jemielnicy
 leśnicy
 likwidacji
 mają
 międzynarodow
 motives
 nasi
+nauka
 oddziałów
 parkingowa
 podróże
@@ -16,6 +18,7 @@ policji
 powiatowe
 powstańców
 profits
+psp
 remains
 shift
 silent
@@ -28,6 +31,7 @@ tak
 untold
 widmo
 wojna
+wycho
 wyglądać
 śląskich
 święto
