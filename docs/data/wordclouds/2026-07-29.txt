@@ -1,5 +1,8 @@
+bez
 jemielnicy
+kalinowice
 kino
+krytyc
 nowe
 ostrzeżenie
 plac
@@ -8,6 +11,7 @@ pojawiło
 remains
 się
 siłownia
+sołtysa
 story
 strefa
 untold
