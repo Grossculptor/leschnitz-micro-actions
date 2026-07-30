@@ -187,7 +187,26 @@ on every push and before every scheduled pipeline run.
    workflow (`regenerate_safe.yml`) now fails loudly — it was never selective.**
    To regenerate a subset, work from `suppressed.json`'s `original_title`, never
    from `description` (which is the placeholder text for purged items).
-7. **Alarms:** `scripts/check_data_health.py` runs last in `scrape.yml` and fails on
+7. **⚠ Only `pipeline.py` got the 2026-07-30 fix.** These scripts are manual-run
+   only (no workflow invokes them) but they write **directly into
+   `docs/data/projects.json`**, bypassing `validate_micro()`, the quarantine and the
+   health check — and each hardcodes the model with no `reasoning_effort`:
+
+   | Script | `max_tokens` | |
+   |--------|--------------|---|
+   | `fix_truncated_titles.py` | **200** | tighter than the 1000 that caused the flood |
+   | `regenerate_titles.py` | **200** | same |
+   | `regenerate_all_content.py` | 600 | |
+   | `regenerate_batch.py` | 600 | |
+   | `import_unverified.py` | 1000 | model is a default arg |
+   | `pipeline_debug.py` | 1000 | hardcodes `llama-3.1-70b-versatile`, which Groq no longer serves |
+
+   Running one today would very likely write empty or truncated text onto the live
+   site. Before using any of them, raise `max_tokens` to ≥800 and add
+   `reasoning_effort: 'low'` — or better, route them through `pipeline.py`'s
+   `_groq_chat`, which is now the single place model and budget are configured
+   (`GROQ_MODEL` env var overrides the default).
+8. **Alarms:** `scripts/check_data_health.py` runs last in `scrape.yml` and fails on
    any published placeholder, >25 items awaiting retry, or >30% of a run's relevance
    decisions coming from the keyword fallback. An off-box canary on the Hetzner box
    (`/home/datasculptor/leschnitz-canary.py`, every 30 min) checks the *published*
