@@ -20,6 +20,12 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+
+      # Costs no API calls and takes about a second. If an invariant is broken,
+      # stop here rather than discovering it in the published data.
+      - name: Invariant selftest
+        run: python scripts/selftest.py
+
       - name: Run pipeline
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -33,7 +39,8 @@ jobs:
           # the per-item retry counter resets every run and failed items are retried
           # forever instead of being suppressed after 3 attempts.
           git add data docs/data/projects.json docs/data/wordclouds \
-                  docs/data/quarantine.json docs/data/suppressed.json
+                  docs/data/quarantine.json docs/data/suppressed.json \
+                  docs/data/last_run.json
           git commit -m "Auto: scrape + micros @ $(date -u +'%Y-%m-%dT%H:%MZ')" || echo "no changes"
           git push
 
