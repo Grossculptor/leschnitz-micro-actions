@@ -21,7 +21,6 @@ gąsiorowic
 hikes
 history
 indigenous
-informacja
 ink
 invader
 leschnitz
@@ -32,17 +31,14 @@ memory
 minutes
 monuments
 occupier
-ofert
 old
 once
 others
-otwarcia
 paint
 parish
 perfume
 pockets
 profits
-remains
 safety
 salary
 settlement
@@ -52,10 +48,8 @@ silence
 smell
 spoke
 statut
-story
 strategy
 times
-untold
 uphill
 voices
 volunteers

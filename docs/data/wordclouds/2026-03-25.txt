@@ -1,6 +1,4 @@
 benefits
-biometanowni
-budowa
 claim
 crafts
 cries
@@ -14,12 +12,8 @@ names
 new
 only
 profits
-remains
 saviours
 settler
-story
 street
 uniformed
-untold
-warmątow
 while

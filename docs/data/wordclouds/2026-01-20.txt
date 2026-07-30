@@ -6,7 +6,6 @@ christmas
 clerk
 concrete
 decides
-decyzji
 disappear
 erase
 erases
@@ -29,7 +28,6 @@ permission
 piotrówka
 plant
 players
-remains
 returns
 road
 sceptre
@@ -44,11 +42,8 @@ story
 thief
 tree
 trees
-untold
 usurpers
 while
 whose
-wniosek
-wydanie
 year
 zabrze
