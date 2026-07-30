@@ -37,7 +37,7 @@ python scripts/archive_manager.py
 ```
 
 ### GitHub Deployment
-- Scraping workflow runs every 6 hours via cron
+- Scraping workflow runs every 3 hours via cron (`.github/workflows/scrape.yml`)
 - Pipeline auto-commits to repository
 - GitHub Pages deploys from /docs directory
 - Manual regeneration available via GitHub Actions workflow
@@ -156,11 +156,56 @@ Use `python3 scripts/encode_prompt.py` to generate base64 encoding.
 - Audit trail in data/raw folders
 - System prompt reads from env var first, then local file
 
+## Invariants — do not break these (added 2026-07-30)
+
+Read `scripts/selftest.py` first: it encodes these as executable tests and runs in CI
+on every push and before every scheduled pipeline run.
+
+1. **A failed generation must never become a published item.** Items whose
+   generation failed go to `docs/data/quarantine.json`, are retried next run, and
+   after 3 attempts move to `docs/data/suppressed.json`. Never write a fallback or
+   placeholder into `projects.json`. The old fallback wrote poetic
+   `[NEEDS REGENERATION]` text that *looked like content*, which is why nobody
+   noticed for 3.5 months — a failure path must never resemble the success path.
+2. **`suppressed.json` must stay wired into the dedup sets**, or the 894 purged
+   placeholders return. The first run after the purge re-scraped 29 of them.
+   Match on exact normalized URL and hash only — never add suppressed URLs to
+   `existing_raw_urls`, which fuzzy-matches slugs at 0.80–0.85 and would then block
+   every future `ostrzezenie-dla-opolskiego-*` warning as a near-duplicate.
+3. **`scrape.yml` must keep committing `quarantine.json`.** The runner is ephemeral;
+   without it the retry counter resets every run and nothing ever gets suppressed.
+4. **`validate_micro()` runs only on newly generated items, never retroactively.**
+   Hand-edited items legitimately break its rules (longer descriptions, the author's
+   own word choices). `VALIDATION_MODE=shadow` reports without dropping;
+   `enforce` routes failures to quarantine.
+5. **Never truncate a description with a bare slice.** Use
+   `smart_truncate_description()`. The old `[:500]` left 745 published items ending
+   mid-word.
+6. **`pipeline.py --regenerate` rewrites EVERY item's title and description** and
+   has never honoured `docs/data/regenerate_list.json`. It requires
+   `REGENERATE_ALL_CONFIRM=yes`. This means the **"Safe Selective Regeneration"
+   workflow (`regenerate_safe.yml`) now fails loudly — it was never selective.**
+   To regenerate a subset, work from `suppressed.json`'s `original_title`, never
+   from `description` (which is the placeholder text for purged items).
+7. **Alarms:** `scripts/check_data_health.py` runs last in `scrape.yml` and fails on
+   any published placeholder, >25 items awaiting retry, or >30% of a run's relevance
+   decisions coming from the keyword fallback. An off-box canary on the Hetzner box
+   (`/home/datasculptor/leschnitz-canary.py`, every 30 min) checks the *published*
+   site and opens a `[canary]` issue — it is the only check that survives this
+   workflow being disabled or silently unscheduled.
+
 ## Critical Implementation Notes
 
 ### API Configuration
 - **NEVER use urllib for Groq API** - Cloudflare blocks it, use requests library
-- **Current Model**: `moonshotai/Kimi-K2-Instruct-0905` (case-sensitive)
+- **Current Model**: `openai/gpt-oss-120b`, overridable with the `GROQ_MODEL` env var
+- **A model swap is never a one-line change.** `gpt-oss-120b` bills hidden reasoning
+  tokens against `max_tokens`, so a budget that was fine for Kimi-K2 makes it return
+  `content: ""`. Commit `ad939808` swapped only the model string and left
+  `max_tokens: 1000` with no `reasoning_effort`: 894 placeholder items over 3.5
+  months, every workflow run reporting success. When changing models, audit
+  `max_tokens` and `reasoning_effort` at every callsite and run one real item through
+  the pipeline before pushing.
 - **GitHub Secrets Required**: GROQ_API_KEY and SYSTEM_PROMPT (base64 encoded)
 - **System Prompt Location**: `secrets/SYSTEM_PROMPT.local.txt`
 
