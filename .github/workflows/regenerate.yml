@@ -26,6 +26,10 @@ jobs:
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           SYSTEM_PROMPT: ${{ secrets.SYSTEM_PROMPT }}
+          # This workflow legitimately intends to rewrite every item (the dispatch
+          # input already requires typing "yes"). regenerate_safe.yml does not set
+          # this and will now fail loudly rather than rewrite the whole archive.
+          REGENERATE_ALL_CONFIRM: "yes"
         run: |
           echo "Starting regeneration of all micro actions..."
           python scripts/pipeline.py --regenerate

@@ -356,33 +356,52 @@ def _groq_chat(messages, model="openai/gpt-oss-120b"):
         "User-Agent": "Leschnitz-MicroActions/1.0"
     }
     
+    # gpt-oss-120b bills hidden reasoning tokens against max_tokens. With a tight
+    # budget and no reasoning_effort cap it spends everything on reasoning and
+    # returns content:"" -- which looks like a successful call but yields no JSON.
+    # This is what produced ~75% fallback items from 2026-04-17 onwards.
     payload = {
         "model": model,
         "messages": messages,
         "temperature": 0.7,
-        "max_tokens": 1000
+        "max_tokens": 2000,
+        "reasoning_effort": "low"
     }
-    
-    try:
-        print(f"DEBUG: Sending request to Groq API...")
-        response = SESSION.post(
-            "https://api.groq.com/openai/v1/chat/completions",
-            headers=headers,
-            json=payload,
-            timeout=60
-        )
-        print(f"DEBUG: Groq API response status: {response.status_code}")
-        response.raise_for_status()
-        result = response.json()
-        print(f"DEBUG: Groq API call successful")
-        return result
-    except requests.HTTPError as e:
-        if e.response.text:
-            print(f"Groq API Error: {e.response.text}")
-        raise
-    except Exception as e:
-        print(f"Error calling Groq API: {e}")
-        raise
+
+    last_err = None
+    for attempt in range(1, 4):
+        try:
+            print(f"DEBUG: Sending request to Groq API (attempt {attempt}/3)...")
+            response = SESSION.post(
+                "https://api.groq.com/openai/v1/chat/completions",
+                headers=headers,
+                json=payload,
+                timeout=60
+            )
+            print(f"DEBUG: Groq API response status: {response.status_code}")
+            # Retry transient failures instead of burning the item on one hiccup
+            if response.status_code == 429 or response.status_code >= 500:
+                raise requests.HTTPError(
+                    f"transient {response.status_code}: {response.text[:200]}",
+                    response=response)
+            response.raise_for_status()
+            result = response.json()
+            print(f"DEBUG: Groq API call successful")
+            return result
+        except (requests.HTTPError, requests.RequestException, ValueError) as e:
+            last_err = e
+            status = getattr(getattr(e, "response", None), "status_code", None)
+            # 4xx other than 429 is a request problem: retrying will not help
+            if status is not None and 400 <= status < 500 and status != 429:
+                print(f"Groq API Error (non-retryable {status}): {getattr(e.response, 'text', '')[:300]}")
+                raise
+            if attempt < 3:
+                backoff = 2 ** attempt
+                print(f"WARN: Groq call failed ({e}); retrying in {backoff}s")
+                time.sleep(backoff)
+
+    print(f"ERROR: Groq API failed after 3 attempts: {last_err}")
+    raise RuntimeError(f"Groq API unavailable after 3 attempts: {last_err}")
 
 def _extract_json(text:str):
     # Robust JSON extractor: take first {...} block
@@ -433,17 +452,37 @@ Published: {item.get('published','')}
 Available keywords: {kws}
 Content: {item.get('summary') or (item.get('content') or '')[:400]}
 Return JSON only."""
-    try:
-        out = _groq_chat([{"role":"system","content":sys},{"role":"user","content":user}])
-        js = _extract_json(out["choices"][0]["message"]["content"])
-        if {"title","datetime","description"}.issubset(js.keys()):
-            js["title"] = smart_truncate_title(normalize_german_places(js["title"]))
-            js["description"] = normalize_german_places(js["description"])[:500]
-            return js
-    except Exception as e:
-        print(f"WARN: Generation failed for '{item.get('title','')[:50]}...': {e}")
-    # Fallback: create generic micro action when AI fails
-    print(f"WARN: Using fallback generation - item needs manual review")
+    reason = "unknown"
+    for attempt in range(1, 3):
+        msgs = [{"role":"system","content":sys},{"role":"user","content":user}]
+        if attempt > 1:
+            # Second pass: be blunt about the contract. Cheap insurance against a
+            # single malformed or empty completion costing us the whole item.
+            msgs.append({"role":"user","content":
+                'Your previous reply was unusable. Reply with ONE JSON object and nothing '
+                'else: {"title": "...", "datetime": "...", "description": "..."}'})
+        try:
+            out = _groq_chat(msgs)
+            content = (out["choices"][0]["message"].get("content") or "").strip()
+            if not content:
+                reason = "empty_content"
+                print(f"WARN: Groq returned empty content (attempt {attempt}/2)")
+                continue
+            js = _extract_json(content)
+            if {"title","datetime","description"}.issubset(js.keys()):
+                js["title"] = smart_truncate_title(normalize_german_places(js["title"]))
+                js["description"] = normalize_german_places(js["description"])[:500]
+                return js
+            reason = "unparseable_json"
+            print(f"WARN: Groq reply missing required keys (attempt {attempt}/2)")
+        except Exception as e:
+            reason = f"api_error: {e}"
+            print(f"WARN: Generation failed for '{item.get('title','')[:50]}...': {e}")
+            break
+    # Quarantine marker. main() keeps items carrying fallback_used OUT of
+    # projects.json (see quarantine handling) so this placeholder text can never
+    # reach the published site again.
+    print(f"WARN: Generation unsuccessful ({reason}) - item goes to quarantine, not to the site")
     title_base = normalize_german_places(item.get("title",""))[:40]
     return {
         "title": f"What story remains untold in {title_base[:30]}...?",
@@ -451,11 +490,22 @@ Return JSON only."""
         "description": f"[NEEDS REGENERATION] Visit the location mentioned in recent news. Document what the official narrative excludes. Notice the silence between words, the spaces where indigenous memory persists. Return with evidence of what refuses to be erased.",
         "needs_regeneration": True,
         "original_title": item.get("title",""),
-        "fallback_used": True
+        "fallback_used": True,
+        "fallback_reason": reason
     }
 
 def regenerate_existing():
     """Regenerate all existing micro actions with new prompt system"""
+    # This rewrites the title AND description of EVERY item in projects.json,
+    # manually edited ones included. regenerate_safe.yml calls it expecting
+    # docs/data/regenerate_list.json to be honoured -- it never has been, so that
+    # "safe selective" workflow would in fact rewrite the whole archive. Require an
+    # explicit opt-in so it fails loudly instead of silently destroying good data.
+    if os.getenv("REGENERATE_ALL_CONFIRM") != "yes":
+        print("ERROR: --regenerate rewrites the title AND description of EVERY item in projects.json.")
+        print("ERROR: It is NOT selective - docs/data/regenerate_list.json is ignored.")
+        print("ERROR: Refusing to run without REGENERATE_ALL_CONFIRM=yes in the environment.")
+        raise SystemExit(1)
     print(f"INFO: Starting regeneration mode at {dt.datetime.utcnow().isoformat()}")
     
     # Check API key
@@ -528,6 +578,65 @@ def regenerate_existing():
     print(f"INFO: Failed: {failed} items")
     print(f"INFO: Saved to {projects_file}")
 
+QUARANTINE_FILE = DOCS / "quarantine.json"
+SUPPRESSED_FILE = DOCS / "suppressed.json"
+MAX_GENERATION_ATTEMPTS = 3
+
+def _load_json_list(path):
+    """Read a JSON list, tolerating a missing or malformed file."""
+    if path.exists():
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(data, list):
+                return data
+            print(f"WARN: {path.name} is not a JSON list - ignoring")
+        except Exception as e:
+            print(f"WARN: Could not read {path.name}: {e}")
+    return []
+
+def _save_json_list(path, rows):
+    path.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+
+def partition_generated(micros, quarantine, suppressed, now=None):
+    """Split freshly generated micros into publishable ones and quarantined ones.
+
+    Failed generations never reach projects.json. A quarantined item is retried on
+    the next run (its URL is absent from projects.json, so it still looks new);
+    after MAX_GENERATION_ATTEMPTS it is suppressed for good. This is what makes it
+    structurally impossible for "[NEEDS REGENERATION]" to appear on the site.
+
+    `quarantine` is a dict keyed by hash and `suppressed` a list; both are mutated
+    in place. Returns (publishable, quarantined_this_run).
+    """
+    now = now or dt.datetime.utcnow().isoformat()
+    good, quarantined_now = [], 0
+    for m in micros:
+        if not m.get("fallback_used"):
+            if quarantine.pop(m.get("hash"), None):
+                print(f"INFO: Recovered from quarantine on retry: {m.get('title','')[:50]}...")
+            good.append(m)
+            continue
+        h = m.get("hash")
+        rec = quarantine.get(h) or {
+            "hash": h,
+            "source": m.get("source"),
+            "original_title": m.get("original_title") or "",
+            "published": m.get("datetime"),
+            "attempts": 0,
+            "first_seen": now,
+        }
+        rec["attempts"] = rec.get("attempts", 0) + 1
+        rec["last_attempt"] = now
+        rec["last_reason"] = m.get("fallback_reason", "unknown")
+        if rec["attempts"] >= MAX_GENERATION_ATTEMPTS:
+            quarantine.pop(h, None)
+            suppressed.append({**rec, "reason": "generation_failed", "suppressed_at": now})
+            print(f"INFO: Suppressed after {rec['attempts']} failed attempts: {rec['original_title'][:60]}")
+        else:
+            quarantine[h] = rec
+            quarantined_now += 1
+    return good, quarantined_now
+
 def main():
     print(f"INFO: Starting pipeline at {dt.datetime.utcnow().isoformat()}")
     
@@ -579,10 +688,20 @@ def main():
         except Exception as e:
             print(f"WARN: Could not load existing projects.json: {e}")
     
+    # Suppressed = sources that must never re-enter projects.json: the placeholder
+    # items purged on 2026-07-30, plus anything that failed generation
+    # MAX_GENERATION_ATTEMPTS times. Matched on exact normalized URL / hash only --
+    # deliberately NOT fed to the fuzzy cross-domain check below, which would then
+    # block every future weather warning as an 0.85-similar slug.
+    suppressed = _load_json_list(SUPPRESSED_FILE)
+    suppressed_sources = {normalize_url(s.get("source", "")) for s in suppressed if s.get("source")}
+    if suppressed:
+        print(f"INFO: Loaded {len(suppressed)} suppressed sources (will not be re-added)")
+
     # Build set of existing normalized source URLs and raw URLs for cross-domain check
-    existing_sources = {normalize_url(item.get("source", "")) for item in existing if item.get("source")}
+    existing_sources = {normalize_url(item.get("source", "")) for item in existing if item.get("source")} | suppressed_sources
     existing_raw_urls = [item.get("source", "") for item in existing if item.get("source")]
-    
+
     all_items = []
     seen_urls = set()  # Track URLs seen in this pipeline run
     print(f"INFO: Processing {len(FEEDS)} feeds...")
@@ -677,14 +796,25 @@ def main():
                 "fallback_used": True
             })
 
+    # Keep failed generations out of projects.json entirely (see partition_generated)
+    quarantine = {q.get("hash"): q for q in _load_json_list(QUARANTINE_FILE) if q.get("hash")}
+    micros, quarantined_now = partition_generated(micros, quarantine, suppressed)
+    _save_json_list(QUARANTINE_FILE, list(quarantine.values()))
+    _save_json_list(SUPPRESSED_FILE, suppressed)
+    print(f"INFO: {quarantined_now} item(s) quarantined this run; "
+          f"{len(quarantine)} awaiting retry; {len(suppressed)} suppressed total")
+
     # Merge with existing projects (already loaded at the beginning)
     DOCS.mkdir(parents=True, exist_ok=True)
-    
+
     # Create sets for deduplication based on both hash AND normalized source URL
-    existing_hashes = {item.get("hash") for item in existing if item.get("hash")}
-    existing_sources = {normalize_url(item.get("source", "")) for item in existing if item.get("source")}
+    # (suppressed entries included so purged placeholders cannot come back)
+    existing_hashes = ({item.get("hash") for item in existing if item.get("hash")}
+                       | {s.get("hash") for s in suppressed if s.get("hash")})
+    existing_sources = ({normalize_url(item.get("source", "")) for item in existing if item.get("source")}
+                        | {normalize_url(s.get("source", "")) for s in suppressed if s.get("source")})
     existing_raw_urls = [item.get("source", "") for item in existing if item.get("source")]
-    
+
     # Add only new micros (not already in existing by hash OR normalized source)
     new_micros = []
     skipped_count = 0

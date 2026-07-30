@@ -29,6 +29,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data docs/data/projects.json docs/data/wordclouds
+          # quarantine.json MUST be committed: the runner is ephemeral, so without it
+          # the per-item retry counter resets every run and failed items are retried
+          # forever instead of being suppressed after 3 attempts.
+          git add data docs/data/projects.json docs/data/wordclouds \
+                  docs/data/quarantine.json docs/data/suppressed.json
           git commit -m "Auto: scrape + micros @ $(date -u +'%Y-%m-%dT%H:%MZ')" || echo "no changes"
           git push
+
+      # Runs last, after the push, so a red run is the alarm rather than a gate:
+      # quarantine state still persists and healthy items still publish, but a
+      # broken generator can no longer fail silently for months.
+      - name: Data health check
+        run: python scripts/check_data_health.py
