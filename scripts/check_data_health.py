@@ -19,6 +19,9 @@ PLACEHOLDER_TAG = "[NEEDS REGENERATION]"
 # More than this many items waiting on a retry means generation is broken, not
 # that one article was awkward.
 QUARANTINE_ALARM = 25
+# Share of a run's relevance decisions allowed to come from the keyword fallback
+# before the editorial gate counts as degraded.
+HEURISTIC_ALARM = 0.30
 
 
 def load_list(path):
@@ -32,10 +35,22 @@ def load_list(path):
         return []
 
 
+def load_obj(path):
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return data if isinstance(data, dict) else {}
+    except Exception as e:
+        print(f"WARN: could not read {path.name}: {e}")
+        return {}
+
+
 def main():
     items = load_list(DOCS / "projects.json")
     quarantine = load_list(DOCS / "quarantine.json")
     suppressed = load_list(DOCS / "suppressed.json")
+    run = load_obj(DOCS / "last_run.json")
 
     placeholders = [i for i in items
                     if i.get("needs_regeneration")
@@ -66,6 +81,25 @@ def main():
             f"{len(quarantine)} items awaiting retry (alarm above {QUARANTINE_ALARM}) - "
             "generation is failing systematically. Check max_tokens / reasoning_effort "
             "in _groq_chat and the Groq model's availability.")
+
+    # Classifier degradation. The keyword fallback decides what enters the archive
+    # at all and leaves no mark on the item, so a Groq outage silently changes the
+    # editorial gate. Ratio, not count: a run with 2 items proves nothing.
+    heur = run.get("classified_by_heuristic")
+    pre = run.get("preselected") or 0
+    if heur is not None and pre >= 10:
+        ratio = heur / pre
+        print(f"heuristic gate       : {heur}/{pre} ({ratio:.0%})")
+        if ratio > HEURISTIC_ALARM:
+            failures.append(
+                f"{ratio:.0%} of classifications fell back to the keyword heuristic "
+                f"(alarm above {HEURISTIC_ALARM:.0%}). Relevance filtering is degraded, "
+                "so off-topic items are entering the archive unmarked.")
+    elif heur is not None:
+        print(f"heuristic gate       : {heur}/{pre} (too few items to judge)")
+
+    if run.get("validation_mode") == "shadow":
+        print("validation mode      : shadow (reporting only - not yet enforcing)")
 
     if failures:
         print()

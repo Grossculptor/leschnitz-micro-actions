@@ -99,6 +99,105 @@ def smart_truncate_title(text:str, min_len:int=45, max_len:int=58)->str:
     # Fallback: hard cut at min_len
     return text[:min_len].rstrip() + '?'
 
+def smart_truncate_description(text:str, limit:int=500)->str:
+    """Truncate a description at a sentence (or word) boundary.
+
+    The previous `[:limit]` slice cut mid-word: 745 of the 2564 items on the site
+    are exactly 500 characters and end in the middle of a word. Always returns
+    text closed with terminal punctuation.
+    """
+    text = (text or "").strip()
+    if len(text) <= limit:
+        return text
+    window = text[:limit]
+    end = max(window.rfind(". "), window.rfind("! "), window.rfind("? "),
+              window.rfind("."), window.rfind("!"), window.rfind("?"))
+    if end >= limit // 2:          # keep at least half the budget of real text
+        return window[:end + 1].strip()
+    cut = window.rfind(" ")
+    if cut <= 0:
+        return window
+    return window[:cut].rstrip(" ,;:-–—") + "."
+
+# Validation of generated items. Every rule here was measured against the 2564
+# known-good items on the site before being enabled; the whole set rejects 6 of
+# them, and all 6 are genuinely defective (one entirely empty card, three
+# truncated datetimes, one Polish description, one 'colonial'). A rule that
+# rejected a meaningful share of good output would starve the site, not guard it.
+FORBIDDEN_SUBSTRINGS = ("datasculptor", "colonial", "[needs regeneration]")
+BARE_POLISH_PLACE = re.compile(r"Leśnic|Strzelce Opolskie|\bOpol(e|u)\b")
+MOJIBAKE = re.compile(r"Ã|â€")
+# Polish function words: a handful in quoted source phrases is intended, a
+# descriptionful of them means the model answered in the wrong language.
+POLISH_FUNCTION_WORDS = re.compile(
+    r"\b(jest|nie|oraz|który|która|dla|przez|tego|jako|zostanie|będzie|wszystk)\w*\b", re.I)
+
+def validate_micro(item:dict)->list:
+    """Return a list of reasons the item is unfit to publish (empty == fit)."""
+    problems = []
+    title = (item.get("title") or "").strip()
+    desc = (item.get("description") or "").strip()
+    blob = f"{title} {desc}"
+
+    if not title:
+        problems.append("empty title")
+    if not desc:
+        problems.append("empty description")
+    if desc and len(desc) < 40:
+        problems.append(f"description too short ({len(desc)} chars)")
+    if len(desc) > 500:
+        problems.append(f"description too long ({len(desc)} chars)")
+    if desc and desc[-1] not in '.?!")…':
+        problems.append("description ends mid-sentence")
+    for bad in FORBIDDEN_SUBSTRINGS:
+        if bad in blob.lower():
+            problems.append(f"forbidden text {bad!r}")
+    if MOJIBAKE.search(blob):
+        problems.append("encoding damage")
+    if len(POLISH_FUNCTION_WORDS.findall(desc)) >= 5:
+        problems.append("description is not in English")
+    return problems
+
+def advise_micro(item:dict)->list:
+    """Non-blocking observations: logged, never a reason to drop an item.
+
+    Bare Polish place names live here rather than in validate_micro because the
+    rule cannot tell a missed normalisation from a proper noun -- of the three live
+    items it flags, one is the festival "Roztańczony Leśnicki Ryneczek", where the
+    Polish name is the event's actual title. Gating on that would discard real
+    coverage of local events to satisfy a cosmetic rule.
+    """
+    notes = []
+    blob = f"{item.get('title') or ''} {item.get('description') or ''}"
+    if BARE_POLISH_PLACE.search(blob):
+        notes.append("contains a Polish place name (check normalisation, or a proper noun)")
+    return notes
+
+def repair_datetime(value, fallback):
+    """Return a sane ISO datetime, preferring the feed's own published date.
+
+    The model invents the `datetime` field, and it gets this wrong in two ways:
+    truncated offsets ("2026-04-12T13:16:00+02:") and dates far in the future,
+    which sort to the top of the site and pin themselves there. Mechanically
+    repairable, so repair rather than discard an otherwise good item.
+    """
+    def parse(v):
+        try:
+            p = dparser.parse(str(v))
+            return p if p.tzinfo else p.replace(tzinfo=dt.timezone.utc)
+        except Exception:
+            return None
+    now = dt.datetime.now(dt.timezone.utc)
+    got = parse(value)
+    if got is not None and got <= now + dt.timedelta(hours=36):
+        return value
+    alt = parse(fallback)
+    if alt is not None and alt <= now + dt.timedelta(hours=36):
+        print(f"INFO: repaired datetime {value!r} -> {fallback!r} (feed published date)")
+        return fallback
+    print(f"INFO: repaired datetime {value!r} -> now (no usable feed date)")
+    return now.isoformat()
+
 def sha1(s:str)->str:
     return hashlib.sha1(s.encode("utf-8","ignore")).hexdigest()
 
@@ -344,7 +443,19 @@ def _read_system_prompt()->str:
         return p.read_text(encoding="utf-8")
     raise RuntimeError("SYSTEM_PROMPT missing: provide env var or secrets/SYSTEM_PROMPT.local.txt")
 
-def _groq_chat(messages, model="openai/gpt-oss-120b"):
+# Model is env-overridable so a bad or withdrawn model can be rolled back without a
+# commit (the pattern prosto and lesnica already use). Groq withdrew
+# moonshotai/Kimi-K2 without notice on 2026-04-14; the swap that replaced it is
+# what caused the 2026-04..07 placeholder flood.
+GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+
+# "shadow" logs what enforcement would reject without acting; "enforce" routes
+# failing items to quarantine. Starts in shadow so the real false-positive rate on
+# freshly generated items can be read off a live run before it can drop anything.
+VALIDATION_MODE = os.getenv("VALIDATION_MODE", "shadow")
+
+def _groq_chat(messages, model=None):
+    model = model or GROQ_MODEL
     print(f"DEBUG: Making Groq API call with model {model}")
     api_key = os.environ.get('GROQ_API_KEY')
     if not api_key:
@@ -435,12 +546,18 @@ Content: {(item.get('content') or '')[:1200]}
         js = _extract_json(text)
         # minimal validation
         if "relevant" in js:
+            js["classified_by"] = "llm"
             return js
     except Exception as e:
         print(f"WARN: Classification failed for '{item.get('title','')[:50]}...': {e}")
-    # Fallback heuristic
+    # Heuristic fallback. This decides what enters the archive at all, and unlike a
+    # generation failure it leaves no trace on the item -- during the 2026-04..07
+    # outage it silently admitted drought alerts and power-cut notices. The
+    # behaviour is kept (a keyword gate is a reasonable degraded mode) but the
+    # decision is now labelled and counted so it cannot degrade in silence.
+    print(f"WARN: Classification fell back to keyword heuristic for '{item.get('title','')[:50]}...'")
     return {"relevant": ("bip.lesnica.pl" in (item.get("source") or "") or strong_keyword_hit(item.get("title","")+item.get("summary","")+item.get("content",""))),
-            "why":"heuristic fallback","places_german":[]}
+            "why":"heuristic fallback","places_german":[],"classified_by":"heuristic"}
 
 def generate_micro(item:dict)->dict:
     sys = _read_system_prompt() + """
@@ -471,7 +588,20 @@ Return JSON only."""
             js = _extract_json(content)
             if {"title","datetime","description"}.issubset(js.keys()):
                 js["title"] = smart_truncate_title(normalize_german_places(js["title"]))
-                js["description"] = normalize_german_places(js["description"])[:500]
+                js["description"] = smart_truncate_description(
+                    normalize_german_places(js["description"]))
+                js["datetime"] = repair_datetime(js.get("datetime"), item.get("published"))
+                for note in advise_micro(js):
+                    print(f"NOTE: {note}")
+                problems = validate_micro(js)
+                if not problems:
+                    return js
+                if VALIDATION_MODE == "enforce":
+                    reason = "validation: " + "; ".join(problems)
+                    print(f"WARN: item rejected by validator (attempt {attempt}/2): {problems}")
+                    continue
+                # Shadow mode: report what enforcement would have done, publish anyway.
+                print(f"SHADOW: validator WOULD REJECT (attempt {attempt}/2): {problems}")
                 return js
             reason = "unparseable_json"
             print(f"WARN: Groq reply missing required keys (attempt {attempt}/2)")
@@ -597,6 +727,65 @@ def _load_json_list(path):
 def _save_json_list(path, rows):
     path.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
 
+# A real article, kept in-repo so the pipeline can prove end-to-end that it can
+# still turn a source item into a publishable micro action BEFORE it touches
+# projects.json. Deliberately a weather/traffic notice: that is the exact class
+# that failed for three and a half months.
+PREFLIGHT_FIXTURE = {
+    "title": "Ostrzeżenie dla Opolskiego. Utrudnienia w ruchu na DK46 w Leśnicy",
+    "summary": ("Zarząd dróg informuje o utrudnieniach w ruchu na drodze krajowej 46 "
+                "w okolicach Leśnicy. Prace potrwają do końca tygodnia."),
+    "published": "2026-01-15T09:00:00+00:00",
+    "link": "https://example.invalid/preflight-fixture",
+    "source": "https://example.invalid/preflight-fixture",
+}
+
+def preflight_generation():
+    """Abort the run if the generator cannot produce one valid item.
+
+    The 2026-04-17 model swap degraded ~75% of output for 3.5 months while every
+    workflow run reported success, because nothing ever asserted that generation
+    still worked. One API call converts that into a run that fails immediately.
+    """
+    print("INFO: Preflight - generating one fixture micro action...")
+    micro = generate_micro(dict(PREFLIGHT_FIXTURE))
+    if micro.get("fallback_used"):
+        raise RuntimeError(
+            f"Preflight generation failed ({micro.get('fallback_reason')}). "
+            "Refusing to run: the generator is broken, so this run would quarantine "
+            "or degrade everything it touched. Check max_tokens / reasoning_effort in "
+            f"_groq_chat and that model {GROQ_MODEL!r} still exists on Groq.")
+    problems = validate_micro(micro)
+    if problems:
+        # In shadow mode this is informational; enforcement would drop real items.
+        msg = f"Preflight item failed validation: {problems}"
+        if VALIDATION_MODE == "enforce":
+            raise RuntimeError(msg + " - refusing to run.")
+        print(f"SHADOW: {msg}")
+    print(f"INFO: Preflight OK -> {micro.get('title')}")
+    return micro
+
+def check_model_available():
+    """Warn (never abort) if the configured model is absent from Groq's live list.
+
+    Groq withdrew Kimi-K2 with no notice on 2026-04-14 and the pipeline simply
+    started failing every call. Warn-only: a shape change in this endpoint must
+    never be able to stop the pipeline by itself.
+    """
+    try:
+        r = SESSION.get("https://api.groq.com/openai/v1/models",
+                        headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}"},
+                        timeout=20)
+        r.raise_for_status()
+        ids = [m.get("id") for m in r.json().get("data", [])]
+        if ids and GROQ_MODEL not in ids:
+            print(f"WARN: model {GROQ_MODEL!r} is NOT in Groq's live model list. "
+                  f"It may have been withdrawn. Available: {sorted(i for i in ids if i)[:8]}...")
+        else:
+            print(f"INFO: model {GROQ_MODEL!r} confirmed available on Groq")
+    except Exception as e:
+        print(f"WARN: could not verify model availability ({e}) - continuing")
+
 def partition_generated(micros, quarantine, suppressed, now=None):
     """Split freshly generated micros into publishable ones and quarantined ones.
 
@@ -668,10 +857,16 @@ def main():
         print(f"ERROR: API connectivity test failed: {e}")
         print("ERROR: The Groq API is not accessible. Check:")
         print("  1. GROQ_API_KEY is valid")
-        print("  2. The model 'openai/gpt-oss-120b' is available")
+        print(f"  2. The model {GROQ_MODEL!r} is available")
         print("  3. Your account has credits/access")
         raise RuntimeError(f"Cannot proceed without working API: {e}")
-    
+
+    # Reachability is not capability: the API answered for 3.5 months while
+    # generation was broken. Prove the generator still works before scraping.
+    check_model_available()
+    preflight_generation()
+    print(f"INFO: Validation mode: {VALIDATION_MODE}")
+
     batch_ts = ts_now()
     raw_dir = RAW / batch_ts
     rel_dir = RELEVANT / batch_ts
@@ -753,6 +948,7 @@ def main():
             (raw_dir / (sha1(url)+"_error.txt")).write_text(str(e), encoding="utf-8")
 
     relevant=[]
+    heuristic_classifications = 0
     print(f"INFO: Processing {len(all_items)} scraped items for relevance...")
     preselected = [it for it in all_items if it.get("preselect")]
     print(f"INFO: {len(preselected)} items passed preselection filter")
@@ -762,13 +958,18 @@ def main():
         try:
             cls = classify_with_kimi(it)
             print(f"INFO: Classification result: relevant={cls.get('relevant')}")
+            if cls.get("classified_by") == "heuristic":
+                heuristic_classifications += 1
             if cls.get("relevant"):
                 it["places_german"] = cls.get("places_german", [])
+                it["classified_by"] = cls.get("classified_by", "llm")
                 relevant.append(it)
         except Exception as e:
             print(f"WARN: Classification failed, using fallback: {e}")
+            heuristic_classifications += 1
             if "bip.lesnica.pl" in (it.get("source") or ""):
                 it["places_german"]=[]
+                it["classified_by"] = "heuristic"
                 relevant.append(it)
     (rel_dir / "relevant.json").write_text(json.dumps(relevant, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -781,6 +982,10 @@ def main():
             print(f"INFO: Generated micro action successfully")
             m["source"] = it.get("link") or it.get("source")
             m["hash"] = it.get("id")
+            # Provenance: only stamped when the item got in via the degraded keyword
+            # gate, so the archive records how it was admitted.
+            if it.get("classified_by") == "heuristic":
+                m["classified_by"] = "heuristic"
             micros.append(m)
         except Exception as e:
             print(f"WARN: Generation failed, using fallback: {e}")
@@ -850,6 +1055,30 @@ def main():
     print(f"INFO: Generated {len(micros)} micro actions, {len(new_micros)} were new")
     print(f"INFO: Total micro actions in database: {len(combined)}")
     print(f"INFO: Output saved to {projects_file}")
+
+    # Run summary, same idea as prosto's /health. Two consumers: check_data_health.py
+    # in this workflow, and an off-box canary that needs to answer "is this pipeline
+    # still alive and still producing good output?" without trusting the pipeline to
+    # report its own failure.
+    (DOCS / "last_run.json").write_text(json.dumps({
+        "finished_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "model": GROQ_MODEL,
+        "validation_mode": VALIDATION_MODE,
+        "feeds": len(FEEDS),
+        "scraped": len(all_items),
+        "preselected": len(preselected),
+        "relevant": len(relevant),
+        "classified_by_heuristic": heuristic_classifications,
+        "generated_ok": len(micros),
+        "added_to_site": len(new_micros),
+        "duplicates_skipped": skipped_count,
+        "quarantined_this_run": quarantined_now,
+        "awaiting_retry": len(quarantine),
+        "suppressed_total": len(suppressed),
+        "total_items": len(combined),
+        "newest_item": combined[0].get("datetime") if combined else None,
+    }, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"INFO: Run summary written to {DOCS / 'last_run.json'}")
 
     # Extract word clouds from titles
     wordcloud_script = ROOT / "scripts" / "extract_wordclouds.py"
