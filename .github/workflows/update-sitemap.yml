@@ -18,7 +18,9 @@ jobs:
   update-sitemap:
     runs-on: ubuntu-latest
     timeout-minutes: 10  # Prevent hanging sitemap generation
-    
+    permissions:
+      contents: write  # default GITHUB_TOKEN is read-only; without this the push gets 403
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -50,4 +52,5 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add docs/sitemap.xml
         git commit -m "Auto-update sitemap.xml"
+        git pull --rebase  # scrape.yml pushes every 3h; don't fail on a race
         git push
