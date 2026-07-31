@@ -1,4 +1,5 @@
 accidents
+born
 children
 closures
 communication
@@ -17,6 +18,7 @@ life
 local
 mute
 new
+notice
 ograniczenia
 old
 oppeln
@@ -28,9 +30,11 @@ purchase
 rewrites
 road
 rso
+safety
 silence
 silent
 stay
+storm
 story
 tender
 voices
