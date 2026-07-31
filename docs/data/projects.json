@@ -1,19 +1,5 @@
 [
   {
-    "title": "Does the flood alert hide the Invader’s land‑grab plan?",
-    "datetime": "2026-05-15T10:12:00+02:00",
-    "description": "At dawn, lay thin, scented ribbons (wet earth and pine) along the Odra banks near Leschnitz. Each ribbon bears the word Ostrzeżenie and the phrase Gwałtowne wzrosty. Passers‑by inhale the damp aroma, read the warning, then notice a subtle stencil of the historic river path erased by recent levee work – a quiet reminder of the Expander’s silent reshaping of the landscape.",
-    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-15-05-2026-10-12-gwaltowne-wzrosty-stanow-wody-1-odra/ar/c1p1-19803805",
-    "hash": "0ed0b290b5ba665b767ed24d4ae55651d8b12191"
-  },
-  {
-    "title": "Who funds the new Kadłubiec field and whose voices stay?",
-    "datetime": "2026-07-31T06:52:00+02:00",
-    "description": "At dawn, lay a thin veil of pine smoke around the half‑finished walls of the Kadłubiec sports shed. Place small, hand‑written notes on the scaffolding that ask passersby to whisper the names of families displaced since 1945. As the sun warms the concrete, the scent of fresh earth mixes with the distant cheers of the LZS team, revealing the invisible hand that scripts the celebration.",
-    "source": "https://www.strzelce360.pl/artykul/11930,nowy-rozdzial-dla-lzs-kadlubiec-trwa-wyczekiwana-inwestycja",
-    "hash": "d3f918cc24423adb043b0419ba3a582e6c2e73c9"
-  },
-  {
     "title": "Who profits from the silence of harvest accidents in?",
     "datetime": "2026-07-31T13:45:00+02:00",
     "description": "At the edge of the wheat fields, lay a fresh imprint of a tractor tire in the dust, scented with cut hay and diesel. Place a small wooden sign, hand‑painted with the word “Witness” in both Polish and German, next to the imprint. As the wind carries the warm grain aroma, passersby are invited to pause, record a short note, and leave a seed packet, symbolically planting attention where the Invader’s machinery fell.",
@@ -40,6 +26,13 @@
     "hash": "598710f09a516665747f9a33fa43ca0b54b8a83f"
   },
   {
+    "title": "Why does the RSO hide road closures from local voices?",
+    "datetime": "2026-07-31T10:42:12+00:00",
+    "description": "In the early evening, place a small bundle of dried lavender and a handwritten note on the side of the blocked DK11 near Oppeln. The scent drifts as passersby read the note: “Road closed, but whose traffic is really stopped?” The gentle aroma invites pause, exposing the silent PR framing of the RSO warning while honoring the lingering presence of the region’s original residents.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-31-07-2026-16-38-zablokowana-dk11/ar/c1p1-19803805",
+    "hash": "93ed81fd035ac946a2e69f1af11c8d9f716d92ef"
+  },
+  {
     "title": "Do the ograniczenia hide the Invader’s plan in Oppeln?",
     "datetime": "2026-07-31T10:00:00+02:00",
     "description": "At the municipal parking lot near the BIP office, lay a thin line of fragrant rosemary sprigs forming the shape of a broken road sign. Passers‑by inhale the earthy scent, notice the scent‑marked “no‑entry” path, and receive a hand‑written note: “Your traffic map is a veil. Ask who benefits.” The subtle aroma lingers, prompting a pause that reveals the hidden PR narrative behind the imposed ograniczenia.",
@@ -59,6 +52,13 @@
     "description": "In the shadow of the Strzelecki Cultural Center, lay a handful of dried pine needles and a small brass bowl of fresh river water. Invite passersby to dip their fingers, feeling the cool slip as they whisper the phrase “Nowe życie starego podwórka.” The scent of pine mingles with the morning mist, turning a routine walk into a quiet protest against the Invader’s erased memories.",
     "source": "https://www.strzelce360.pl/artykul/11928,nowe-zycie-starego-podworka-przy-sok-powstanie-wyjatkowa-przestrzen",
     "hash": "39a3624f4ede9ed7fd90b5f9b13131ea0acff54d"
+  },
+  {
+    "title": "Who funds the new Kadłubiec field and whose voices stay?",
+    "datetime": "2026-07-31T06:52:00+02:00",
+    "description": "At dawn, lay a thin veil of pine smoke around the half‑finished walls of the Kadłubiec sports shed. Place small, hand‑written notes on the scaffolding that ask passersby to whisper the names of families displaced since 1945. As the sun warms the concrete, the scent of fresh earth mixes with the distant cheers of the LZS team, revealing the invisible hand that scripts the celebration.",
+    "source": "https://www.strzelce360.pl/artykul/11930,nowy-rozdzial-dla-lzs-kadlubiec-trwa-wyczekiwana-inwestycja",
+    "hash": "d3f918cc24423adb043b0419ba3a582e6c2e73c9"
   },
   {
     "title": "Why does the RSO road notice silence local voices?",
@@ -1303,6 +1303,13 @@
     "description": "At the main roundabout of Leschnitz, tie a bundle of dried sage and pine needles to the traffic sign announcing road works. The herbal scent drifts through the exhaust, recalling the forest that once belonged to the original Silesian families. Slip a handwritten note onto the sign: “Your detour hides the silence of the Invader’s promises.” Photograph the scene and post it on the municipal BIP, letting the quiet resistance linger in the morning fog.",
     "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-sa-utrudnienia-w-ruchu-w-woj-opolskim-15-05-2026-sprawdz-gdzie-moga-wystapic-trudnosci/ar/c1p1-21631769",
     "hash": "cbe97b22be476e0abdb8dbb9077e065d2533c242"
+  },
+  {
+    "title": "Does the flood alert hide the Invader’s land‑grab plan?",
+    "datetime": "2026-05-15T10:12:00+02:00",
+    "description": "At dawn, lay thin, scented ribbons (wet earth and pine) along the Odra banks near Leschnitz. Each ribbon bears the word Ostrzeżenie and the phrase Gwałtowne wzrosty. Passers‑by inhale the damp aroma, read the warning, then notice a subtle stencil of the historic river path erased by recent levee work – a quiet reminder of the Expander’s silent reshaping of the landscape.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-15-05-2026-10-12-gwaltowne-wzrosty-stanow-wody-1-odra/ar/c1p1-19803805",
+    "hash": "0ed0b290b5ba665b767ed24d4ae55651d8b12191"
   },
   {
     "title": "Do traffic alerts mask Leschnitz’s displaced voices?",
