@@ -1,9 +1,14 @@
+children
 courtyard
 dissolve
+equipment
+leschnitz
 life
+mute
 new
 old
 paperwork
+purchase
 rewrites
 silent
 story
