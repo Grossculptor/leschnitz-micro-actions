@@ -21,68 +21,47 @@ python scripts/pipeline.py
 python scripts/pipeline.py --regenerate
 ```
 
-### Archive Management Commands
-```bash
-# View archive statistics
-python scripts/archive_stats.py
-
-# Clean up old backups and empty archives (dry run)
-python scripts/archive_cleanup.py
-
-# Execute cleanup (actually delete files)
-python scripts/archive_cleanup.py --execute
-
-# Manually run archive manager
-python scripts/archive_manager.py
-```
-
 ### GitHub Deployment
 - Scraping workflow runs every 3 hours via cron (`.github/workflows/scrape.yml`)
 - Pipeline auto-commits to repository
 - GitHub Pages deploys from /docs directory
 - Manual regeneration available via GitHub Actions workflow
+- Sitemap: `.github/workflows/update-sitemap.yml` regenerates `docs/sitemap.xml` weekly (Mon 12:00 UTC) and on pushes touching `generate_sitemap.py`/`projects.json`. Fixed 2026-07-31 after failing on every run since Aug 2025 (0 successes in 117): the default `GITHUB_TOKEN` is read-only, so its `git push` got 403 until the job got an explicit `permissions: contents: write` block.
+- **Rule: any workflow step that pushes needs `permissions: contents: write`** — the default `GITHUB_TOKEN` is read-only. A workflow failing within seconds with `Permission denied to github-actions[bot]` on push means the block is missing; check the run log's "GITHUB_TOKEN Permissions" group before debugging anything else.
 
 ## Architecture
 
 ### Data Pipeline
-RSS Feeds (config/feeds.txt) → Raw Data → Relevance Filtering → AI Generation (Groq) → docs/data/projects.json → Archive Manager → GitHub Pages
+RSS Feeds (config/feeds.txt) → Raw Data → Relevance Filtering → AI Generation (Groq) → docs/data/projects.json → GitHub Pages
 
-### Living Memory Architecture (NEW)
-The project uses a **Living Memory** architecture for optimal performance:
-- **current.json**: Contains last 14 days of content (50-60 items) - loaded by default
-- **projects.json**: Complete archive (175+ items) - fallback/reference 
-- **Time-based archives**: Historical data organized by week/month/year
-- **Auto-archiving**: Pipeline automatically runs archive_manager.py after updates
-
-Benefits:
-- **60-70% faster page load** (52 vs 175 items)
-- **Unlimited scalability** without performance degradation  
-- **Preserved media/edits** across all archives
-- **Browse historical data** via archive browser UI
+### ⚠ There is NO "Living Memory" architecture (corrected 2026-07-31)
+Earlier versions of this file described a Living Memory system (`current.json`,
+`archive_manager.py`, weekly/monthly/yearly archives, `archive-browser.js`).
+**It was reverted on 2025-08-18 and never deployed** (see Session History), but
+the docs kept describing it as current for almost a year. None of those files
+exist. The real architecture is one file: `docs/app.js` fetches
+`data/projects.json` directly (2563 items, ~2.0MB as of 2026-07-30) and sorts
+client-side. Do not "restore" archive scripts or code paths that reference
+`current.json` — they never worked in production.
 
 ### Core Files
-- **scripts/pipeline.py**: Main processing pipeline (with --regenerate flag)
-- **scripts/archive_manager.py**: Manages Living Memory time-based archives
-- **scripts/archive_stats.py**: Shows archive statistics and performance metrics
-- **scripts/archive_cleanup.py**: Removes empty archives and old backups
+- **scripts/pipeline.py**: Main processing pipeline (with --regenerate flag — see the regeneration warning below)
+- **scripts/selftest.py**: 16 offline invariant tests; CI gate before every scheduled run
+- **scripts/generate_sitemap.py**: Writes docs/sitemap.xml (run by update-sitemap.yml)
 - **docs/index.html**: Static website
-- **docs/app.js**: Search and UI (loads current.json first, falls back to projects.json)
-- **docs/archive-browser.js**: Browse historical weekly/monthly/yearly archives
+- **docs/app.js**: Search and UI (loads `data/projects.json` directly)
 - **docs/styles.css**: Minimalist grayscale design
-- **docs/data/current.json**: Last 14 days of micro actions (fast loading)
-- **docs/data/projects.json**: Complete archive (166+ micro actions)
-- **docs/data/archive_index.json**: Index of all time-based archives
+- **docs/data/projects.json**: The published archive — the one file that drives the whole site
+- **docs/data/quarantine.json**: Failed generations awaiting retry (suppressed after 3 attempts)
+- **docs/data/suppressed.json**: Never-publish list (purged placeholders + 3-strike failures); wired into dedup
+- **docs/data/last_run.json**: Per-run counts, read by health check and the server-side canary
 - **config/feeds.txt**: RSS feed sources
 - **secrets/SYSTEM_PROMPT.local.txt**: AI system prompt (local only, contains all generation rules)
 
 ### Data Storage
-- Raw: `/data/raw/<timestamp>/`
-- Filtered: `/data/relevant/<timestamp>/`
-- Current output: `/docs/data/current.json` (14-day window)
-- Full archive: `/docs/data/projects.json`
-- Weekly archives: `/docs/data/weeks/YYYY-WNN.json`
-- Monthly archives: `/docs/data/months/YYYY-MM.json`
-- Yearly archives: `/docs/data/years/YYYY.json`
+- Raw scrapes: `data/raw/<timestamp>/` (runner-local, not committed)
+- Filtered: `data/relevant/<timestamp>/` (runner-local, not committed)
+- Published output: `docs/data/projects.json` + sibling state files listed above (committed by scrape.yml)
 
 ## Critical Content Rules
 
@@ -298,6 +277,7 @@ See `docs/WORDCLOUD_SPEC.md` for full specification.
 
 ## Session History Summary
 
+### 2026-07-31: Fixed update-sitemap.yml (first success ever — missing `permissions: contents: write`); purged the fictional Living Memory sections from this file
 ### 2026-01-12: Added word cloud extraction system
 ### 2025-08-15: Fixed Groq API blocking issue (replaced urllib with requests)
 ### 2025-08-16: Removed DATAsculptor references, moved rules to secret prompt  
