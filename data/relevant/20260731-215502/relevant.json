@@ -1,0 +1,46 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-31-07-2026-22-02-gwaltowne-wzrosty-stanow-wody/ar/c1p1-19803805",
+    "title": "Nowa informacja RSO (31.07.2026 22:02). Przeczytaj więcej",
+    "summary": "Nowe ostrzeżenie RSO: Gwałtowne wzrosty stanów wody (31.07.2026 22:02). Obejmuje Opolskiego. Sprawdź treść.",
+    "content": "Nowe ostrzeżenie RSO: Gwałtowne wzrosty stanów wody (31.07.2026 22:02). Obejmuje Opolskiego. Sprawdź treść.",
+    "published": "2026-07-31T10:42:12+00:00",
+    "id": "f4703ba70ce2cb96f31d75026ba6e4c5f3cd932c",
+    "preselect": true,
+    "places_german": [
+      "Oppeln",
+      "Leschnitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/11932,zderzenie-osobowki-z-cysterna-w-wierchlesiu-interweniowaly-sluzby",
+    "title": "Zderzenie osobówki z cysterną w Wierchlesiu. Interweniowały służby",
+    "summary": "W piątek, 31 lipca, około godz. 13.30 w Wierchlesiu doszło do zdarzenia drogowego z udziałem osobowego Peugeota oraz samochodu ciężarowego z cysterną.",
+    "content": "W piątek, 31 lipca, około godz. 13.30 w Wierchlesiu doszło do zdarzenia drogowego z udziałem osobowego Peugeota oraz samochodu ciężarowego z cysterną.",
+    "published": "2026-07-31T14:29:00+02:00",
+    "id": "7a07ae86321a4550b62c4158d8ed64492dca82ff",
+    "preselect": true,
+    "places_german": [
+      "Wierchlesiu"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/11927,mlody-mieszkaniec-powiatu-wpadl-na-ulicy-mial-ponad-200-gramow-narkotykow",
+    "title": "Młody mieszkaniec powiatu wpadł na ulicy. Miał ponad 200 gramów narkotyków",
+    "summary": "Ponad 200 gramów rożnego rodzaju narkotyków zabezpieczyli strzeleccy kryminalny przy młodym mieszkańcu powiatu strzeleckiego. Z takim \"ekwipunkiem\" poruszał się po ulicach miasta. Mężczyzna został zatrzymany i usłyszał zarzuty.",
+    "content": "Ponad 200 gramów rożnego rodzaju narkotyków zabezpieczyli strzeleccy kryminalny przy młodym mieszkańcu powiatu strzeleckiego. Z takim \"ekwipunkiem\" poruszał się po ulicach miasta. Mężczyzna został zatrzymany i usłyszał zarzuty.",
+    "published": "2026-07-30T13:10:00+02:00",
+    "id": "17d028523415ebd1bd41a3b86faad1f84e0c1144",
+    "preselect": true,
+    "places_german": [
+      "Kreis Gross Strehlitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]
