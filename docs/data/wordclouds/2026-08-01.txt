@@ -1,7 +1,16 @@
+climate
+council
 field
 funds
+hide
+invader
 kadłubiec
+meeting
 new
+rso
 stay
+summon
+village
 voices
+warning
 whose

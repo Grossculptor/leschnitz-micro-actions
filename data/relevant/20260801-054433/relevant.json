@@ -1,0 +1,47 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-01-08-2026-06-05-burze-2/ar/c1p1-19803805",
+    "title": "Zarejestrowano nowy komunikat RSO (01.08.2026 06:05). Poznaj szczegóły ostrzeżenia",
+    "summary": "Wydano komunikat RSO: Burze/2 (01.08.2026 06:05). Dla Opolskiego. Poznaj szczegóły.",
+    "content": "Wydano komunikat RSO: Burze/2 (01.08.2026 06:05). Dla Opolskiego. Poznaj szczegóły.",
+    "published": "2026-08-01T04:12:10+00:00",
+    "id": "fe742ba6f365cf4367834b66223d63c2c9216574",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/11934,wyborczy-konflikt-w-brzezinie-czy-uda-sie-wybrac-nowego-soltysa",
+    "title": "Wyborczy konflikt w Brzezinie. Czy uda się wybrać nowego sołtysa?",
+    "summary": "Sytuacja jest bardzo dziwna – komentuje rada sołecka Brzeziny. – Najpierw sołtys zaskoczył wszystkich swoją rezygnacją, a teraz zwołano zebranie wiejskie w ratuszu w Strzelcach Opolskich, o którym dowiedzieliśmy się przypadkowo i z półtoragodzinnym wyprzedzeniem. O co tu chodzi?",
+    "content": "Sytuacja jest bardzo dziwna – komentuje rada sołecka Brzeziny. – Najpierw sołtys zaskoczył wszystkich swoją rezygnacją, a teraz zwołano zebranie wiejskie w ratuszu w Strzelcach Opolskich, o którym dowiedzieliśmy się przypadkowo i z półtoragodzinnym wyprzedzeniem. O co tu chodzi?",
+    "published": "2026-08-01T06:32:00+02:00",
+    "id": "85e498b0e92cb55971d93945f86be9a5ffdb58c3",
+    "preselect": true,
+    "places_german": [
+      "Strzelce Opolskie",
+      "Brzeziny"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/11935,osp-staniszcze-male-z-kolejnym-wsparciem-do-jednostki-trafi-nowoczesny-sprzet",
+    "title": "OSP Staniszcze Małe z kolejnym wsparciem. Do jednostki trafi nowoczesny sprzęt",
+    "summary": "Inwestują w sprzęt, szkolą się i konsekwentnie dążą do celu. Druhowie z OSP Staniszcze Małe po raz kolejny udowadniają, że pasja i zaangażowanie przynoszą realne efekty. Do jednostki trafi 15 tysięcy złotych wsparcia w ramach programu „Aktywna Wieś”.",
+    "content": "Inwestują w sprzęt, szkolą się i konsekwentnie dążą do celu. Druhowie z OSP Staniszcze Małe po raz kolejny udowadniają, że pasja i zaangażowanie przynoszą realne efekty. Do jednostki trafi 15 tysięcy złotych wsparcia w ramach programu „Aktywna Wieś”.",
+    "published": "2026-08-01T06:02:00+02:00",
+    "id": "065e9a2c5f42242b8d871306514e3f752817ab16",
+    "preselect": true,
+    "places_german": [
+      "Staniszcze Małe",
+      "Leschnitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]
