@@ -1,0 +1,11 @@
+block
+car
+hide
+luxury
+marka
+prawego
+rising
+silent
+tankowanie
+tenant
+turn
