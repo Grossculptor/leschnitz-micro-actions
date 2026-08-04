@@ -1,4 +1,5 @@
 agenda
+agendas
 alert
 arrive
 behind
@@ -8,6 +9,7 @@ fanatic
 forgotten
 fragments
 fund
+funds
 heat
 hidden
 hide
@@ -16,6 +18,7 @@ lake
 local
 makes
 mask
+murals
 new
 opolanie
 otmice
@@ -29,6 +32,7 @@ stories
 swell
 turawskie
 ujazd
+village
 villages
 while
 żędowicach
