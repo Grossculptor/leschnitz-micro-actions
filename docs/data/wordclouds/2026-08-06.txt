@@ -1,6 +1,9 @@
+ade
+agenda
 alert
 behind
 bike
+birthday
 burmistrz
 card
 community
@@ -8,6 +11,7 @@ dfk
 fire
 flood
 fuel
+fury
 heritage
 hidden
 hide
@@ -29,7 +33,9 @@ past
 pologne
 power
 praise
+profits
 promote
+quiet
 rcb
 risk
 rso
@@ -38,10 +44,13 @@ sale
 scandal
 silence
 songs
+storm
 storm's
+strzelecka
 tour
 tourism
 tours
 true
+veil
 while
 without
