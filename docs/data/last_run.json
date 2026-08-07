@@ -1,18 +1,18 @@
 {
-  "finished_at": "2026-08-07T12:36:26.816272+00:00",
+  "finished_at": "2026-08-07T15:42:45.037971+00:00",
   "model": "openai/gpt-oss-120b",
   "validation_mode": "shadow",
   "feeds": 5,
   "scraped": 32,
-  "preselected": 14,
-  "relevant": 1,
+  "preselected": 16,
+  "relevant": 3,
   "classified_by_heuristic": 0,
-  "generated_ok": 1,
-  "added_to_site": 1,
+  "generated_ok": 3,
+  "added_to_site": 3,
   "duplicates_skipped": 0,
   "quarantined_this_run": 0,
   "awaiting_retry": 0,
   "suppressed_total": 894,
-  "total_items": 2617,
-  "newest_item": "2026-08-07T12:00:00+02:00"
+  "total_items": 2620,
+  "newest_item": "2026-08-07T16:52:00+02:00"
 }
