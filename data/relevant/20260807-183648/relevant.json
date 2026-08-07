@@ -1,0 +1,33 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/wylaczenia-pradu-w-strzelcach-opolskich-sprawdz-gdzie-nie-bedzie-pradu-7-08/ar/c1p1-20594228",
+    "title": "Czy w Strzelcach Opolskich może braknąć prądu? Sprawdź najnowsze informacje z 7.08",
+    "summary": "Czy w Strzelcach Opolskich wystąpią utrudnienia związane z dostawą prądu? Sprawdź komunikaty z 7.08.",
+    "content": "Czy w Strzelcach Opolskich wystąpią utrudnienia związane z dostawą prądu? Sprawdź komunikaty z 7.08.",
+    "published": "2026-08-07T12:12:00+00:00",
+    "id": "3da14bc388d7ff8f3e48632660836889cfc68fbc",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz",
+      "Leschnitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/11969,grozny-wypadek-na-dk94-kolo-izbicka",
+    "title": "Groźny wypadek na DK94 koło Izbicka",
+    "summary": "Do groźnego wypadku doszło dziś na drodze krajowej nr 94, tuż za miejscowością Izbicko w kierunku Opola. Osobowa Toyota zjechała z drogi i uderzyła w drzewo. Pojazdem podróżowały dwie osoby.",
+    "content": "Do groźnego wypadku doszło dziś na drodze krajowej nr 94, tuż za miejscowością Izbicko w kierunku Opola. Osobowa Toyota zjechała z drogi i uderzyła w drzewo. Pojazdem podróżowały dwie osoby.",
+    "published": "2026-08-07T18:18:00+02:00",
+    "id": "cb2c33dabcc9be2a0c6595f5316964e8fc8280b5",
+    "preselect": true,
+    "places_german": [
+      "Izbicko (Iser)",
+      "Opole (Oppeln)"
+    ],
+    "classified_by": "llm"
+  }
+]
