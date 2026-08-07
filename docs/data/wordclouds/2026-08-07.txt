@@ -1,6 +1,8 @@
 become
 burmistrz
+city
 cost
+danger
 dry
 forest
 funds
@@ -11,5 +13,7 @@ new
 playground
 ponds
 sales
+traffic
 true
+ujazdowska
 żędowice
