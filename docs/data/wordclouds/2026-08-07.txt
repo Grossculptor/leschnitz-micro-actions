@@ -1,10 +1,15 @@
+become
 burmistrz
 cost
+dry
+forest
 funds
+gonschiorowitz
 hide
 land
 new
 playground
+ponds
 sales
 true
 żędowice
