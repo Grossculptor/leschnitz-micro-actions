@@ -1,6 +1,10 @@
 burmistrz
 cost
+funds
 hide
 land
+new
+playground
 sales
 true
+żędowice
