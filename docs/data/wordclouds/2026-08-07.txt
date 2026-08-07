@@ -1,5 +1,9 @@
+agenda
 become
+behind
 block
+books
+brake
 breach
 burmistrz
 celebrate
@@ -7,6 +11,7 @@ city
 cost
 cuts
 danger
+desert
 dry
 expansionist
 forest
@@ -14,12 +19,17 @@ funds
 gonschiorowitz
 hidden
 hide
+hides
 invader's
 land
+like
+marks
+missing
 narrative
 new
 occupier
 opolskich
+oppeln
 playground
 police
 ponds
@@ -28,6 +38,7 @@ promises
 road
 safety
 sales
+sand
 silent
 slalomem
 strzelcach
@@ -36,4 +47,5 @@ traffic
 tricks
 true
 ujazdowska
+vanishing
 żędowice
