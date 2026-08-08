@@ -3,6 +3,7 @@ civic
 cuts
 daily
 displaced
+drought
 fade
 fear
 fest
@@ -10,6 +11,7 @@ hidden
 hide
 histories
 honor
+ignore
 local
 mask
 old
@@ -19,6 +21,7 @@ power
 press
 rider
 roundup
+rso
 scent
 settler
 silence
@@ -26,5 +29,8 @@ slalom
 strzelcach
 summer
 voices
+warn
 warning
+water
 year
+yet
