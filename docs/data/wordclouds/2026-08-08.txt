@@ -1,6 +1,10 @@
 civic
+cuts
 hidden
 mask
 outage
 power
+settler
+silence
+strzelcach
 warning
