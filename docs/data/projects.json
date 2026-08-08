@@ -1,5 +1,17 @@
 [
   {
+    "title": "Why does the power outage warning mask hidden civic?",
+    "datetime": "2026-08-08T09:00:00+00:00",
+    "description": "At the town square of Strzelcach Opolskich, place a small bundle of wilted lavender beside the municipal notice board. As passersby read the blackout alert, the scent of the lavender—once used in traditional gatherings—fills the air, reminding them of the community’s forgotten rituals. Leave a handwritten note: “Who decides when darkness falls on our homes?” The note dissolves with the morning dew, exposing the invisible power of the Invader’s silence.",
+    "keywords": [
+      "Strzelcach",
+      "Opolskich",
+      "ryzyko"
+    ],
+    "source": "https://strzelceopolskie.naszemiasto.pl/wylaczenia-pradu-w-strzelcach-opolskich-gdzie-8-08-beda-planowane-wylaczenia-pradu-a-gdzie-awarie/ar/c1p1-20594228",
+    "hash": "aafd87c26578d1136e329da7ceb0ec179de2c0df"
+  },
+  {
     "title": "Why does the road safety narrative hide the Invader's?",
     "datetime": "2026-08-07T18:30:00+02:00",
     "description": "At sunset, place a handful of pine cones on the shoulder of DK94 near Izbicko, each scented with cedar oil. As drivers pass, the faint aroma drifts, inviting a pause to notice the cracked paint of the guardrail—an absent reminder of the community’s forgotten safety. The scent lingers, a quiet protest against the glossy press release that celebrates swift cleanup while the local voices remain unheard.",
@@ -80,6 +92,13 @@
     "description": "In the town square of Leschnitz, lay a thin veil of white chalk dust shaped like a map of the communal fields. As passers‑by step on it, the chalk lifts, revealing faint numbers that dissolve like morning mist. The scent of damp earth rises, reminding the crowd of the soil that once fed the indigenous families now erased. The act whispers the hidden fees the Invader’s office refuses to name.",
     "source": "https://bip.lesnica.pl/16043/zarzadzenie-nr-00504172026burmistrza-lesnicyz-dnia-6-sierpnia-2026-rokuw-sprawie-ustalenia-warunkow-sprzedazynieruchomosci-gminnej.html",
     "hash": "9685c1573ab5f7abe555ad6df0ee457cebdfdbfb"
+  },
+  {
+    "title": "Why are senior crowns presented as harvest propaganda?",
+    "datetime": "2026-08-07T06:36:00+02:00",
+    "description": "In the town square of Leschnitz, lay a woven wreath of wilted rye beside a steaming pot of herbal tea. Invite the seniors from Szymiszowa-Osiedel to place their hands on the crown, whispering the names of forgotten fields. As the scent of dry stalks fills the air, record the quiet sighs that echo the lost labor of the original harvesters, exposing the festive façade of the Invader’s harvest narrative.",
+    "source": "https://www.strzelce360.pl/artykul/11962,tworza-korone-ucza-sie-i-wyjezdzaja-seniorzy-z-szymiszowa-osiedla-nie-proznuja",
+    "hash": "6c7305303eb5c7ca16900a2d8de7e04b9977d76c"
   },
   {
     "title": "Who funds the new playground in Żędowice and why?",

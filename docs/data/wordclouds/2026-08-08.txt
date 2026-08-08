@@ -1,0 +1,6 @@
+civic
+hidden
+mask
+outage
+power
+warning

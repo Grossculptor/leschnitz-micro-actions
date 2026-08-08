@@ -9,6 +9,7 @@ burmistrz
 celebrate
 city
 cost
+crowns
 cuts
 danger
 desert
@@ -17,6 +18,7 @@ expansionist
 forest
 funds
 gonschiorowitz
+harvest
 hidden
 hide
 hides
@@ -34,11 +36,14 @@ playground
 police
 ponds
 power
+presented
 promises
+propaganda
 road
 safety
 sales
 sand
+senior
 silent
 slalomem
 strzelcach
