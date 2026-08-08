@@ -1,10 +1,17 @@
+bishop
 civic
 cuts
+fade
 hidden
+histories
+honor
+local
 mask
+old
 outage
 power
 settler
 silence
 strzelcach
 warning
+year
