@@ -1,5 +1,11 @@
 absent
 cross
 families
+heat
+invader
+mask
 mute
+new
 renovated
+silence
+warning
