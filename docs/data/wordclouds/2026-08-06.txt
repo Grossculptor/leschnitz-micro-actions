@@ -4,6 +4,7 @@ alert
 behind
 bike
 birthday
+bridge
 burmistrz
 card
 community
@@ -38,6 +39,7 @@ profits
 promote
 quiet
 rcb
+repair
 risk
 river
 rso
@@ -54,5 +56,6 @@ tourism
 tours
 true
 veil
+voices
 while
 without
