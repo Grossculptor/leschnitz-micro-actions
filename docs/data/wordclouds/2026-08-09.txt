@@ -1,11 +1,16 @@
 absent
 cross
+erased
 families
 heat
 invader
+market
 mask
+modern
 mute
 new
 renovated
 silence
+squares
+voices
 warning
