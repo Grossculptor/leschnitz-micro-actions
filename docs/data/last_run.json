@@ -1,10 +1,10 @@
 {
-  "finished_at": "2026-08-10T00:49:10.168404+00:00",
+  "finished_at": "2026-08-10T04:21:09.010613+00:00",
   "model": "openai/gpt-oss-120b",
   "validation_mode": "shadow",
   "feeds": 5,
-  "scraped": 27,
-  "preselected": 13,
+  "scraped": 28,
+  "preselected": 14,
   "relevant": 0,
   "classified_by_heuristic": 0,
   "generated_ok": 0,
