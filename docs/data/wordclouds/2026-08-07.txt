@@ -15,6 +15,7 @@ danger
 desert
 dry
 expansionist
+fine
 forest
 funds
 gonschiorowitz
@@ -22,6 +23,7 @@ harvest
 hidden
 hide
 hides
+invader
 invader's
 land
 like
@@ -44,6 +46,7 @@ safety
 sales
 sand
 senior
+silence
 silent
 slalomem
 strzelcach
@@ -53,4 +56,5 @@ tricks
 true
 ujazdowska
 vanishing
+veil
 żędowice
