@@ -1,4 +1,17 @@
+costs
+decree
 doctors
+environmental
+hide
+histories
+invader
+local
+magic
 mask
+mayor
 occupier
+summer
+tour
+true
+veil
 wages

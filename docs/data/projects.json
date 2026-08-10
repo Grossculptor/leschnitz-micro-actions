@@ -1,10 +1,31 @@
 [
   {
+    "title": "Why does the mayor’s decree veil the Invader’s?",
+    "datetime": "2026-08-10T16:30:00+02:00",
+    "description": "In the town square of Leschnitz, place a bundle of fresh pine needles beside the municipal notice board. As passers‑by read the mayor’s order, the pine scent drifts, reminding them of the forest that the Expansionist promised to protect yet silently logs. The needles wilt over three days, leaving a faint, earthy residue that whispers of the missing voices of the original stewards.",
+    "source": "https://bip.lesnica.pl/16060/zarzadzenie-nr-00504192026-burmistrza-lesnicy-z-dnia-10-sierpnia-2026-r-dotyczace-projektu-programu-ochrony-srodowiska-dla-gminy-lesnica-na-lata-20262030-z-perspektywa-do-2033-r.html",
+    "hash": "550a94bbaf1fe861fef3376a543f2074db619ad5"
+  },
+  {
+    "title": "Why does the mayor hide true environmental costs from?",
+    "datetime": "2026-08-10T12:00:00+00:00",
+    "description": "Place a stack of hand‑written leaflets on the town hall steps at dawn. Each sheet smells of fresh pine and faint incense, inviting passersby to fold a corner and leave a small stone. The stones accumulate, forming a silent mound that records every ignored voice, while the scent lingers as a reminder of the unseen impact of the proposed program.",
+    "source": "https://bip.lesnica.pl/16061/obwieszczenie-burmistrza-lesnicy-o-mozliwosci-udzialu-spoleczenstwa-przy-opracowaniu-projektu-programu-ochrony-srodowiska-dla-gminy-lesnica-na-lata-2026-2030-z-perspektywa-do-2033-r-wraz-z-prognoza-oddzialywania-na-srodowisko.html",
+    "hash": "fd42e1e9fbdd7ee25bf9a04590f582650278c187"
+  },
+  {
     "title": "Why does the Occupier mask doctors' wages in?",
     "datetime": "2026-08-10T07:14:00+02:00",
     "description": "Tie thin pine ribbons scented with antiseptic around the hospital entrance in Gross Strehlitz. On each ribbon print a salary figure for a doctor or a nurse. Invite passers‑by to whisper the numbers into the wind, collecting the murmurs on a recorder. The scent, the rustle, and the hidden figures expose the PR silence about how much the lekarze and pielęgniarki zarabiają.",
     "source": "https://www.strzelce360.pl/artykul/11974,tyle-zarabiaja-lekarze-i-pielegniarki-w-szpitalu-w-strzelcach-opolskich",
     "hash": "abd14348c247630b175a1b4040def65c79c52ef8"
+  },
+  {
+    "title": "Why does the summer magic tour hide local histories?",
+    "datetime": "2026-08-10T06:22:00+02:00",
+    "description": "Gather a handful of wild lavender and lay it along the stone steps of Moszny Castle at dusk. As the scent drifts, hand out tiny scrolls that ask visitors to note which voices are heard and which are silent in the ‘School of Magic’. The fleeting fragrance and soft candlelight reveal the invisible absence of the original Silesian community, turning a festive trip into a quiet inquiry.",
+    "source": "https://www.strzelce360.pl/artykul/11976,szkola-magii-w-srodku-lata-to-byla-czarodziejska-przygoda",
+    "hash": "42537d080380266773b61b6b27ff51a66534dfe1"
   },
   {
     "title": "Do modern market squares mask the Invader’s erased voices?",
