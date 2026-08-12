@@ -1,4 +1,5 @@
 agenda
+betoniarka
 community
 concrete
 crush
@@ -13,7 +14,10 @@ mayor
 monster
 rso
 school
+side
 silence
+tumble
 veil
 voices
 warning
+żędowice
