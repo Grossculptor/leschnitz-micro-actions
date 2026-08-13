@@ -1,0 +1,47 @@
+[
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/patronat-nowej-trybuny-opolskiej-wazne-informacje/ar/c15-19143597",
+    "title": "Patronat Nowej Trybuny Opolskiej – ważne informacje",
+    "summary": "O przyznaniu patronatu redakcyjnego decyduje redaktor naczelny &bdquo;Nowej Trybuny Opolskiej&rdquo; i nto.pl.",
+    "content": "O przyznaniu patronatu redakcyjnego decyduje redaktor naczelny &bdquo;Nowej Trybuny Opolskiej&rdquo; i nto.pl.",
+    "published": "2026-08-12T14:40:09+02:00",
+    "id": "9ccbd679d372e0e52f07e1d811eb613278abc6db",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/11988,sprawa-biometanowni-komitet-protestacyjny-szuka-pomocy-w-stolicy",
+    "title": "Sprawa biometanowni. Komitet protestacyjny szuka pomocy w stolicy",
+    "summary": "Postępowanie środowiskowe dotyczące budowy biometanowni w Warmątowicach wciąż trwa, tymczasem komitet protestacyjny „Stop Biometanowni w Gminie Strzelce Opolskie” pojechał z interwencją do Ministerstwa Klimatu i Środowiska.",
+    "content": "Postępowanie środowiskowe dotyczące budowy biometanowni w Warmątowicach wciąż trwa, tymczasem komitet protestacyjny „Stop Biometanowni w Gminie Strzelce Opolskie” pojechał z interwencją do Ministerstwa Klimatu i Środowiska.",
+    "published": "2026-08-13T06:16:00+02:00",
+    "id": "2e6429e8712fedf629394a0f30a4f572c33c27c9",
+    "preselect": true,
+    "places_german": [
+      "Warmątowice",
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/11989,z-raszowej-i-lak-kozielskich-rowerami-do-blachowni-byla-historia-i-integracja",
+    "title": "Z Raszowej i Łąk Kozielskich rowerami do Blachowni. Była historia i integracja",
+    "summary": "Mieszkańcy Raszowej i Łąk Kozielskich wybrali się niedawno na wspólną wycieczkę rowerową. Zaprosiły na nią sołtyski obu miejscowości wraz z radami sołeckimi. Celem wyprawy była Blachownia, gdzie uczestnicy zwiedzili schron oraz Muzeum Śląskiej Bitwy o Paliwo Blechhammer 1944.",
+    "content": "Mieszkańcy Raszowej i Łąk Kozielskich wybrali się niedawno na wspólną wycieczkę rowerową. Zaprosiły na nią sołtyski obu miejscowości wraz z radami sołeckimi. Celem wyprawy była Blachownia, gdzie uczestnicy zwiedzili schron oraz Muzeum Śląskiej Bitwy o Paliwo Blechhammer 1944.",
+    "published": "2026-08-13T06:04:00+02:00",
+    "id": "f163a7342a0fc3e417ae2cffe28a2ec8b577f32c",
+    "preselect": true,
+    "places_german": [
+      "Raschowa",
+      "Kosenau",
+      "Blachau"
+    ],
+    "classified_by": "llm"
+  }
+]
