@@ -1,0 +1,32 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/gdzie-wystepuja-utrudnienia-w-ruchu-w-woj-opolskim-stan-na-13-08-2026/ar/c1p1-19949817",
+    "title": "Jakie utrudnienia czekają na kierowców w woj. opolskim (13.08.2026)?",
+    "summary": "Gdzie kierowcy napotkają utrudnienia w woj. opolskim? Sprawdź komunikaty z 13.08.2026.",
+    "content": "Gdzie kierowcy napotkają utrudnienia w woj. opolskim? Sprawdź komunikaty z 13.08.2026.",
+    "published": "2026-08-13T06:42:11+00:00",
+    "id": "2b60a7046b71655226c76bea10791d16dfda537e",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Gross Strehlitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/przeglad-prasy-strzelce-opolskie-13-08-2026-sprawdz-zestawienie-najwazniejszych-informacji-z-wczoraj-w-strzelcach-opolskich/ar/c1p1-19739151",
+    "title": "W pigułce o wydarzeniach z ostatnich godzin. Przegląd prasy - Strzelce Opolskie (13.08).",
+    "summary": "Warto rzucić okiem na te publikacje. Oto najważniejsze prasowe podsumowanie - Strzelce Opolskie (13.08).",
+    "content": "Warto rzucić okiem na te publikacje. Oto najważniejsze prasowe podsumowanie - Strzelce Opolskie (13.08).",
+    "published": "2026-08-13T03:54:10+00:00",
+    "id": "2eaead9847a8bfd775311f09602a573c0ce70036",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  }
+]
