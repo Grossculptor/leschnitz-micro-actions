@@ -4,6 +4,7 @@ age
 applaud
 authorities
 committee
+community
 cyclists
 elder's
 fines
@@ -17,6 +18,7 @@ leschnitz's
 lot
 narrative
 pijani
+police
 profits
 residents
 revision
