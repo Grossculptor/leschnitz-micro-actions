@@ -1,4 +1,6 @@
+active
 again
+age
 applaud
 authorities
 committee
@@ -18,6 +20,10 @@ revision
 rolnictwa
 scent
 serve
+settlers
+silence
+third
 today
 town's
 traffic
+university
