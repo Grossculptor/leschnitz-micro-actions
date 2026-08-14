@@ -6,12 +6,15 @@ authorities
 committee
 community
 cyclists
+czas
 elder's
+erased
 fines
 forced
 forgotten
 hero
 hide
+invader's
 kibica
 komisji
 krakowska
@@ -19,6 +22,7 @@ leschnitz's
 lot
 narrative
 neglect
+oppeln
 pijani
 police
 profits
@@ -36,3 +40,5 @@ today
 town's
 traffic
 university
+veil
+voices
