@@ -3,6 +3,7 @@ again
 age
 applaud
 authorities
+civic
 committee
 community
 cyclists
@@ -12,7 +13,9 @@ erased
 fines
 forced
 forgotten
+heat
 hero
+hidden
 hide
 invader's
 kibica
@@ -20,6 +23,7 @@ komisji
 krakowska
 leschnitz's
 lot
+mask
 narrative
 neglect
 oppeln
@@ -42,3 +46,4 @@ traffic
 university
 veil
 voices
+warning
