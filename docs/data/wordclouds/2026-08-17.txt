@@ -1,6 +1,9 @@
 alert
 bogactwa
+conceal
+damage
 hide
+invader
 mapa
 new
 omit
@@ -8,4 +11,5 @@ oppeln's
 powiatowa
 rso
 strzelce
+tornado
 voices
