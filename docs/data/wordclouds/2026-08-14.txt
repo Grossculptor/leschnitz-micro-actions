@@ -1,6 +1,7 @@
 active
 again
 age
+aid
 applaud
 authorities
 civic
@@ -11,12 +12,16 @@ czas
 elder's
 erased
 fines
+first
 forced
 forgotten
+frame
+harmony
 heat
 hero
 hidden
 hide
+invader
 invader's
 kibica
 komisji
@@ -47,3 +52,4 @@ university
 veil
 voices
 warning
+workshops
