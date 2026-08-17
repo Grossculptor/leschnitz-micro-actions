@@ -1,5 +1,11 @@
+alert
 bogactwa
+hide
 mapa
+new
 omit
+oppeln's
 powiatowa
+rso
 strzelce
+voices
