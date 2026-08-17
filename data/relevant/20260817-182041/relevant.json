@@ -1,0 +1,44 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/paliwo-nagle-potanialo-kierowcy-maja-jedno-pytanie-do-rzadu/ar/c1p2-29273723",
+    "title": "Paliwo nagle potaniało. Kierowcy mają jedno pytanie do rządu",
+    "summary": "W niedzielę wieczorem (16 sierpnia) litr Pb95 na opolskich stacjach kosztował 7,29 zł. W poniedziałek rano (17 sierpnia) już 6,41 zł. Tak wygląda w praktyce powrót programu „Ceny Paliwa Niżej”. Kierowcy dostali tańsze paliwo, ale nie wszyscy są zachwyceni.",
+    "content": "W niedzielę wieczorem (16 sierpnia) litr Pb95 na opolskich stacjach kosztował 7,29 zł. W poniedziałek rano (17 sierpnia) już 6,41 zł. Tak wygląda w praktyce powrót programu „Ceny Paliwa Niżej”. Kierowcy dostali tańsze paliwo, ale nie wszyscy są zachwyceni.",
+    "published": "2026-08-17T14:28:24+00:00",
+    "id": "26e38269151818e17a9188ffbbe136c867c35a46",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/pasieka-to-dzisiaj-czesc-opola-ale-kiedys-wyspa-lezala-poza-granicami-miasta/ar/c1-15521349",
+    "title": "Pasieka to dzisiaj część Opola. Ale kiedyś wyspa leżała poza granicami miasta",
+    "summary": "Wyspa Pasieka stanowi jedną z najstarszych części Opola, ale w granicach administracyjnych miasta znalazła się dopiero w 1891 roku. Z okazji 130. rocznicy w 2021 r. rada dzielnicy Stare Miasto postulowała zrobienie z Pasieki parku kulturowego.",
+    "content": "Wyspa Pasieka stanowi jedną z najstarszych części Opola, ale w granicach administracyjnych miasta znalazła się dopiero w 1891 roku. Z okazji 130. rocznicy w 2021 r. rada dzielnicy Stare Miasto postulowała zrobienie z Pasieki parku kulturowego.",
+    "published": "2026-08-17T17:39:00+02:00",
+    "id": "f7627621d1d66e747d2ad9a01a8cdae52ccaa9cf",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12007,koncert-i-potancowka-ale-dzialo-sie-w-jemielnicy",
+    "title": "Koncert i potańcówka. Ale działo się w Jemielnicy",
+    "summary": "Piętnastego sierpnia na mieszkańców Jemielnicy czekało dużo atrakcji. W tamtejszej parafii Wniebowzięcia Najświętszej Maryi Panny miał miejsce odpust. Na placu przy świetlicy wiejskiej zabrzmiała zaś muzyka.",
+    "content": "Piętnastego sierpnia na mieszkańców Jemielnicy czekało dużo atrakcji. W tamtejszej parafii Wniebowzięcia Najświętszej Maryi Panny miał miejsce odpust. Na placu przy świetlicy wiejskiej zabrzmiała zaś muzyka.",
+    "published": "2026-08-17T15:06:00+02:00",
+    "id": "21f51f8b7329e68afca314ec76e98e2a7569d4c7",
+    "preselect": true,
+    "places_german": [
+      "Jemielnica"
+    ],
+    "classified_by": "llm"
+  }
+]
