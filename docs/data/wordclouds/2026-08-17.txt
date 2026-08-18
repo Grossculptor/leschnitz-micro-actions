@@ -5,6 +5,7 @@ civic
 conceal
 damage
 displaced
+exposing
 feast
 hide
 invader
@@ -16,10 +17,12 @@ oppeln
 oppeln's
 parish
 pasieka
+pilgrimage
 powiatowa
 praise
 rso
 silence
+storm
 strzelce
 tornado
 voices
