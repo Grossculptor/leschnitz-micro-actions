@@ -1,0 +1,32 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-19-08-2026-15-20-gwaltowne-wzrosty-stanow-wody/ar/c1p1-19803805",
+    "title": "Ukazał się nowy komunikat RSO (19.08.2026 15:20). Sprawdź aktualne informacje",
+    "summary": "Nowy komunikat RSO: Gwałtowne wzrosty stanów wody (19.08.2026 15:20). Wydany dla Opolskiego. Sprawdź szczegóły.",
+    "content": "Nowy komunikat RSO: Gwałtowne wzrosty stanów wody (19.08.2026 15:20). Wydany dla Opolskiego. Sprawdź szczegóły.",
+    "published": "2026-08-19T11:24:10+00:00",
+    "id": "c5dd506ae653aa9e1bd65d31ab242b1f6aced8c0",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/16092/obwieszczenie-o-zebraniu-materialu-dowodowego-w-sprawie-udzielenia-pozwolen.html",
+    "title": "Obwieszczenie o zebraniu materiału dowodowego w sprawie udzielenia pozwoleń",
+    "summary": "",
+    "content": "",
+    "published": "2026-08-19T14:22:11+02:00",
+    "id": "76dfaaac7b700a039e3dfc418a9b5c68b13c2c0f",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Gross Strehlitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]
