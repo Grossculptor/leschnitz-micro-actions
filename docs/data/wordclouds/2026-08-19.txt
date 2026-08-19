@@ -9,6 +9,7 @@ engine
 erase
 evidence
 expansionist
+fatigue
 festyn
 fire
 flood
@@ -43,6 +44,8 @@ tender
 trails
 travel
 true
+unheard
 voices
 women
+youth's
 łącznik
