@@ -1,0 +1,45 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-20-08-2026-10-30-burze-2/ar/c1p1-19803805",
+    "title": "Zarejestrowano nowy komunikat RSO (20.08.2026 11:10). Poznaj szczegóły ostrzeżenia",
+    "summary": "Informacja RSO: ALERT RCB (20.08.2026 11:10). Wydana dla Opolskiego. Sprawdź, czego dotyczy.",
+    "content": "Informacja RSO: ALERT RCB (20.08.2026 11:10). Wydana dla Opolskiego. Sprawdź, czego dotyczy.",
+    "published": "2026-08-20T08:36:10+00:00",
+    "id": "85bb5a08cbc39cd3e10000bae9e2a8852ee94ce0",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12018,tradycja-wymalowana-na-scianach-nowe-murale-w-zalesiu-slaskim",
+    "title": "Tradycja wymalowana na ścianach. Nowe murale w Zalesiu Śląskim",
+    "summary": "Nowe, wyjątkowe ozdoby pojawiły się w przestrzeni Zalesia Śląskiego. Na ścianach budynków powstały trzy murale, które opowiadają o lokalnych tradycjach. Szczególne miejsce zajmują na nich dywany kwietne, od pokoleń układane przez mieszkańców podczas Bożego Ciała.",
+    "content": "Nowe, wyjątkowe ozdoby pojawiły się w przestrzeni Zalesia Śląskiego. Na ścianach budynków powstały trzy murale, które opowiadają o lokalnych tradycjach. Szczególne miejsce zajmują na nich dywany kwietne, od pokoleń układane przez mieszkańców podczas Bożego Ciała.",
+    "published": "2026-08-20T06:05:00+02:00",
+    "id": "0a2bc11d33d74a7813a4184266c63dc8b88e4db3",
+    "preselect": true,
+    "places_german": [
+      "Zalesie Śląskie"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12012,kanalizacja-byla-rachunki-nie-w-suchodancu-przyjdzie-czas-zaplaty",
+    "title": "Kanalizacja była, rachunki nie. W Suchodańcu przyjdzie czas zapłaty",
+    "summary": "W Suchodańcu mieszkańcy mogą korzystać z sieci kanalizacyjnej dopiero od wiosny 2025 roku, kiedy wielu z nich przyłączyło się do wartej blisko 18 mln zł inwestycji. Teraz, po roku użytkowania, czeka ich rozliczenie – sięgające nawet kilku tysięcy złotych. Skąd wzięły się zaległości i jak duże obciążenie finansowe spadnie na gospodarstwa domowe?",
+    "content": "W Suchodańcu mieszkańcy mogą korzystać z sieci kanalizacyjnej dopiero od wiosny 2025 roku, kiedy wielu z nich przyłączyło się do wartej blisko 18 mln zł inwestycji. Teraz, po roku użytkowania, czeka ich rozliczenie – sięgające nawet kilku tysięcy złotych. Skąd wzięły się zaległości i jak duże obciążenie finansowe spadnie na gospodarstwa domowe?",
+    "published": "2026-08-19T06:12:00+02:00",
+    "id": "f311e9a2770e977f2df0862f149a7e4cae62e411",
+    "preselect": true,
+    "places_german": [
+      "Suchodaniec",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]
