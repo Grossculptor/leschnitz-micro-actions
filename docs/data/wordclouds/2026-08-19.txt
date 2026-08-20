@@ -31,6 +31,7 @@ motives
 new
 office
 oppeln
+oppeln's
 permit
 pilgrimage
 push
@@ -39,6 +40,7 @@ rso
 sejmik
 silence
 station
+storm
 strzelcach
 tender
 trails
