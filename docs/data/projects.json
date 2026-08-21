@@ -1,5 +1,12 @@
 [
   {
+    "title": "Why does the courtroom veil the pain of Dziewkowic's girl?",
+    "datetime": "2026-08-22T10:00:00+02:00",
+    "description": "At dawn I place a single white lily on the steps of the Strzelcach Opolskich courthouse, letting its scent mingle with the stale air of bureaucracy. A handwritten note, folded like a quiet prayer, asks: “Who watches the watchers when the child's voice is silenced?” Passers‑by are invited to leave a petal, creating a growing, fragrant memorial that slowly reveals the hidden absence of public concern.",
+    "source": "https://www.strzelce360.pl/artykul/12029,sprawa-11-latki-z-dziewkowic-zyla-cala-polska-ruszyl-proces-karola-b",
+    "hash": "b9346375373fb7873254bb8eeb87c7d31e092624"
+  },
+  {
     "title": "Why does the Oppeln regulator hide the river's sigh?",
     "datetime": "2026-08-22T10:00:00+02:00",
     "description": "At dawn, lay a bundle of dried reed and lavender beside the Vistula’s edge in Leschnitz. As passersby step over, the scent of earth and faint perfume rises, echoing the unnoticed water warnings. The bundle bears a handwritten copy of the WOOŚ.420.13.2026.MSe.3 notice, inviting curiosity and exposing the regulator’s quiet omission.",
@@ -14,6 +21,25 @@
     "hash": "49eb8f21a9352745c1944786e6241367bdeec9c9"
   },
   {
+    "title": "Why does the RSO flood alert mask long‑standing water?",
+    "datetime": "2026-08-21T14:55:00+02:00",
+    "description": "Place a small, transparent bowl of river water on the steps of the Leschnitz town hall. As passersby step over, the faint scent of wet earth rises, mingling with the crisp morning air. Attach a handwritten note that reads, “We see the rise, but we never saw the dry fields of our ancestors.” The bowl will slowly evaporate, leaving only the paper—an invisible trace of the ignored drought that preceded the flood.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/ostrzezenie-dla-opolskiego-21-08-2026-14-50-gwaltowne-wzrosty-stanow-wody-prosna/ar/c1p1-19803805",
+    "hash": "be7c4f2316cf4be3ac96485a9aaa53bc5cd48030"
+  },
+  {
+    "title": "Why will the A4 toll gates vanish like ghostly sentinels?",
+    "datetime": "2026-08-21T14:49:05+00:00",
+    "description": "At dusk, place a line of white chalk silhouettes on the pavement where the six toll booths once stood, each scented with faint pine resin. Passers‑by hear the soft rustle of paper receipts imagined, feeling the empty space breathe a cool, metallic hush that hints at the Occupier’s vanished revenue ritual. The chalk fades with rain, leaving only the memory of absence.",
+    "keywords": [
+      "autostrady",
+      "bramki",
+      "poboru"
+    ],
+    "source": "https://strzelceopolskie.naszemiasto.pl/z-autostrady-a4-znikna-bramki-do-poboru-oplat-wiemy-kiedy-to-sie-stanie/ar/c1p2-29285433",
+    "hash": "cb05cb167db6899811a5bac2c84a556ccce2b9a4"
+  },
+  {
     "title": "Why does the new RSO komunikat hide flood risk for?",
     "datetime": "2026-08-21T14:00:00+02:00",
     "description": "At the town square, place a translucent water‑filled balloon beside the historic fountain. As passersby inhale the cool mist, hand out tiny cards that read: “Gwałtowne wzrosty – see what the official notice omits.” The scent of wet stone and pine lingers, prompting a quiet pause to question the calm tone of the RSO’s latest komunikat.",
@@ -26,6 +52,20 @@
     "description": "At sunrise, lay a thin line of white chalk along the old platform, spelling the names of displaced families in the scent of fresh pine and wet stone. Passers‑by are invited to step on the letters, feeling the crunch underfoot as the modern façade rises behind them, exposing the quiet PR promise of “modern, functional” while the ground remembers what was removed.",
     "source": "https://www.strzelce360.pl/artykul/12020,wielkie-zmiany-przy-strzeleckim-dworcu-powstanie-centrum-przesiadkowe",
     "hash": "735efe642c2c99e387f9385cc60fc3bcdc05dd48"
+  },
+  {
+    "title": "Why does free summer fun in Szymiszowie-Osiedlu conceal?",
+    "datetime": "2026-08-21T10:00:00+02:00",
+    "description": "At the town square, scatter hand‑made paper suns scented with pine and lemon. Each sun bears a tiny slip: “No fee, but whose silence is bought?” Passers pick them up, inhale the fresh aroma, and place them on the municipal notice board where official flyers promise “free joy.” The growing pile becomes a fragrant mirror of the hidden PR promise, inviting the community to question the cost of the so‑called gratis summer.",
+    "source": "https://www.strzelce360.pl/artykul/12022,w-szymiszowie-osiedlu-nie-ma-nudy-podczas-wakacji",
+    "hash": "3fac1f17cda4abc6ff641b89e3bb4f3c103f63ba"
+  },
+  {
+    "title": "Does Ujazd’s bioteka mask settler green branding?",
+    "datetime": "2026-08-21T10:00:00+02:00",
+    "description": "At dawn, place a handful of pine needles and a small vial of river water on the construction fence of the Ujazd bioteka. The scent of fresh timber mingles with the damp earth, inviting passers‑by to inhale the forest that never existed here. Invite locals to write a single word of memory on biodegradable tags and tie them to the fence. Over weeks the tags accumulate, revealing the gap between the promised green space and the lived absence of the indigenous landscape.",
+    "source": "https://www.strzelce360.pl/artykul/12009,pierwsze-takie-miejsce-w-wojewodztwie-w-ujezdzie-powstaje-bioteka",
+    "hash": "9e9b60e388843a0cb3c24fb106eee7e3bf0de372"
   },
   {
     "title": "Does the Invader’s kitchen purchase mask local needs?",
