@@ -1,6 +1,16 @@
 erased
+force
 hide
 hub
+invader
+kitchen
+local
+mask
+needs
 new
+pick
+purchase
+sołtys
 strzelcach
+villagers
 voices
