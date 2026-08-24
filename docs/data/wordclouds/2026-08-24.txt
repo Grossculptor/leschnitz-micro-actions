@@ -30,8 +30,11 @@ spatial
 stores
 strzelce
 suchej
+sławięcice
 tours
+trail
 trips
+ujazd
 vanished
 veil
 voice
