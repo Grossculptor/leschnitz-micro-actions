@@ -3,6 +3,7 @@ agenda
 behind
 czternastek
 festival
+field
 friendly
 gift
 harvest
@@ -17,9 +18,12 @@ parades
 partnership
 pension
 promises
+renovated
 rybaczówka
+school
 settlement
 sweet
+town's
 toxic
 veil
 warm
