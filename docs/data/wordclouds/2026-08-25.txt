@@ -5,12 +5,18 @@ czternastek
 festival
 friendly
 gift
+harvest
 hidden
 hide
 invader
+mask
+motives
 narratives
 net
+parades
+partnership
 pension
+promises
 rybaczówka
 settlement
 sweet
@@ -19,3 +25,4 @@ veil
 warm
 waste
 workshops
+year
