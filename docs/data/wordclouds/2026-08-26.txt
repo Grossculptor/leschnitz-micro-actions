@@ -1,4 +1,10 @@
 celebration
 harvest
+invader
+lingering
+mask
+new
+priests
 profits
+silence
 zalesiu
