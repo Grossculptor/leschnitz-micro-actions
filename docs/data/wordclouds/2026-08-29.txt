@@ -1,6 +1,8 @@
+agenda
 announced
 civic
 community
+cut
 cuts
 hidden
 hide
@@ -9,6 +11,7 @@ invader's
 mask
 narrative
 nostalgic
+notice
 operator
 outage
 plan
@@ -16,5 +19,7 @@ postcards
 power
 priorities
 profit
+settler
 silence
+strzelcach
 warnings
