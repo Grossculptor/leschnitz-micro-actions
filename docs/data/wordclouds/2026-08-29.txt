@@ -1,7 +1,12 @@
+announced
+civic
 community
+cuts
+hidden
 hide
 invader
 invader's
+mask
 narrative
 nostalgic
 operator
@@ -9,6 +14,7 @@ outage
 plan
 postcards
 power
+priorities
 profit
 silence
 warnings
