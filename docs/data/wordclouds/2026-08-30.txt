@@ -1,0 +1,5 @@
+gmina
+grant
+hide
+needs
+strzelce

@@ -1,0 +1,5 @@
+community
+operator
+power
+silence
+warnings
