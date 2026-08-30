@@ -1,0 +1,32 @@
+[
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/tragiczne-katastrofy-i-wypadki-lotnicze-gineli-w-nich-piloci-i-pasazerowie/ar/c16-18718375",
+    "title": "Tragiczne katastrofy i wypadki lotnicze. Ginęli w nich piloci i pasażerowie",
+    "summary": "Na Opolszczyźnie doszło w sumie do kilkunastu katastrof, wypadk&oacute;w i incydent&oacute;w lotniczych. W wypadkach ginęli też piloci związani z naszym regionem oraz piloci radzieckiego myśliwca, kt&oacute;rzy wystartowali z lotniska w Skarbimierzu.",
+    "content": "Na Opolszczyźnie doszło w sumie do kilkunastu katastrof, wypadk&oacute;w i incydent&oacute;w lotniczych. W wypadkach ginęli też piloci związani z naszym regionem oraz piloci radzieckiego myśliwca, kt&oacute;rzy wystartowali z lotniska w Skarbimierzu.",
+    "published": "2026-08-30T17:38:00+02:00",
+    "id": "69dad6b96de01fc5b34cc2c77d7d1bc1dc8646df",
+    "preselect": true,
+    "places_german": [
+      "Oppeln",
+      "Skarbimierz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12056,zderzenie-osobowki-z-motocyklem-dwie-osoby-trafily-do-szpitala",
+    "title": "Zderzenie osobówki z motocyklem. Dwie osoby trafiły do szpitala",
+    "summary": "Do zdarzenia doszło w niedzielę, 30 sierpnia, w godzinach popołudniowych na skrzyżowaniu ul. Opolskiej (droga krajowa nr 94) z ul. Bocznicową w Strzelcach Opolskich.",
+    "content": "Do zdarzenia doszło w niedzielę, 30 sierpnia, w godzinach popołudniowych na skrzyżowaniu ul. Opolskiej (droga krajowa nr 94) z ul. Bocznicową w Strzelcach Opolskich.",
+    "published": "2026-08-30T18:36:00+02:00",
+    "id": "c9b6bdb423bcebd8c30ab5a3e759572879e71652",
+    "preselect": true,
+    "places_german": [
+      "Strzelce Opolskie",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]
