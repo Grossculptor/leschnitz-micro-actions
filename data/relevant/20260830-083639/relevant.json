@@ -1,0 +1,60 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/prasowka-30-08-2026-z-calego-tygodnia-w-strzelcach-opolskich-badz-na-biezaco-z-wydarzeniami/ar/c1p1-29307041",
+    "title": "Te artykuły były najczęściej czytane w zeszłym tygodniu. Zobacz zestawienie",
+    "summary": "Zobacz, o czym najchętniej czytali mieszkańcy Strzelec Opolskich.",
+    "content": "Zobacz, o czym najchętniej czytali mieszkańcy Strzelec Opolskich.",
+    "published": "2026-08-30T07:00:54+00:00",
+    "id": "929151fe9c1c20b1dadda7da23b3c5f31f433f41",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/gdzie-nie-bedzie-pradu-w-strzelcach-opolskich-sprawdz-gdzie-30-08-moze-zabraknac-pradu/ar/c1p1-20594228",
+    "title": "Czy w Strzelcach Opolskich zapowiedziano przerwy w zasilaniu? Przeczytaj najnowsze komunikaty z 30.08",
+    "summary": "Czy w Strzelcach Opolskich są planowane wyłączenia prądu? Zobacz najnowsze informacje z 30.08.",
+    "content": "Czy w Strzelcach Opolskich są planowane wyłączenia prądu? Zobacz najnowsze informacje z 30.08.",
+    "published": "2026-08-28T11:10:31+00:00",
+    "id": "da144e653b11b9b6115b3b684c6aa6faa56690d3",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12054,chodnika-w-tym-miejscu-na-razie-nie-bedzie-mieszkancy-nie-zamierzaja-odpuscic",
+    "title": "Chodnika w tym miejscu na razie nie będzie. Mieszkańcy nie zamierzają odpuścić",
+    "summary": "Ostatni remont ulicy Żeromskiego (na wysokości wieży ciśnień) oraz ulicy Kościelnej w Staniszczach Wielkich przyniósł długo oczekiwaną zmianę – nową nawierzchnię i utwardzone pobocza. Inwestycja zrealizowana w ramach sztandarowego programu powiatu strzeleckiego „4x10” znacząco poprawiła komfort jazdy. Do pełni szczęścia zabrakło jednak kluczowego z punktu widzenia pieszych elementu: niewielkiego odcinka chodnika, który połączyłby centrum miejscowości z nowo otwartym sklepem sieci Dino.",
+    "content": "Ostatni remont ulicy Żeromskiego (na wysokości wieży ciśnień) oraz ulicy Kościelnej w Staniszczach Wielkich przyniósł długo oczekiwaną zmianę – nową nawierzchnię i utwardzone pobocza. Inwestycja zrealizowana w ramach sztandarowego programu powiatu strzeleckiego „4x10” znacząco poprawiła komfort jazdy. Do pełni szczęścia zabrakło jednak kluczowego z punktu widzenia pieszych elementu: niewielkiego odcinka chodnika, który połączyłby centrum miejscowości z nowo otwartym sklepem sieci Dino.",
+    "published": "2026-08-30T06:30:00+02:00",
+    "id": "5d7c1540849b3627a798fe4eaf1efb78e4978074",
+    "preselect": true,
+    "places_german": [
+      "Staniszczach Wielkich",
+      "Gross Strehlitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12055,szkola-ktora-przechowuje-pamiec-calej-wsi-wyjatkowe-miejsce-w-otmicach",
+    "title": "Szkoła, która przechowuje pamięć całej wsi. Wyjątkowe miejsce w Otmicach",
+    "summary": "Szkoła to miejsce, w którym oprócz nauki czytania, pisania czy matematyki uczymy się również czegoś, co trudno znaleźć w książkach. Wartości historii i kultury regionu, w którym żyjemy. Doskonałym przykładem jest tu szkoła podstawowa w Otmicach, nie tylko dlatego, że edukuje dzieci od 125 lat, ale też z racji Izby Pamięci stworzonej przez Jolantę Lamm.",
+    "content": "Szkoła to miejsce, w którym oprócz nauki czytania, pisania czy matematyki uczymy się również czegoś, co trudno znaleźć w książkach. Wartości historii i kultury regionu, w którym żyjemy. Doskonałym przykładem jest tu szkoła podstawowa w Otmicach, nie tylko dlatego, że edukuje dzieci od 125 lat, ale też z racji Izby Pamięci stworzonej przez Jolantę Lamm.",
+    "published": "2026-08-30T06:08:00+02:00",
+    "id": "35547b2f6906125f4b2d8300c64b9592018a236d",
+    "preselect": true,
+    "places_german": [
+      "Otmice"
+    ],
+    "classified_by": "llm"
+  }
+]
