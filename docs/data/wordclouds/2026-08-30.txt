@@ -1,9 +1,14 @@
+brzezin
+council
 cuts
+empty
 footpath
 gmina
 grant
+helicopter
 hide
 invader
+kalinowice
 list
 local
 mask
@@ -12,13 +17,16 @@ missing
 mourning
 mute
 needs
+neglect
 news
 official
 opolskich
 outages
 power
 program
+remain
 reports
+rescue
 road
 school
 silence
@@ -29,3 +37,4 @@ traffic
 true
 village's
 voices
+while

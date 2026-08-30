@@ -1,0 +1,31 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/zderzenie-motocyklisty-z-samochodem-do-szpitala-zabral-go-smiglowiec-lpr/ar/c1p2-29308053",
+    "title": "Zderzenie motocyklisty z samochodem. Do szpitala zabrał go śmigłowiec LPR",
+    "summary": "Na skrzyżowaniu ulicy Opolskiej z Kolejową i Bocznicową w Strzelcach Opolskich samochód osobowy zderzył się z motocyklem.",
+    "content": "Na skrzyżowaniu ulicy Opolskiej z Kolejową i Bocznicową w Strzelcach Opolskich samochód osobowy zderzył się z motocyklem.",
+    "published": "2026-08-30T14:55:41+00:00",
+    "id": "eaefc9c37d71d4854f1749bd32cd444c131dc34b",
+    "preselect": true,
+    "places_german": [
+      "Strzelcach Opolskich"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12052,kalinowice-wybraly-nowego-soltysa-brzezina-nadal-nie-to-spory-problem",
+    "title": "Kalinowice wybrały nowego sołtysa, Brzezina - nadal nie. To spory problem",
+    "summary": "Kalinowice mają od 20 sierpnia nowego sołtysa: został nim Damian Pełka. Jest też nowa rada sołecka. Niestety w Brzezinie na kolejnym już zebraniu znów nie udało się dokonać wyborów z powodu braku chętnych.",
+    "content": "Kalinowice mają od 20 sierpnia nowego sołtysa: został nim Damian Pełka. Jest też nowa rada sołecka. Niestety w Brzezinie na kolejnym już zebraniu znów nie udało się dokonać wyborów z powodu braku chętnych.",
+    "published": "2026-08-29T06:26:00+02:00",
+    "id": "db72fef24ab5a4128d183da959f2dbd183295d5f",
+    "preselect": true,
+    "places_german": [
+      "Kalinowitz",
+      "Briesen"
+    ],
+    "classified_by": "llm"
+  }
+]
