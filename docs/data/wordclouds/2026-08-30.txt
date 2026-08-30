@@ -1,5 +1,10 @@
+cuts
 gmina
 grant
 hide
+mask
 needs
+opolskich
+power
+strzelcach
 strzelce
