@@ -1,0 +1,47 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/maja-prawie-100-lat-i-wciaz-odpalaja-stare-traktory-zachwycily-na-zlocie/ar/c1p2-29309113",
+    "title": "Mają prawie 100 lat i wciąż odpalają. Stare traktory zachwyciły na zlocie",
+    "summary": "Zlot zabytkowych traktorów był częścią dożynek gminy Strzelce Opolskie, których gospodarzem były w tym roku sołectwa Nowa Wieś i Adamowice. Można było zrobić sobie pamiątkowe zdjęcie, zajrzeć pod maskę, a nawet zasiąść za kierownicą i poczuć klimat rolnictwa sprzed kilku dekad.",
+    "content": "Zlot zabytkowych traktorów był częścią dożynek gminy Strzelce Opolskie, których gospodarzem były w tym roku sołectwa Nowa Wieś i Adamowice. Można było zrobić sobie pamiątkowe zdjęcie, zajrzeć pod maskę, a nawet zasiąść za kierownicą i poczuć klimat rolnictwa sprzed kilku dekad.",
+    "published": "2026-08-31T13:15:44+00:00",
+    "id": "a9f1b56eb91d53c04d6c067fd7ea6fc00617479d",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz",
+      "Leschnitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/wylaczenia-pradu-w-strzelcach-opolskich-gdzie-31-08-moze-wystapic-awaria-lub-planowe-wylaczenie-pradu/ar/c1p1-20594228",
+    "title": "Czy w Strzelcach Opolskich zapowiedziano przerwy w zasilaniu? Przeczytaj najnowsze komunikaty z 31.08",
+    "summary": "Czy w Strzelcach Opolskich będą prowadzone prace skutkujące przerwami w dostawie energii? Sprawdź informacje z 31.08.",
+    "content": "Czy w Strzelcach Opolskich będą prowadzone prace skutkujące przerwami w dostawie energii? Sprawdź informacje z 31.08.",
+    "published": "2026-08-31T10:11:09+00:00",
+    "id": "192d3607d2555c60ef5e37503623a0a7cd07df6a",
+    "preselect": true,
+    "places_german": [
+      "Strzelce"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12059,atrakcje-stare-traktory-i-zabawa-tak-wygladaly-dozynki-gminy-strzelce-opolskie",
+    "title": "Atrakcje, stare traktory i zabawa. Tak wyglądały dożynki gminy Strzelce Opolskie",
+    "summary": "Mieszkańcy gminy Strzelce Opolskie oraz goście mogli zaszaleć w ostatni weekend wakacji na dożynkach gminnych, organizowanych przez sołectwa Adamowice i Nowa Wieś na nowowiejskim boisku.",
+    "content": "Mieszkańcy gminy Strzelce Opolskie oraz goście mogli zaszaleć w ostatni weekend wakacji na dożynkach gminnych, organizowanych przez sołectwa Adamowice i Nowa Wieś na nowowiejskim boisku.",
+    "published": "2026-08-31T18:22:00+02:00",
+    "id": "cf9cb26f7ad43e246f6ee3912047d6d14f840962",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz",
+      "Adamowice",
+      "Nowa Wieś"
+    ],
+    "classified_by": "llm"
+  }
+]
