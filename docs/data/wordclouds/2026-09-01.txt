@@ -1,6 +1,7 @@
 agenda
 agendas
 aid
+blackout
 blocks
 breath
 budżet
@@ -12,6 +13,7 @@ headlines
 hidden
 hide
 hiding
+ignored
 invader
 invader's
 lighting
@@ -32,6 +34,7 @@ renovation
 reveal
 road
 rule
+ryzyko
 scholarships
 school
 settler
@@ -43,6 +46,7 @@ student
 summer
 tax
 temporary
+threat
 traffic
 trails
 true
