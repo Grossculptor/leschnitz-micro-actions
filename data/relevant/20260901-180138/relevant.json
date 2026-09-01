@@ -1,0 +1,45 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-w-woj-opolskim-1-09-2026-lista-aktualnych-remontow-drog-i-innych-zdarzen/ar/c1p1-19949817",
+    "title": "Jakie są aktualne ((1.09.2026)) utrudnienia drogowe w woj. opolskim?",
+    "summary": "Gdzie mogą występować korki i utrudnienia w woj. opolskim? Dane z 1.09.2026.",
+    "content": "Gdzie mogą występować korki i utrudnienia w woj. opolskim? Dane z 1.09.2026.",
+    "published": "2026-09-01T16:30:13+00:00",
+    "id": "8ba93891b1c757ebe557740d091c74adb2bc6895",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/przeglad-prasy-z-sierpnia-2026-zestaw-najwazniejszych-wydarzen-miesiaca-co-dzialo-sie-w-strzelcach-opolskich/ar/c1p1-29315055",
+    "title": "Co było najczęściej czytane? Miesięczne podsumowanie dla Strzelec Opolskich",
+    "summary": "Top artykuły miesiąca i najważniejsze wydarzenia w Strzelcach Opolskich.",
+    "content": "Top artykuły miesiąca i najważniejsze wydarzenia w Strzelcach Opolskich.",
+    "published": "2026-09-01T15:50:38+00:00",
+    "id": "11e3a85fd3c763f5796683fece1af1b072b95ae1",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12058,na-piaskowej-w-kolonowskiem-bedzie-jasniej-i-bezpieczniej",
+    "title": "Na Piaskowej w Kolonowskiem będzie jaśniej i bezpieczniej",
+    "summary": "Mieszkańcy ulicy Piaskowej w Kolonowskiem już niebawem zyskają bezpieczną i dobrze oświetloną drogę.",
+    "content": "Mieszkańcy ulicy Piaskowej w Kolonowskiem już niebawem zyskają bezpieczną i dobrze oświetloną drogę.",
+    "published": "2026-08-31T06:09:00+02:00",
+    "id": "10a03c3385faffda02e13d85fcb3b2856a3f84e3",
+    "preselect": true,
+    "places_german": [
+      "Kolonowskiem",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]
