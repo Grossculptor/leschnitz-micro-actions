@@ -1,6 +1,7 @@
 agenda
 agendas
 aid
+behind
 blackout
 blocks
 breath
@@ -8,6 +9,7 @@ budżet
 community
 daily
 delay
+eateries
 forgotten
 headlines
 hidden
@@ -21,10 +23,12 @@ list
 local
 market
 mask
+menus
 monthly
 neglect
 new
 obywatelski
+official
 one
 oppeln
 permit
@@ -50,6 +54,7 @@ threat
 traffic
 trails
 true
+truth
 updates
 veil
 voices
