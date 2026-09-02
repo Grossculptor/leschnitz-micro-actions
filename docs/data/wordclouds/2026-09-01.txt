@@ -1,6 +1,7 @@
 agenda
 agendas
 aid
+alerts
 behind
 blackout
 blocks
@@ -11,6 +12,7 @@ daily
 delay
 eateries
 forgotten
+grid
 headlines
 hidden
 hide
@@ -31,7 +33,9 @@ obywatelski
 official
 one
 oppeln
+outage
 permit
+power
 promised
 read
 renovation
