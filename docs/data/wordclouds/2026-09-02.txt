@@ -1,5 +1,6 @@
 agenda
 air
+barriers
 border
 breath
 burmistrz
@@ -13,6 +14,7 @@ hide
 homes
 invader
 invader's
+izbicku
 leschnitz
 list
 mask
@@ -24,6 +26,7 @@ planned
 power
 profit
 road
+roadside
 safety
 scent
 settler

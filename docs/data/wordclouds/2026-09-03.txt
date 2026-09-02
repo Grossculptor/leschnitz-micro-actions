@@ -1,0 +1,6 @@
+cuts
+local
+occupier
+power
+silence
+voices

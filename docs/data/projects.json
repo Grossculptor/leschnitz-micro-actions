@@ -1,5 +1,12 @@
 [
   {
+    "title": "Will the Occupier’s power cuts silence local voices?",
+    "datetime": "2026-09-03T09:00:00+02:00",
+    "description": "At the town square of Gross Strehlitz, place small, scented sachets of pine and rosemary on each streetlamp. As the scheduled blackout looms, the sachets release a fresh forest aroma that lingers while the lights dim, inviting passersby to whisper stories of the land’s original stewards. The faint scent becomes a quiet protest against the invisible hand that plans the outage, reminding the community of the enduring breath of the indigenous soil.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-nie-bedzie-pradu-w-strzelcach-opolskich-sprawdz-gdzie-3-09-moze-zabraknac-pradu/ar/c1p1-20594228",
+    "hash": "de435f621749095c704e69464a044ca2410f347b"
+  },
+  {
     "title": "Why are planned power cuts in Strzelcach Opolskich hidden?",
     "datetime": "2026-09-02T13:06:51+00:00",
     "description": "At dusk, place a small lantern on the municipal notice board, its flame flickering against the official schedule. Around it, scatter dried lavender and charcoal dust, letting the sweet scent mingle with the faint smell of ozone. Passers‑by are invited to write on the lantern’s glass the words they hear in the utility’s press release, exposing the quiet promise of “planned” outages while the air hums with the unspoken fatigue of the local families.",
@@ -38,6 +45,13 @@
     "description": "In the town square of Strzelec Opolskich, lay a thin veil of white cotton scented with pine sap. As passersby walk over it, the cotton slowly absorbs the dust of daily flyers. After one hour, the cotton is lifted, revealing faint ink traces of the most‑repeated words from the week’s headlines—‘Dowiedz’, ‘najczęściej’, ‘pisały’. The scent of fresh pine mingles with the faint metallic hint of ink, prompting onlookers to question which stories are amplified and which voices are erased.",
     "source": "https://strzelceopolskie.naszemiasto.pl/prasowka-ze-strzelec-opolskich-2-09-2026-przeglad-prasy-zestawienie-najwazniejszych-informacji/ar/c1p1-19739151",
     "hash": "65159a78b40557391fd41c16b7d61b2c2501e1a5"
+  },
+  {
+    "title": "Why do roadside barriers hide the voices of Izbicku’s?",
+    "datetime": "2026-09-02T09:59:00+02:00",
+    "description": "At dusk, place a thin veil of pine needles along the Opolska barrier in Izbicku. As passers‑by brush past, the scent of fresh resin rises, reminding them of the hidden crash of an Osobówka and the child’s quiet gasp. Leave a small, handwritten note asking: “Who heard the crash?” and collect the responses in a glass jar to reveal the silent PR narrative of safety.",
+    "source": "https://www.strzelce360.pl/artykul/12066,osobowka-rozbila-sie-o-barierki-trzy-osoby-w-tym-dziecko-trafily-do-szpitala",
+    "hash": "6f2cfb5615c88f5231d9d52c3971dfeab346b21e"
   },
   {
     "title": "Why does safety messaging hide the Invader's traffic?",
