@@ -1,6 +1,7 @@
 agenda
 applaud
 behind
+blackouts
 brief
 bureaucratic
 city
@@ -15,6 +16,8 @@ dissolve
 dry
 energy
 erasing
+freedom
+grid
 grosz
 hidden
 hide
@@ -22,10 +25,12 @@ invader
 keep
 left
 leschnitz
+linger
 local
 locks
 lovers
 mask
+narratives
 oberschlesien
 occupier
 officials
@@ -33,6 +38,7 @@ opolska
 opolskich
 oppeln
 pearl
+planned
 power
 promised
 reports
@@ -40,7 +46,9 @@ residents
 river
 road
 silence
+square
 strzelcach
+strzelcah
 teaching
 traffic
 vacancies
