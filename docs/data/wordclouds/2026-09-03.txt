@@ -1,6 +1,9 @@
 cuts
 local
 occupier
+opolskich
 power
+residents
 silence
+strzelcach
 voices
