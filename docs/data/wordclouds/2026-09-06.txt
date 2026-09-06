@@ -16,6 +16,7 @@ ideal
 imielnitz
 indigenous
 invader
+lose
 mask
 myth
 neglect
@@ -29,6 +30,7 @@ short
 sky
 story
 strzelce
+towns
 trips
 true
 view
