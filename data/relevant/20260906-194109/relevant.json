@@ -1,0 +1,33 @@
+[
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/wiecie-ze-te-opolskie-miejscowosci-byly-kiedys-miastami-stracily-jednak-prawa-miejskie/ar/c1-16096787",
+    "title": "Wiecie, że te opolskie miejscowości były kiedyś miastami? Straciły jednak prawa miejskie",
+    "summary": "Stary Grodk&oacute;w, Skorogoszcz, Ścinawa - to tylko niekt&oacute;re z miejscowości w wojew&oacute;dztwie opolskim, kt&oacute;re kiedyś miały status miast. \nUtraciły jednak prawa miejskie. Niekt&oacute;re pozostały gminami wiejskimi, a część zupełnie podupadła na znaczeniu i jest wioskami.",
+    "content": "Stary Grodk&oacute;w, Skorogoszcz, Ścinawa - to tylko niekt&oacute;re z miejscowości w wojew&oacute;dztwie opolskim, kt&oacute;re kiedyś miały status miast. \nUtraciły jednak prawa miejskie. Niekt&oacute;re pozostały gminami wiejskimi, a część zupełnie podupadła na znaczeniu i jest wioskami.",
+    "published": "2026-09-06T18:24:27+02:00",
+    "id": "b4e23896a037d00258c8dca1de694fe9e51e597e",
+    "preselect": true,
+    "places_german": [
+      "Stary Grodków",
+      "Skorogoszcz",
+      "Ścinawa"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12083,grodzisko-to-quot-najpiekniejsza-wies-opolska-2026-quot-rozmierka-tez-z-sukcesem",
+    "title": "Grodzisko to \"Najpiękniejsza Wieś Opolska 2026\"! Rozmierka też z sukcesem",
+    "summary": "Grodzisko zdobyło pierwsze miejsce w konkursie \"Najpiękniejsza Wieś Opolska 2026\", wygrywając w kategorii „Najpiękniejsza Wieś - dziedzictwo i wspólnota”. Z kolei Rozmierka zajęła drugie miejsce w kategorii „Miejsce - serce wspólnoty”.",
+    "content": "Grodzisko zdobyło pierwsze miejsce w konkursie \"Najpiękniejsza Wieś Opolska 2026\", wygrywając w kategorii „Najpiękniejsza Wieś - dziedzictwo i wspólnota”. Z kolei Rozmierka zajęła drugie miejsce w kategorii „Miejsce - serce wspólnoty”.",
+    "published": "2026-09-06T17:05:00+02:00",
+    "id": "386406eb42a647a8c72fbe1e4fd5dfce73c97b71",
+    "preselect": true,
+    "places_german": [
+      "Grodzisko",
+      "Rozmierka"
+    ],
+    "classified_by": "llm"
+  }
+]

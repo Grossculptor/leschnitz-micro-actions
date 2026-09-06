@@ -1,15 +1,20 @@
 appear
 bound
 budget
+burghof
+celebrate
 church
+city
 conceal
 erased
+fade
 fame
 fire
 gear
 hide
 ideal
 imielnitz
+indigenous
 invader
 mask
 myth
@@ -17,6 +22,8 @@ neglect
 new
 oppeln
 oscar
+records
+rights
 rose
 short
 sky
@@ -27,4 +34,5 @@ true
 view
 villages
 voices
+while
 wood
