@@ -1,0 +1,60 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-woj-opolskie-gdzie-trwaja-roboty-drogowe-sprawdz-stan-na-7-09-2026/ar/c1p1-19949817",
+    "title": "Gdzie występują czasowe utrudnienia na drogach w woj. opolskim? Stan na 7.09.2026",
+    "summary": "Jakie utrudnienia mogą wpłynąć na podróż w woj. opolskim? Sprawdź najnowsze dane.",
+    "content": "Jakie utrudnienia mogą wpłynąć na podróż w woj. opolskim? Sprawdź najnowsze dane.",
+    "published": "2026-09-07T06:00:17+00:00",
+    "id": "1af72b4a69d19d1083b2b12f4a1cbf89c7ea03d6",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/inwestorzy-w-strefie-gospodarczej-przy-a4-szukaja-pracownikow-beda-setki-nowych-miejsc-pracy/ar/c1p2-29299013",
+    "title": "Inwestorzy w strefie gospodarczej przy A4 szukają pracowników. Będą setki nowych miejsc pracy",
+    "summary": "Strefa Aktywności Gospodarczej w gminie Ujazd to gigant na mapie opolskiego rynku pracy. Działające tam firmy już zatrudniają tysiące pracowników, a to nie koniec, ponieważ wciąż poszukują kolejnych rąk do pracy.",
+    "content": "Strefa Aktywności Gospodarczej w gminie Ujazd to gigant na mapie opolskiego rynku pracy. Działające tam firmy już zatrudniają tysiące pracowników, a to nie koniec, ponieważ wciąż poszukują kolejnych rąk do pracy.",
+    "published": "2026-09-07T03:45:00+00:00",
+    "id": "df380977b24eb8b8116714c6d0dd19d778975de6",
+    "preselect": true,
+    "places_german": [
+      "Ujazd",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12082,quot-nie-quot-dla-mieszkan-w-palacu-w-strzelcach-opolskich-gmina-chce-miliona-zlotych",
+    "title": "\"Nie\" dla mieszkań w pałącu w Strzelcach Opolskich. Gmina chce miliona złotych",
+    "summary": "Radni nie zgodzili się na adaptację ruin strzeleckiego pałacu na apartamentowiec. Co więcej, wysłane zostało wezwanie do uregulowania spłaty zobowiązania hipotecznego zapisanego w umowie sprzedaży zabytku.",
+    "content": "Radni nie zgodzili się na adaptację ruin strzeleckiego pałacu na apartamentowiec. Co więcej, wysłane zostało wezwanie do uregulowania spłaty zobowiązania hipotecznego zapisanego w umowie sprzedaży zabytku.",
+    "published": "2026-09-07T07:07:00+02:00",
+    "id": "df282d89e775faff91864e357a0ce1a1eb04b0fc",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12084,jest-dofinansowanie-na-nowa-inwestycje-w-kadlubcu",
+    "title": "Jest dofinansowanie na nową inwestycję w Kadłubcu",
+    "summary": "W Kadłubcu powstanie nowa zatoka autobusowa. Gmina Leśnica pozyskała na ten cel dofinansowanie z programu Fundusze Europejskie dla Opolskiego 2021-2027.",
+    "content": "W Kadłubcu powstanie nowa zatoka autobusowa. Gmina Leśnica pozyskała na ten cel dofinansowanie z programu Fundusze Europejskie dla Opolskiego 2021-2027.",
+    "published": "2026-09-07T05:05:00+02:00",
+    "id": "c5ca4d6dbe3557c3c20d19cedb9def2ddea5e0aa",
+    "preselect": true,
+    "places_german": [
+      "Kadłubiec",
+      "Leschnitz"
+    ],
+    "classified_by": "llm"
+  }
+]
