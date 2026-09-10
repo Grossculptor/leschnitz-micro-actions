@@ -1,5 +1,6 @@
 agenda
 bajtle
+beautiful
 bells
 benefits
 celebrate
@@ -23,6 +24,7 @@ invader
 invader's
 izbicko
 kwocie
+label
 leschnitz
 local
 loss
@@ -59,6 +61,7 @@ true
 two
 updates
 vespa
+village
 voices
 while
 work
