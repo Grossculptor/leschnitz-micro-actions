@@ -6,15 +6,18 @@ blackout
 demand
 disc
 extra
+festival
 field
 forgotten
 friendly
 fuels
+golden
 golf
 hidden
 hide
 hides
 invader's
+jemielnicki
 kierowcy
 leschnitz
 mask
@@ -23,6 +26,8 @@ new
 notice
 operator
 plans
+profits
+promise
 punish
 road
 roads
