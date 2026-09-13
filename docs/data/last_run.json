@@ -1,5 +1,5 @@
 {
-  "finished_at": "2026-09-13T19:57:07.320196+00:00",
+  "finished_at": "2026-09-13T22:42:38.143944+00:00",
   "model": "openai/gpt-oss-120b",
   "validation_mode": "shadow",
   "feeds": 5,
@@ -13,6 +13,6 @@
   "quarantined_this_run": 0,
   "awaiting_retry": 0,
   "suppressed_total": 894,
-  "total_items": 2942,
-  "newest_item": "2026-09-13T09:30:00+02:00"
+  "total_items": 2943,
+  "newest_item": "2026-09-13T19:13:16+00:00"
 }
