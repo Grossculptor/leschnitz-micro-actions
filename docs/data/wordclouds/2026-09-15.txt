@@ -1,5 +1,6 @@
 abandoned
 beautiful
+bypass
 candle
 car
 chase
@@ -9,6 +10,7 @@ cost
 council
 delays
 dictionary
+displaced
 dziewkowice
 ears
 fate
