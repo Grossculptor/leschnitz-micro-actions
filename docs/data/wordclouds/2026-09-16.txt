@@ -1,3 +1,4 @@
+agenda
 alert
 behind
 call
@@ -7,6 +8,7 @@ control
 cost
 flood
 funding
+glorify
 grabs
 hidden
 hide
@@ -15,11 +17,15 @@ homes
 invader
 invader's
 land
+limits
 mask
+masking
 mayor
+mieszkaniec
 myths
 narrative
 oppeln
+police
 promise
 przeszkody
 public
@@ -29,9 +35,12 @@ ruchu
 settler
 silence
 space
+speed
 today
+trasy
 true
 upgrade
 waste
 water
+while
 zakłócenia
