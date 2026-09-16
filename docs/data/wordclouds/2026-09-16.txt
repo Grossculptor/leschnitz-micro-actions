@@ -1,11 +1,18 @@
 agenda
 alert
 behind
+birthday
+book
 call
 camera
+celebrating
 cheapest
+club
+coat
 control
 cost
+delays
+erase
 flood
 funding
 glorify
@@ -13,6 +20,7 @@ grabs
 hidden
 hide
 hides
+history
 homes
 invader
 invader's
@@ -24,8 +32,12 @@ mayor
 mieszkaniec
 myths
 narrative
+new
 oppeln
 police
+presented
+profits
+progress
 promise
 przeszkody
 public
@@ -36,6 +48,7 @@ settler
 silence
 space
 speed
+strzelce
 today
 trasy
 true
