@@ -1,3 +1,4 @@
+agendas
 burmistrz
 bypass
 celebrated
@@ -12,6 +13,7 @@ gmina
 groß
 harvest
 heraldic
+hidden
 hide
 invader
 jubilee
@@ -23,6 +25,7 @@ lędzin
 mask
 mowing
 municipal
+murals
 mute
 narrative
 needs
@@ -47,6 +50,7 @@ stewards
 still
 toddler
 traffic
+village
 woes
 występują
 żyrowa
