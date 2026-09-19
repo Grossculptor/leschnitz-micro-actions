@@ -1,0 +1,45 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/koniec-popularnego-marketu-w-centrum-miasta-pracownice-zostaly-bez-wyplat/ar/c1p2-29366755",
+    "title": "Koniec popularnego marketu w centrum miasta. Pracownice zostały bez wypłat",
+    "summary": "Market SPAR zlokalizowany przy ulicy Wojska Polskiego w Strzelcach Opolskich niespodziewanie zakończył swoją działalność. Sklep, który przez ostatnie cztery lata wpisał się w krajobraz ścisłego centrum miasta, z dnia na dzień zamknął drzwi przed klientami. Największy dramat przeżywają jednak zatrudnione tam kobiety, które nagle straciły źródło dochodu i wciąż czekają na uregulowanie zaległych wypłat.",
+    "content": "Market SPAR zlokalizowany przy ulicy Wojska Polskiego w Strzelcach Opolskich niespodziewanie zakończył swoją działalność. Sklep, który przez ostatnie cztery lata wpisał się w krajobraz ścisłego centrum miasta, z dnia na dzień zamknął drzwi przed klientami. Największy dramat przeżywają jednak zatrudnione tam kobiety, które nagle straciły źródło dochodu i wciąż czekają na uregulowanie zaległych wypłat.",
+    "published": "2026-09-19T10:49:59+00:00",
+    "id": "8f15953e5a5341792e297917f312ca7bfbdfbce1",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-woj-opolskie-gdzie-trwaja-roboty-drogowe-sprawdz-stan-na-19-09-2026/ar/c1p1-19949817",
+    "title": "Które trasy są obecnie objęte ograniczeniami ruchu w woj. opolskim - 19.09.2026?",
+    "summary": "Jakie zmiany w organizacji ruchu obowiązują w woj. opolskim? Stan na 19.09.2026.",
+    "content": "Jakie zmiany w organizacji ruchu obowiązują w woj. opolskim? Stan na 19.09.2026.",
+    "published": "2026-09-19T05:42:11+00:00",
+    "id": "31f34fb2d70dc7c0f52cae041a302d167bdfa622",
+    "preselect": true,
+    "places_german": [
+      "Oppeln",
+      "Leschnitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/w-tych-miejscach-policjancji-najczesciej-stoja-z-suszarkami-tutaj-wlepiaja-mandaty/ar/c1-18938117",
+    "title": "W tych miejscach policjancji najczęściej stoją z suszarkami. Tutaj wlepiają mandaty",
+    "summary": "Kierowcy z wojew&oacute;dztwa opolskiego wymieniają się informacjami, gdzie najczęściej można spotkać patrole drog&oacute;wki. Publikują zdjęcia z konkretnymi lokalizacjami i ostrzegają nawzajem.",
+    "content": "Kierowcy z wojew&oacute;dztwa opolskiego wymieniają się informacjami, gdzie najczęściej można spotkać patrole drog&oacute;wki. Publikują zdjęcia z konkretnymi lokalizacjami i ostrzegają nawzajem.",
+    "published": "2026-09-19T12:37:00+02:00",
+    "id": "fbf039dbfae4619eb4c761097abb9a00598567c8",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]
