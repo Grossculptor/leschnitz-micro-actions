@@ -15,6 +15,7 @@ harvest
 heraldic
 hidden
 hide
+highway
 invader
 jubilee
 lands
@@ -31,6 +32,7 @@ narrative
 needs
 occupier
 online
+oppeln
 problems
 problemy
 profits
@@ -45,11 +47,13 @@ routine
 safety
 scent
 settler
+speed
 stanisch
 stewards
 still
 toddler
 traffic
+trap
 village
 woes
 występują
