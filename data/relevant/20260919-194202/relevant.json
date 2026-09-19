@@ -1,0 +1,32 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/te-opolskie-miejscowosci-zniknely-jak-atlantyda-nikt-tu-juz/ar/c1-8758119",
+    "title": "Te opolskie miejscowości zniknęły jak Atlantyda. Nikt tu już nie mieszka",
+    "summary": "W ciągu ostatnich stu lat na terenie Opolszczyzny z powierzchni ziemi zniknęło co najmniej kilkanaście miejscowości. Co się z nimi stało? Dowiesz się z tego artykułu.",
+    "content": "W ciągu ostatnich stu lat na terenie Opolszczyzny z powierzchni ziemi zniknęło co najmniej kilkanaście miejscowości. Co się z nimi stało? Dowiesz się z tego artykułu.",
+    "published": "2026-09-19T17:57:57+00:00",
+    "id": "899ca4060547954fa452c6b884742e3b49047221",
+    "preselect": true,
+    "places_german": [
+      "Oppeln",
+      "Gross Strehlitz",
+      "Leschnitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/te-opolskie-miejscowosci-zniknely-jak-atlantyda-nikt-tu-juz-nie-mieszka/ar/c1-15340690",
+    "title": "Te opolskie miejscowości zniknęły jak Atlantyda. Nikt tu już nie mieszka",
+    "summary": "W ciągu ostatnich stu lat na terenie Opolszczyzny z powierzchni ziemi zniknęło co najmniej kilkanaście miejscowości. Co się z nimi stało? Dowiesz się z tego artykułu.",
+    "content": "W ciągu ostatnich stu lat na terenie Opolszczyzny z powierzchni ziemi zniknęło co najmniej kilkanaście miejscowości. Co się z nimi stało? Dowiesz się z tego artykułu.",
+    "published": "2026-09-19T19:57:57+02:00",
+    "id": "2079aeeb5c5879ebdf580d2972789495c19196c4",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]
