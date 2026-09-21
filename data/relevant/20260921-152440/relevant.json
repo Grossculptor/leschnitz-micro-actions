@@ -1,0 +1,32 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/utrudnienia-w-ruchu-21-09-2026-w-woj-opolskim-gdzie-sa-dzisiaj-prowadzone-roboty-drogowe/ar/c1p1-19949817",
+    "title": "Jakie miejsca na drogach woj. opolskim są obecnie (21.09.2026) utrudnione?",
+    "summary": "Gdzie występują utrudnienia na drogach w woj. opolskim? Zobacz aktualny raport z 21.09.2026.",
+    "content": "Gdzie występują utrudnienia na drogach w woj. opolskim? Zobacz aktualny raport z 21.09.2026.",
+    "published": "2026-09-21T10:42:13+00:00",
+    "id": "89f3f601b28beed4a03127676adcc6363ab3fcdf",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/16172/xxx-sesja-rady-miejskiej-w-lesnicy.html",
+    "title": "XXX Sesja Rady Miejskiej w Leśnicy",
+    "summary": "",
+    "content": "",
+    "published": "2026-09-21T15:50:21+02:00",
+    "id": "49cd9f4635a4e7f5b5c9254d79dc79c86fdb40d9",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Oppeln",
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  }
+]
