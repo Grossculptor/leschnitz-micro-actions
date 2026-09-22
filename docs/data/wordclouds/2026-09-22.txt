@@ -4,7 +4,9 @@ cheap
 cost
 court
 erased
+fish
 fixes
+fresh
 goods
 heirs
 hidden
@@ -20,12 +22,15 @@ mask
 mayor
 neglect
 notice
+praised
 risk
 road
 selling
 settler
 silence
+silent
 staff
+stay
 tender
 traffic
 voices
