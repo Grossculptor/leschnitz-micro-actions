@@ -1,0 +1,33 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/gdzie-wystepuja-utrudnienia-w-ruchu-w-woj-opolskim-stan-na-23-09-2026/ar/c1p1-19949817",
+    "title": "Jakie utrudnienia wpływają na przejazd przez woj. opolskie - 23.09.2026?",
+    "summary": "Które trasy są objęte utrudnieniami w woj. opolskim? Zobacz najnowsze dane (23.09.2026).",
+    "content": "Które trasy są objęte utrudnieniami w woj. opolskim? Zobacz najnowsze dane (23.09.2026).",
+    "published": "2026-09-23T14:54:10+00:00",
+    "id": "1d80ddb8046463f936e790c578db4051ee074777",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12180,wjechal-na-miejsce-smiertelnego-wypadku-60-latek-byl-nietrzezwy",
+    "title": "Wjechał na miejsce śmiertelnego wypadku. 60-latek był nietrzeźwy",
+    "summary": "60-letni mieszkaniec gminy Ujazd zignorował pachołki i wjechał wprost na miejsce, gdzie prowadzono czynności po śmiertelnym wypadku. Okazało się, że był nietrzeźwy.",
+    "content": "60-letni mieszkaniec gminy Ujazd zignorował pachołki i wjechał wprost na miejsce, gdzie prowadzono czynności po śmiertelnym wypadku. Okazało się, że był nietrzeźwy.",
+    "published": "2026-09-23T12:51:00+02:00",
+    "id": "017425f4da0d02931f222f5df6253a46839975a7",
+    "preselect": true,
+    "places_german": [
+      "Ujazd",
+      "Leschnitz",
+      "Gross Strehlitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]
