@@ -1,0 +1,31 @@
+[
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/tragiczne-wypadki-sprzed-lat-polskie-drogi-byly-najniebezpieczniejsze-w-europie/ar/c1-15223336",
+    "title": "Tragiczne wypadki sprzed lat. Polskie drogi były najniebezpieczniejsze w Europie",
+    "summary": "Z roku na rok drogi Opolszczyzny są coraz bezpieczniejsze. Jest mniej wypadk&oacute;w śmiertelnych, ginie też mniej ludzi. Ale nie zawsze tak było. Najtragiczniejsza była końc&oacute;wka lat 90. i początek lat dwutysięcznych.",
+    "content": "Z roku na rok drogi Opolszczyzny są coraz bezpieczniejsze. Jest mniej wypadk&oacute;w śmiertelnych, ginie też mniej ludzi. Ale nie zawsze tak było. Najtragiczniejsza była końc&oacute;wka lat 90. i początek lat dwutysięcznych.",
+    "published": "2026-09-24T19:58:00+02:00",
+    "id": "bc5d65abdd8db3eb0ebf9e03355ecc1dd37daa81",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12185,dwie-kontrole-dwoch-kierowcow-i-ten-sam-problem-nie-mieli-prawa-jazdy",
+    "title": "Dwie kontrole, dwóch kierowców i ten sam problem. Nie mieli prawa jazdy",
+    "summary": "W niespełna dwie godziny policjanci strzeleckiej drogówki zatrzymali dwóch kierowców, którzy prowadzili samochody bez wymaganych uprawnień. Jeden wpadł w Strzelcach Opolskich, a drugi - w Zalesiu Śląskim.",
+    "content": "W niespełna dwie godziny policjanci strzeleckiej drogówki zatrzymali dwóch kierowców, którzy prowadzili samochody bez wymaganych uprawnień. Jeden wpadł w Strzelcach Opolskich, a drugi - w Zalesiu Śląskim.",
+    "published": "2026-09-24T11:07:00+02:00",
+    "id": "0e0d335dfe91a8f216825ea89d5899e4fb5564cd",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz",
+      "Zalesie Śląskie"
+    ],
+    "classified_by": "llm"
+  }
+]
