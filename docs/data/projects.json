@@ -1,10 +1,31 @@
 [
   {
+    "title": "Why does the Invader’s safety plan silence local voices?",
+    "datetime": "2026-09-25T13:23:49+02:00",
+    "description": "At the town square of Leschnitz, lay a thin veil of white ash on the bench where the mayor’s decree was posted. As the morning mist rises, passers‑by inhale the faint scent of burnt sage, a reminder of forgotten rituals. Each day, add a new line of native herbs to the ash, spelling out the names of families displaced since 1945, making the invisible absence visible to the bureaucratic gaze.",
+    "source": "https://bip.lesnica.pl/16180/zarzadzenienr-00504402026burmistrza-lesnicyz-dnia-17-wrzesnia-2026-rw-sprawie-przygotowania-gminy-lesnica-do-funkcjonowania-w-systemie-kierowania-bezpieczenstwem-narodowym.html",
+    "hash": "681ec1e06879df252190933476d389e8840a1144"
+  },
+  {
+    "title": "Why are only polished villages celebrated in Leschnitz?",
+    "datetime": "2026-09-25T12:00:00+02:00",
+    "description": "At dusk, scatter hand‑pressed lavender sachets on the stone steps of the Leschnitz town hall. The scent drifts into the waiting lobby, where a quiet note rests beside the visitor register: “The praised ‘najpiękniejsze wioski’ hide the voices of those who never left the fields. Look for the empty stalls where the original caretakers once traded.” The lingering aroma invites passersby to linger, read, and question the glossy tourism script.",
+    "source": "https://nto.pl/oto-najpiekniejsze-wioski-na-opolszczyznie-mieszkaja-tu-prawdziwi-gospodarze/ar/c1-17589529",
+    "hash": "1b979db98ca050f623c1a490fb8c136a130bbaad"
+  },
+  {
     "title": "Who hears the seniors’ silent pleas in Gross Strehlitz’s?",
     "datetime": "2026-09-25T12:00:00+02:00",
     "description": "In the quiet of the town hall, spread a thin linen over the council table and scatter the seniors’ handwritten cards like fallen leaves. Light a sandalwood incense that drifts through the vaulted room, inviting officials to pause, inhale, and read the wishes inked by the elders. Each card is a scented whisper of need, turning bureaucratic silence into a palpable, lingering atmosphere.",
     "source": "https://www.strzelce360.pl/artykul/12188,seniorzy-wylozyli-karty-na-stol-w-ratuszu-dyskutowali-o-swoich-potrzebach",
     "hash": "a63ad4ec478a5c46f65104efaeacb09ef7741c02"
+  },
+  {
+    "title": "Why do road alerts mask Invader’s traffic control?",
+    "datetime": "2026-09-25T12:00:00+00:00",
+    "description": "At the next BIP notice board in Leschnitz, spray a thin veil of pine‑scented chalk over the official road‑work signs. The scent drifts, inviting commuters to pause and inhale the forest that once belonged to the local community. Along the chalked line, attach a small folded paper that reads, “Who hears the road when the voice is silenced?” The gesture lingers, turning a bureaucratic alert into a fragrant reminder of erased paths.",
+    "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-wystepuja-utrudnienia-w-ruchu-w-woj-opolskim-stan-na-25-09-2026/ar/c1p1-19949817",
+    "hash": "05a676cf6d7e0280cebe46e121f3d79db88bcba3"
   },
   {
     "title": "Why does the city celebrate a drunken bike spill?",
@@ -26,6 +47,13 @@
     "description": "At the main square of Leschnitz, lay a thin line of crushed rosemary along the temporary road signs. As drivers pause, the scent of herb mingles with diesel, prompting them to read the faintly inked question on the pavement: “Who decides the detour?” The smell lingers, inviting passersby to trace the invisible path of the Invader’s traffic plan, while a small notebook records each curious glance.",
     "source": "https://strzelceopolskie.naszemiasto.pl/woj-opolskie-gdzie-sa-utrudnienia-w-ruchu-sprawdz-gdzie-sa-remonty-i-inne-zdarzenia-25-09-2026/ar/c1p1-19949817",
     "hash": "c1e7e2140920595f6f0924ce3d9cc80fcfc689b4"
+  },
+  {
+    "title": "Why does the festyn glorify profit while silence hides?",
+    "datetime": "2026-09-25T06:34:00+02:00",
+    "description": "In the town square of Leschnitz, scatter hand‑made paper petals scented with pine and soot on the steps where the festyn banner hangs. Each petal bears a line of the original permit request, folded into a tiny kite. As wind lifts them, passers‑by hear the rustle of bureaucracy, noticing the gap where the voices of the displaced families should be. The faint smell of fresh bread mixes with the metallic hint of ink, inviting a pause to question whose story is really being celebrated.",
+    "source": "https://www.strzelce360.pl/artykul/12187,w-tydzien-zrobili-wielki-festyn-dla-marcela-zebrali-46-5-tys-zl",
+    "hash": "632ea38b0c5c3b67eff3be2ffeba37ae5759dcad"
   },
   {
     "title": "Who profits from the festive façade of the Saint?",
