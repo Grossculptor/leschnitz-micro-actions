@@ -18,9 +18,11 @@ narrative
 oppeln
 pilgrimage
 pojazdów
+police
 prestige
 ruch
 settlement
+silence
 sold
 streets
 thrills
