@@ -1,0 +1,5 @@
+award
+consumer
+invader
+laud
+prestige
