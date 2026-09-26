@@ -1,0 +1,9 @@
+board
+delays
+forgotten
+hide
+invader's
+pathways
+road
+tourist
+villages
