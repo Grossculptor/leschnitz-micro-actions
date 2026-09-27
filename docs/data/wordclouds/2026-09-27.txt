@@ -16,6 +16,7 @@ missing
 pathways
 praise
 profit
+review
 road
 roadblocks
 silence
@@ -23,4 +24,6 @@ toll
 tourist
 traffic
 villages
+voices
+weekly
 ziemowit
