@@ -1,11 +1,13 @@
 agenda
 board
+brigade
 chair
 cold
 delays
 drivers
 echo
 exploitation
+fire
 forgotten
 gates
 gross
@@ -18,6 +20,7 @@ invader's
 library
 mask
 missing
+new
 oppeln
 pathways
 potholes
@@ -32,6 +35,7 @@ strehlitz's
 toll
 tourist
 traffic
+truck
 village
 villages
 voices
