@@ -1,15 +1,19 @@
 agenda
 bifyj
+bus
 bypass
 chapel
 child's
 community
+cost
 costs
 crash
 erase
+fiat
 food
 hidden
 hide
+hides
 historic
 hulajnogą
 inspector
@@ -40,4 +44,5 @@ tender
 towns
 traffic
 trail
+true
 view
