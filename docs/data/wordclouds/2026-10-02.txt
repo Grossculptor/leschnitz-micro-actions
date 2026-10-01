@@ -1,0 +1,6 @@
+heating
+local
+mayor
+plan
+silence
+voices
