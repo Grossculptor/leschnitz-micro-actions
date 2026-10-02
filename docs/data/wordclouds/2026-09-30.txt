@@ -1,5 +1,7 @@
 agendas
+behind
 committee
+concealed
 cost
 free
 hidden
@@ -15,10 +17,12 @@ mask
 men
 motives
 mysterious
+narrative
 newsroom
 niezapominajki
 oppeln
 oppeln's
+propaganda
 przejazd
 przeszkody
 quiz
