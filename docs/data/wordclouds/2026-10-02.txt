@@ -11,6 +11,7 @@ civic
 cost
 council
 cuts
+cutting
 day
 displaced
 energy
@@ -18,13 +19,17 @@ environmental
 families
 feast
 fees
+fields
 flee
+gains
 harvest
 heating
 hidden
 hide
+indigenous
 invader
 invader's
+komisja
 komisji
 leschnitz
 leśnicy
@@ -37,11 +42,13 @@ municipal
 mute
 narrative
 near
+obwodnica
 offers
 one
 opening
 own
 plan
+pleas
 pole
 power
 prize
@@ -56,6 +63,7 @@ silence
 skarg
 sound
 strzelce
+strzelec
 strzelecki
 true
 visit
