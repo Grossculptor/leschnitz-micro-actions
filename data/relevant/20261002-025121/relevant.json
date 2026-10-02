@@ -1,0 +1,31 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/grozny-wypadek-na-dk94-betonowoz-zderzyl-sie-z-osobowa-toyota/ar/c1p2-29401513",
+    "title": "Groźny wypadek na DK94. Betonowóz zderzył się z osobową Toyotą",
+    "summary": "Do groźnego wypadku doszło w czwartek (1 października) na drodze krajowej nr 94 przed wjazdem do Strzelec Opolskich. Zderzył się tam samochód osobowy Toyota z betonowozem.",
+    "content": "Do groźnego wypadku doszło w czwartek (1 października) na drodze krajowej nr 94 przed wjazdem do Strzelec Opolskich. Zderzył się tam samochód osobowy Toyota z betonowozem.",
+    "published": "2026-10-01T17:14:54+00:00",
+    "id": "28cbb306df329771af4b30a056f2546265788218",
+    "preselect": true,
+    "places_german": [
+      "Oppeln",
+      "Strzelec Opolskie"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12203,dozynki-wiejskie-w-zimnej-wodce-dobrej-zabawy-nie-brakowalo",
+    "title": "Dożynki wiejskie w Zimnej Wódce. Dobrej zabawy nie brakowało!",
+    "summary": "W weekend, 26 i 27 września, mieszkańcy Zimnej Wódki świętowali dożynki wiejskie. Nie zabrakło wspólnej zabawy, biesiadowania i podziękowania za tegoroczne plony.",
+    "content": "W weekend, 26 i 27 września, mieszkańcy Zimnej Wódki świętowali dożynki wiejskie. Nie zabrakło wspólnej zabawy, biesiadowania i podziękowania za tegoroczne plony.",
+    "published": "2026-09-29T06:05:00+02:00",
+    "id": "ff4e98d80353c6343dd6feb7869f03e6c32162b9",
+    "preselect": true,
+    "places_german": [
+      "Zimna Wódka"
+    ],
+    "classified_by": "llm"
+  }
+]

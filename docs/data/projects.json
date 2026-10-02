@@ -1,10 +1,29 @@
 [
   {
+    "title": "Who profits from the harvest feast in Zimna Wódka?",
+    "datetime": "2026-10-02T10:00:00+02:00",
+    "description": "At dawn, scatter a handful of wheat husks on the steps of the town hall in Zimna Wódka. As the sun lifts, the dry scent of grain mingles with the lingering aroma of fresh rye bread from the Dożynki. Invite passersby to press their palms into the husks, leaving a faint imprint. Each imprint is photographed and later compiled into a silent wall‑map showing whose hands are absent – the displaced families whose labor never reached the celebration.",
+    "source": "https://www.strzelce360.pl/artykul/12203,dozynki-wiejskie-w-zimnej-wodce-dobrej-zabawy-nie-brakowalo",
+    "hash": "ff4e98d80353c6343dd6feb7869f03e6c32162b9"
+  },
+  {
     "title": "Why does the mayor’s heating plan silence local voices?",
     "datetime": "2026-10-02T09:30:00+02:00",
     "description": "In the town square of Leschnitz, place a small wooden box painted with the municipal seal. Inside, lay a bundle of pine needles soaked in rainwater, releasing an earthy scent. Attach a handwritten note asking: “Who decides the warmth of our homes?” Leave the box near the new energy office for passersby to discover, then collect the notes they leave behind. The gathered whispers will form a map of forgotten community needs, exposing the hidden PR narrative of progress.",
     "source": "https://bip.lesnica.pl/16187/obwieszczenieburmistrza-lesnicyo-przystapieniu-do-opracowania-projektu-zalozen-do-planu-zaopatrzenia-w-cieplo-energie-elektryczna-i-paliwa-gazowe-dla-gminy-lesnica-na-lata-2026-2040.html",
     "hash": "dd033f160bce9713e36c9d166ad330a10304e29d"
+  },
+  {
+    "title": "Why hide the wypadek of a Betonowóz near Strzelce on B94?",
+    "datetime": "2026-10-02T09:00:00+02:00",
+    "description": "At dawn, lay a thin line of white chalk on the asphalt of B94 near Gross Strehlitz, tracing the exact path of the crashed Betonowóz. As the sun rises, the chalk releases a faint scent of limestone, inviting passersby to step on the line and feel the subtle crunch underfoot, reminding them of the invisible impact of the forgotten crash.",
+    "keywords": [
+      "wypadek",
+      "Betonowóz",
+      "zderzył"
+    ],
+    "source": "https://strzelceopolskie.naszemiasto.pl/grozny-wypadek-na-dk94-betonowoz-zderzyl-sie-z-osobowa-toyota/ar/c1p2-29401513",
+    "hash": "28cbb306df329771af4b30a056f2546265788218"
   },
   {
     "title": "Why does the Invader flee after breaking the power pole?",
