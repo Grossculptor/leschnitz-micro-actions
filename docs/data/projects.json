@@ -1,5 +1,19 @@
 [
   {
+    "title": "Why does the Komisji Skarg protocol hide the Settler’s?",
+    "datetime": "2026-10-03T09:30:00+02:00",
+    "description": "At the town square of Leschnitz, lay a thin veil of white cotton scented with pine sap over the bench where the protocol was signed. Passersby are invited to lift a corner, revealing the faint ink of the meeting minutes and a handwritten note: “Your voice is a breath we cannot hear.” The cotton drifts away with the wind, leaving only the lingering scent of pine and the echo of unanswered complaints.",
+    "source": "https://bip.lesnica.pl/16191/protokol-nr-52026swpz-posiedzenia-komisji-skarg-wnioskow-i-petycjiw-dniu-18-wrzesnia-2026-roku.html",
+    "hash": "f85d40357e60d9d1753b21642d0b28353d4d3f7e"
+  },
+  {
+    "title": "Why does the Komisji Skarg protocol silence local voices?",
+    "datetime": "2026-10-02T12:00:00+02:00",
+    "description": "At the town square near the old post office, spread a thin layer of powdered incense that smells of pine and rusted iron. As passersby inhale, hand out translucent cards printed with the word “PROTOKÓŁ” and the date of the posiedzenia. The scent lingers, inviting curiosity while the silent cards expose the empty promises of the Komisji Skarg, prompting citizens to ask what is omitted.",
+    "source": "https://bip.lesnica.pl/16192/protokol-nr-42026swpz-posiedzenia-komisji-skarg-wnioskow-i-petycjiw-dniu-11-wrzesnia-2026-roku.html",
+    "hash": "9bff5cc1a1416d6fa3b07ea70cc24770b25497e3"
+  },
+  {
     "title": "Who profits from the harvest feast in Zimna Wódka?",
     "datetime": "2026-10-02T10:00:00+02:00",
     "description": "At dawn, scatter a handful of wheat husks on the steps of the town hall in Zimna Wódka. As the sun lifts, the dry scent of grain mingles with the lingering aroma of fresh rye bread from the Dożynki. Invite passersby to press their palms into the husks, leaving a faint imprint. Each imprint is photographed and later compiled into a silent wall‑map showing whose hands are absent – the displaced families whose labor never reached the celebration.",
@@ -12,6 +26,27 @@
     "description": "In the town square of Leschnitz, place a small wooden box painted with the municipal seal. Inside, lay a bundle of pine needles soaked in rainwater, releasing an earthy scent. Attach a handwritten note asking: “Who decides the warmth of our homes?” Leave the box near the new energy office for passersby to discover, then collect the notes they leave behind. The gathered whispers will form a map of forgotten community needs, exposing the hidden PR narrative of progress.",
     "source": "https://bip.lesnica.pl/16187/obwieszczenieburmistrza-lesnicyo-przystapieniu-do-opracowania-projektu-zalozen-do-planu-zaopatrzenia-w-cieplo-energie-elektryczna-i-paliwa-gazowe-dla-gminy-lesnica-na-lata-2026-2040.html",
     "hash": "dd033f160bce9713e36c9d166ad330a10304e29d"
+  },
+  {
+    "title": "Who masks the hidden cost of opening energy offers?",
+    "datetime": "2026-10-02T09:19:18+02:00",
+    "description": "In the town square of Leschnitz, scatter tiny, hand‑rolled paper sachets scented with pine and iron. Each sachet bears the phrase “otwarcia ofert” and a QR code that leads to the raw procurement file. Passers‑by pick them up, inhale the metallic aroma, and whisper the numbers aloud, exposing the invisible calculus behind the public tender.",
+    "source": "https://bip.lesnica.pl/16190/zmiana-swz-skladania-otwarcia-ofert-i-tzo-dot-zakup-energii-elektrycznej-na-potrzeby-obiektow-gminy-lesnica-zakladu-gospodarki-komunalnej-gminnego-zarzadu-oswiaty-i-obiektow-oswiatowych-lesnickiego-osrodka-kultury-i-rekreacji-w-lesnicy.html",
+    "hash": "5b56244c7eb6d14d62358c0076a0eab99bdf7672"
+  },
+  {
+    "title": "Who profits from a one‑day prize visit to Leschnitz’s?",
+    "datetime": "2026-10-02T09:00:00+02:00",
+    "description": "At dawn, scatter fragrant pine needles along the market square of Leschnitz, then place a small, hand‑written note on each bench that reads, “Welcome, but whose story is being celebrated?” The scent of pine mingles with the lingering coffee of early commuters, inviting passersby to pause, read, and question the brief, glossy visit that masks deeper settlement narratives.",
+    "source": "https://www.strzelce360.pl/artykul/12219,wygrali-konkurs-w-nagrode-przyjechali-na-opolszczyzne-odwiedzili-tez-strzelce-opolskie",
+    "hash": "27399d19dc81e44d0d84ebcc8b90d92ac6a9620b"
+  },
+  {
+    "title": "Why does the municipal aid narrative hide the Invader's?",
+    "datetime": "2026-10-02T09:00:00+02:00",
+    "description": "In the town square of Kolonowitz, lay a single white sheet scented with fresh pine and faint diesel. On it, write Michał’s name in charcoal, then fold the edges into tiny boats and set them afloat on the fountain. Passersby watch the paper drift, feeling the cool mist and the weight of silence, prompting them to ask who truly funds the rescue and whose voices remain unheard.",
+    "source": "https://www.strzelce360.pl/artykul/12212,tragiczny-wypadek-zmienil-jego-zycie-23-letni-michal-potrzebuje-naszej-pomocy",
+    "hash": "b38834863b9aea1bde025e31deff566522b957cd"
   },
   {
     "title": "Why hide the wypadek of a Betonowóz near Strzelce on B94?",
@@ -38,6 +73,13 @@
     "description": "In the town square of Strzelcach Opolskich, scatter scented paper slips scented with pine and fresh bread, each bearing a fragment of the September ‘interesowało czytelników’ headline. Passers‑by pick them up, inhale the aroma, and read the line before it dissolves in rain, exposing the fleeting PR promise of community engagement.",
     "source": "https://strzelceopolskie.naszemiasto.pl/przeglad-prasy-z-wrzesnia-2026-zestaw-najwazniejszych-wydarzen-miesiaca-co-dzialo-sie-w-strzelcach-opolskich/ar/c1p1-29402785",
     "hash": "a1630c8559b3e4942ed25c2f1c6af899bdf9c775"
+  },
+  {
+    "title": "Does the Strzelecki citizen budget mute rural voices?",
+    "datetime": "2026-10-02T06:30:00+02:00",
+    "description": "At dawn, place a bundle of dried rye stalks on the steps of the Strzelecki town hall, each stalk scented with faint pine and earth. Whisper the names of Niwki, Szczepanek, Burghof, Dziewkowice and Szymiszów-Osiedle into the wind. As passersby step over them, they leave faint footprints, marking the invisible labor that the budget decision tries to conceal. The lingering aroma invites contemplation of whose voices are truly heard.",
+    "source": "https://www.strzelce360.pl/artykul/12218,strzelecki-budzet-obywatelski-2027-rozstrzygniety-ktore-zadania-beda-realizowane",
+    "hash": "035ef4bf4b6eb043c3fcce35f39b095e60284276"
   },
   {
     "title": "Why does the road safety narrative silence the displaced?",
