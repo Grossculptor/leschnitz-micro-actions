@@ -5,6 +5,7 @@ celebration
 community
 council
 czytelnik
+erased
 forgotten
 future
 hide
@@ -12,6 +13,7 @@ hospital
 invader
 komisji
 leschnitz
+local
 mask
 new
 participants
@@ -19,6 +21,7 @@ pasją
 pathways
 promise
 protocol
+race
 road
 settler
 silence
@@ -26,7 +29,10 @@ silencing
 skarg
 ties
 traffic
+veil
 voice
+voices
 while
 whose
+wreck
 year
