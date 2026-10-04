@@ -23,11 +23,13 @@ promise
 protocol
 race
 road
+senior
 settler
 silence
 silencing
 skarg
 ties
+tour
 traffic
 veil
 voice
