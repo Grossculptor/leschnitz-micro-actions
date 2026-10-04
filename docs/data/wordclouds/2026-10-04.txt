@@ -1,11 +1,17 @@
+aura
 behind
 churches
 conceal
+dark
 displaced
+erasure
 fog
 heritage
 hide
+historic
 invader
+lanes
+leschnitz
 local
 mask
 nature
@@ -19,5 +25,7 @@ settler
 sketch
 snapshots
 staged
+vanished
 voices
+waldhof
 widać

@@ -1,0 +1,32 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/buduja-u-nas-nowy-kawalek-drogi-ekspresowej-s11-to-bedzie-46-kilometrowy-odcinek-trasy/ar/c1p2-29409489",
+    "title": "Budują u nas nowy kawałek drogi ekspresowej S11. To będzie 46-kilometrowy odcinek trasy",
+    "summary": "Już w 2028 roku gotowy ma być cały opolski odcinek drogi ekspresowej S11. Budowa ruszyła. Z lotu ptaka widać zarys trasy, która będzie mieć po dwa pasy ruchu w każdym kierunku.",
+    "content": "Już w 2028 roku gotowy ma być cały opolski odcinek drogi ekspresowej S11. Budowa ruszyła. Z lotu ptaka widać zarys trasy, która będzie mieć po dwa pasy ruchu w każdym kierunku.",
+    "published": "2026-10-04T16:37:09+00:00",
+    "id": "141540e19973b822458832867e792782457bd5de",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/folwark-waldhof-otacza-ciemna-aura-to-tajemnicze-miejsce/ar/c1-16294613",
+    "title": "Folwark Waldhof otacza ciemna aura. To tajemnicze miejsce",
+    "summary": "Na stoku G&oacute;ry Świętej Anny, w okolicy wioski Żyrowa, można zwiedzić malownicze ruiny folwarku Waldhof (Leśnik). Ten kompleks owiany jest tajemnicą.",
+    "content": "Na stoku G&oacute;ry Świętej Anny, w okolicy wioski Żyrowa, można zwiedzić malownicze ruiny folwarku Waldhof (Leśnik). Ten kompleks owiany jest tajemnicą.",
+    "published": "2026-10-04T20:10:36+02:00",
+    "id": "43d75e806458e9feffc34b61f233a95c9339e721",
+    "preselect": true,
+    "places_german": [
+      "Waldhof",
+      "Góra Świętej Anny (Heiligenberg)",
+      "Żyrowa (Schillwitz)"
+    ],
+    "classified_by": "llm"
+  }
+]
