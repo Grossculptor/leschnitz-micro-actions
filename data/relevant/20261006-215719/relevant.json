@@ -1,0 +1,34 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/w-opuszczonym-dworcu-kolejowym-na-slasku-dzieja-sie-dziwne/ar/c1-9658915",
+    "title": "W opuszczonym dworcu kolejowym na Śląsku dzieją się dziwne rzeczy. Ludzie skarżą się",
+    "summary": "",
+    "content": "",
+    "published": "2026-10-06T21:57:27+00:00",
+    "id": "ac3bff6ca174bdc20faa7f1540bbb9a30279855f",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Gross Strehlitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/w-opuszczonym-dworcu-kolejowym-na-slasku-dzieja-sie-dziwne-rzeczy-ludzie-skarza-sie/ar/c1-17700335",
+    "title": "W opuszczonym dworcu kolejowym na Śląsku dzieją się dziwne rzeczy. Ludzie skarżą się",
+    "summary": "Zabytkowy dworzec kolejowy w Leśnicy został zbudowany w 1936 r. Jeszcze do 2000 roku obsługiwał on podr&oacute;żnych na linii kolejowej nr 175 Kłodnica - Kluczbork, łącząc wiele małych opolskich wsi. Ludzie, kt&oacute;rzy weszli do opuszczonego dworca, twierdzą, że coś tam straszy... Sprawdziliśmy, jak wygląda w środku.",
+    "content": "Zabytkowy dworzec kolejowy w Leśnicy został zbudowany w 1936 r. Jeszcze do 2000 roku obsługiwał on podr&oacute;żnych na linii kolejowej nr 175 Kłodnica - Kluczbork, łącząc wiele małych opolskich wsi. Ludzie, kt&oacute;rzy weszli do opuszczonego dworca, twierdzą, że coś tam straszy... Sprawdziliśmy, jak wygląda w środku.",
+    "published": "2026-10-06T22:13:32+02:00",
+    "id": "ca2c88e9dbbca6ea0ac2c9504e1f7c3b61018528",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Oppeln",
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  }
+]
