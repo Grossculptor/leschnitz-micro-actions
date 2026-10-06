@@ -1,0 +1,37 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/woj-opolskie-gdzie-sa-utrudnienia-w-ruchu-sprawdz-gdzie-sa-remonty-i-inne-zdarzenia-6-10-2026/ar/c1p1-19949817",
+    "title": "Jakie utrudnienia wpływają na przejazd przez woj. opolskie - 6.10.2026?",
+    "summary": "Gdzie występują utrudnienia na drogach w woj. opolskim? Zobacz aktualny raport z 6.10.2026.",
+    "content": "Gdzie występują utrudnienia na drogach w woj. opolskim? Zobacz aktualny raport z 6.10.2026.",
+    "published": "2026-10-06T08:42:16+00:00",
+    "id": "5bc355111d1a6a6c6310c57a1d7c79ceec1eeb32",
+    "preselect": true,
+    "places_german": [
+      "Oppeln",
+      "Leschnitz",
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/tymi-autami-bedzie-teraz-jezdzila-policja-do-setki-w-11-sekund/ar/c1p2-29412419",
+    "title": "Tymi autami będzie teraz jeździła policja. Do setki w 11 sekund",
+    "summary": "Na drogi województwa opolskiego wyjechało 15 nowych radiowozów. To hybrydowe samochody Kia Niro z najnowszym oznakowaniem, które trafiły do komend w Opolu, Brzegu, Kędzierzynie-Koźlu, Krapkowicach, Nysie i Prudniku. Jak podkreślają policjanci, jest to największa dotychczas wymiana wysłużonych pojazdów na ekologiczne auta w garnizonie opolskim.",
+    "content": "Na drogi województwa opolskiego wyjechało 15 nowych radiowozów. To hybrydowe samochody Kia Niro z najnowszym oznakowaniem, które trafiły do komend w Opolu, Brzegu, Kędzierzynie-Koźlu, Krapkowicach, Nysie i Prudniku. Jak podkreślają policjanci, jest to największa dotychczas wymiana wysłużonych pojazdów na ekologiczne auta w garnizonie opolskim.",
+    "published": "2026-10-06T05:40:19+00:00",
+    "id": "3b3eac708460495993ef7f038dfd9723eae1cfb5",
+    "preselect": true,
+    "places_german": [
+      "Oppeln",
+      "Brieg",
+      "Königshütte",
+      "Kraplau",
+      "Neisse",
+      "Neustadt"
+    ],
+    "classified_by": "llm"
+  }
+]
