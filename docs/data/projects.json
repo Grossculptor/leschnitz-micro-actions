@@ -1,5 +1,36 @@
 [
   {
+    "title": "Why does the Regional Director’s notice hide the town’s?",
+    "datetime": "2026-10-07T14:30:00+02:00",
+    "description": "In the square of Leschnitz, place a bundle of dried lavender tied with twine beside the municipal notice board. As passersby read the official notice, the lavender releases a faint, calming aroma that contrasts with the sterile language of the Regionalny Dyrektor Ochrony. The scent invites a pause, a breath, and a question about whose voices are omitted from the document.",
+    "source": "https://bip.lesnica.pl/16210/zawiadomienie-regionalnego-dyrektora-ochrony-srodowiska-w-opolu-z-dnia-6-pazdziernika-2026-r-nr-woos420132026mse10.html",
+    "hash": "e28340e7edd45bb744d86b7e8d8960d0c633104b"
+  },
+  {
+    "title": "Why do traffic delays hide Leschnitz’s silent residents?",
+    "datetime": "2026-10-07T12:30:00+00:00",
+    "description": "At the next roadwork detour in Leschnitz, lay thin strips of biodegradable fabric scented with fresh pine on the pavement. As drivers pause, the fabric unfurls, revealing handwritten questions about the displaced families whose streets are now marked as ‘construction zones’. The faint pine aroma mingles with the exhaust, turning a bureaucratic delay into a quiet invitation to notice the absent voices.",
+    "keywords": [
+      "utrudnienia",
+      "ruchu",
+      "Gdzie"
+    ],
+    "source": "https://strzelceopolskie.naszemiasto.pl/gdzie-wystepuja-utrudnienia-w-ruchu-w-woj-opolskim-stan-na-7-10-2026/ar/c1p1-19949817",
+    "hash": "30a0206234a6df0354db1d2c42f4be683d72a6bd"
+  },
+  {
+    "title": "Why does the dogtrekking celebration hide the Strzelec?",
+    "datetime": "2026-10-07T12:00:00+02:00",
+    "description": "At the riverbank in Wiśle, lay a trail of fresh pine needles and the scent of damp earth. Place small, biodegradable ribbons bearing the forgotten names of Strzelec’s original families along the course. As spectators applaud the gold medal, the ribbons flutter, whispering the absent voices. The act smells of rain‑soaked bark, inviting onlookers to notice who is celebrated and who remains unseen.",
+    "keywords": [
+      "dogtrekkingu",
+      "Strzelecka",
+      "Polski"
+    ],
+    "source": "https://www.strzelce360.pl/artykul/12240,mistrzostwa-polski-w-dogtrekkingu-strzelecka-ekipa-ma-powody-do-dumy",
+    "hash": "98620ad1631049cd9810be5ee8dd6bed8ddae56b"
+  },
+  {
     "title": "What silent stories of displaced families and broken?",
     "datetime": "2026-10-07T09:00:00+02:00",
     "description": "At dawn, slip a bundle of hand‑rolled paper sachets scented with pine resin and wilted meadow herbs into the cracked ticket window of the opuszczonym dworcu kolejowym. Each sachet bears a short, handwritten note recalling a family forced to leave their village in 1945. As the wind stirs the dust, the faint aroma awakens passers‑by, prompting them to pause, read, and photograph the hidden testimony—an intimate reminder of the forgotten promises behind the station’s silent façade.",
@@ -12,6 +43,13 @@
     "description": "In the early morning mist of Oppeln's market square, lay a long wooden plank scented with fresh pine. Invite passers‑by to place a single white stone on the plank, each stone representing a hospital voice silenced by the Invader's agenda. As the stones accumulate, a faint echo of whispered promises fills the air, exposing the PR script behind the so‑called round table.",
     "source": "https://strzelceopolskie.naszemiasto.pl/marcin-ociepa-zwoluje-okragly-stol-w-sprawie-szpitali-podal-termin/ar/c1p2-29415301",
     "hash": "3e0aa53227b451fe1a7884be1a4eda5e80cc6b0b"
+  },
+  {
+    "title": "Why do Oppeln’s celebrated careers hide the Invader’s?",
+    "datetime": "2026-10-07T05:05:00+02:00",
+    "description": "In the town square of Oppeln, place a fragrant bundle of wild sage and pine needles on the steps of the municipal library. As passers‑by pause, hand out tiny cards that list the celebrated locals while the scent of forest evokes the forgotten voices of the original Silesian families. The aroma lingers, inviting a quiet question about whose stories truly shape the city’s pride.",
+    "source": "https://nto.pl/oto-najbardziej-znani-mieszkancy-opola-ich-kariery-budza-podziw/ar/c1-17507723",
+    "hash": "bd9121b91093694db42070938c73d4bd4e6b55d9"
   },
   {
     "title": "Why does the abandoned Śląsk station whisper hidden?",
