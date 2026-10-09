@@ -4,7 +4,9 @@ blessing
 ceremony
 clean
 everyday
+hidden
 hide
+invader
 kayak
 lane
 leschnitz
@@ -21,13 +23,17 @@ opolem
 oppeln
 original
 panew
+plant
+power
 road
 routes
 saint
+scars
 silence
 tears
 three
 utrudnienia
+veil
 voices
 works
 zalesie
