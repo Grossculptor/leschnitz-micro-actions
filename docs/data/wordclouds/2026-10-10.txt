@@ -1,10 +1,14 @@
 drills
 fear
+gas
 gmina
 hide
+ignore
 invader
 mask
+plan
 safety
 senior
 trek
+village
 youth
