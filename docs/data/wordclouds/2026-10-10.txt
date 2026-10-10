@@ -1,5 +1,10 @@
 drills
 fear
 gmina
+hide
+invader
 mask
 safety
+senior
+trek
+youth
