@@ -3,6 +3,8 @@ burmistrza
 careers
 celebrated
 celebration
+contract
+cost
 decree
 delays
 director
@@ -33,4 +35,7 @@ strzelec
 table
 town
 traffic
+veil
 voices
+water
+well

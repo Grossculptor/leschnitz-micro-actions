@@ -1,0 +1,75 @@
+[
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/16223/wniosek-o-wydanie-decyzji-o-srodowiskowych-uwarunkowaniach-dla-przedsiewziecia-pn-budowa-stawu-rekreacyjnego-wraz-z-systemem-pietrzenia-doprowadzania-i-odprowadzania-wod-zlokalizowanego-na-dzialkach-nr-826-1393-1394-1395-i-1396-obreb-0086-raszowa-oraz-na-dzialkach-nr-8433-i-8434-obreb-0057-laki-kozielskie.html",
+    "title": "Wniosek o wydanie decyzji o  środowiskowych uwarunkowaniach dla przedsięwzięcia pn. „Budowa stawu rekreacyjnego wraz z systemem piętrzenia, doprowadzania i odprowadzania wód” zlokalizowanego na działkach nr 826, 1393, 1394, 1395 i 1396, obręb 0086 Raszowa oraz na działkach nr 843/3 i 843/4 obręb 0057 Łąki Kozielskie.",
+    "summary": "",
+    "content": "",
+    "published": "2026-10-14T13:06:27+02:00",
+    "id": "5446e9c96e84cb272d68905bd9b696bc51285752",
+    "preselect": true,
+    "places_german": [
+      "Raszowa",
+      "Łąki Kozielskie"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/16222/obwieszczenie-o-wszczeciu-postepowania-w-sprawie-wydania-decyzji-o-srodowiskowych-uwarunkowaniach-dla-przedsiewziecia-pn-budowa-stawu-rekreacyjnego-wraz-z-systemem-pietrzenia-doprowadzania-i-odprowadzania-wod.html",
+    "title": "OBWIESZCZENIE o wszczęciu postępowania w sprawie wydania decyzji o środowiskowych uwarunkowaniach dla przedsięwzięcia pn. „Budowa stawu rekreacyjnego wraz z systemem piętrzenia, doprowadzania i odprowadzania wód”",
+    "summary": "",
+    "content": "",
+    "published": "2026-10-14T12:31:38+02:00",
+    "id": "1ca654aa3624a39b8aecd243c789358c738e2581",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Gross Strehlitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/16211/ogloszenie-o-zamowieniu-w-trybie-podstawowym-dot-budowa-studni-glebinowej-na-ujeciu-wody-pitnej-w-porebie.html",
+    "title": "Ogłoszenie o zamówieniu w trybie podstawowym dot.: „Budowa studni głębinowej na ujęciu wody pitnej w Porębie”",
+    "summary": "",
+    "content": "",
+    "published": "2026-10-07T14:02:46+02:00",
+    "id": "95149f9c936ed29f330c2349438b4346c086f7d5",
+    "preselect": true,
+    "places_german": [
+      "Poręba"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12259,coraz-wiecej-niebezpiecznych-zdarzen-z-hulajnogami-na-opolszczyznie",
+    "title": "Coraz więcej niebezpiecznych zdarzeń z hulajnogami na Opolszczyźnie",
+    "summary": "Największe zagrożenie stanowią hulajnogi elektryczne, które mogą osiągać znaczne prędkości. Statystyki wypadków z ich udziałem gwałtownie rosną. Także na Opolszczyźnie nie brakuje niebezpiecznych zdarzeń.",
+    "content": "Największe zagrożenie stanowią hulajnogi elektryczne, które mogą osiągać znaczne prędkości. Statystyki wypadków z ich udziałem gwałtownie rosną. Także na Opolszczyźnie nie brakuje niebezpiecznych zdarzeń.",
+    "published": "2026-10-14T07:00:00+02:00",
+    "id": "ed23f18e47affb005fb3239d3af6df1b5a23ece5",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12266,potezna-awaria-gmina-jemielnica-bez-wody",
+    "title": "Potężna awaria. Gmina Jemielnica bez wody",
+    "summary": "We wtorkowy poranek, 13 października, wielu mieszkańców gminy Jemielnica miało poważne problemy z umyciem się czy nalaniem wody do czajnika. Wszystko z powodu awarii jednej z głównych magistral sieci wodociągowej w regionie.",
+    "content": "We wtorkowy poranek, 13 października, wielu mieszkańców gminy Jemielnica miało poważne problemy z umyciem się czy nalaniem wody do czajnika. Wszystko z powodu awarii jednej z głównych magistral sieci wodociągowej w regionie.",
+    "published": "2026-10-13T09:26:00+02:00",
+    "id": "3a95df7ac7a8fd66bc7cf7daf4c072f6bfc56dea",
+    "preselect": true,
+    "places_german": [
+      "Jemielnica"
+    ],
+    "classified_by": "llm"
+  }
+]
