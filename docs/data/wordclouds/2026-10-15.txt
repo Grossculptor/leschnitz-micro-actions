@@ -2,7 +2,10 @@ agri
 banner
 bright
 community
+daszyński
 finance
+forgotten
+fountain
 hall
 hide
 lease
@@ -12,4 +15,5 @@ mayor
 order
 protocol
 silence
+square
 voices
