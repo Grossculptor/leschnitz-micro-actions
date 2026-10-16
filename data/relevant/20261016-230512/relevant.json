@@ -1,0 +1,32 @@
+[
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/16235/wniosek-o-wydanie-decyzji-na-usuniecie-drzewa.html",
+    "title": "Wniosek o wydanie decyzji na usunięcie drzewa",
+    "summary": "",
+    "content": "",
+    "published": "2026-10-16T13:35:13+02:00",
+    "id": "eba9ccc231649db4c87102f5e910fbbd8a263b58",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/16232/wniosek-o-wydanie-decyzji-na-usuniecie-drzewa.html",
+    "title": "Wniosek o wydanie decyzji na usunięcie drzewa",
+    "summary": "",
+    "content": "",
+    "published": "2026-10-16T13:24:33+02:00",
+    "id": "10dedefe7d0c621957a32bd8d09188b53199a378",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Oppeln",
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  }
+]
