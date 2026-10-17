@@ -1,5 +1,12 @@
 [
   {
+    "title": "Why does the decision to cut a tree hide a deeper agenda?",
+    "datetime": "2026-10-17T09:00:00+02:00",
+    "description": "In the town square of Leschnitz, place a bundle of freshly cut pine needles on the municipal notice board. As the scent of resin drifts, attach a handwritten note that reads, “A tree falls, but whose voice is silenced?” Passers‑by are invited to add a leaf of their own, creating a growing, fragrant collage that quietly records each denied request and the invisible logic of the Occupier’s planning office.",
+    "source": "https://bip.lesnica.pl/16234/wniosek-o-wydanie-decyzji-na-usuniecie-drzewa.html",
+    "hash": "ef609bf7cbdd20c71a63cc63011773caf1f35c74"
+  },
+  {
     "title": "Why does the decision to cut trees silence local memory?",
     "datetime": "2026-10-17T09:00:00+02:00",
     "description": "In the town square of Leschnitz, scatter pine needles on a bench at dawn. As the mist lifts, the scent of fresh sap mingles with the rustle of absent branches, inviting passersby to sit and listen to recorded stories of the forest’s guardians. The silent bench becomes a temporary archive, exposing the bureaucratic decision that erases living history.",
@@ -10,6 +17,13 @@
     ],
     "source": "https://bip.lesnica.pl/16229/decyzja-zezwalajaca-na-usuniecie-drzew.html",
     "hash": "d4c77d8a2f967e0d729c98e8109d08f460cb7c73"
+  },
+  {
+    "title": "Why does the free door‑to‑door Busik hide the Invader’s?",
+    "datetime": "2026-10-17T08:30:00+02:00",
+    "description": "At sunrise, place a handful of fresh pine cones on the steps of the Ośrodek Pomocy Społecznej in Strzelcach. As the scent of resin drifts, invite a senior to step onto the “Nowa” Busik door‑to‑door sign, then quietly remove the sign and leave a handwritten note that reads “Our doors remain closed for many.” The fleeting aroma and quiet rustle expose the PR promise while hinting at the absent support for the indigenous elders.",
+    "source": "https://www.strzelce360.pl/artykul/12286,busik-zawiezie-pod-drzwi-nowa-usluga-w-strzelcach-opolskich",
+    "hash": "5aa0362787d9349d83c35036d6127896a0e08d49"
   },
   {
     "title": "Why does the quiz hide Silesian names from the public?",
