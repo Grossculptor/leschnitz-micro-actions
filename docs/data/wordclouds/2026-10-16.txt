@@ -11,13 +11,16 @@ decree
 erase
 erasure
 expansionist
+fest
 film
 forest
+gains
 gross
 herbs
 heritage
 hidden
 hide
+indigenous
 invader
 invader's
 japan
@@ -30,6 +33,7 @@ oktoberfest
 order
 permit
 police
+potato
 public
 quiz
 settler's
@@ -42,4 +46,5 @@ tree's
 trees
 vanish
 voices
+while
 witness
