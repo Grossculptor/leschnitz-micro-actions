@@ -1,0 +1,30 @@
+[
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/quiz/qh/11733?hash_podglad=3449b142f26bac6cd1fe481261f11e2e",
+    "title": "Hyjdla i Zeflik. Ciekawe, czy znasz śląskie imiona? [QUIZ]",
+    "summary": "Nie Brajanek i Dżesika, nawet nie najpopularniejsze dzisiaj Zuzanna i Antoni. Znasz tradycyjne śląskie imiona? W dzisiejszych czasach są rzadko nadawane, ale kto wie, czy nie wr&oacute;cą do mody? Rozwiąż ten śląski quiz i sprawdź, czy je znasz.",
+    "content": "Nie Brajanek i Dżesika, nawet nie najpopularniejsze dzisiaj Zuzanna i Antoni. Znasz tradycyjne śląskie imiona? W dzisiejszych czasach są rzadko nadawane, ale kto wie, czy nie wr&oacute;cą do mody? Rozwiąż ten śląski quiz i sprawdź, czy je znasz.",
+    "published": "2026-10-16T20:52:00+02:00",
+    "id": "9eee3908f72e574a4a7d45e3d2006a5adadd8ca5",
+    "preselect": true,
+    "places_german": [],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/16229/decyzja-zezwalajaca-na-usuniecie-drzew.html",
+    "title": "Decyzja zezwalająca na usunięcie drzew",
+    "summary": "",
+    "content": "",
+    "published": "2026-10-16T12:45:09+02:00",
+    "id": "d4c77d8a2f967e0d729c98e8109d08f460cb7c73",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Gross Strehlitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]

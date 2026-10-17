@@ -1,0 +1,6 @@
+cut
+decision
+local
+memory
+silence
+trees

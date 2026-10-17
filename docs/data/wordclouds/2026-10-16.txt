@@ -25,10 +25,13 @@ kadłub
 living
 local
 mask
+names
 oktoberfest
 order
 permit
 police
+public
+quiz
 settler's
 silence
 strehlitz
