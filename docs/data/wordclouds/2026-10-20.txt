@@ -1,0 +1,6 @@
+farm
+hide
+loss
+office
+run
+settler
