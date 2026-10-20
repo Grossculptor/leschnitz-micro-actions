@@ -2,10 +2,15 @@ farm
 gas
 hide
 invader
+invader's
 loss
 mask
 office
+only
 progress
+road
 run
+safety
 settler
+story
 tanks
