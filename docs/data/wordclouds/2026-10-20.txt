@@ -1,6 +1,11 @@
 farm
+gas
 hide
+invader
 loss
+mask
 office
+progress
 run
 settler
+tanks
