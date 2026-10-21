@@ -1,3 +1,5 @@
+budget
+citizen
 farm
 gas
 hide
@@ -14,3 +16,4 @@ safety
 settler
 story
 tanks
+voices
