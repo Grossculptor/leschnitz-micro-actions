@@ -1,0 +1,57 @@
+[
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/quiz/qh/11827?hash_podglad=194a2a82f6e08728bf11c2730ec8d8b0",
+    "title": "Faja, binder, handablaga - czy znasz te śląskie słowa? Wiesz, co znaczą? [QUIZ]",
+    "summary": "Kiedyś te słowa znał każdy na Śląsku. Dzisiaj pamiętają je często tylko znawcy godki śląskiej. Sprawdź, czy zaliczasz się do nich? Pytania do quizu ułożyła Dorota Wons z Zębowic, autorka &bdquo;Rolniczego słownika gwarowego&rdquo;.",
+    "content": "Kiedyś te słowa znał każdy na Śląsku. Dzisiaj pamiętają je często tylko znawcy godki śląskiej. Sprawdź, czy zaliczasz się do nich? Pytania do quizu ułożyła Dorota Wons z Zębowic, autorka &bdquo;Rolniczego słownika gwarowego&rdquo;.",
+    "published": "2026-10-23T15:02:35+02:00",
+    "id": "2e463cf888b74d922f81348020cfee3d25c8b517",
+    "preselect": true,
+    "places_german": [],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/16252/informacja-o-wyborze-oferty-dot-zakup-energii-elektrycznej-na-potrzeby-obiektow-gminy-lesnica-zakladu-gospodarki-komunalnej-gminnego-zarzadu-oswiaty-i-obiektow-oswiatowych-lesnickiego-osrodka-kultury-i-rekreacji-w-lesnicy.html",
+    "title": "Informacja o wyborze oferty dot.: „Zakup energii elektrycznej na potrzeby obiektów Gminy Leśnica, Zakładu Gospodarki Komunalnej, Gminnego Zarządu Oświaty i obiektów oświatowych, Leśnickiego Ośrodka Kultury i Rekreacji w Leśnicy”",
+    "summary": "",
+    "content": "",
+    "published": "2026-10-23T10:24:50+02:00",
+    "id": "864ffe81a005ab391eb040f888daae2ded73d0e7",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12326,wybuch-gazu-w-blotnicy-strzeleckiej-lokator-z-oparzeniami-trafil-do-szpitala",
+    "title": "Wybuch gazu w Błotnicy Strzeleckiej. Lokator z oparzeniami trafił do szpitala",
+    "summary": "Do zdarzenia doszło w czwartek, 22 października, w godzinach popołudniowych w jednym z pomieszczeń budynku wielorodzinnego w Błotnicy Strzeleckiej. Najprawdopodobniej wybuchł gaz z pojemnika używanego do kuchenki turystycznej. Jedna osoba została poszkodowana.",
+    "content": "Do zdarzenia doszło w czwartek, 22 października, w godzinach popołudniowych w jednym z pomieszczeń budynku wielorodzinnego w Błotnicy Strzeleckiej. Najprawdopodobniej wybuchł gaz z pojemnika używanego do kuchenki turystycznej. Jedna osoba została poszkodowana.",
+    "published": "2026-10-23T07:23:00+02:00",
+    "id": "940ba97b59ab805e2ece6ac4063f6fc7af5ebe17",
+    "preselect": true,
+    "places_german": [
+      "Blotnitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12308,liczyla-sie-kazda-minuta-dzielnicowy-odnalazl-mezczyzne-w-kryzysie",
+    "title": "Liczyła się każda minuta. Dzielnicowy odnalazł mężczyznę w kryzysie",
+    "summary": "Mł. asp. Przemysław Grabarczyk, dzielnicowy z komisariatu w Zawadzkiem, odnalazł 54-latka, który deklarował zamiar odebrania sobie życia. Dzięki jego zaangażowaniu mężczyzna otrzymał specjalistyczną pomoc. Za postawę policjanta do komendy wpłynęły szczególne podziękowania.",
+    "content": "Mł. asp. Przemysław Grabarczyk, dzielnicowy z komisariatu w Zawadzkiem, odnalazł 54-latka, który deklarował zamiar odebrania sobie życia. Dzięki jego zaangażowaniu mężczyzna otrzymał specjalistyczną pomoc. Za postawę policjanta do komendy wpłynęły szczególne podziękowania.",
+    "published": "2026-10-21T11:13:00+02:00",
+    "id": "4ffd4a25bb2cbba41433adb904561ae573053d4e",
+    "preselect": true,
+    "places_german": [
+      "Zawadzki",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  }
+]
