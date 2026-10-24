@@ -1,0 +1,63 @@
+[
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/tak-wygladala-opolszczyzna-w-czasach-prl-zdjecia-opolskich-miast/ar/c1-15795308",
+    "title": "Tak wyglądała Opolszczyzna w czasach PRL. Zdjęcia opolskich miast",
+    "summary": "Pamiętacie, gdzie w Opolu był Mały Bar? Na tych zdjęciach z archiwum możemy także zobaczyć odkryte lodowisko w Nysie, nieistniejący już pomnik w Strzelcach Opolskich, bloki wznoszone w Kędzierzynie-Koźlu, a także basen w Zdzieszowicach. To tylko niekt&oacute;re miejsca na fotografiach z opolskich miast sprzed 50 lat. Zapraszamy do podr&oacute;ży w czasie.",
+    "content": "Pamiętacie, gdzie w Opolu był Mały Bar? Na tych zdjęciach z archiwum możemy także zobaczyć odkryte lodowisko w Nysie, nieistniejący już pomnik w Strzelcach Opolskich, bloki wznoszone w Kędzierzynie-Koźlu, a także basen w Zdzieszowicach. To tylko niekt&oacute;re miejsca na fotografiach z opolskich miast sprzed 50 lat. Zapraszamy do podr&oacute;ży w czasie.",
+    "published": "2026-10-24T08:43:00+02:00",
+    "id": "d6e6b55f43dcd2a0ddfdc3078dab6e9caf9ac203",
+    "preselect": true,
+    "places_german": [
+      "Oppeln",
+      "Neisse",
+      "Strzelce Opolskie",
+      "Kędzierzyn‑Koźle",
+      "Zdzieszowice"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/opole-na-zdjeciach-w-google-street-view-kamery-zlapaly-dziwne-i-wstydliwe-widoki/ar/c1-15200876",
+    "title": "Opole na zdjęciach w Google Street View. Kamery złapały dziwne i wstydliwe widoki",
+    "summary": "Pijacy na ławkach i na przystanku w centrum Opola, prostytutki przy wjeździe do miasta - to tylko część dziwnych zdjęć z Opola, jakie można zobaczyć na Google Street View. Na tych fotografiach zrobionych z samochodu można także zobaczyć, jak bardzo zmieniła się w ostatnich latach stolica wojew&oacute;dztwa opolskiego.",
+    "content": "Pijacy na ławkach i na przystanku w centrum Opola, prostytutki przy wjeździe do miasta - to tylko część dziwnych zdjęć z Opola, jakie można zobaczyć na Google Street View. Na tych fotografiach zrobionych z samochodu można także zobaczyć, jak bardzo zmieniła się w ostatnich latach stolica wojew&oacute;dztwa opolskiego.",
+    "published": "2026-10-24T08:22:00+02:00",
+    "id": "f95a15000c897420f7bbe005e8113413782f702d",
+    "preselect": true,
+    "places_german": [
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12330,odwiedzili-winnice-w-balcarzowicach-to-byla-wyjatkowa-przygoda",
+    "title": "Odwiedzili winnicę w Balcarzowicach. To była wyjątkowa przygoda",
+    "summary": "Wcale nie trzeba jechać daleko, by odkryć ciekawe miejsca i poznać ludzi z pasją. Przekonali się o tym uczestnicy wyjazdu do Winnicy Rodzinnej Cwielong-Olszewski w Balcarzowicach, który zorganizował Leśnicki Ośrodek Kultury i Rekreacji. Z zaproszenia skorzystało 35 osób.",
+    "content": "Wcale nie trzeba jechać daleko, by odkryć ciekawe miejsca i poznać ludzi z pasją. Przekonali się o tym uczestnicy wyjazdu do Winnicy Rodzinnej Cwielong-Olszewski w Balcarzowicach, który zorganizował Leśnicki Ośrodek Kultury i Rekreacji. Z zaproszenia skorzystało 35 osób.",
+    "published": "2026-10-24T06:39:00+02:00",
+    "id": "d9874fde93d37c0abc61b216c535fd9dabb8a00c",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Balcarzowice"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12331,oswietleniowy-boom-w-gminie-strzelce-opolskie-przybedzie-nowych-latarni",
+    "title": "Oświetleniowy boom w gminie Strzelce Opolskie. Przybędzie nowych latarni",
+    "summary": "W gminie Strzelce Opolskie jedna inwestycja związana z budową oświetlenia goni drugą.",
+    "content": "W gminie Strzelce Opolskie jedna inwestycja związana z budową oświetlenia goni drugą.",
+    "published": "2026-10-24T06:04:00+02:00",
+    "id": "609b6c016897298542397729809b6d12787e0463",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  }
+]
