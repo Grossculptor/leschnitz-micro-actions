@@ -1,11 +1,14 @@
 boom
 community
+cost
 google
 hide
 hiding
 invader
+kolonowskie
 lighting
 locals
+mayor
 memory
 neglect
 oppeln
@@ -16,5 +19,6 @@ silent
 spaces
 street
 suffering
+true
 vanished
 vineyard
