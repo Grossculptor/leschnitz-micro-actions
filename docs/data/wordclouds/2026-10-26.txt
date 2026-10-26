@@ -1,6 +1,10 @@
+churches
 community
 court
 fund
+hidden
 invader
 new
 only
+settler
+wooden
