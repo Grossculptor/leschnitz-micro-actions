@@ -1,0 +1,30 @@
+[
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12342,zderzenie-ciezarowki-i-auta-osobowego-na-autostradzie-a4",
+    "title": "Zderzenie ciężarówki i auta osobowego na autostradzie A4",
+    "summary": "W niedzielę około godziny 18:30 doszło do zderzenia samochodu osobowego z ciężarówką na autostradzie A4 pod Strzelcami Opolskimi.",
+    "content": "W niedzielę około godziny 18:30 doszło do zderzenia samochodu osobowego z ciężarówką na autostradzie A4 pod Strzelcami Opolskimi.",
+    "published": "2026-10-26T08:40:00+01:00",
+    "id": "1aad0569401af50321f1b1e53c2facba99bbd132",
+    "preselect": true,
+    "places_german": [
+      "Strzelce Opolskie"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12340,670-tysiecy-zlotych-na-remont-boiska-i-kort-do-padla",
+    "title": "670 tysięcy złotych na remont boiska i kort do padla",
+    "summary": "Gmina Strzelce Opolskie otrzymała 330 tys. zł dofinansowania do inwestycji sportowych.",
+    "content": "Gmina Strzelce Opolskie otrzymała 330 tys. zł dofinansowania do inwestycji sportowych.",
+    "published": "2026-10-26T06:08:00+01:00",
+    "id": "f87cd1550d10e393c7a55b9a9b1e7d8bdb122653",
+    "preselect": true,
+    "places_german": [
+      "Gross Strehlitz"
+    ],
+    "classified_by": "llm"
+  }
+]
