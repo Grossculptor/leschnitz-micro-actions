@@ -1,0 +1,44 @@
+[
+  {
+    "source": "https://wild-union-5400.thedatasculptor.workers.dev/",
+    "link": "https://strzelceopolskie.naszemiasto.pl/opolszczyzna-ma-wielki-problem-za-25-lat-z-niektorych-gmin-zniknie-polowa-ludzi/ar/c1p2-29208965",
+    "title": "Opolszczyzna ma wielki problem. Za 25 lat z niektórych gmin zniknie połowa ludzi",
+    "summary": "Wyludnianie Opolszczyzny przyspiesza. W 2060 roku w województwie będzie mieszkać 690 tysięcy ludzi. 220 tysięcy ludzi mniej niż obecnie. Kilka gmin straci ponad połowę mieszkańców.",
+    "content": "Wyludnianie Opolszczyzny przyspiesza. W 2060 roku w województwie będzie mieszkać 690 tysięcy ludzi. 220 tysięcy ludzi mniej niż obecnie. Kilka gmin straci ponad połowę mieszkańców.",
+    "published": "2026-10-26T04:39:00+00:00",
+    "id": "aa7d6d8445535ea72d4eeaa829df9b8e28f76553",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Gross Strehlitz",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/konkurs-na-najsmieszniejsze-slaskie-slowo-internauci-wybrali/ar/c1-17507395",
+    "title": "Konkurs na najśmieszniejsze śląskie słowo. Internauci wybrali",
+    "summary": "Naszych czytelnik&oacute;w zapytaliśmy o to, jakie ich zdaniem śląskie słowo jest najlepsze. Wybraliśmy 20 tych sł&oacute;w, kt&oacute;re były najpopularniejsze w Waszych odpowiedziach. Jadymy durś ze śląskimi słowami!",
+    "content": "Naszych czytelnik&oacute;w zapytaliśmy o to, jakie ich zdaniem śląskie słowo jest najlepsze. Wybraliśmy 20 tych sł&oacute;w, kt&oacute;re były najpopularniejsze w Waszych odpowiedziach. Jadymy durś ze śląskimi słowami!",
+    "published": "2026-10-26T09:41:00+01:00",
+    "id": "041da7506bcfb64b270d4402140e025f5fef1b37",
+    "preselect": true,
+    "places_german": [],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12346,miliony-na-nowa-inwestycje-w-ckziu-prace-obejma-niemal-cala-szkole",
+    "title": "Miliony na nową inwestycję w CKZiU. Prace obejmą niemal całą szkołę",
+    "summary": "Rusza kolejna wielka inwestycja w Centrum Kształcenia Zawodowego i Ustawicznego w Strzelcach Opolskich.",
+    "content": "Rusza kolejna wielka inwestycja w Centrum Kształcenia Zawodowego i Ustawicznego w Strzelcach Opolskich.",
+    "published": "2026-10-27T06:48:00+01:00",
+    "id": "7e8ed1d80cf59f9500f4d2955bdfcbacdb071d07",
+    "preselect": true,
+    "places_german": [
+      "Groß Strehlitz"
+    ],
+    "classified_by": "llm"
+  }
+]
