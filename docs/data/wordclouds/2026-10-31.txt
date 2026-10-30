@@ -1,0 +1,7 @@
+council
+decree
+hidden
+mask
+tax
+town
+wealth

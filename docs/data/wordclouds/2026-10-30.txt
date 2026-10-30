@@ -3,8 +3,12 @@ aid
 all
 animal
 announced
+award
 behind
+boost
+budget
 buzz
+childcare
 civic
 cost
 council
@@ -12,6 +16,7 @@ day
 drive
 drown
 extra
+fee
 first
 funds
 gate
@@ -19,6 +24,7 @@ growth
 hidden
 hide
 histories
+honor
 invader
 invader's
 joint
@@ -30,14 +36,20 @@ making
 mask
 named
 neglect
+opaque
+oversight
 pks
+profit
 propaganda
 record
 road
 routes
 saints
+scent
+seven
 silence
 silent
+springs
 stay
 sweet
 town's
@@ -49,3 +61,4 @@ water
 well
 while
 winter
+work
