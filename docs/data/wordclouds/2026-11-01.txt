@@ -1,5 +1,11 @@
 cloud
 gym
 mask
+masks
 otmicach's
+real
+rozmierzy
 silence
+story
+teatr
+wielki
