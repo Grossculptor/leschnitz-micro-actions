@@ -1,6 +1,7 @@
 agenda
 betray
 breakthrough
+celebrated
 communication
 drying
 fade
@@ -8,9 +9,11 @@ fuels
 gates
 hidden
 imielnitz
+local
 parish
 peace
 pond
+raptors
 sell
 voices
 water
