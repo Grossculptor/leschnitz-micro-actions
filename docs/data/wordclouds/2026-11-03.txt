@@ -11,6 +11,7 @@ granite
 hidden
 leschnitz
 linger
+local
 mask
 narratives
 oppeln
@@ -18,7 +19,9 @@ profits
 puddle
 run
 settler
+silence
 steps
 still
 train
 trees
+voices
