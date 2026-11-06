@@ -1,0 +1,6 @@
+cut
+decision
+local
+silence
+trees
+voices
