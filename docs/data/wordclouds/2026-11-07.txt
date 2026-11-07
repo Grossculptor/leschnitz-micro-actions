@@ -5,10 +5,15 @@ colorful
 cut
 decision
 exhibition
+hall
+heating
 hides
 local
 mayor
+new
 propaganda
+replace
+shelter
 silence
 teachers
 trees
