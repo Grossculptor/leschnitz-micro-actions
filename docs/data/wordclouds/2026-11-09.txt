@@ -2,9 +2,13 @@ budget
 burned
 celebrate
 czyste
+decision
+delay
 hides
 historic
+obwieszczenie
 oppeln
+park
 powietrze
 profits
 promise
@@ -16,4 +20,5 @@ silent
 sport
 synagogue
 voices
+water
 while
