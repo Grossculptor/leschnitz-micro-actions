@@ -1,8 +1,13 @@
 agenda
+agendas
+bieg
+celebrate
+centawie
 claim
 clatter
 court
 farm
+foreign
 hidden
 hide
 hike
@@ -12,7 +17,11 @@ local
 loss
 narrative
 niwek's
+oppeln
 regional
+scorer
+silence
 sound
 tax
 veil
+while
