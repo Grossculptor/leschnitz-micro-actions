@@ -1,0 +1,32 @@
+[
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12417,14-zagryzionych-danieli-wilki-znow-zaatakowaly-w-gminie-izbicko",
+    "title": "14 zagryzionych danieli. Wilki znów zaatakowały w gminie Izbicko?",
+    "summary": "Poranek, w piątek trzynastego listopada, odsłonił tragedię, do jakiej doszło w jednej z zagród danieli w Krośnicy. Ze stada liczącego prawie dwadzieścia osobników zostało tylko pięć żywych sztuk.",
+    "content": "Poranek, w piątek trzynastego listopada, odsłonił tragedię, do jakiej doszło w jednej z zagród danieli w Krośnicy. Ze stada liczącego prawie dwadzieścia osobników zostało tylko pięć żywych sztuk.",
+    "published": "2026-11-13T14:22:00+01:00",
+    "id": "4a31d584dbc0256d022701fb1471acaaedcfc264",
+    "preselect": true,
+    "places_german": [
+      "Izbicko",
+      "Krośnica",
+      "Oppeln"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12412,ogien-zabral-jej-ukochane-zwierzeta-bolesne-skutki-pozaru-w-jemielnicy",
+    "title": "Ogień zabrał jej ukochane zwierzęta. Bolesne skutki pożaru w Jemielnicy",
+    "summary": "Od drogi nie widać tragedii, jaka miała miejsce na ulicy Parkowej w Jemielnicy. O tym, że stało się coś złego, świadczy obecnie jedynie ledwo wyczuwalny zapach spalenizny. Dopiero na posesji widać ogrom zniszczeń. Połowa budynku spłonęła. W dymie i ogniu życie straciło 19 zwierząt.",
+    "content": "Od drogi nie widać tragedii, jaka miała miejsce na ulicy Parkowej w Jemielnicy. O tym, że stało się coś złego, świadczy obecnie jedynie ledwo wyczuwalny zapach spalenizny. Dopiero na posesji widać ogrom zniszczeń. Połowa budynku spłonęła. W dymie i ogniu życie straciło 19 zwierząt.",
+    "published": "2026-11-13T06:36:00+01:00",
+    "id": "2ad9f6f9e2307afd29d48b5893366ecc917086ac",
+    "preselect": true,
+    "places_german": [
+      "Jemielnica"
+    ],
+    "classified_by": "llm"
+  }
+]
