@@ -1,10 +1,45 @@
 [
   {
+    "title": "Why does the pumpkin feast mask the Invader’s social?",
+    "datetime": "2026-11-17T10:00:00+01:00",
+    "description": "In the town square of Szczepank, lay a thin veil of dried pumpkin vines around the bench where elders sip tea. Quietly replace the official flyers with hand‑written notes scented with cinnamon, inviting the “large and small” to share a silent moment of listening. As the scent drifts, watch passersby pause, read, and whisper the forgotten names of the original families, exposing the subtle PR script that turns integration into performance.",
+    "source": "https://www.strzelce360.pl/artykul/12426,integracja-duzych-i-malych-czyli-dzien-dyni-w-szczepanku",
+    "hash": "2c9ceccf3af304645fa6c46d906db86430b4bc3b"
+  },
+  {
+    "title": "Why does the decision to cut the tree mask hidden?",
+    "datetime": "2026-11-16T10:00:00+01:00",
+    "description": "At the municipal office in Leschnitz, place a small bundle of fresh pine needles on the desk of the official who signed the removal permit. The scent of resin fills the air, reminding staff of the forest they are about to erase. Leave a handwritten note that reads, \"We remember the roots that held our community together.\" The paper will be collected later, exposing the quiet PR narrative that frames removal as progress.",
+    "source": "https://bip.lesnica.pl/16296/decyzja-zezwalajaca-na-usuniecie-drzewa.html",
+    "hash": "a1cc05f50d418b93706a0417d3e392bd199db501"
+  },
+  {
+    "title": "Why does the safety lecture mask a hidden PR agenda?",
+    "datetime": "2026-11-16T09:30:00+01:00",
+    "description": "In the town square of Izbick, scatter tiny reflective shards on the benches where seniors gathered. As the afternoon sun catches them, a faint metallic scent mingles with the aroma of fresh bread from a nearby stall. Passers‑by pause, noticing the glint and questioning the polished talk of safety, while a soft whisper of wind carries the phrase “protect your savings” like a distant warning.",
+    "source": "https://www.strzelce360.pl/artykul/12419,o-bezpieczenstwo-nalezy-dbac-wazne-spotkanie-w-izbicku",
+    "hash": "ddf1dc6b6a46a9aabc5476a3e4462cde0eba4261"
+  },
+  {
     "title": "Why do Oppeln film shoots hide the Invader's erased voices?",
     "datetime": "2026-11-16T09:00:00+01:00",
     "description": "At sunrise, spread white parchment on the steps of the BIP office in Leschnitz. On each sheet, write the name of a classic Oppeln‑shot film in invisible ink. As passers‑by step on them, the scent of fresh pine and coffee drifts, revealing faint letters that whisper the forgotten Silesian families erased by the Invader’s scripts. Collect the impressions and post them on a community board, turning bureaucratic silence into a fragrant, audible memory.",
     "source": "https://nto.pl/te-filmy-krecono-na-opolszczyznie-bylo-kilka-naprawde-duzych-tytulow-z-wielkimi-gwiazdami/ar/c1-16894077",
     "hash": "d0cc909d066b772e2b1fadbce8520c77654590b4"
+  },
+  {
+    "title": "Who profits from nostalgic images of Oppeln’s past?",
+    "datetime": "2026-11-16T07:54:00+01:00",
+    "description": "In the town square, scatter translucent fabric strips dyed in the faded colors of 60‑80s attire. As wind lifts them, the scent of old laundry and coal mingles, recalling daily life. Passersby are invited to pin a small note describing a forgotten story of the indigenous families, exposing the hidden PR narrative that romanticizes the Settler era.",
+    "source": "https://nto.pl/tak-wygladala-codziennosc-w-latach-60-70-i-80-tak-ubierali-sie-ludzie-tak-zyli/ar/c1-15632782",
+    "hash": "9f363e405401b4503842db052c3cd513938bcd8c"
+  },
+  {
+    "title": "Why does Leschnitz lift taxes and silence local voices?",
+    "datetime": "2026-11-16T07:00:00+01:00",
+    "description": "In the town square of Leschnitz, scatter hand‑made paper coins scented with pine and ash on the municipal notice board. Each coin bears the new 2.7 % increase, while a quiet friend reads the unchanged transport tax aloud, letting the scent of fresh ink linger as passersby pause, noticing the invisible weight of the tax rise.",
+    "source": "https://www.strzelce360.pl/artykul/12428,gmina-lesnica-podnosi-podatki-kto-zaplaci-najwiecej",
+    "hash": "029adb96c532682ddfe615972e1b6cc177e1dc3f"
   },
   {
     "title": "Why does the Invader delay the gas project decision?",
