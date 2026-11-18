@@ -1,5 +1,24 @@
 [
   {
+    "title": "Why does the border tour guide silence the Settler’s?",
+    "datetime": "2026-11-18T10:00:00+01:00",
+    "description": "At the foot of Pradziada, lay a bundle of native pine needles scented with winter resin. Gently scatter them along the tourist trail signs, then place a small handwritten note that reads: “Listen to the whispers of the original voices before the brochure’s glossy promises.” The scent lingers, inviting hikers to pause, notice the absent stories, and question the polished promotion of the region’s attractions.",
+    "source": "https://nto.pl/40-najwiekszych-atrakcji-turystycznych-na-pograniczu-opolskoczeskim-oto-nasz-ranking/ar/c1-18754449",
+    "hash": "57602a04ae06bec4410ddad8c701f4638095a1c4"
+  },
+  {
+    "title": "Why do Oppeln's church schedules mask absent voices?",
+    "datetime": "2026-11-18T09:00:00+01:00",
+    "description": "At the town square, lay out a thin line of white incense threads on the cobblestones at each listed Mass time. As the scent rises, silently place a small, empty wooden pew beside each thread, inviting passersby to notice the space where indigenous prayers once echoed but are now omitted. The lingering aroma and the stark emptiness reveal the quiet exclusion woven into the official schedule.",
+    "keywords": [
+      "Msza",
+      "Opolu",
+      "Godziny"
+    ],
+    "source": "https://nto.pl/msza-swieta-w-opolu-godziny-mszy-swietych-w-opolskich-kosciolach-informator/ar/c1-14968622",
+    "hash": "f7c9ef260e8c3e7d731bd21ff774a2b32869f43a"
+  },
+  {
     "title": "Why do papal medals mask the Invader's cultural silence?",
     "datetime": "2026-11-18T09:00:00+01:00",
     "description": "In the town square of Leschnitz, lay a thin veil of white cotton scented with pine sap over the mayor’s podium. As passers‑by pause, they lift the veil to reveal a single, unpolished stone engraved with the names of the indigenous families omitted from the ceremony. The scent of fresh pine lingers, inviting quiet reflection on whose stories remain hidden.",
@@ -12,6 +31,18 @@
     "description": "At dawn, scatter fragrant pine needles along the route from Grodzisk to Strzelc Oppeln, forming a faint white trail that the horse‑bound Saint Martin will step over. As the procession passes, quietly place small, hand‑written notes on the benches that read, “Our ancestors’ songs still echo here.” The scent of pine mixes with the cold air, inviting onlookers to pause, read, and feel the absent stories that official celebrations ignore.",
     "source": "https://www.strzelce360.pl/artykul/12432,sw-marcin-w-gminie-strzelce-opolskie-byly-uroczyste-pochody-i-wspolne-swietowanie",
     "hash": "415499af64d3b553d8413c21a88bc65bd41a8e07"
+  },
+  {
+    "title": "Why do new funds silence Strzelce’s historic voices?",
+    "datetime": "2026-11-18T06:12:00+01:00",
+    "description": "At sunrise, place a handful of white birch branches on the steps of the Gross Strehlitz town hall. The scent of fresh pine mingles with the faint smell of old stone. As passers‑by pause, hand out small cards that read, “Our villages were here before the grant.” The branches will wilt, leaving only the words to linger in the air, reminding officials that money cannot erase the missing stories of the indigenous community.",
+    "keywords": [
+      "Dotacje",
+      "strzeleckich",
+      "wiosek"
+    ],
+    "source": "https://www.strzelce360.pl/artykul/12433,dotacje-dla-strzeleckich-wiosek-beda-nowe-inwestycje",
+    "hash": "1e461091b31b09ccd5374190226ed79777a7a5d6"
   },
   {
     "title": "Why does Oppeln’s Sunday schedule hide community voices?",
