@@ -1,5 +1,8 @@
 behind
 bypass
+committee
+finance
+grazing
 hide
 inflated
 invader's
@@ -15,6 +18,7 @@ profits
 promises
 saint
 scent
+settler
 smell
 stories
 tender
