@@ -1,5 +1,5 @@
 {
-  "finished_at": "2026-11-21T18:22:56.963135+00:00",
+  "finished_at": "2026-11-22T00:45:18.630832+00:00",
   "model": "openai/gpt-oss-120b",
   "validation_mode": "shadow",
   "feeds": 5,
