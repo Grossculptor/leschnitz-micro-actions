@@ -1,0 +1,66 @@
+[
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/tak-przed-dekadami-wygladala-kolej-dworce-pociagi-parowozy-ludzie-pracujacy-w-pkp/ar/c1-15831449",
+    "title": "Tak przed dekadami wyglądała kolej. Dworce, pociągi, parowozy, ludzie pracujący w PKP",
+    "summary": "Kolej na Opolszczyznę dotarła 15 sierpnia 1842 roku. W&oacute;wczas przejechał pierwszy pociąg z Wrocławia do Brzegu. Co ciekawe, trasa ta jest fragmentem najstarszej na obecnych ziemiach polskich linii kolejowej. Wcześniej, bo 22 maja 1842 roku pociąg pojechał z Wrocławia do Oławy. W 1843 roku kolej żelazna tarła  do Opola, a dwa lata p&oacute;źniej do &oacute;wczesnego Kędzierzyna i dalej do Gliwic. W następnych latach nastąpił prawdziwy boom na drogi żelazne, powstawały kolejne linie, dworce i stacje...",
+    "content": "Kolej na Opolszczyznę dotarła 15 sierpnia 1842 roku. W&oacute;wczas przejechał pierwszy pociąg z Wrocławia do Brzegu. Co ciekawe, trasa ta jest fragmentem najstarszej na obecnych ziemiach polskich linii kolejowej. Wcześniej, bo 22 maja 1842 roku pociąg pojechał z Wrocławia do Oławy. W 1843 roku kolej żelazna tarła  do Opola, a dwa lata p&oacute;źniej do &oacute;wczesnego Kędzierzyna i dalej do Gliwic. W następnych latach nastąpił prawdziwy boom na drogi żelazne, powstawały kolejne linie, dworce i stacje...",
+    "published": "2026-11-24T12:51:00+01:00",
+    "id": "1f7fbabc893fd54d92aa835f7921e6e7dac70a20",
+    "preselect": true,
+    "places_german": [
+      "Oppeln",
+      "Brieg",
+      "Breslau",
+      "Ohlau",
+      "Königshütte",
+      "Gleiwitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://bip.lesnica.pl/rss/2025/rejestr-zmian-strony.html",
+    "link": "https://bip.lesnica.pl/16311/xxxii-sesja-rady-miejskiej-w-lesnicy.html",
+    "title": "XXXII Sesja Rady Miejskiej w Leśnicy",
+    "summary": "",
+    "content": "",
+    "published": "2026-11-24T09:19:22+01:00",
+    "id": "49fbc94954cfc29d6e3ed7fa631e4fdc4e34fd3c",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12458,mlodziez-pamieta-o-seniorach-piekne-gesty-uczniow-ckziu-w-strzelcach-opolskich",
+    "title": "Młodzież pamięta o seniorach. Piękne gesty uczniów CKZiU w Strzelcach Opolskich",
+    "summary": "Pensjonariusze Domu Pomocy Społecznej w Strzelcach Opolskich wraz z filiami w Szymiszowie i Leśnicy mogą liczyć na życzliwą pamięć młodzieży uczącej się w Centrum Kształcenia Zawodowego i Ustawicznego w Strzelcach Opolskich.",
+    "content": "Pensjonariusze Domu Pomocy Społecznej w Strzelcach Opolskich wraz z filiami w Szymiszowie i Leśnicy mogą liczyć na życzliwą pamięć młodzieży uczącej się w Centrum Kształcenia Zawodowego i Ustawicznego w Strzelcach Opolskich.",
+    "published": "2026-11-24T14:08:00+01:00",
+    "id": "a00d5bf0c4397987160f3a9953a1c52b1187e30a",
+    "preselect": true,
+    "places_german": [
+      "Strzelce Opolskie",
+      "Schimschow",
+      "Leschnitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12439,wojsko-przeprowadzi-cwiczenia-w-rejonie-zawadzkiego-jest-apel-do-mieszkancow",
+    "title": "Wojsko przeprowadzi ćwiczenia w rejonie Zawadzkiego. Jest apel do mieszkańców",
+    "summary": "W dniach 24-26 listopada na obszarze pomiędzy miejscowościami Zawadzkie (powiat strzelecki) i Miasteczko Śląskie (powiat tarnogórski) Wojsko Polskie przeprowadzi ćwiczenia taktyczne.",
+    "content": "W dniach 24-26 listopada na obszarze pomiędzy miejscowościami Zawadzkie (powiat strzelecki) i Miasteczko Śląskie (powiat tarnogórski) Wojsko Polskie przeprowadzi ćwiczenia taktyczne.",
+    "published": "2026-11-20T06:12:00+01:00",
+    "id": "36b1227bf0e23c619554a2318035f29e77ccd6aa",
+    "preselect": true,
+    "places_german": [
+      "Zawadzkie",
+      "Miasteczko Śląskie"
+    ],
+    "classified_by": "llm"
+  }
+]

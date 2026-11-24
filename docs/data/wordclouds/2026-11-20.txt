@@ -1,3 +1,4 @@
+army
 behind
 bypass
 committee
@@ -7,6 +8,7 @@ hide
 inflated
 invader's
 light
+local
 martin
 mask
 missing
@@ -19,6 +21,8 @@ promises
 saint
 scent
 settler
+silence
 smell
 stories
 tender
+voices
