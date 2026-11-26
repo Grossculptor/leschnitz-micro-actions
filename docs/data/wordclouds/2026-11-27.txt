@@ -1,6 +1,11 @@
+budget
+citizens
+european
 hide
+leschnitz
 line
 lost
 promise
 raszowa
 second
+true
