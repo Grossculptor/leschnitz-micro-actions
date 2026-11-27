@@ -1,5 +1,12 @@
 [
   {
+    "title": "Why does the railway’s ghost hide the Settler’s true?",
+    "datetime": "2026-11-27T14:00:00+01:00",
+    "description": "At the old Leschnitz platform, lay a thin veil of mist scented with iron and pine. Place a row of translucent ribbons, each bearing a faded ticket stub from 1842, and let them flutter as a silent choir. Passersby hear the soft rustle, smell the lingering coal dust, and pause to read the dates, confronting the invisible hands that built the line. The ribbons gather, forming a fragile map of erased routes, exposing the Invader’s forgotten promises.",
+    "source": "https://nto.pl/tak-kiedys-wygladala-kolej-dworce-pociagi-parowozy-ludzie-pracujacy-w-pkp/ar/c1-15831449",
+    "hash": "095eda9369aaeda75106c03d15c03e6a05c02eb8"
+  },
+  {
     "title": "Why does Raszowa’s second line hide its lost promise?",
     "datetime": "2026-11-27T10:00:00+01:00",
     "description": "At dawn, lay a thin ribbon of chalk along the abandoned track, spelling the word “silence” in the dust. As commuters pass, the scent of fresh coffee from nearby stalls mixes with the iron‑oxide smell of rust, inviting strangers to pause, read, and photograph the line that never received a happy end. The chalk fades with each footstep, leaving a trace of the missed chance and a whisper of the village’s untold story.",
@@ -7,11 +14,25 @@
     "hash": "b6d8eb41d4a64031370dcd729454549d63bb4e73"
   },
   {
+    "title": "Why does the broken wall hide the Invader's forgotten?",
+    "datetime": "2026-11-27T09:30:00+01:00",
+    "description": "At dawn, lay a thin line of crushed lavender petals across the jagged gap in the Imielnitz church wall. The scent drifts over the pond, inviting passersby to pause, trace the fissure with fingertips, and whisper the names of the original Silesian families erased by the Expansionist narrative. Each petal collected later becomes a tiny flag for the restored dignity of the displaced community.",
+    "source": "https://www.strzelce360.pl/artykul/12465,runal-mur-przy-kosciele-w-jemielnicy-parafia-szykuje-sie-do-odbudowy",
+    "hash": "7d78194159655b2a826778f1b66c8012dbe96b3a"
+  },
+  {
     "title": "Does the European Citizens’ Budget hide Leschnitz’s true?",
     "datetime": "2026-11-27T09:00:00+01:00",
     "description": "At dawn, place 50 hand‑written cards about forgotten Kształcenie stories on the steps of the former Städtisches Bürgerhaus in Leschnitz. The paper smells of pine and old ink. Passers‑by pick one, read a line about a pre‑Expander teacher, and leave a small stone on the card. Over weeks the pile grows, a quiet scent‑filled mound that reveals the Europejski Budżet’s hidden omissions.",
     "source": "https://www.strzelce360.pl/artykul/12463,ksztalcenie-ma-znaczenie-europejski-budzet-obywatelski-okiem-stowarzyszenia-europa-iuvenis",
     "hash": "ad8805b96a61ea4c427d4ab476fbb97320488467"
+  },
+  {
+    "title": "Is the officer’s TV cameo a Settler PR stunt in Leschnitz?",
+    "datetime": "2026-11-27T06:26:00+01:00",
+    "description": "At the municipal square of Ujazd, place a small wooden plaque scented with pine and fresh rain. Write the words “Dzielnicowy – Lombard – Award” in fading ink. Invite passers‑by to press their palms on the plaque, leaving a warm imprint that slowly fades. Over weeks the missing letters reveal the hidden script: a reminder that the celebrated cameo masks a public‑relations game of the Invader.",
+    "source": "https://www.strzelce360.pl/artykul/12466,dzielnicowy-z-gminy-ujazd-zagral-w-popularnym-serialu",
+    "hash": "cce4f4526e496fa6f287b813438420060bce9a3c"
   },
   {
     "title": "Why does the water authority ignore the town’s thirst?",

@@ -1,0 +1,49 @@
+[
+  {
+    "source": "https://nto.pl/rss/nowatrybunaopolska.xml",
+    "link": "https://nto.pl/tak-kiedys-wygladala-kolej-dworce-pociagi-parowozy-ludzie-pracujacy-w-pkp/ar/c1-15831449",
+    "title": "Tak kiedyś wyglądała kolej. Dworce, pociągi, parowozy, ludzie pracujący w PKP",
+    "summary": "Kolej na Opolszczyznę dotarła 15 sierpnia 1842 roku. W&oacute;wczas przejechał pierwszy pociąg z Wrocławia do Brzegu. Co ciekawe, trasa ta jest fragmentem najstarszej na obecnych ziemiach polskich linii kolejowej. Wcześniej, bo 22 maja 1842 roku pociąg pojechał z Wrocławia do Oławy. W 1843 roku kolej żelazna tarła  do Opola, a dwa lata p&oacute;źniej do &oacute;wczesnego Kędzierzyna i dalej do Gliwic. W następnych latach nastąpił prawdziwy boom na drogi żelazne, powstawały kolejne linie, dworce i stacje...",
+    "content": "Kolej na Opolszczyznę dotarła 15 sierpnia 1842 roku. W&oacute;wczas przejechał pierwszy pociąg z Wrocławia do Brzegu. Co ciekawe, trasa ta jest fragmentem najstarszej na obecnych ziemiach polskich linii kolejowej. Wcześniej, bo 22 maja 1842 roku pociąg pojechał z Wrocławia do Oławy. W 1843 roku kolej żelazna tarła  do Opola, a dwa lata p&oacute;źniej do &oacute;wczesnego Kędzierzyna i dalej do Gliwic. W następnych latach nastąpił prawdziwy boom na drogi żelazne, powstawały kolejne linie, dworce i stacje...",
+    "published": "2026-11-27T13:15:26+01:00",
+    "id": "095eda9369aaeda75106c03d15c03e6a05c02eb8",
+    "preselect": true,
+    "places_german": [
+      "Breslau",
+      "Brieg",
+      "Ohlau",
+      "Oppeln",
+      "Gleiwitz"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12466,dzielnicowy-z-gminy-ujazd-zagral-w-popularnym-serialu",
+    "title": "Dzielnicowy z gminy Ujazd zagrał w popularnym serialu",
+    "summary": "Mł. asp. Krzysztof Kuczmera z Posterunku Policji w Leśnicy, dzielnicowy gminy Ujazd, wystąpił w serialu \"Lombard. Życie pod zastaw\" emitowanym na antenie Telewizji Puls. Udział w produkcji był jedną z nagród za zwycięstwo w ogólnopolskim plebiscycie \"Super Dzielnicowy 2026\".",
+    "content": "Mł. asp. Krzysztof Kuczmera z Posterunku Policji w Leśnicy, dzielnicowy gminy Ujazd, wystąpił w serialu \"Lombard. Życie pod zastaw\" emitowanym na antenie Telewizji Puls. Udział w produkcji był jedną z nagród za zwycięstwo w ogólnopolskim plebiscycie \"Super Dzielnicowy 2026\".",
+    "published": "2026-11-27T06:26:00+01:00",
+    "id": "cce4f4526e496fa6f287b813438420060bce9a3c",
+    "preselect": true,
+    "places_german": [
+      "Leschnitz",
+      "Ujazd"
+    ],
+    "classified_by": "llm"
+  },
+  {
+    "source": "https://www.strzelce360.pl/rss/articles/pl",
+    "link": "https://www.strzelce360.pl/artykul/12465,runal-mur-przy-kosciele-w-jemielnicy-parafia-szykuje-sie-do-odbudowy",
+    "title": "Runął mur przy kościele w Jemielnicy. Parafia szykuje się do odbudowy",
+    "summary": "Od kilkunastu dni mieszkańcy Jemielnicy i wierni udający się do tamtejszego kościoła widzą od strony stawu dużą wyrwę w murze okalającym świątynię.",
+    "content": "Od kilkunastu dni mieszkańcy Jemielnicy i wierni udający się do tamtejszego kościoła widzą od strony stawu dużą wyrwę w murze okalającym świątynię.",
+    "published": "2026-11-27T06:11:00+01:00",
+    "id": "7d78194159655b2a826778f1b66c8012dbe96b3a",
+    "preselect": true,
+    "places_german": [
+      "Jemielnica"
+    ],
+    "classified_by": "llm"
+  }
+]
